@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngu Brice Che | Cybersecurity Portfolio</title>
+    <meta
+        name="description"
+        content="Personal portfolio for Ngu Brice Che, highlighting technical support, cloud infrastructure, automation, and cybersecurity-focused operations."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        abyss: "#06080d",
+                        graphite: "#0e131c",
+                        steel: "#161d2a",
+                        mist: "#94a3b8",
+                        line: "rgba(96, 165, 250, 0.18)",
+                        accent: "#3b82f6"
+                    },
+                    fontFamily: {
+                        sans: ["Space Grotesk", "sans-serif"],
+                        mono: ["IBM Plex Mono", "monospace"]
+                    },
+                    boxShadow: {
+                        glow: "0 0 0 1px rgba(59, 130, 246, 0.15), 0 20px 80px rgba(2, 12, 27, 0.65)"
+                    },
+                    backgroundImage: {
+                        grid: "linear-gradient(rgba(59,130,246,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px)"
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent 30%),
+                radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.1), transparent 22%),
+                linear-gradient(180deg, #05070c 0%, #090d14 45%, #05070b 100%);
+        }
+
+        .glass {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(9, 13, 20, 0.88));
+            backdrop-filter: blur(18px);
+        }
+
+        .scanline::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(rgba(255, 255, 255, 0.015) 50%, transparent 50%);
+            background-size: 100% 4px;
+            opacity: 0.32;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-100 antialiased">
+    <div class="fixed inset-0 -z-10 bg-grid bg-[size:42px_42px] opacity-30"></div>
+
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/75 backdrop-blur-xl">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+            <a href="#top" class="font-mono text-xs uppercase tracking-[0.35em] text-slate-300">NBC//SEC</a>
+            <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+                <a href="#about" class="transition hover:text-accent">About</a>
+                <a href="#expertise" class="transition hover:text-accent">Expertise</a>
+                <a href="#experience" class="transition hover:text-accent">Experience</a>
+                <a href="#credentials" class="transition hover:text-accent">Credentials</a>
+                <a href="#contact" class="transition hover:text-accent">Contact</a>
+            </div>
+            <a
+                href="mailto:ngubriceche@outlook.com"
+                class="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent/60 hover:bg-accent/15"
+            >
+                Let’s Connect
+            </a>
+        </nav>
+    </header>
+
+    <main id="top" class="mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-10 lg:pt-16">
+        <section class="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-stretch">
+            <div class="glass relative overflow-hidden rounded-[2rem] border border-white/10 p-8 shadow-glow lg:p-10">
+                <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/80 to-transparent"></div>
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Personal Portfolio</p>
+                <div class="mt-6 max-w-3xl">
+                    <p class="text-sm text-slate-400">Minnesota, USA</p>
+                    <h1 class="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                        Ngu Brice Che
+                    </h1>
+                    <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
+                        Technical support and cloud operations specialist building resilient systems, faster troubleshooting workflows,
+                        and security-aware user experiences.
+                    </p>
+                </div>
+
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a
+                        href="mailto:ngubriceche@outlook.com"
+                        class="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-400"
+                    >
+                        Email Me
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/ngubriceche"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/50 hover:text-accent"
+                    >
+                        LinkedIn
+                    </a>
+                    <a
+                        href="tel:+17029002373"
+                        class="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/50 hover:text-accent"
+                    >
+                        Call / Text
+                    </a>
+                </div>
+
+                <div class="mt-10 grid gap-4 sm:grid-cols-3">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Focus</p>
+                        <p class="mt-3 text-xl font-semibold text-white">Cloud Ops</p>
+                        <p class="mt-2 text-sm text-slate-400">Azure, AWS, GCP administration and support.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Strength</p>
+                        <p class="mt-3 text-xl font-semibold text-white">Automation</p>
+                        <p class="mt-2 text-sm text-slate-400">Python, PowerShell, Terraform, and workflow improvement.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mindset</p>
+                        <p class="mt-3 text-xl font-semibold text-white">Security-Aware</p>
+                        <p class="mt-2 text-sm text-slate-400">Access control, monitoring, network troubleshooting, and stable operations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="glass scanline relative overflow-hidden rounded-[2rem] border border-accent/20 p-6 shadow-glow">
+                <div class="flex items-center justify-between">
+                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">System Snapshot</p>
+                    <span class="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_#3b82f6]"></span>
+                </div>
+
+                <div class="mt-6 space-y-4 text-sm">
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+                        <p class="font-mono text-slate-500">role.current</p>
+                        <p class="mt-2 text-base font-medium text-white">Client Technical Support Specialist</p>
+                        <p class="mt-2 text-slate-400">Known for clear communication, accurate escalation, and dependable follow-through.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+                        <p class="font-mono text-slate-500">operations.metric</p>
+                        <p class="mt-2 text-3xl font-bold text-white">90%+</p>
+                        <p class="mt-2 text-slate-400">SLA performance supported in workforce and service environments.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+                        <p class="font-mono text-slate-500">core.stack</p>
+                        <p class="mt-2 text-slate-300">Azure / AWS / GCP / Python / PowerShell / Terraform / ServiceNow / Genesys</p>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section id="about" class="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">About</p>
+                <h2 class="mt-4 text-3xl font-bold text-white">Building calm, control, and clarity in technical environments.</h2>
+                <p class="mt-5 text-base leading-8 text-slate-300">
+                    I work across support, systems, and cloud operations with a practical cybersecurity mindset. My approach combines
+                    strong troubleshooting, careful documentation, and a focus on keeping end users productive while protecting system integrity.
+                </p>
+                <p class="mt-4 text-base leading-8 text-slate-400">
+                    From enterprise networking and endpoint monitoring to hybrid cloud administration and service tooling, I’m most effective
+                    where reliability, speed, and technical judgment all matter at once.
+                </p>
+            </div>
+
+            <div id="expertise" class="grid gap-4 sm:grid-cols-2">
+                <article class="glass rounded-[2rem] border border-white/10 p-6">
+                    <div class="flex items-center gap-3 text-accent">
+                        <i data-lucide="shield"></i>
+                        <h3 class="text-lg font-semibold text-white">Security & Networking</h3>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        DNS, DHCP, VPN, firewall management, endpoint monitoring, access controls, and issue isolation across enterprise systems.
+                    </p>
+                </article>
+                <article class="glass rounded-[2rem] border border-white/10 p-6">
+                    <div class="flex items-center gap-3 text-accent">
+                        <i data-lucide="cloud"></i>
+                        <h3 class="text-lg font-semibold text-white">Cloud Infrastructure</h3>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Hands-on support and administration in Azure, AWS, and GCP, with a focus on access, stability, and operational readiness.
+                    </p>
+                </article>
+                <article class="glass rounded-[2rem] border border-white/10 p-6">
+                    <div class="flex items-center gap-3 text-accent">
+                        <i data-lucide="terminal-square"></i>
+                        <h3 class="text-lg font-semibold text-white">Automation</h3>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Python, PowerShell, Terraform, and IaC practices used to reduce repetitive work and improve deployment consistency.
+                    </p>
+                </article>
+                <article class="glass rounded-[2rem] border border-white/10 p-6">
+                    <div class="flex items-center gap-3 text-accent">
+                        <i data-lucide="headset"></i>
+                        <h3 class="text-lg font-semibold text-white">Technical Support</h3>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Incident resolution, customer communication, cross-functional escalation, and platform support using ServiceNow and Salesforce.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="mt-8 glass rounded-[2rem] border border-white/10 p-8">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Experience</p>
+                    <h2 class="mt-3 text-3xl font-bold text-white">Operational depth across support, infrastructure, and analytics.</h2>
+                </div>
+                <p class="max-w-xl text-sm leading-7 text-slate-400">
+                    A progression from frontline IT support into cloud administration, workforce analytics, and client-facing technical operations.
+                </p>
+            </div>
+
+            <div class="mt-8 space-y-5">
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Client Technical Support Specialist</h3>
+                            <p class="mt-1 text-accent">Roundel, Target Corporation</p>
+                        </div>
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Oct 2025 - Jan 2026</p>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Supported the Roundel platform by resolving user and system issues, improving case quality in ServiceNow and Salesforce,
+                        and coordinating complex escalations with clear ownership and follow-through.
+                    </p>
+                </article>
+
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Chat & Phone Technical Customer Service</h3>
+                            <p class="mt-1 text-accent">Foundever</p>
+                        </div>
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2025 - Apr 2025</p>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Guided TurboTax users through filing workflows, account issues, software troubleshooting, and escalations backed by
+                        reproducible technical notes.
+                    </p>
+                </article>
+
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Workforce Management Analyst</h3>
+                            <p class="mt-1 text-accent">WTW</p>
+                        </div>
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Aug 2022 - Dec 2024</p>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Monitored adherence and service levels for 100+ agents using NICE and Genesys Cloud, delivering performance reporting,
+                        Excel dashboards, and staffing insights that supported 90%+ SLA compliance.
+                    </p>
+                </article>
+
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">System Administrator</h3>
+                            <p class="mt-1 text-accent">nVent HOFFMAN</p>
+                        </div>
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2021 - Aug 2022</p>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Managed hybrid cloud access across Azure, AWS, and GCP, automated infrastructure with PowerShell, Python, and Terraform,
+                        and supported Tier 2/3 operations and incident response documentation.
+                    </p>
+                </article>
+
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">IT Support Specialist</h3>
+                            <p class="mt-1 text-accent">MTN Cameroon</p>
+                        </div>
+                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Sep 2016 - Feb 2021</p>
+                    </div>
+                    <p class="mt-4 text-sm leading-7 text-slate-400">
+                        Installed and supported enterprise network devices, resolved connectivity issues, and maintained firewall, endpoint,
+                        and IoT device health for large user environments.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div id="credentials" class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Credentials</p>
+                <h2 class="mt-3 text-3xl font-bold text-white">Certifications and training that support enterprise-ready execution.</h2>
+
+                <div class="mt-8 space-y-4">
+                    <div class="rounded-2xl border border-accent/20 bg-accent/5 p-5">
+                        <p class="text-lg font-semibold text-white">Microsoft Certified: Azure Solutions Architect Expert</p>
+                        <p class="mt-2 text-sm text-slate-400">Issued November 2024</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Microsoft Certified: Azure Administrator Associate</p>
+                        <p class="mt-2 text-sm text-slate-400">Issued September 2024</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-base font-semibold text-white">Azure Cloud Computing</p>
+                        <p class="mt-2 text-sm text-slate-400">NoelTechSolutions • Oct 2022 - Feb 2023</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-base font-semibold text-white">Cisco Networking (CCNA Routing and Switching)</p>
+                        <p class="mt-2 text-sm text-slate-400">Cisco Networking Academy • Oct 2016 - Jan 2017</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Toolkit</p>
+                <h2 class="mt-3 text-3xl font-bold text-white">Core platforms I rely on to keep systems stable and teams moving.</h2>
+
+                <div class="mt-8 grid gap-3 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Azure</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">AWS</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">GCP</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Terraform</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Python</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">PowerShell</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">ServiceNow</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Salesforce</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">NICE</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Genesys Cloud</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Firewall Management</div>
+                    <div class="rounded-2xl border border-white/10 px-4 py-4 text-sm text-slate-300">Endpoint Monitoring</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mt-8">
+            <div class="glass rounded-[2rem] border border-accent/20 p-8 shadow-glow">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Contact</p>
+                <h2 class="mt-3 max-w-3xl text-3xl font-bold text-white">
+                    Open to technical support, cloud operations, and cybersecurity-adjacent opportunities.
+                </h2>
+                <p class="mt-4 max-w-2xl text-base leading-8 text-slate-400">
+                    If you need someone who can troubleshoot carefully, communicate clearly, and improve operational reliability, let’s talk.
+                </p>
+
+                <div class="mt-8 grid gap-4 md:grid-cols-3">
+                    <a href="mailto:ngubriceche@outlook.com" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40">
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="mail"></i>
+                            <span class="font-semibold text-white">Email</span>
+                        </div>
+                        <p class="mt-3 text-sm text-slate-400">ngubriceche@outlook.com</p>
+                    </a>
+                    <a href="tel:+17029002373" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40">
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="phone"></i>
+                            <span class="font-semibold text-white">Phone</span>
+                        </div>
+                        <p class="mt-3 text-sm text-slate-400">+1 (702) 900-2373</p>
+                    </a>
+                    <a
+                        href="https://linkedin.com/in/ngubriceche"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40"
+                    >
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="linkedin"></i>
+                            <span class="font-semibold text-white">LinkedIn</span>
+                        </div>
+                        <p class="mt-3 text-sm text-slate-400">linkedin.com/in/ngubriceche</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
