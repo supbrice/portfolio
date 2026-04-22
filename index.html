@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brice | Creative Technologist</title>
+    <title>Brice | Cloud & Cybersecurity Engineer</title>
     <meta
         name="description"
-        content="Creative technologist and IT professional based in Minnesota. Azure certified with experience in cloud infrastructure, automation, and technical support."
+        content="Azure-certified engineer with experience in cloud infrastructure, technical support, automation, and security-aware systems across Azure, AWS, and GCP."
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -166,6 +166,19 @@
         .ticker-item:hover {
             opacity: 1;
             transform: translateY(-1px);
+        }
+
+        .ticker-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            transition: transform 180ms ease, filter 180ms ease, opacity 180ms ease;
+        }
+
+        .ticker-link:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
         }
 
         .ticker-item img {
@@ -381,26 +394,26 @@
         <div class="ticker-shell">
             <div class="ticker-track">
                 <div class="ticker-group" aria-label="Technology stack logos">
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Microsoft Azure" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Azure</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="Amazon AWS" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">AWS</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Google Cloud</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="Terraform" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Terraform</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Cisco</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/crowdstrike/E00400" alt="CrowdStrike" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CrowdStrike</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/microsoftdefender/0078D4" alt="Microsoft Defender" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Defender</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/paloaltonetworks/0070C0" alt="Palo Alto Networks" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Palo Alto</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/comptia/C8202F" alt="CompTIA" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CompTIA</span></span>
+                    <a class="ticker-link ticker-item" href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="Microsoft Azure" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Azure</span></a>
+                    <a class="ticker-link ticker-item" href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="Amazon AWS" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">AWS</span></a>
+                    <a class="ticker-link ticker-item" href="https://cloud.google.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Google Cloud</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.terraform.io" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="Terraform" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Terraform</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.cisco.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Cisco</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.crowdstrike.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/crowdstrike/E00400" alt="CrowdStrike" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CrowdStrike</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.microsoft.com/security" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/microsoftdefender/0078D4" alt="Microsoft Defender" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Defender</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.paloaltonetworks.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/paloaltonetworks/0070C0" alt="Palo Alto Networks" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Palo Alto</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.comptia.org" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/comptia/C8202F" alt="CompTIA" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CompTIA</span></a>
                 </div>
                 <div class="ticker-group" aria-hidden="true">
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Azure</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">AWS</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Google Cloud</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Terraform</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Cisco</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/crowdstrike/E00400" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CrowdStrike</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/microsoftdefender/0078D4" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Defender</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/paloaltonetworks/0070C0" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Palo Alto</span></span>
-                    <span class="ticker-item"><img src="https://cdn.simpleicons.org/comptia/C8202F" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CompTIA</span></span>
+                    <a class="ticker-link ticker-item" href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/microsoftazure/0078D4" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Azure</span></a>
+                    <a class="ticker-link ticker-item" href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">AWS</span></a>
+                    <a class="ticker-link ticker-item" href="https://cloud.google.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Google Cloud</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.terraform.io" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Terraform</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.cisco.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Cisco</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.crowdstrike.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/crowdstrike/E00400" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CrowdStrike</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.microsoft.com/security" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/microsoftdefender/0078D4" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Defender</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.paloaltonetworks.com" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/paloaltonetworks/0070C0" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">Palo Alto</span></a>
+                    <a class="ticker-link ticker-item" href="https://www.comptia.org" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/comptia/C8202F" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';" /><span class="ticker-fallback">CompTIA</span></a>
                 </div>
             </div>
         </div>
@@ -413,18 +426,38 @@
                 <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">About</p>
                 <div class="mt-6 max-w-3xl">
                     <h1 class="mt-3 max-w-4xl text-5xl font-black tracking-[-0.06em] text-white sm:text-6xl lg:text-[7rem] lg:leading-[0.95]">
-                        Creative Technologist
+                        Cloud &amp; Cybersecurity Engineer
                     </h1>
                     <p class="mt-3 max-w-2xl text-xl font-semibold leading-tight text-accent sm:text-2xl lg:text-[1.7rem]">
-                        Building clearer systems and better digital experiences.
+                        Azure-certified engineer specializing in cloud infrastructure, technical support, and security-aware systems.
                     </p>
+                    <p class="mt-4 max-w-3xl font-mono text-xs uppercase tracking-[0.3em] text-slate-400 sm:text-sm">
+                        90%+ SLA Performance | Azure • AWS • GCP | Terraform • Python • PowerShell
+                    </p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        <a
+                            href="./Ngu%20Brice%20Che%20-%20Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                            class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:border-accent/60 hover:bg-blue-400"
+                        >
+                            Download Resume
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/ngubriceche"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
+                        >
+                            View LinkedIn
+                        </a>
+                    </div>
                     <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">
-                        I like building calm, useful digital experiences at the intersection of technology, support, systems, and creative problem-solving.
-                        My best work happens when I can translate complexity into something clearer, faster, and easier for people to use.
+                        I work across Azure, AWS, and GCP with a foundation in technical support, infrastructure operations, and practical troubleshooting. I’m most effective in roles where cloud administration, issue resolution, and clear communication all matter at the same time.
                     </p>
                     <p class="mt-4 max-w-2xl text-base leading-8 text-slate-400">
-                        I come from hands-on support and infrastructure, but what keeps me curious is shaping better workflows, exploring new tools,
-                        and turning technical knowledge into practical outcomes.
+                        My approach is hands-on and systems-focused: understand the environment, isolate the problem, stabilize the service, and document the fix. I bring strong security awareness through access control, endpoint visibility, secure configuration habits, and support workflows that reduce operational risk.
                     </p>
                 </div>
 
@@ -513,6 +546,51 @@
             </div>
         </section>
 
+        <section class="section-break">
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Cloud &amp; Security Focus</p>
+                <h2 class="mt-3 text-3xl font-bold text-white">Practical experience across cloud operations, support, automation, and security-aware systems.</h2>
+                <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <h3 class="text-lg font-semibold text-white">Cloud Infrastructure</h3>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Keeping cloud environments stable, accessible, and well governed.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>Azure, AWS, GCP administration</li>
+                            <li>Identity &amp; access management</li>
+                            <li>Access control and environment stability</li>
+                        </ul>
+                    </article>
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <h3 class="text-lg font-semibold text-white">Technical Support</h3>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Resolving high-volume issues with clear ownership and follow-through.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>Resolving high-volume issues</li>
+                            <li>Clear documentation and escalation</li>
+                            <li>Improving resolution time and ticket quality</li>
+                        </ul>
+                    </article>
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <h3 class="text-lg font-semibold text-white">Automation</h3>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Using scripting and IaC to simplify repetitive operational work.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>PowerShell, Python, Terraform</li>
+                            <li>Reducing repetitive work</li>
+                            <li>Improving workflows</li>
+                        </ul>
+                    </article>
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <h3 class="text-lg font-semibold text-white">Security Awareness</h3>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Supporting systems with secure habits and practical risk awareness.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>Basic threat detection concepts</li>
+                            <li>Endpoint monitoring exposure</li>
+                            <li>Secure configurations and best practices</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="section-break grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div class="glass rounded-[2rem] border border-white/10 p-8">
                 <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Currently Exploring</p>
@@ -569,29 +647,67 @@
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
                     <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Automation</p>
                     <h3 class="mt-3 text-xl font-semibold text-white">Support Workflow Automation</h3>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Scripts and process ideas focused on reducing repetitive support work, improving ticket quality, and creating faster handoffs.
-                    </p>
-                    <p class="mt-5 text-xs uppercase tracking-[0.28em] text-slate-500">Python • PowerShell • Service Operations</p>
+                    <p class="mt-4 text-sm leading-7 text-slate-400"><strong>Problem:</strong> Repetitive support tasks slowed response time and created inconsistent handoffs.</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-400"><strong>Solution:</strong> Built PowerShell- and Python-based workflow ideas to standardize troubleshooting steps and reduce manual admin work.</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-400"><strong>Outcome:</strong> Created a clearer path to faster resolution, stronger ticket quality, and more consistent support operations.</p>
+                    <a
+                        href="https://github.com/supbrice/CloudProjects"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:text-blue-300"
+                    >
+                        View on GitHub
+                    </a>
                 </article>
 
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
                     <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Cloud</p>
                     <h3 class="mt-3 text-xl font-semibold text-white">Hybrid Cloud Lab Builds</h3>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Personal lab environments for exploring Azure, AWS, and GCP administration, access control patterns, and infrastructure setup.
-                    </p>
-                    <p class="mt-5 text-xs uppercase tracking-[0.28em] text-slate-500">Azure • AWS • GCP • Terraform</p>
+                    <p class="mt-4 text-sm leading-7 text-slate-400"><strong>Problem:</strong> Cloud knowledge is strongest when it is tested in hands-on environments, not just studied.</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-400"><strong>Solution:</strong> Built lab environments across Azure, AWS, and GCP to practice IAM, deployment, access control, and infrastructure setup.</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-400"><strong>Outcome:</strong> Strengthened cloud administration skills and created practical experience that maps directly to support and engineering work.</p>
                 </article>
 
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
                     <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Analytics</p>
                     <h3 class="mt-3 text-xl font-semibold text-white">Performance Dashboards</h3>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Reporting and dashboard concepts for monitoring service levels, spotting trends, and turning raw operational data into action.
-                    </p>
-                    <p class="mt-5 text-xs uppercase tracking-[0.28em] text-slate-500">Excel • Data Analysis • SLA Tracking</p>
+                    <p class="mt-4 text-sm leading-7 text-slate-400"><strong>Problem:</strong> Raw service data made it harder to spot trends quickly and act on performance gaps.</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-400"><strong>Solution:</strong> Structured reporting and dashboard concepts around SLA tracking, trend visibility, and operational metrics.</p>
+                    <p class="mt-3 text-sm leading-7 text-slate-400"><strong>Outcome:</strong> Improved visibility into service performance and supported faster operational decision-making.</p>
                 </article>
+            </div>
+        </section>
+
+        <section class="section-break">
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Hands-On Labs &amp; Continuous Learning</p>
+                <h2 class="mt-3 text-3xl font-bold text-white">Hands-On Labs &amp; Continuous Learning</h2>
+                <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Cloud IAM Security Lab</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Implemented role-based access control across Azure and AWS using least privilege principles.</p>
+                    </article>
+                    <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Endpoint Monitoring with Microsoft Defender</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Reviewed alerts and system security posture to understand endpoint protection workflows.</p>
+                    </article>
+                    <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Basic Log Analysis</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Analyzed system and security logs to identify patterns and potential issues.</p>
+                    </article>
+                    <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Secure Azure VM Deployment</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Configured virtual machines with restricted access and network security rules.</p>
+                    </article>
+                    <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">PowerShell Automation Lab</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Automated routine administrative tasks to improve efficiency.</p>
+                    </article>
+                    <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Incident Response Simulation</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Practiced identifying, documenting, and escalating technical and security-related issues.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -621,10 +737,9 @@
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Oct 2025 - Jan 2026</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
-                        <li>Provided client and technical support for the Roundel platform, resolving system and user issues to maintain stable day-to-day operations.</li>
-                        <li>Diagnosed, documented, and resolved incidents using ServiceNow and Salesforce, improving case clarity and handoff speed.</li>
-                        <li>Partnered with IT and cross-functional teams to escalate and close complex inquiries with clear ownership and timely follow-through.</li>
-                        <li>Supported SLA and customer satisfaction goals through accurate troubleshooting, professional communication, and recurring-issue trend analysis.</li>
+                        <li>Resolved 50+ client and platform issues daily to keep Roundel operations stable and reduce recurring disruption.</li>
+                        <li>Documented and resolved incidents in ServiceNow and Salesforce, improving ticket quality and escalation accuracy.</li>
+                        <li>Partnered with cross-functional teams to close high-impact issues faster while protecting SLA performance.</li>
                     </ul>
                 </article>
 
@@ -642,10 +757,9 @@
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2025 - Apr 2025</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
-                        <li>Supported TurboTax users via chat and phone with filing workflows, account setup, and technical troubleshooting.</li>
-                        <li>Resolved software, login, and connectivity issues while documenting reproducible steps and solutions for faster follow-up.</li>
-                        <li>Investigated complex communication failures between user devices and applications by replicating issues in test environments.</li>
-                        <li>Escalated high-impact cases with complete technical notes to improve turnaround and resolution quality.</li>
+                        <li>Resolved 50+ user issues daily across chat and phone involving filing workflows, account setup, and software troubleshooting.</li>
+                        <li>Improved resolution time by documenting reproducible steps and complete escalation notes for complex cases.</li>
+                        <li>Investigated communication failures between devices and applications to restore service and reduce repeat contacts.</li>
                     </ul>
                 </article>
 
@@ -663,9 +777,9 @@
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Aug 2022 - Dec 2024</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
-                        <li>Monitored adherence and service levels for 100+ agents using NICE and Genesys Cloud, maintaining 90%+ SLA compliance.</li>
-                        <li>Provided hourly performance reporting and developed Excel dashboards.</li>
-                        <li>Analyzed historical data to optimize workforce allocation and develop long-term staffing capacity plans.</li>
+                        <li>Maintained 90%+ SLA performance by monitoring adherence and service levels for 100+ agents in NICE and Genesys Cloud.</li>
+                        <li>Built hourly reporting and Excel dashboards that made performance gaps and staffing needs easier to act on.</li>
+                        <li>Analyzed historical trends to improve workforce allocation and support long-term capacity planning.</li>
                     </ul>
                 </article>
 
@@ -683,10 +797,9 @@
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2021 - Aug 2022</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
-                        <li>Optimized access controls across Azure, AWS, and GCP.</li>
-                        <li>Automated infrastructure using PowerShell, Terraform, and Python (Infrastructure as Code).</li>
-                        <li>Provided Tier 2/3 hybrid cloud support and managed enterprise application deployments.</li>
-                        <li>Monitored system health and authored SOPs for incident response.</li>
+                        <li>Supported hybrid cloud operations across Azure, AWS, and GCP with a focus on access control and service stability.</li>
+                        <li>Automated infrastructure tasks with PowerShell, Terraform, and Python to reduce repetitive admin work.</li>
+                        <li>Delivered Tier 2/3 support for enterprise deployments, system health monitoring, and incident response documentation.</li>
                     </ul>
                 </article>
 
@@ -704,9 +817,9 @@
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Sep 2016 - Feb 2021</p>
                     </div>
                     <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
-                        <li>Installed and configured enterprise network devices, supporting 100+ users.</li>
-                        <li>Troubleshot DNS, DHCP, VPN, and connectivity issues.</li>
-                        <li>Maintained firewalls and endpoint monitoring, and managed IoT device lifecycle and patching.</li>
+                        <li>Supported 100+ users by installing and configuring enterprise network devices in a production environment.</li>
+                        <li>Resolved DNS, DHCP, VPN, and connectivity issues to restore service quickly and reduce downtime.</li>
+                        <li>Maintained firewalls, endpoint monitoring, and IoT patching with a strong focus on secure operations.</li>
                     </ul>
                 </article>
             </div>
@@ -790,75 +903,36 @@
         <section id="contact" class="section-break">
             <div class="glass rounded-[2rem] border border-accent/20 p-8 shadow-glow">
                 <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Contact</p>
-                <h2 class="mt-3 max-w-3xl text-3xl font-bold text-white">Available for new opportunities — let's talk.</h2>
-                <div class="mt-8 flex items-center justify-center gap-6">
-                    <a href="#contact" data-mail-user="ngubriceche" data-mail-domain="outlook.com" data-mail-subject="Portfolio%20Inquiry" class="email-protected rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40 hover:bg-white/[0.05]">
-                        <div class="flex items-center">
-                            <span class="brand-chip brand-email">
-                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                    <path d="M3 7.25L12 13.5L21 7.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <rect x="3" y="5.5" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.8"></rect>
-                                </svg>
-                            </span>
-                        </div>
-                    </a>
-                    <a href="tel:+17029002373" title="+1 (702) 900-2373" aria-label="+1 (702) 900-2373" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40 hover:bg-white/[0.05]">
-                        <div class="flex items-center">
-                            <span class="brand-chip brand-phone">
-                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                    <path d="M6.6 4.75h2.55l1.28 3.18-1.7 1.68c1 2.01 2.62 3.62 4.63 4.63l1.68-1.7 3.18 1.28v2.55a1.6 1.6 0 0 1-1.77 1.59C10.27 17.43 6.57 13.73 5 8.12a1.6 1.6 0 0 1 1.6-3.37Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </span>
-                        </div>
+                <h2 class="mt-3 max-w-4xl text-3xl font-bold text-white">Open to Cloud, IT Support, and Cybersecurity opportunities — let’s build reliable and secure systems.</h2>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a
+                        href="#contact"
+                        data-mail-user="ngubriceche"
+                        data-mail-domain="outlook.com"
+                        data-mail-subject="Portfolio%20Inquiry"
+                        class="email-protected inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:border-accent/60 hover:bg-blue-400"
+                    >
+                        Email
                     </a>
                     <a
                         href="https://linkedin.com/in/ngubriceche"
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="LinkedIn Profile"
-                        aria-label="LinkedIn Profile"
-                        class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40 hover:bg-white/[0.05]"
+                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
                     >
-                        <div class="flex items-center">
-                            <span class="brand-chip brand-linkedin">
-                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38a1.56 1.56 0 0 1 0 3.12ZM5.6 9.68h2.66V18H5.6V9.68Zm4.35 0h2.55v1.14h.04c.35-.67 1.23-1.37 2.53-1.37 2.71 0 3.21 1.78 3.21 4.09V18h-2.66v-3.95c0-.94-.02-2.15-1.31-2.15-1.31 0-1.51 1.02-1.51 2.08V18H9.95V9.68Z"></path>
-                                </svg>
-                            </span>
-                        </div>
+                        LinkedIn
                     </a>
-                </div>
-
-                <div class="mt-4">
                     <a
-                        href="./ngu-brice-che-resume.pdf"
+                        href="./Ngu%20Brice%20Che%20-%20Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent transition hover:border-accent/60 hover:bg-accent/15"
+                        download
+                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
                     >
-                        <span class="brand-chip bg-accent/15 text-accent">
-                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M12 4.5v9m0 0 3.5-3.5M12 13.5 8.5 10M5 16.5v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </span>
+                        Resume
                     </a>
                 </div>
 
-                <div class="mt-4 rounded-2xl border border-white/10 bg-slate-950/50 p-5">
-                    <div class="flex items-center gap-4">
-                        <span class="brand-chip brand-location">
-                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M12 20s6-5.4 6-10a6 6 0 1 0-12 0c0 4.6 6 10 6 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8"></circle>
-                            </svg>
-                        </span>
-                        <div>
-                            <span class="font-semibold text-white">Location</span>
-                            <p class="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500">Based In</p>
-                        </div>
-                    </div>
-                    <p class="mt-3 text-sm text-slate-400">Minnesota, United States</p>
-                </div>
             </div>
         </section>
     </main>
