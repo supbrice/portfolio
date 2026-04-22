@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ngu Brice Che | Cybersecurity Portfolio</title>
+    <title>Brice | Creative Technologist</title>
     <meta
         name="description"
-        content="Personal portfolio for Ngu Brice Che, highlighting technical support, cloud infrastructure, automation, and cybersecurity-focused operations."
+        content="Personal portfolio for Brice, a creative technologist focused on support operations, cloud systems, automation, and digital problem-solving."
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -46,6 +46,14 @@
             scroll-behavior: smooth;
         }
 
+        :root {
+            color-scheme: dark;
+        }
+
+        html.light {
+            color-scheme: light;
+        }
+
         body {
             background:
                 radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent 30%),
@@ -67,67 +75,209 @@
             background-size: 100% 4px;
             opacity: 0.32;
         }
+
+        .brand-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            flex-shrink: 0;
+        }
+
+        .brand-chip svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            display: block;
+        }
+
+        .brand-linkedin {
+            background: linear-gradient(135deg, rgba(10, 102, 194, 0.24), rgba(10, 102, 194, 0.08));
+            color: #0a66c2;
+        }
+
+        .brand-email {
+            background: linear-gradient(135deg, rgba(0, 120, 212, 0.24), rgba(14, 165, 233, 0.08));
+            color: #38bdf8;
+        }
+
+        .brand-phone {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.24), rgba(21, 128, 61, 0.08));
+            color: #4ade80;
+        }
+
+        .brand-location {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.24), rgba(244, 63, 94, 0.08));
+            color: #fb7185;
+        }
+
+        .theme-toggle-icon-sun {
+            display: none;
+        }
+
+        .section-break {
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .section-break::before {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.28), transparent);
+        }
+
+        html.light body {
+            background:
+                radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 28%),
+                radial-gradient(circle at 85% 12%, rgba(14, 165, 233, 0.12), transparent 20%),
+                linear-gradient(180deg, #f8fbff 0%, #eef4fb 42%, #f6f9fd 100%);
+        }
+
+        html.light .glass {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(241, 245, 249, 0.92));
+            backdrop-filter: blur(18px);
+            box-shadow: 0 18px 48px rgba(148, 163, 184, 0.18);
+        }
+
+        html.light .scanline::before {
+            opacity: 0.08;
+            background: linear-gradient(rgba(15, 23, 42, 0.04) 50%, transparent 50%);
+        }
+
+        html.light .theme-toggle-icon-moon {
+            display: none;
+        }
+
+        html.light .theme-toggle-icon-sun {
+            display: block;
+        }
+
+        html.light .section-break::before {
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.18), transparent);
+        }
+
+        html.light .bg-grid {
+            opacity: 0.12 !important;
+        }
+
+        html.light .bg-slate-950\/75,
+        html.light .bg-slate-950\/70,
+        html.light .bg-slate-950\/55,
+        html.light .bg-slate-950\/50 {
+            background-color: rgba(255, 255, 255, 0.72) !important;
+        }
+
+        html.light .bg-white\/\[0\.03\] {
+            background-color: rgba(255, 255, 255, 0.78) !important;
+        }
+
+        html.light .border-white\/5 {
+            border-color: rgba(15, 23, 42, 0.08) !important;
+        }
+
+        html.light .border-white\/10 {
+            border-color: rgba(148, 163, 184, 0.22) !important;
+        }
+
+        html.light .border-white\/15 {
+            border-color: rgba(148, 163, 184, 0.26) !important;
+        }
+
+        html.light .text-white {
+            color: #0f172a !important;
+        }
+
+        html.light .text-slate-100,
+        html.light .text-slate-300 {
+            color: #334155 !important;
+        }
+
+        html.light .text-slate-400 {
+            color: #475569 !important;
+        }
+
+        html.light .text-slate-500 {
+            color: #64748b !important;
+        }
+
+        html.light .text-slate-950 {
+            color: #eff6ff !important;
+        }
+
+        html.light .shadow-glow {
+            box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.14), 0 20px 60px rgba(148, 163, 184, 0.2) !important;
+        }
+
+        html.light .shadow-\[0_0_18px_\#3b82f6\] {
+            box-shadow: 0 0 18px rgba(59, 130, 246, 0.35) !important;
+        }
+
+        @media (min-width: 1024px) {
+            .section-break {
+                margin-top: 5rem;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen text-slate-100 antialiased">
     <div class="fixed inset-0 -z-10 bg-grid bg-[size:42px_42px] opacity-30"></div>
 
     <header class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/75 backdrop-blur-xl">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-            <a href="#top" class="font-mono text-xs uppercase tracking-[0.35em] text-slate-300">NBC//SEC</a>
-            <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+        <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 lg:px-10">
+            <a href="#top" class="leading-tight">
+                <span class="block text-base font-semibold tracking-tight text-white">Brice</span>
+                <span class="font-mono text-[0.65rem] uppercase tracking-[0.28em] text-slate-500">Creative Technologist</span>
+            </a>
+            <div class="order-3 flex w-full items-center gap-4 overflow-x-auto pb-1 text-xs text-slate-300 md:order-2 md:w-auto md:gap-8 md:pb-0 md:text-sm">
                 <a href="#about" class="transition hover:text-accent">About</a>
+                <a href="#projects" class="transition hover:text-accent">Projects</a>
                 <a href="#expertise" class="transition hover:text-accent">Expertise</a>
                 <a href="#experience" class="transition hover:text-accent">Experience</a>
                 <a href="#credentials" class="transition hover:text-accent">Credentials</a>
                 <a href="#contact" class="transition hover:text-accent">Contact</a>
             </div>
-            <a
-                href="mailto:ngubriceche@outlook.com"
-                class="rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent/60 hover:bg-accent/15"
+            <button
+                id="theme-toggle"
+                type="button"
+                aria-label="Toggle color theme"
+                class="order-2 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.03] p-2.5 text-slate-300 transition hover:border-accent/40 hover:text-accent md:order-3"
             >
-                Let’s Connect
-            </a>
+                <svg class="theme-toggle-icon-moon h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <svg class="theme-toggle-icon-sun h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+                    <path d="M12 2.5v2.2M12 19.3v2.2M21.5 12h-2.2M4.7 12H2.5M18.72 5.28l-1.56 1.56M6.84 17.16l-1.56 1.56M18.72 18.72l-1.56-1.56M6.84 6.84L5.28 5.28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg>
+            </button>
         </nav>
     </header>
 
     <main id="top" class="mx-auto max-w-7xl px-6 pb-16 pt-10 lg:px-10 lg:pt-16">
-        <section class="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-stretch">
+        <section class="grid gap-8">
             <div class="glass relative overflow-hidden rounded-[2rem] border border-white/10 p-8 shadow-glow lg:p-10">
                 <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/80 to-transparent"></div>
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Personal Portfolio</p>
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">About</p>
                 <div class="mt-6 max-w-3xl">
                     <p class="text-sm text-slate-400">Minnesota, USA</p>
-                    <h1 class="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                        Ngu Brice Che
-                    </h1>
-                    <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
-                        Technical support and cloud operations specialist building resilient systems, faster troubleshooting workflows,
-                        and security-aware user experiences.
+                    <h1 class="mt-3 text-6xl font-black tracking-[-0.06em] text-white sm:text-7xl lg:text-[7.5rem] lg:leading-none">Brice</h1>
+                    <p class="mt-3 max-w-2xl text-xl font-semibold leading-tight text-accent sm:text-2xl">
+                        Creative technologist building clearer systems and better digital experiences.
                     </p>
-                </div>
-
-                <div class="mt-8 flex flex-wrap gap-3">
-                    <a
-                        href="mailto:ngubriceche@outlook.com"
-                        class="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-400"
-                    >
-                        Email Me
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/ngubriceche"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/50 hover:text-accent"
-                    >
-                        LinkedIn
-                    </a>
-                    <a
-                        href="tel:+17029002373"
-                        class="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/50 hover:text-accent"
-                    >
-                        Call / Text
-                    </a>
+                    <p class="mt-4 font-mono text-xs uppercase tracking-[0.38em] text-slate-500 sm:text-sm">Creative Technologist</p>
+                    <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+                        I like building calm, useful digital experiences at the intersection of technology, support, systems, and creative problem-solving.
+                        My best work happens when I can translate complexity into something clearer, faster, and easier for people to use.
+                    </p>
+                    <p class="mt-4 max-w-2xl text-base leading-8 text-slate-400">
+                        I come from hands-on support and infrastructure, but what keeps me curious is shaping better workflows, exploring new tools,
+                        and turning technical knowledge into practical outcomes.
+                    </p>
                 </div>
 
                 <div class="mt-10 grid gap-4 sm:grid-cols-3">
@@ -143,98 +293,170 @@
                     </div>
                     <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mindset</p>
-                        <p class="mt-3 text-xl font-semibold text-white">Security-Aware</p>
-                        <p class="mt-2 text-sm text-slate-400">Access control, monitoring, network troubleshooting, and stable operations.</p>
+                        <p class="mt-3 text-xl font-semibold text-white">Curious Builder</p>
+                        <p class="mt-2 text-sm text-slate-400">Practical troubleshooting, systems thinking, and steady growth across modern tech.</p>
                     </div>
                 </div>
             </div>
-
-            <aside class="glass scanline relative overflow-hidden rounded-[2rem] border border-accent/20 p-6 shadow-glow">
-                <div class="flex items-center justify-between">
-                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">System Snapshot</p>
-                    <span class="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_#3b82f6]"></span>
-                </div>
-
-                <div class="mt-6 space-y-4 text-sm">
-                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
-                        <p class="font-mono text-slate-500">role.current</p>
-                        <p class="mt-2 text-base font-medium text-white">Client Technical Support Specialist</p>
-                        <p class="mt-2 text-slate-400">Known for clear communication, accurate escalation, and dependable follow-through.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
-                        <p class="font-mono text-slate-500">operations.metric</p>
-                        <p class="mt-2 text-3xl font-bold text-white">90%+</p>
-                        <p class="mt-2 text-slate-400">SLA performance supported in workforce and service environments.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
-                        <p class="font-mono text-slate-500">core.stack</p>
-                        <p class="mt-2 text-slate-300">Azure / AWS / GCP / Python / PowerShell / Terraform / ServiceNow / Genesys</p>
-                    </div>
-                </div>
-            </aside>
         </section>
 
-        <section id="about" class="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <section id="about" class="section-break">
             <div class="glass rounded-[2rem] border border-white/10 p-8">
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">About</p>
-                <h2 class="mt-4 text-3xl font-bold text-white">Building calm, control, and clarity in technical environments.</h2>
-                <p class="mt-5 text-base leading-8 text-slate-300">
-                    I work across support, systems, and cloud operations with a practical cybersecurity mindset. My approach combines
-                    strong troubleshooting, careful documentation, and a focus on keeping end users productive while protecting system integrity.
-                </p>
-                <p class="mt-4 text-base leading-8 text-slate-400">
-                    From enterprise networking and endpoint monitoring to hybrid cloud administration and service tooling, I’m most effective
-                    where reliability, speed, and technical judgment all matter at once.
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                        <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">What I Do</p>
+                        <h2 class="mt-3 text-3xl font-bold text-white">Creative problem-solving grounded in technical execution.</h2>
+                    </div>
+                    <p class="max-w-xl text-base leading-7 text-slate-400">
+                        I enjoy work that blends systems thinking, communication, and experimentation, especially when it improves how people interact with technology.
+                    </p>
+                </div>
+
+                <div id="expertise" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="shield"></i>
+                            <h3 class="text-lg font-semibold text-white">Security & Networking</h3>
+                        </div>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Keeping systems connected, protected, and reliable.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>DNS, DHCP, and VPN support</li>
+                            <li>Firewall and endpoint monitoring</li>
+                            <li>Issue isolation across enterprise environments</li>
+                        </ul>
+                    </article>
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="cloud"></i>
+                            <h3 class="text-lg font-semibold text-white">Cloud Infrastructure</h3>
+                        </div>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Supporting cloud environments with a focus on access and stability.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>Azure, AWS, and GCP administration</li>
+                            <li>Hybrid support and environment readiness</li>
+                            <li>Access control and operational upkeep</li>
+                        </ul>
+                    </article>
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="terminal-square"></i>
+                            <h3 class="text-lg font-semibold text-white">Automation</h3>
+                        </div>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Using scripts and infrastructure tools to remove repetitive work.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>Python and PowerShell workflows</li>
+                            <li>Terraform and infrastructure as code</li>
+                            <li>Process improvement through automation</li>
+                        </ul>
+                    </article>
+                    <article class="glass rounded-[2rem] border border-white/10 p-6">
+                        <div class="flex items-center gap-3 text-accent">
+                            <i data-lucide="headset"></i>
+                            <h3 class="text-lg font-semibold text-white">Technical Support</h3>
+                        </div>
+                        <p class="mt-4 text-base leading-7 text-slate-300">Turning technical problems into clear, manageable next steps.</p>
+                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
+                            <li>Incident resolution and escalation</li>
+                            <li>ServiceNow and Salesforce workflows</li>
+                            <li>Clear communication with end users and teams</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-break grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Currently Exploring</p>
+                <h2 class="mt-3 text-3xl font-bold text-white">The mix of technical depth and creative curiosity that keeps me building.</h2>
+                <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">Learning</p>
+                        <p class="mt-3 text-sm leading-7 text-slate-300">Modern workflows, automation, cloud tooling, and practical ways AI can support real work.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">Building</p>
+                        <p class="mt-3 text-sm leading-7 text-slate-300">Small projects, better processes, and portfolio pieces that show both technical discipline and creative thinking.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">Interested In</p>
+                        <p class="mt-3 text-sm leading-7 text-slate-300">Support systems, cloud environments, user experience, and digital tools that remove friction.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="font-mono text-xs uppercase tracking-[0.28em] text-slate-500">Style</p>
+                        <p class="mt-3 text-sm leading-7 text-slate-300">Clear communication, thoughtful execution, and a steady approach to solving messy problems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Direction</p>
+                <h2 class="mt-3 text-3xl font-bold text-white">What I'm Building Toward</h2>
+                <div class="mt-8 space-y-4">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Workflow Tools</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Automation and support-focused utilities that save time and improve handoff quality.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Cloud Lab Builds</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Hands-on experiments that turn learning into visible, practical proof of skill.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                        <p class="text-lg font-semibold text-white">Digital Case Studies</p>
+                        <p class="mt-2 text-sm leading-7 text-slate-400">Simple write-ups showing how I approached a problem, the tools I used, and what changed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-break glass rounded-[2rem] border border-white/10 p-8">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Projects</p>
+                    <h2 class="mt-3 text-3xl font-bold text-white">Work that shows how I think, build, and improve systems.</h2>
+                </div>
+                <p class="max-w-xl text-base leading-7 text-slate-400">
+                    This section is ready for live demos, GitHub links, screenshots, or deeper case studies as your portfolio grows.
                 </p>
             </div>
 
-            <div id="expertise" class="grid gap-4 sm:grid-cols-2">
-                <article class="glass rounded-[2rem] border border-white/10 p-6">
-                    <div class="flex items-center gap-3 text-accent">
-                        <i data-lucide="shield"></i>
-                        <h3 class="text-lg font-semibold text-white">Security & Networking</h3>
-                    </div>
+            <div class="mt-8 grid gap-5 lg:grid-cols-3">
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Automation</p>
+                    <h3 class="mt-3 text-xl font-semibold text-white">Support Workflow Automation</h3>
                     <p class="mt-4 text-sm leading-7 text-slate-400">
-                        DNS, DHCP, VPN, firewall management, endpoint monitoring, access controls, and issue isolation across enterprise systems.
+                        Scripts and process ideas focused on reducing repetitive support work, improving ticket quality, and creating faster handoffs.
                     </p>
+                    <p class="mt-5 text-xs uppercase tracking-[0.28em] text-slate-500">Python • PowerShell • Service Operations</p>
                 </article>
-                <article class="glass rounded-[2rem] border border-white/10 p-6">
-                    <div class="flex items-center gap-3 text-accent">
-                        <i data-lucide="cloud"></i>
-                        <h3 class="text-lg font-semibold text-white">Cloud Infrastructure</h3>
-                    </div>
+
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Cloud</p>
+                    <h3 class="mt-3 text-xl font-semibold text-white">Hybrid Cloud Lab Builds</h3>
                     <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Hands-on support and administration in Azure, AWS, and GCP, with a focus on access, stability, and operational readiness.
+                        Personal lab environments for exploring Azure, AWS, and GCP administration, access control patterns, and infrastructure setup.
                     </p>
+                    <p class="mt-5 text-xs uppercase tracking-[0.28em] text-slate-500">Azure • AWS • GCP • Terraform</p>
                 </article>
-                <article class="glass rounded-[2rem] border border-white/10 p-6">
-                    <div class="flex items-center gap-3 text-accent">
-                        <i data-lucide="terminal-square"></i>
-                        <h3 class="text-lg font-semibold text-white">Automation</h3>
-                    </div>
+
+                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+                    <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Analytics</p>
+                    <h3 class="mt-3 text-xl font-semibold text-white">Performance Dashboards</h3>
                     <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Python, PowerShell, Terraform, and IaC practices used to reduce repetitive work and improve deployment consistency.
+                        Reporting and dashboard concepts for monitoring service levels, spotting trends, and turning raw operational data into action.
                     </p>
-                </article>
-                <article class="glass rounded-[2rem] border border-white/10 p-6">
-                    <div class="flex items-center gap-3 text-accent">
-                        <i data-lucide="headset"></i>
-                        <h3 class="text-lg font-semibold text-white">Technical Support</h3>
-                    </div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Incident resolution, customer communication, cross-functional escalation, and platform support using ServiceNow and Salesforce.
-                    </p>
+                    <p class="mt-5 text-xs uppercase tracking-[0.28em] text-slate-500">Excel • Data Analysis • SLA Tracking</p>
                 </article>
             </div>
         </section>
 
-        <section id="experience" class="mt-8 glass rounded-[2rem] border border-white/10 p-8">
+        <section id="experience" class="section-break glass rounded-[2rem] border border-white/10 p-8">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                     <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Experience</p>
                     <h2 class="mt-3 text-3xl font-bold text-white">Operational depth across support, infrastructure, and analytics.</h2>
                 </div>
-                <p class="max-w-xl text-sm leading-7 text-slate-400">
+                <p class="max-w-xl text-base leading-7 text-slate-400">
                     A progression from frontline IT support into cloud administration, workforce analytics, and client-facing technical operations.
                 </p>
             </div>
@@ -248,10 +470,12 @@
                         </div>
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Oct 2025 - Jan 2026</p>
                     </div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Supported the Roundel platform by resolving user and system issues, improving case quality in ServiceNow and Salesforce,
-                        and coordinating complex escalations with clear ownership and follow-through.
-                    </p>
+                    <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                        <li>Provided client and technical support for the Roundel platform, resolving system and user issues to maintain stable day-to-day operations.</li>
+                        <li>Diagnosed, documented, and resolved incidents using ServiceNow and Salesforce, improving case clarity and handoff speed.</li>
+                        <li>Partnered with IT and cross-functional teams to escalate and close complex inquiries with clear ownership and timely follow-through.</li>
+                        <li>Supported SLA and customer satisfaction goals through accurate troubleshooting, professional communication, and recurring-issue trend analysis.</li>
+                    </ul>
                 </article>
 
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
@@ -262,10 +486,12 @@
                         </div>
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2025 - Apr 2025</p>
                     </div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Guided TurboTax users through filing workflows, account issues, software troubleshooting, and escalations backed by
-                        reproducible technical notes.
-                    </p>
+                    <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                        <li>Supported TurboTax users via chat and phone with filing workflows, account setup, and technical troubleshooting.</li>
+                        <li>Resolved software, login, and connectivity issues while documenting reproducible steps and solutions for faster follow-up.</li>
+                        <li>Investigated complex communication failures between user devices and applications by replicating issues in test environments.</li>
+                        <li>Escalated high-impact cases with complete technical notes to improve turnaround and resolution quality.</li>
+                    </ul>
                 </article>
 
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
@@ -276,10 +502,11 @@
                         </div>
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Aug 2022 - Dec 2024</p>
                     </div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Monitored adherence and service levels for 100+ agents using NICE and Genesys Cloud, delivering performance reporting,
-                        Excel dashboards, and staffing insights that supported 90%+ SLA compliance.
-                    </p>
+                    <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                        <li>Monitored adherence and service levels for 100+ agents using NICE and Genesys Cloud, maintaining 90%+ SLA compliance.</li>
+                        <li>Provided hourly performance reporting and developed Excel dashboards.</li>
+                        <li>Analyzed historical data to optimize workforce allocation and develop long-term staffing capacity plans.</li>
+                    </ul>
                 </article>
 
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
@@ -290,10 +517,12 @@
                         </div>
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2021 - Aug 2022</p>
                     </div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Managed hybrid cloud access across Azure, AWS, and GCP, automated infrastructure with PowerShell, Python, and Terraform,
-                        and supported Tier 2/3 operations and incident response documentation.
-                    </p>
+                    <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                        <li>Optimized access controls across Azure, AWS, and GCP.</li>
+                        <li>Automated infrastructure using PowerShell, Terraform, and Python (Infrastructure as Code).</li>
+                        <li>Provided Tier 2/3 hybrid cloud support and managed enterprise application deployments.</li>
+                        <li>Monitored system health and authored SOPs for incident response.</li>
+                    </ul>
                 </article>
 
                 <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
@@ -304,15 +533,16 @@
                         </div>
                         <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Sep 2016 - Feb 2021</p>
                     </div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">
-                        Installed and supported enterprise network devices, resolved connectivity issues, and maintained firewall, endpoint,
-                        and IoT device health for large user environments.
-                    </p>
+                    <ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                        <li>Installed and configured enterprise network devices, supporting 100+ users.</li>
+                        <li>Troubleshot DNS, DHCP, VPN, and connectivity issues.</li>
+                        <li>Maintained firewalls and endpoint monitoring, and managed IoT device lifecycle and patching.</li>
+                    </ul>
                 </article>
             </div>
         </section>
 
-        <section class="mt-8 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+        <section class="section-break grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div id="credentials" class="glass rounded-[2rem] border border-white/10 p-8">
                 <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Credentials</p>
                 <h2 class="mt-3 text-3xl font-bold text-white">Certifications and training that support enterprise-ready execution.</h2>
@@ -358,28 +588,52 @@
             </div>
         </section>
 
-        <section id="contact" class="mt-8">
+        <section id="contact" class="section-break">
             <div class="glass rounded-[2rem] border border-accent/20 p-8 shadow-glow">
                 <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Contact</p>
-                <h2 class="mt-3 max-w-3xl text-3xl font-bold text-white">
-                    Open to technical support, cloud operations, and cybersecurity-adjacent opportunities.
-                </h2>
-                <p class="mt-4 max-w-2xl text-base leading-8 text-slate-400">
-                    If you need someone who can troubleshoot carefully, communicate clearly, and improve operational reliability, let’s talk.
-                </p>
+                <h2 class="mt-3 max-w-3xl text-3xl font-bold text-white">Available for new opportunities — let's talk.</h2>
+                <div class="mt-6">
+                    <a
+                        href="mailto:d9zh2xssxg@privaterelay.appleid.com"
+                        class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:border-accent/60 hover:bg-blue-400"
+                    >
+                        <span class="brand-chip bg-white/20 text-slate-950">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M3 7.25L12 13.5L21 7.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <rect x="3" y="5.5" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.8"></rect>
+                            </svg>
+                        </span>
+                        Contact Brice
+                    </a>
+                </div>
 
                 <div class="mt-8 grid gap-4 md:grid-cols-3">
-                    <a href="mailto:ngubriceche@outlook.com" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="mail"></i>
-                            <span class="font-semibold text-white">Email</span>
+                    <a href="mailto:d9zh2xssxg@privaterelay.appleid.com" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40">
+                        <div class="flex items-center gap-4">
+                            <span class="brand-chip brand-email">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M3 7.25L12 13.5L21 7.25" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <rect x="3" y="5.5" width="18" height="13" rx="2.5" stroke="currentColor" stroke-width="1.8"></rect>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="font-semibold text-white">Email</span>
+                                <p class="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500">Primary Contact</p>
+                            </div>
                         </div>
-                        <p class="mt-3 text-sm text-slate-400">ngubriceche@outlook.com</p>
+                        <p class="mt-3 text-sm text-slate-400">Click to email</p>
                     </a>
                     <a href="tel:+17029002373" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="phone"></i>
-                            <span class="font-semibold text-white">Phone</span>
+                        <div class="flex items-center gap-4">
+                            <span class="brand-chip brand-phone">
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M6.6 4.75h2.55l1.28 3.18-1.7 1.68c1 2.01 2.62 3.62 4.63 4.63l1.68-1.7 3.18 1.28v2.55a1.6 1.6 0 0 1-1.77 1.59C10.27 17.43 6.57 13.73 5 8.12a1.6 1.6 0 0 1 1.6-3.37Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="font-semibold text-white">Phone</span>
+                                <p class="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500">Fastest Response</p>
+                            </div>
                         </div>
                         <p class="mt-3 text-sm text-slate-400">+1 (702) 900-2373</p>
                     </a>
@@ -389,12 +643,80 @@
                         rel="noopener noreferrer"
                         class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/40"
                     >
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="linkedin"></i>
-                            <span class="font-semibold text-white">LinkedIn</span>
+                        <div class="flex items-center gap-4">
+                            <span class="brand-chip brand-linkedin">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38a1.56 1.56 0 0 1 0 3.12ZM5.6 9.68h2.66V18H5.6V9.68Zm4.35 0h2.55v1.14h.04c.35-.67 1.23-1.37 2.53-1.37 2.71 0 3.21 1.78 3.21 4.09V18h-2.66v-3.95c0-.94-.02-2.15-1.31-2.15-1.31 0-1.51 1.02-1.51 2.08V18H9.95V9.68Z"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <span class="font-semibold text-white">LinkedIn</span>
+                                <p class="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500">Professional Profile</p>
+                            </div>
                         </div>
                         <p class="mt-3 text-sm text-slate-400">linkedin.com/in/ngubriceche</p>
                     </a>
+                </div>
+
+                <div class="mt-4">
+                    <a
+                        href="./Ngu Brice Che - Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent/10 px-5 py-3 text-sm font-semibold text-accent transition hover:border-accent/60 hover:bg-accent/15"
+                    >
+                        <span class="brand-chip bg-accent/15 text-accent">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M14 3.5H8A2.5 2.5 0 0 0 5.5 6v12A2.5 2.5 0 0 0 8 20.5h8a2.5 2.5 0 0 0 2.5-2.5V8Zm0 0V8h4.5M9 12.5h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        Digital Resume
+                    </a>
+                </div>
+
+                <div class="mt-4 rounded-2xl border border-white/10 bg-slate-950/50 p-5">
+                    <div class="flex items-center gap-4">
+                        <span class="brand-chip brand-location">
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 20s6-5.4 6-10a6 6 0 1 0-12 0c0 4.6 6 10 6 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8"></circle>
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="font-semibold text-white">Location</span>
+                            <p class="mt-1 text-xs uppercase tracking-[0.3em] text-slate-500">Based In</p>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-slate-400">Minnesota, United States</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-break">
+            <div class="glass rounded-[2rem] border border-white/10 p-8">
+                <div class="flex items-center justify-between">
+                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Snapshot</p>
+                    <span class="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_#3b82f6]"></span>
+                </div>
+                <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4 text-sm">
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-slate-500">role.current</p>
+                        <p class="mt-2 text-base font-medium text-white">Client Technical Support Specialist</p>
+                        <p class="mt-2 text-slate-400">Known for clear communication, accurate escalation, and dependable follow-through.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-slate-500">operations.metric</p>
+                        <p class="mt-2 text-3xl font-bold text-white">90%+</p>
+                        <p class="mt-2 text-slate-400">SLA performance supported in workforce and service environments.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-slate-500">core.stack</p>
+                        <p class="mt-2 text-slate-300">Azure / AWS / GCP / Python / PowerShell / Terraform / ServiceNow / Genesys</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                        <p class="font-mono text-slate-500">lab.mode</p>
+                        <p class="mt-2 text-slate-300">Projects, automation ideas, continuous learning, and systems improvement.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -402,6 +724,22 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
+        (function () {
+            const root = document.documentElement;
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                root.classList.add("light");
+            }
+
+            const toggle = document.getElementById("theme-toggle");
+            if (!toggle) return;
+
+            toggle.addEventListener("click", function () {
+                const isLight = root.classList.toggle("light");
+                localStorage.setItem("theme", isLight ? "light" : "dark");
+            });
+        })();
+
         lucide.createIcons();
     </script>
 </body>
