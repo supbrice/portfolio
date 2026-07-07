@@ -1,0 +1,18 @@
+[
+  {
+    "id": "app-1783102135639",
+    "submittedAt": "2026-07-03T18:08:55.639212Z",
+    "jobTitle": "Cloud Engineer",
+    "companyName": "Contoso",
+    "jobLink": "https://example.com",
+    "note": "Test submission"
+  },
+  {
+    "id": "app-1783102396591",
+    "submittedAt": "2026-07-03T18:13:16.591565Z",
+    "jobTitle": "Cloud Engineer",
+    "companyName": "Contoso",
+    "jobLink": "https://example.com",
+    "note": "Verification"
+  }
+]

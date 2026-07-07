@@ -1,20 +1,20 @@
 /* styles.css */
 body {
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.28;
+    line-height: 1.22;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #000000;
-    font-size: 10pt;
+    font-size: 9pt;
 }
 
 .container {
     max-width: 8.5in;
-    margin: 0.3rem auto;
-    padding: 0.45in 0.55in;
+    margin: 0.15rem auto;
+    padding: 0.3in 0.45in;
     background: #ffffff;
-    border: 1px solid #000000;
+    border: 1.5px solid #000000;
 }
 
 header {
@@ -42,6 +42,9 @@ h1 {
 .contact-info a {
     color: #000000;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.16rem;
 }
 
 .contact-info a:hover {
@@ -83,7 +86,7 @@ h2 {
     font-size: 11.5pt;
     font-weight: bold;
     color: #000000;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1.5px solid #000000;
     padding-bottom: 3px;
     margin-top: 0.55rem;
     margin-bottom: 0.3rem;
@@ -144,7 +147,7 @@ p {
 @media print {
     @page {
         size: Letter;
-        margin: 0.02in 0.1in;
+        margin: 0; /* remove page margins so content can align to all corners */
     }
 
     html,
@@ -154,8 +157,8 @@ p {
     }
 
     body {
-        font-size: 8.6pt;
-        line-height: 1.15;
+        font-size: 9.2pt;
+        line-height: 1.04;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
@@ -163,25 +166,72 @@ p {
     .container {
         margin: 0;
         max-width: none;
-        width: 100%;
-        padding: 0.03in 0.16in;
+        /* account for a small printable padding while keeping content aligned to corners */
+        width: calc(8.5in - 0.12in);
+        height: calc(11in - 0.12in);
+        padding: 0.06in; /* smaller safety padding for printers */
         border: none;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden; /* prevent content from flowing to a second page */
+    }
+
+    /* Tighten headings, margins and lists for print */
+    header {
+        margin-bottom: 0.12rem;
     }
 
     h1 {
-        font-size: 14.5pt;
+        font-size: 16.6pt;
+        margin-bottom: 0.08rem;
     }
 
     h2 {
-        font-size: 10pt;
-        margin-top: 0.3rem;
-        margin-bottom: 0.14rem;
+        font-size: 12pt;
+        margin-top: 0.18rem;
+        margin-bottom: 0.08rem;
+        padding-bottom: 1px;
+    }
+
+    section, article {
+        margin-bottom: 0.06rem;
+    }
+
+    .contact-info {
+        font-size: 9pt;
+        gap: 0.08rem;
+        margin-bottom: 0.12rem;
+    }
+
+    ul {
+        margin-bottom: 0.06rem;
+        padding-left: 10px;
+    }
+
+    li {
+        margin-bottom: 0px;
+    }
+
+    .job-meta {
+        font-size: 8.8pt;
+        margin-bottom: 0.03rem;
+    }
+
+    h1 {
+        font-size: 16.6pt;
+    }
+
+    h2 {
+        font-size: 12pt;
+        margin-top: 0.26rem;
+        margin-bottom: 0.12rem;
         padding-bottom: 1px;
     }
 
     section {
-        margin-bottom: 0.12rem;
+        margin-bottom: 0.1rem;
     }
 
     article {
@@ -189,8 +239,8 @@ p {
     }
 
     .job-meta {
-        font-size: 8.5pt;
-        margin-bottom: 0.05rem;
+        font-size: 8.8pt;
+        margin-bottom: 0.04rem;
     }
 
     p {
@@ -211,8 +261,8 @@ p {
         display: block;
         column-count: 2;
         column-gap: 0.2in;
-        margin-top: 0.04rem;
-        font-size: 8.1pt;
+        margin-top: 0.02rem;
+        font-size: 8.4pt;
         line-height: 1.08;
     }
 
@@ -223,9 +273,9 @@ p {
     }
 
     .bottom-sections h2 {
-        margin-top: 0.16rem;
-        margin-bottom: 0.08rem;
-        font-size: 9.3pt;
+        margin-top: 0.12rem;
+        margin-bottom: 0.06rem;
+        font-size: 10pt;
     }
 
     .bottom-sections article {
