@@ -1,8 +1,10 @@
 .DS_Store
 .venv/
+__pycache__/
+*.pyc
 applications.db
 uploads/
 generated/
-__pycache__/
-*.pyc
 submissions.json
+server.js
+server.py

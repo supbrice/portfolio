@@ -1,26 +1,43 @@
-# Bryz! Portfolio
+# Brice — Systems & Infrastructure Portfolio
 
-Personal portfolio site for **Systems & Infrastructure** roles (Brice / Bryz!).
+Personal portfolio website for **Brice** ([@supbrice](https://github.com/supbrice)).
 
-## What this is
+## What this website is
 
-A static single-page site built with HTML and Tailwind CSS (CDN). It showcases experience, projects, and certifications for infrastructure and cloud operations roles.
+A single-page site for **Systems & Infrastructure / Azure & hybrid** roles. It presents:
 
-This repository is a **personal portfolio / lab**, not a company product.
+- Professional summary and core skills (networking, cloud, automation, support)
+- Featured projects with links to public GitHub labs (`CloudProjects`, Multi-Region Azure hybrid)
+- Work experience (nVent System Administrator first)
+- Certifications (AZ-305, AZ-104)
+- Contact + resume download
+
+This is a **personal portfolio**, not a company product and not a production customer deploy.
+
+## Live site
+
+**Azure Static Web Apps:** https://mango-ground-0a1d23510.7.azurestaticapps.net/
 
 ## Open locally
 
-1. Clone or open this folder.
-2. Open `index.html` in a browser (double-click, or “Open with Live Server” in VS Code).
+1. Open `index.html` in a browser (or VS Code Live Server).
+2. No build step — Tailwind is loaded from CDN.
 
-No build step is required.
+## Repo contents
 
-## Contents
+| File | Purpose |
+| --- | --- |
+| `index.html` | Main portfolio page |
+| `Brice-Resume.pdf` | Resume download linked from the site |
+| `web-pfp.png` | Profile image |
+| `.github/workflows/` | Azure Static Web Apps deploy on `main` |
 
-- `index.html` — main portfolio page
-- `Brice-Resume.pdf` — resume download linked from the site
-- Other HTML/CSS files are older or supporting drafts
+## Related public labs
 
-## Privacy note
+- [CloudProjects](https://github.com/supbrice/CloudProjects) — CPS network upgrade write-up
+- [Multi-Region Azure Hybrid](https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity) — Terraform hybrid lab
+- [configure-ad](https://github.com/supbrice/configure-ad) — Hybrid AD lab
 
-Do not commit local databases, uploads, or secrets. Prefer a `.gitignore` for `applications.db`, `uploads/`, `.venv/`, and OS junk (`.DS_Store`).
+## Contact
+
+[linkedin.com/in/ngubriceche](https://www.linkedin.com/in/ngubriceche) · [github.com/supbrice](https://github.com/supbrice)
