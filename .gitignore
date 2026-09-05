@@ -1,0 +1,8 @@
+.DS_Store
+.venv/
+applications.db
+uploads/
+generated/
+__pycache__/
+*.pyc
+submissions.json
