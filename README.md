@@ -33,11 +33,10 @@ This is a **personal portfolio / lab showcase**, not a company product and not a
 | Hybrid Identity Lab | [configure-ad](https://github.com/supbrice/configure-ad) | AD DS on Azure VMs, OU/GPO, Entra Connect/Cloud Sync notes |
 | Azure Architect Labs | [Azure-Cloud-Skills-and-Use-Cases](https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases) | Entra/CA/RBAC, hybrid DNS/VPN, Terraform, Monitor patterns |
 
-### Personal utilities (clearly labeled on the site)
-| Project | Repo | Live demo |
-| --- | --- | --- |
-| AI Usage Dashboard | [ai-usage-dashboard](https://github.com/supbrice/ai-usage-dashboard) | [GitHub Pages](https://supbrice.github.io/ai-usage-dashboard/) |
-| SOFI Levels Card | [sofi-levels-card](https://github.com/supbrice/sofi-levels-card) | [GitHub Pages](https://supbrice.github.io/sofi-levels-card/) |
+### Not on the hire site
+
+Personal utilities (`ai-usage-dashboard`, `sofi-levels-card`) stay in GitHub but are **not** featured on this portfolio page (recruiter guidance: keep the skim on infra labs only).
+
 
 ## Stack
 
