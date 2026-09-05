@@ -1,6 +1,6 @@
 # Bryz! Portfolio
 
-Personal portfolio site for **Systems & Infrastructure** roles (Ngu Brice Che / Bryz!).
+Personal portfolio site for **Systems & Infrastructure** roles (Brice / Bryz!).
 
 ## What this is
 
@@ -18,7 +18,7 @@ No build step is required.
 ## Contents
 
 - `index.html` — main portfolio page
-- `Ngu Brice Che - Resume.pdf` — resume download linked from the site
+- `Brice-Resume.pdf` — resume download linked from the site
 - Other HTML/CSS files are older or supporting drafts
 
 ## Privacy note
