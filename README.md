@@ -4,9 +4,9 @@ Personal portfolio website for **Brice** ([@supbrice](https://github.com/supbric
 
 ## Live site
 
-**Azure Static Web Apps:** [mango-ground-0a1d23510.7.azurestaticapps.net](https://mango-ground-0a1d23510.7.azurestaticapps.net/)
+**Live (GitHub Pages):** [supbrice.github.io/portfolio](https://supbrice.github.io/portfolio/)
 
-Repo: [github.com/supbrice/brice-portfolio](https://github.com/supbrice/brice-portfolio)
+Repo: [github.com/supbrice/brice-portfolio](https://github.com/supbrice/portfolio)
 
 ## What this website is
 
