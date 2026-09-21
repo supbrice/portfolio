@@ -323,7 +323,7 @@
         .support-line li {
             color: var(--muted);
             font-size: 0.98rem;
-            font-weight: 520;
+            font-weight: 500;
         }
 
         .core-line li:not(:last-child)::after,
@@ -1714,9 +1714,14 @@
             function mark() {
                 var line = (header ? header.offsetHeight : 0) + 24;
                 var current = sections[0];
-                sections.forEach(function (section) {
-                    if (section.getBoundingClientRect().top <= line) current = section;
-                });
+                var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+                if (atBottom) {
+                    current = sections[sections.length - 1];
+                } else {
+                    sections.forEach(function (section) {
+                        if (section.getBoundingClientRect().top <= line) current = section;
+                    });
+                }
                 links.forEach(function (link) {
                     var on = current && link.getAttribute("href") === "#" + current.id;
                     link.classList.toggle("is-active", on);
