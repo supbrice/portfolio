@@ -1,38 +1,39 @@
-# Ngu Brice Che — Systems & Cloud Portfolio
+# Ngu Brice Che — IT Professional Portfolio
 
-Personal portfolio for **Ngu Brice Che** ([@supbrice](https://github.com/supbrice)). Ready now for Azure, systems, hybrid cloud, Entra/IAM, and IT operations. Growing into security administration, SOC / security analysis, and cloud security — those are goals, not current titles.
+Personal portfolio for **Ngu Brice Che** ([@supbrice](https://github.com/supbrice)).
+
+Primary identity: **IT Professional**.
+
+Core line: Systems Administration · IT Operations · Technical Support · Networking.
+
+Cloud, infrastructure, identity, and automation support that work. Azure is one skill, not the headline. Cybersecurity and security operations are a direction, not a current specialty or a SOC role.
 
 ## Live site
 
 **Live (GitHub Pages):** [supbrice.github.io/portfolio](https://supbrice.github.io/portfolio/)
 
-Repo: [github.com/supbrice/brice-portfolio](https://github.com/supbrice/portfolio)
+Repo: [github.com/supbrice/portfolio](https://github.com/supbrice/portfolio)
 
 ## What this website is
 
-A single-page hire-facing site (HTML + Tailwind CDN) that mirrors the current resume and links every public GitHub project.
-
-Desktop layout borrows the *structure* of a fixed identity rail plus a scrolling canvas (inspired by samwrks.in). The visual theme stays dark navy, glass, and blue. It is not a light-theme copy.
+A single-page portfolio (static `index.html`) that follows the resume and links the four public infrastructure labs.
 
 | Section | What you see |
 | --- | --- |
-| Identity rail | Availability, name **Ngu Brice Che**, role line, pitch, project and contact CTAs, email / LinkedIn / GitHub / resume |
-| About | Professional summary plus the approved About Me copy (the bio keeps “I'm Brice”) |
-| Technical expertise | Six cards: Azure & Cloud, Systems Administration, Identity & Entra, Networking, Automation, Security (security-adjacent, expanding into) |
-| Proof lanes | Tabs for Infrastructure projects, Creative & digital, and Security labs (empty on purpose) |
-| Projects | CPS network, multi-region Terraform, hybrid identity, Azure architect labs, with Infrastructure / Identity / Security filters |
-| Cybersecurity journey | Honest progression toward SOC, SecOps, IAM, cloud security, IR, and monitoring |
-| Experience | Roundel → WTW → nVent → MTN (same titles, employers, dates, bullets) |
-| Credentials | AZ-305, AZ-104, Azure coursework, Cisco networking track |
-| Target roles | Ready now vs growing into |
-| Collaborate | Inquiry chips plus the same contact methods |
-| Tools | Logo cloud for Azure, Terraform, Entra ID, PowerShell, Python, ServiceNow, Salesforce |
+| Hero | Name **Ngu Brice Che**, IT Professional positioning, four calls to action |
+| About | Short personal note in the existing voice |
+| Skills | IT & systems, cloud & infrastructure, identity & security, automation, additional capabilities |
+| Projects | Case studies for the four labs, labeled lab / portfolio |
+| Experience | Roundel, WTW, nVent HOFFMAN, MTN Cameroon |
+| Certifications | AZ-305, AZ-104, plus the existing training lines |
+| Career direction | Infrastructure and operations now; cybersecurity / SecOps as a goal |
+| Beyond IT | Video, photo, documents, content, AI-assisted workflows, automation |
+| Contact | Inquiry types plus email, LinkedIn, GitHub, and resume |
 
 This is a **personal portfolio / lab showcase**, not a company product and not a production customer deployment.
 
 ## Projects on the site
 
-### Hire-facing labs
 | Project | Repo | Focus |
 | --- | --- | --- |
 | Network Infrastructure Upgrade (CPS) | [CloudProjects](https://github.com/supbrice/CloudProjects) | UniFi, VLANs, OT/public/corporate isolation, troubleshooting scenarios |
@@ -40,40 +41,29 @@ This is a **personal portfolio / lab showcase**, not a company product and not a
 | Hybrid Identity Lab | [configure-ad](https://github.com/supbrice/configure-ad) | AD DS on Azure VMs, OU/GPO, Entra Connect/Cloud Sync notes |
 | Azure Architect Labs | [Azure-Cloud-Skills-and-Use-Cases](https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases) | Entra/CA/RBAC, hybrid DNS/VPN, Terraform, Monitor patterns |
 
-### Not on the hire site
-
-Personal utilities (`ai-usage-dashboard`, `sofi-levels-card`) stay in GitHub but are **not** featured on this portfolio page (recruiter guidance: keep the skim on infra labs only).
-
+Personal utilities stay in GitHub and are not featured on this page.
 
 ## Stack
 
-- Static `index.html` + Tailwind CSS (CDN) + Lucide icons
+- Static `index.html` (no build step)
 - Resume download: `Brice-Resume.pdf`
-- Deploy: GitHub Actions → **Azure Static Web Apps** on every push to `main`
+- Profile image: `web-pfp.png`
+- GitHub Pages: `.nojekyll` so Pages serves the files as-is
+- Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
 
 ## Open locally
 
 1. Clone this repo.
-2. Open `index.html` in a browser (or VS Code Live Server).
+2. Open `index.html` in a browser.
 3. No build step.
-
-## Repo layout
-
-```
-index.html          # Portfolio page
-Brice-Resume.pdf    # Resume linked from the site
-web-pfp.png         # Profile image
-README.md           # This file
-.github/workflows/  # Azure Static Web Apps CI/CD
-.gitignore
-```
 
 ## Honest scope
 
-- Labs are labeled as labs. No fake production SLAs or enterprise scale claims.
-- The identity rail and page title use **Ngu Brice Che**. The About Me copy keeps the approved line “I'm Brice”.
-- Security labs are a placeholder lane. No SOC employment and no security certifications are claimed.
-- Entra Conditional Access / PIM / Intune flagship lab is not claimed until it ships.
+- Labs are labeled as labs. Diagrams on the project cards are schematics, not screenshots.
+- No invented metrics, clients, or awards.
+- Hero and header show **Ngu Brice Che**. The About section keeps “I'm Brice”.
+- AZ-305 and AZ-104 are the certifications. The Cisco Networking Academy line is training, not a CCNA claim.
+- Entra Conditional Access / PIM is not claimed as a shipped lab. MFA and cybersecurity are marked as growth.
 
 ## Contact
 
