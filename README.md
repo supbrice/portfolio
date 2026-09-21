@@ -18,21 +18,15 @@ Repo: [github.com/supbrice/portfolio](https://github.com/supbrice/portfolio)
 
 A single-page portfolio (static `index.html`) that follows the resume and links the four public infrastructure labs.
 
-On a wide screen the identity sits in a sticky left rail (status, name, role, pitch, calls to action) while the proof scrolls on the right. On a phone the same identity stacks first, then the sections. There is no profile photo on the page. `.portrait-slot` is empty until an image is placed inside it.
+On a wide screen a fixed left rail holds the identity: status, name, role, pitch, two calls to action, and text links. The right side scrolls. A quiet control switches **Case studies** (the four labs as a vertical gallery) and **Capabilities** (about, skills, experience, certifications, career direction, Beyond IT, and contact). On a phone the identity stacks first, then the same control and gallery. There is no profile photo, and `web-pfp.png` is not requested.
 
-The background is a slow drift of soft color fields. With `prefers-reduced-motion: reduce`, those fields stay still and section motion is turned off.
+The background is a light field with a slow drift of soft washes. With `prefers-reduced-motion: reduce`, those washes stay still and the status dot does not pulse.
 
 | Section | What you see |
 | --- | --- |
-| Identity rail | Name **Ngu Brice Che**, IT Professional positioning, four calls to action, no photo |
-| About | Short personal note in the existing voice |
-| Skills | IT & systems, cloud & infrastructure, identity & security, automation, additional capabilities |
-| Projects | Case studies for the four labs, labeled lab / portfolio |
-| Experience | Roundel, WTW, nVent HOFFMAN, MTN Cameroon |
-| Certifications | AZ-305, AZ-104, plus the existing training lines |
-| Career direction | Infrastructure and operations now; cybersecurity / SecOps as a goal |
-| Beyond IT | Video, photo, documents, content, AI-assisted workflows, automation |
-| Contact | Inquiry types plus email, LinkedIn, GitHub, and resume |
+| Identity rail | Name **Ngu Brice Che**, IT Professional positioning, two calls to action, text links, no photo |
+| Case studies | Four labs as rounded schematic cards, labeled lab / portfolio |
+| Capabilities | About, skills, experience, AZ-305 / AZ-104, career direction, Beyond IT, contact |
 
 This is a **personal portfolio / lab showcase**, not a company product and not a production customer deployment.
 
@@ -51,7 +45,7 @@ Personal utilities stay in GitHub and are not featured on this page.
 
 - Static `index.html` (no build step)
 - Resume download: `Brice-Resume.pdf`
-- `web-pfp.png` is unused. The page does not load it. Add an `img` inside `.portrait-slot` when a photo is ready.
+- `web-pfp.png` is unused. The page does not load it and does not render a profile image.
 - GitHub Pages: `.nojekyll` so Pages serves the files as-is
 - Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
 
