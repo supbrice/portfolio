@@ -4,95 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ngu Brice Che | IT Professional</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1018'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-size='12' fill='%23eef3f8'%3EBC%3C/text%3E%3C/svg%3E" />
-    <meta name="description" content="Ngu Brice Che is an IT professional. He builds, supports, and troubleshoots technology environments across systems, infrastructure, networking, cloud, and identity, while continuing to grow toward cybersecurity." />
-    <meta name="theme-color" content="#07090f" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f0e8'/%3E%3Crect x='7' y='6' width='3.5' height='20' fill='%231e4d5c'/%3E%3Ctext x='13' y='23' font-family='Georgia,serif' font-size='16' fill='%231c2430'%3EB%3C/text%3E%3C/svg%3E" />
+    <meta name="description" content="Ngu Brice Che is an IT professional. He builds, supports, and troubleshoots technology environments across systems, infrastructure, networking, cloud, and identity, while continuously growing toward cybersecurity." />
+    <meta name="theme-color" content="#f3f0e8" />
     <link rel="canonical" href="https://supbrice.github.io/portfolio/" />
     <meta property="og:title" content="Ngu Brice Che | IT Professional" />
-    <meta property="og:description" content="Systems administration, IT operations, technical support, and networking — with cloud, infrastructure, identity, and automation in support. Growing toward cybersecurity." />
+    <meta property="og:description" content="Systems administration, IT operations, technical support, and networking. Cloud, infrastructure, identity, and automation support that work. Growing toward cybersecurity." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://supbrice.github.io/portfolio/" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Ngu Brice Che | IT Professional" />
     <script>
-        try {
-            if (localStorage.getItem("theme") === "light") {
-                document.documentElement.classList.add("light");
-            }
-        } catch (err) {}
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             document.documentElement.classList.add("motion-ok");
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
     <style>
         :root {
-            --bg: #07090f;
-            --text: #f4f7fb;
-            --body: #d5deea;
-            --muted: #a9b8ca;
-            --faint: #8b9cb0;
-            --line: rgba(232, 238, 246, 0.12);
-            --accent: #e7eef8;
-            --accent-ink: #121820;
-            --panel: rgba(10, 14, 22, 0.84);
-            --panel-soft: rgba(12, 16, 26, 0.62);
-            --chip: rgba(255, 255, 255, 0.05);
-            --grow: #e6c48a;
-            --ok: #8fd0b0;
-            --shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
-            --radius: 20px;
-            --rail: 380px;
-            color-scheme: dark;
-        }
-
-        html.light {
-            --bg: #eef2f6;
-            --text: #142033;
-            --body: #24364c;
-            --muted: #3d5168;
-            --faint: #5c7086;
-            --line: rgba(18, 32, 51, 0.12);
-            --accent: #172433;
-            --accent-ink: #f7fafc;
-            --panel: rgba(255, 255, 255, 0.86);
-            --panel-soft: rgba(255, 255, 255, 0.66);
-            --chip: rgba(20, 32, 51, 0.05);
-            --grow: #8a5a12;
-            --ok: #0f6b45;
-            --shadow: 0 18px 40px rgba(28, 52, 84, 0.08);
+            --bg: #f3f0e8;
+            --raised: #faf8f4;
+            --figure: #efeae0;
+            --ink: #1c2430;
+            --body: #2c3a4a;
+            --muted: #445266;
+            --line: #ddd4c6;
+            --line-strong: #c9bfae;
+            --accent: #1e4d5c;
+            --accent-ink: #f6f3ec;
+            --max: 1120px;
             color-scheme: light;
         }
 
         * { box-sizing: border-box; }
 
-        svg.sprite {
-            position: absolute;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-        }
-
         html { scroll-behavior: smooth; }
 
-        #about, #skills, #projects, #experience, #certifications, #direction, #beyond, #contact {
-            scroll-margin-top: 1.25rem;
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
         }
 
         body {
             margin: 0;
-            min-height: 100vh;
             background: var(--bg);
-            color: var(--text);
-            font-family: "Source Sans 3", sans-serif;
+            color: var(--ink);
+            font-family: "Source Sans 3", "Segoe UI", sans-serif;
             font-size: 1.0625rem;
             line-height: 1.6;
             text-rendering: optimizeLegibility;
         }
 
+        img, svg { max-width: 100%; }
+
         a { color: inherit; }
+
         button, a { -webkit-tap-highlight-color: transparent; }
 
         :focus-visible {
@@ -100,1676 +67,1074 @@
             outline-offset: 3px;
         }
 
-        ::selection { background: rgba(180, 204, 232, 0.28); }
+        ::selection { background: rgba(30, 77, 92, 0.16); }
 
         .skip {
             position: absolute;
             left: 1rem;
             top: -4rem;
-            z-index: 80;
+            z-index: 40;
             padding: 0.7rem 1rem;
-            border-radius: 999px;
             background: var(--accent);
             color: var(--accent-ink);
-            font-family: Outfit, sans-serif;
             font-weight: 600;
             text-decoration: none;
         }
 
         .skip:focus { top: 0.75rem; }
 
-        .atmosphere {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            overflow: hidden;
-            pointer-events: none;
-            background:
-                radial-gradient(1200px 700px at 70% 10%, rgba(88, 124, 176, 0.16), transparent 60%),
-                var(--bg);
+        .wrap {
+            width: min(var(--max), calc(100% - 2.5rem));
+            margin-inline: auto;
         }
 
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            transform: translate3d(0, 0, 0);
-            will-change: transform;
+        @media (min-width: 800px) {
+            .wrap { width: min(var(--max), calc(100% - 4rem)); }
         }
 
-        .orb-a {
-            width: min(52vw, 680px);
-            height: min(52vw, 680px);
-            left: -12vw;
-            top: -16vh;
-            background: radial-gradient(circle, rgba(132, 170, 220, 0.42) 0%, rgba(132, 170, 220, 0.12) 42%, transparent 70%);
-            animation: drift-a 34s ease-in-out infinite alternate;
-        }
-
-        .orb-b {
-            width: min(42vw, 560px);
-            height: min(42vw, 560px);
-            right: -10vw;
-            top: 22vh;
-            background: radial-gradient(circle, rgba(96, 148, 168, 0.28) 0%, rgba(96, 148, 168, 0.08) 46%, transparent 72%);
-            animation: drift-b 42s ease-in-out infinite alternate;
-        }
-
-        .orb-c {
-            width: min(36vw, 480px);
-            height: min(36vw, 480px);
-            left: 28vw;
-            bottom: -14vh;
-            background: radial-gradient(circle, rgba(196, 164, 112, 0.2) 0%, rgba(196, 164, 112, 0.05) 48%, transparent 72%);
-            animation: drift-c 48s ease-in-out infinite alternate;
-        }
-
-        .orb-d {
-            width: min(64vw, 860px);
-            height: min(40vw, 520px);
-            left: 18vw;
-            top: 48vh;
-            background: radial-gradient(circle, rgba(78, 108, 168, 0.18) 0%, transparent 68%);
-            animation: drift-d 56s ease-in-out infinite alternate;
-        }
-
-        .atmosphere-shade {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, rgba(7, 9, 15, 0.78) 0%, rgba(7, 9, 15, 0.5) 34%, rgba(7, 9, 15, 0.28) 100%);
-        }
-
-        html.light .atmosphere {
-            background:
-                radial-gradient(1000px 620px at 80% 0%, rgba(150, 178, 214, 0.35), transparent 60%),
-                #e7edf3;
-        }
-
-        html.light .orb-a { background: radial-gradient(circle, rgba(148, 178, 216, 0.55) 0%, rgba(148, 178, 216, 0.12) 46%, transparent 72%); }
-        html.light .orb-b { background: radial-gradient(circle, rgba(126, 168, 176, 0.32) 0%, transparent 70%); }
-        html.light .orb-c { background: radial-gradient(circle, rgba(214, 186, 140, 0.32) 0%, transparent 70%); }
-        html.light .orb-d { background: radial-gradient(circle, rgba(176, 196, 220, 0.28) 0%, transparent 70%); }
-
-        html.light .atmosphere-shade {
-            background: linear-gradient(90deg, rgba(238, 243, 248, 0.84) 0%, rgba(238, 243, 248, 0.58) 40%, rgba(238, 243, 248, 0.32) 100%);
-        }
-
-        @keyframes drift-a {
-            from { transform: translate3d(0, 0, 0) scale(1); }
-            to { transform: translate3d(7vw, 8vh, 0) scale(1.08); }
-        }
-
-        @keyframes drift-b {
-            from { transform: translate3d(0, 0, 0) scale(1); }
-            to { transform: translate3d(-6vw, 10vh, 0) scale(1.1); }
-        }
-
-        @keyframes drift-c {
-            from { transform: translate3d(0, 0, 0) scale(1); }
-            to { transform: translate3d(8vw, -7vh, 0) scale(1.06); }
-        }
-
-        @keyframes drift-d {
-            from { transform: translate3d(0, 0, 0) scale(1); }
-            to { transform: translate3d(-5vw, -6vh, 0) scale(1.12); }
-        }
-
-        .shell {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: minmax(300px, var(--rail)) minmax(0, 1fr);
-            align-items: start;
-        }
-
-        .rail {
+        .site-header {
             position: sticky;
             top: 0;
-            align-self: start;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            height: 100dvh;
-            max-height: 100vh;
-            max-height: 100dvh;
-            min-height: 0;
-            overflow: hidden;
-            border-right: 1px solid var(--line);
-            background: color-mix(in srgb, var(--bg) 42%, transparent);
+            z-index: 20;
+            background: var(--bg);
+            border-bottom: 1px solid var(--line);
         }
 
-        .rail-scroll {
-            flex: 1;
-            min-height: 0;
-            overflow: auto;
-            overscroll-behavior: contain;
-            padding: 1.6rem 1.45rem 0.9rem;
-        }
-
-        .rail-top {
+        .bar {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            gap: 0.75rem;
+            gap: 0.25rem 1.25rem;
+            min-height: 4.25rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
         }
 
-        .status {
+        .brand {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            margin: 0;
-            min-height: 32px;
-            padding: 0.2rem 0.7rem 0.2rem 0.5rem;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: var(--chip);
-            color: var(--muted);
-            font-family: Outfit, sans-serif;
-            font-size: 0.82rem;
-            font-weight: 560;
+            min-height: 44px;
+            font-weight: 600;
+            text-decoration: none;
             letter-spacing: -0.01em;
         }
 
-        .status-dot {
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 50%;
-            background: var(--ok);
-            box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 18%, transparent);
-            flex-shrink: 0;
+        .site-nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
-        .theme-toggle {
+        .site-nav a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: var(--chip);
-            color: var(--text);
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        .theme-toggle .sun { display: none; }
-        html.light .theme-toggle .moon { display: none; }
-        html.light .theme-toggle .sun { display: block; }
-
-        .ico {
-            width: 1.05rem;
-            height: 1.05rem;
-            flex-shrink: 0;
-            display: block;
-        }
-
-        /* Empty until a photo is added. No img is rendered, so nothing can break. */
-        .portrait-slot:empty { display: none; }
-
-        .portrait-slot:not(:empty) {
-            margin: 1.1rem 0 0;
-        }
-
-        .portrait-slot img {
-            width: min(100%, 220px);
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 18px;
-            border: 1px solid var(--line);
-        }
-
-        h1, h2, h3 {
-            font-family: Outfit, sans-serif;
-            letter-spacing: -0.04em;
-            line-height: 1.05;
+            min-width: 44px;
+            min-height: 44px;
+            padding: 0 0.7rem;
+            text-decoration: none;
+            color: var(--body);
             font-weight: 600;
-            margin: 0;
-            text-wrap: balance;
+            font-size: 0.98rem;
         }
+
+        .site-nav a:hover { color: var(--ink); }
+
+        .site-nav a[aria-current="true"] {
+            color: var(--accent);
+            box-shadow: inset 0 -2px 0 var(--accent);
+        }
+
+        #work, #about, #skills, #experience, #certifications, #journey, #beyond, #contact {
+            scroll-margin-top: 5.25rem;
+        }
+
+        .hero { padding: clamp(3.25rem, 8vw, 6.5rem) 0 clamp(3.5rem, 8vw, 6rem); }
+
+        .hero-grid {
+            display: grid;
+            gap: 2rem;
+            min-width: 0;
+        }
+
+        @media (min-width: 900px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+                gap: 4.5rem;
+                align-items: end;
+            }
+        }
+
+        .who {
+            margin: 0 0 0.85rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem 0.85rem;
+            align-items: baseline;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .who-name {
+            color: var(--ink);
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        h1, h2, h3, h4 { font-weight: 500; letter-spacing: -0.03em; }
 
         h1 {
-            margin-top: 1.15rem;
-            font-size: clamp(2.35rem, 4vw, 3.15rem);
-            font-weight: 650;
-            letter-spacing: -0.045em;
-        }
-
-        .role {
-            margin: 0.7rem 0 0;
-            color: var(--text);
-            font-family: Outfit, sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        .core-line,
-        .support-line {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            margin: 0.7rem 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .support-line { margin-top: 0.35rem; }
-
-        .core-line li,
-        .support-line li {
-            font-family: Outfit, sans-serif;
-            letter-spacing: -0.02em;
-        }
-
-        .core-line li {
-            color: var(--text);
-            font-size: 0.98rem;
-            font-weight: 600;
-        }
-
-        .support-line li {
-            color: var(--muted);
-            font-size: 0.92rem;
+            margin: 0;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: clamp(2.7rem, 8vw, 5.15rem);
+            line-height: 0.98;
             font-weight: 500;
         }
 
-        .core-line li:not(:last-child)::after,
-        .support-line li:not(:last-child)::after {
-            content: "·";
-            margin: 0 0.4rem;
-            color: var(--faint);
-            font-weight: 400;
+        .scope {
+            list-style: none;
+            margin: 1.75rem 0 0;
+            padding: 0;
+            max-width: 26rem;
         }
 
-        .statement {
-            margin: 1rem 0 0;
-            color: var(--body);
-            font-size: 1.02rem;
+        .scope li {
+            padding: 0.72rem 0;
+            border-top: 1px solid var(--line);
+            font-size: 1.125rem;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+        }
+
+        .scope li:last-child { border-bottom: 1px solid var(--line); }
+
+        .lead {
+            margin: 0;
+            max-width: 38rem;
+            font-size: 1.2rem;
             line-height: 1.55;
+            color: var(--body);
         }
 
-        .cta-row, .link-row {
+        .cta-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1.1rem;
+            align-items: center;
+            gap: 0.75rem 1.1rem;
+            margin-top: 1.75rem;
         }
 
-        .btn, .link-row a, .profile-actions a {
+        .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.4rem;
             min-height: 44px;
-            padding: 0.55rem 0.95rem;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: var(--panel-soft);
-            color: var(--text);
+            padding: 0.65rem 1.15rem;
+            border: 1px solid transparent;
             text-decoration: none;
-            font-family: Outfit, sans-serif;
-            font-size: 0.92rem;
             font-weight: 600;
-            letter-spacing: -0.015em;
+            font-size: 1rem;
         }
 
-        .btn-primary {
-            background: var(--accent);
-            border-color: transparent;
-            color: var(--accent-ink);
-        }
-
-        .profile-actions {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.45rem;
-            margin-top: 0.85rem;
-        }
-
-        .profile-actions a {
-            border-radius: 12px;
-            justify-content: flex-start;
-            padding: 0.45rem 0.7rem;
-            background: color-mix(in srgb, var(--bg) 35%, transparent);
-        }
-
-        .direction-note {
-            margin: 0.8rem 0 0;
-            color: var(--muted);
-            font-size: 0.88rem;
-            line-height: 1.45;
-        }
-
-        .direction-note strong {
-            color: var(--grow);
-            font-weight: 650;
-        }
-
-        .rail-nav {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.15rem;
-            flex-shrink: 0;
-            margin: 0;
-            padding: 0.7rem 0.85rem 0.9rem;
-            border-top: 1px solid var(--line);
-        }
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
-            min-height: 40px;
-            min-width: 0;
-            padding: 0.35rem 0.55rem;
-            border-radius: 12px;
-            color: var(--muted);
-            text-decoration: none;
-            font-family: Outfit, sans-serif;
-            font-size: 0.92rem;
-            font-weight: 560;
-            letter-spacing: -0.015em;
-        }
-
-        .nav-link span {
-            min-width: 0;
-        }
-
-        .nav-link .ico { width: 1rem; height: 1rem; }
-
-        .nav-link.is-active {
-            color: var(--text);
-            background: var(--chip);
-        }
-
-        .canvas {
-            min-width: 0;
-            padding: 1.75rem 1.35rem 3.5rem;
-        }
-
-        .canvas-inner {
-            width: min(880px, 100%);
-        }
-
-        .block { padding: 0.7rem 0; }
-
-        .panel {
-            padding: 1.45rem 1.3rem 1.5rem;
-            border-radius: var(--radius);
-            border: 1px solid var(--line);
-            background: var(--panel);
-            box-shadow: var(--shadow);
-        }
-
-        .eyebrow {
-            margin: 0;
-            color: var(--faint);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .section-head-wrap { padding: 0.2rem 0.1rem 0; }
-
-        .section-head {
-            display: grid;
-            gap: 0.7rem;
-            max-width: 40rem;
-            margin-bottom: 1.35rem;
-        }
-
-        h2 { font-size: clamp(1.55rem, 2.5vw, 2.15rem); }
-
-        .lede {
-            margin: 0;
-            color: var(--body);
-            font-size: 1.05rem;
-        }
-
-        .prose {
-            max-width: 40rem;
-            display: grid;
-            gap: 0.85rem;
-        }
-
-        .prose p { margin: 0; color: var(--body); }
-
-        .mission {
-            color: var(--text) !important;
-            font-family: Outfit, sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
+        .btn-primary { background: var(--accent); color: var(--accent-ink); }
+        .btn-primary:hover { background: #163e4a; }
+        .btn-secondary { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+        .btn-secondary:hover { border-color: var(--ink); }
 
         .text-link {
-            color: var(--text);
-            font-family: Outfit, sans-serif;
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
             font-weight: 600;
             text-underline-offset: 0.18em;
         }
 
-        .skill-sheet { display: grid; gap: 0.7rem; }
+        .portrait-slot:empty { display: none; }
 
-        .skill-row {
-            display: grid;
-            grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
-            gap: 0.75rem 1.2rem;
-            padding: 1rem 1.05rem;
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            background: color-mix(in srgb, var(--bg) 28%, transparent);
+        .portrait-slot img {
+            display: block;
+            width: min(100%, 220px);
+            height: auto;
         }
 
-        .skill-row h3 { font-size: 1.08rem; }
+        section { padding: clamp(3.25rem, 7vw, 5.5rem) 0; border-top: 1px solid var(--line); }
 
-        .skill-row p {
-            margin: 0.35rem 0 0;
-            color: var(--muted);
-            font-size: 0.92rem;
-        }
-
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            align-content: flex-start;
+        .eyebrow {
             margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .chips li {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            min-height: 34px;
-            padding: 0.25rem 0.65rem;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            background: var(--chip);
-            color: var(--text);
-            font-family: Outfit, sans-serif;
-            font-size: 0.88rem;
-            font-weight: 560;
-        }
-
-        .mark {
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.62rem;
-            font-style: normal;
-            font-weight: 500;
-            letter-spacing: 0.06em;
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--grow);
         }
 
-        .cases { display: grid; gap: 1rem; }
+        h2 {
+            margin: 0.55rem 0 0;
+            max-width: 18em;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: clamp(2rem, 4.4vw, 3.15rem);
+            line-height: 1.12;
+        }
 
-        .case {
+        .lede {
+            margin: 1rem 0 0;
+            max-width: 40rem;
+            color: var(--body);
+            font-size: 1.08rem;
+        }
+
+        .studies {
             display: grid;
-            gap: 1rem;
-            padding: 0.9rem;
-            border-radius: 22px;
-            border: 1px solid var(--line);
-            background: var(--panel);
-            box-shadow: var(--shadow);
+            gap: 1.75rem;
+            margin-top: 2.25rem;
+        }
+
+        .study {
+            display: grid;
+            grid-template-columns: 1fr;
+            min-width: 0;
+            background: var(--raised);
+            border: 1px solid var(--line-strong);
+        }
+
+        .study > * { min-width: 0; }
+
+        @media (min-width: 900px) {
+            .study {
+                grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+            }
+
+            .diagram { grid-column: 1; grid-row: 1 / span 2; }
+            .study-main { grid-column: 2; grid-row: 1; }
+            .notes { grid-column: 2; grid-row: 2; }
         }
 
         .diagram {
-            padding: 1rem;
-            border-radius: 16px;
-            border: 1px solid var(--line);
-            background:
-                linear-gradient(rgba(180, 204, 232, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(180, 204, 232, 0.05) 1px, transparent 1px),
-                color-mix(in srgb, var(--bg) 55%, transparent);
-            background-size: 22px 22px, 22px 22px, auto;
-        }
-
-        .diagram-kicker, .label {
             margin: 0;
-            color: var(--faint);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.68rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .diagram-caption {
-            margin: 0.75rem 0 0;
-            color: var(--faint);
-            font-size: 0.8rem;
-        }
-
-        .stack, .zone-grid, .region-grid, .lab-grid {
-            display: grid;
-            gap: 0.45rem;
-            margin-top: 0.75rem;
-        }
-
-        .node, .zone, .region, .lab-cell {
-            border: 1px solid var(--line);
-            border-radius: 10px;
-            background: color-mix(in srgb, var(--bg) 40%, var(--panel));
-            color: var(--text);
-            padding: 0.45rem 0.6rem;
-            font-family: Outfit, sans-serif;
-            font-size: 0.84rem;
-            font-weight: 560;
-            line-height: 1.3;
-        }
-
-        .zone-grid, .lab-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .region-grid { grid-template-columns: 1fr 1fr; }
-
-        .node small, .region small, .zone small, .lab-cell small {
-            display: block;
-            margin-top: 0.12rem;
-            color: var(--muted);
-            font-family: "Source Sans 3", sans-serif;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .dashed { border-style: dashed; }
-
-        .case-body { min-width: 0; padding: 0.25rem 0.35rem 0.35rem; }
-
-        .badge-row {
+            background: var(--figure);
+            padding: 1.35rem 1.1rem 1rem;
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
+            flex-direction: column;
+            justify-content: center;
         }
+
+        .diagram svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .diagram figcaption {
+            margin: 0.85rem 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        .study-main { padding: 1.45rem 1.35rem 0.35rem; }
 
         .badge {
-            display: inline-flex;
-            align-items: center;
-            min-height: 28px;
-            padding: 0.15rem 0.55rem;
-            border-radius: 999px;
-            border: 1px solid var(--line);
-            color: var(--muted);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.68rem;
-            letter-spacing: 0.08em;
+            margin: 0;
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.11em;
             text-transform: uppercase;
         }
 
-        .case h3 { margin-top: 0.75rem; font-size: 1.4rem; }
+        .study h3, .focus h3, .role h3, .certs h3, .journey h3, .beyond h3 {
+            margin: 0.45rem 0 0;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 1.65rem;
+            line-height: 1.2;
+        }
 
-        .case .summary {
-            margin: 0.55rem 0 0;
+        .summary {
+            margin: 0.75rem 0 0;
             color: var(--body);
         }
 
-        .facts {
-            display: grid;
-            gap: 0.85rem;
-            margin-top: 1rem;
+        .study .text-link { margin-top: 0.35rem; }
+
+        .notes {
+            margin: 0.4rem 1.35rem 1.35rem;
+            padding: 0.35rem 0 0;
+            border-top: 1px solid var(--line);
         }
 
-        .facts h4 {
-            margin: 0 0 0.25rem;
-            color: var(--faint);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.12em;
+        .notes div + div { margin-top: 1rem; }
+
+        .notes dt {
+            margin: 0;
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
         }
 
-        .facts p, .facts li { color: var(--body); font-size: 0.98rem; }
-        .facts ul { margin: 0; padding-left: 1.1rem; }
-        .facts li + li { margin-top: 0.25rem; }
-
-        .outcome {
-            padding: 0.75rem 0.85rem;
-            border-radius: 12px;
-            border: 1px solid var(--line);
-            background: color-mix(in srgb, var(--chip) 80%, transparent);
+        .notes dd {
+            margin: 0.28rem 0 0;
+            color: var(--body);
         }
 
-        .case-link { margin-top: 1rem; }
+        .notes ul {
+            margin: 0.35rem 0 0;
+            padding-left: 1.15rem;
+        }
 
-        .jobs { display: grid; }
+        .notes li + li { margin-top: 0.28rem; }
 
-        .job {
+        .prose { max-width: 40rem; margin-top: 1.35rem; }
+        .prose p { margin: 0 0 1rem; color: var(--body); font-size: 1.125rem; }
+        .prose p:last-child { margin-bottom: 0; }
+
+        .mission {
+            font-family: "Source Serif 4", Georgia, serif;
+            font-style: italic;
+            color: var(--ink) !important;
+        }
+
+        .focus {
             display: grid;
-            grid-template-columns: 11rem minmax(0, 1fr);
-            gap: 1rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 760px) {
+            .focus { grid-template-columns: 1fr 1fr; gap: 2rem 2.5rem; }
+        }
+
+        .focus article {
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .focus p, .beyond p, .journey p, .certs p { color: var(--body); }
+
+        .focus p { margin: 0.55rem 0 0; }
+
+        .mark {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.82rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .split {
+            display: grid;
+            gap: 2.75rem;
+            margin-top: 0.25rem;
+        }
+
+        @media (min-width: 900px) {
+            .split {
+                grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.75fr);
+                gap: 4rem;
+                align-items: start;
+            }
+        }
+
+        .roles { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+
+        .role {
+            display: grid;
+            gap: 0.15rem 1.5rem;
             padding: 1.15rem 0;
             border-top: 1px solid var(--line);
         }
 
-        .job:first-child { border-top: 0; padding-top: 0; }
-
-        .job time {
-            color: var(--faint);
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 0.78rem;
-            letter-spacing: 0.04em;
+        .role time {
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        .job h3 { font-size: 1.15rem; }
+        @media (min-width: 700px) {
+            .role { grid-template-columns: 10.5rem minmax(0, 1fr); }
+            .role time { grid-row: 1 / span 4; padding-top: 0.35rem; }
+        }
 
-        .org {
+        .org { margin: 0.15rem 0 0; }
+        .org a {
             display: inline-flex;
             align-items: center;
-            gap: 0.45rem;
-            margin: 0.35rem 0 0;
-            color: var(--text);
+            min-height: 44px;
             font-weight: 600;
+            text-underline-offset: 0.16em;
         }
 
-        .org a { text-decoration: none; }
-        .org a:hover { text-decoration: underline; text-underline-offset: 0.16em; }
+        .role ul { margin: 0.35rem 0 0; padding-left: 1.15rem; color: var(--body); }
+        .role li + li { margin-top: 0.4rem; }
 
-        .org img {
-            width: 18px;
-            height: 18px;
-            border-radius: 4px;
+        .certs {
+            padding-top: 0.2rem;
         }
 
-        .job ul {
-            margin: 0.65rem 0 0;
-            padding-left: 1.1rem;
-            color: var(--body);
+        .certs h3 { font-size: 1.45rem; }
+        .certs .subhead { margin-top: 1.75rem; }
+
+        .code {
+            margin: 1.15rem 0 0;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-size: 1.85rem;
+            letter-spacing: -0.03em;
+            line-height: 1;
         }
 
-        .job li + li { margin-top: 0.35rem; }
-
-        .cred-grid, .direction, .beyond-grid, .inquiry-grid {
-            display: grid;
-            gap: 0.7rem;
+        .certs h4 {
+            margin: 0.4rem 0 0;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 1.02rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 1.35;
         }
 
-        .cred-grid, .direction { grid-template-columns: 1fr 1fr; }
-        .beyond-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .inquiry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .certs article p:last-child { margin: 0.25rem 0 0; color: var(--muted); }
 
-        .cred, .direction article, .beyond-grid article {
-            padding: 1.05rem 1.1rem;
-            border-radius: 16px;
-            border: 1px solid var(--line);
-            background: color-mix(in srgb, var(--bg) 28%, transparent);
-            min-width: 0;
-        }
+        .fine { margin: 0.55rem 0 0; font-size: 0.98rem; }
 
-        .cred-code {
-            margin: 0;
-            color: var(--text);
-            font-family: Outfit, sans-serif;
-            font-size: 1.55rem;
-            font-weight: 650;
-            letter-spacing: -0.04em;
-        }
-
-        .cred h3, .direction h3 {
-            margin-top: 0.3rem;
-            font-size: 1.05rem;
-            letter-spacing: -0.02em;
-            line-height: 1.25;
-        }
-
-        .cred p, .direction p { margin: 0.45rem 0 0; color: var(--body); }
-
-        .training {
-            margin-top: 1.2rem;
-            padding-top: 1.05rem;
-            border-top: 1px solid var(--line);
-        }
-
-        .training h3 { font-size: 1rem; }
-
-        .training-list {
-            display: grid;
-            gap: 0.65rem;
-            margin: 0.8rem 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .training-list li {
+        .training { list-style: none; margin: 0.75rem 0 0; padding: 0; }
+        .training li {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 0.3rem 1rem;
-            padding-bottom: 0.65rem;
-            border-bottom: 1px solid var(--line);
-            color: var(--body);
+            gap: 0.25rem 1rem;
+            padding: 0.75rem 0;
+            border-top: 1px solid var(--line);
+        }
+        .training li span:last-child { color: var(--muted); font-weight: 600; }
+
+        .two, .beyond {
+            display: grid;
+            gap: 1.25rem;
+            margin-top: 1.75rem;
         }
 
-        .training-list strong { color: var(--text); font-weight: 650; }
-
-        .beyond-grid h3 {
-            display: flex;
-            align-items: center;
-            gap: 0.45rem;
-            margin-top: 0.65rem;
-            font-size: 1.02rem;
+        @media (min-width: 760px) {
+            .two { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .beyond { grid-template-columns: 1fr 1fr; gap: 1.25rem 2.5rem; }
         }
 
-        .beyond-grid p { margin: 0.4rem 0 0; color: var(--body); font-size: 0.98rem; }
+        .two article, .beyond article {
+            padding-top: 0.9rem;
+            border-top: 1px solid var(--line);
+        }
 
-        .contact-panel {
-            border-color: color-mix(in srgb, var(--text) 18%, var(--line));
+        .two h3, .beyond h3 { font-size: 1.4rem; }
+        .two p, .beyond p { margin: 0.45rem 0 0; }
+
+        .inquiries {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 1.75rem;
+        }
+
+        @media (min-width: 700px) {
+            .inquiries { grid-template-columns: 1fr 1fr; }
         }
 
         .inquiry {
             display: flex;
-            align-items: center;
-            gap: 0.55rem;
-            min-height: 52px;
-            padding: 0.65rem 0.8rem;
-            border-radius: 14px;
-            border: 1px solid var(--line);
-            background: color-mix(in srgb, var(--bg) 35%, transparent);
-            color: var(--text);
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.15rem;
+            min-height: 44px;
+            padding: 0.95rem 1rem;
+            background: var(--raised);
+            border: 1px solid var(--line-strong);
             text-decoration: none;
-            font-family: Outfit, sans-serif;
-            font-weight: 600;
-            letter-spacing: -0.015em;
-            line-height: 1.25;
         }
+
+        .inquiry:hover { border-color: var(--ink); }
+        .inquiry strong { font-weight: 600; }
+        .inquiry span { color: var(--muted); font-size: 0.98rem; }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem 1.35rem;
+            margin-top: 1.35rem;
+        }
+
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: inset 0 -1px 0 var(--line-strong);
+        }
+
+        .contact-links a:hover { box-shadow: inset 0 -1px 0 var(--ink); }
 
         .site-footer {
-            padding: 0.4rem 0 0.2rem;
-            color: var(--faint);
-            font-size: 0.92rem;
+            padding: 1.25rem 0 2.5rem;
+            color: var(--muted);
+            font-size: 0.95rem;
         }
 
-        .site-footer p { margin: 0; }
-
-        html.motion-ok .nav-link,
-        html.motion-ok .btn,
-        html.motion-ok .inquiry,
-        html.motion-ok .profile-actions a,
-        html.motion-ok .link-row a,
-        html.motion-ok .case,
-        html.motion-ok .skill-row,
-        html.motion-ok .beyond-grid article,
-        html.motion-ok .cred {
-            transition: transform 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+        @media (prefers-reduced-motion: no-preference) {
+            html.motion-ok .rise {
+                animation: rise 0.6s ease both;
+            }
         }
-
-        html.motion-ok .nav-link:hover,
-        html.motion-ok .btn:hover,
-        html.motion-ok .inquiry:hover,
-        html.motion-ok .profile-actions a:hover,
-        html.motion-ok .link-row a:hover,
-        html.motion-ok .case:hover,
-        html.motion-ok .skill-row:hover,
-        html.motion-ok .beyond-grid article:hover,
-        html.motion-ok .cred:hover {
-            transform: translateY(-2px);
-            border-color: color-mix(in srgb, var(--text) 28%, var(--line));
-        }
-
-        html.motion-ok .reveal {
-            opacity: 0;
-            transform: translateY(14px);
-            animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-            animation-play-state: paused;
-        }
-
-        html.motion-ok .reveal.is-in { animation-play-state: running; }
 
         @keyframes rise {
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: none; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-
-            .orb {
-                animation: none;
-                will-change: auto;
-            }
-
-            .nav-link,
-            .btn,
-            .inquiry,
-            .profile-actions a,
-            .link-row a,
-            .case,
-            .skill-row,
-            .beyond-grid article,
-            .cred,
-            .reveal {
-                animation: none;
-                transition: none;
-                transform: none;
-                opacity: 1;
-            }
-        }
-
-        @media (max-width: 1180px) {
-            .beyond-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (min-width: 1280px) {
-            .case {
-                grid-template-columns: minmax(230px, 0.82fr) minmax(0, 1.18fr);
-                align-items: start;
-            }
-
-            .canvas { padding: 2.25rem 2.75rem 4rem 1.75rem; }
-        }
-
-        @media (max-width: 980px) {
-            .shell { display: block; }
-
-            .rail {
-                position: relative;
-                display: block;
-                height: auto;
-                max-height: none;
-                min-height: 0;
-                overflow: visible;
-                border-right: 0;
-                border-bottom: 1px solid var(--line);
-                background: color-mix(in srgb, var(--bg) 55%, transparent);
-            }
-
-            .rail-scroll {
-                overflow: visible;
-                padding: 1.15rem 1.1rem 0.2rem;
-            }
-
-            .atmosphere-shade {
-                background: linear-gradient(180deg, rgba(7, 9, 15, 0.8), rgba(7, 9, 15, 0.62));
-            }
-
-            html.light .atmosphere-shade {
-                background: linear-gradient(180deg, rgba(238, 243, 248, 0.88), rgba(238, 243, 248, 0.72));
-            }
-
-            .orb-d { display: none; }
-
-            h1 { font-size: clamp(2.4rem, 10vw, 3.3rem); }
-
-            .rail-nav {
-                display: flex;
-                flex-wrap: wrap;
-                grid-template-columns: none;
-                gap: 0.4rem;
-                margin: 0;
-                padding: 0.85rem 1.1rem 1.15rem;
-                overflow: visible;
-            }
-
-            .nav-link {
-                flex: 0 0 auto;
-                border: 1px solid var(--line);
-                background: var(--chip);
-                white-space: nowrap;
-            }
-
-            .canvas { padding: 1.15rem 1rem 2.75rem; }
-
-            .skill-row,
-            .job,
-            .cred-grid,
-            .direction,
-            .beyond-grid,
-            .inquiry-grid,
-            .region-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .zone-grid, .lab-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 640px) {
-            .profile-actions { grid-template-columns: 1fr 1fr; }
-            .zone-grid, .lab-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-    <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-1.6A4.4 4.4 0 0 0 15.6 15H8.4A4.4 4.4 0 0 0 4 19.4V21" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><circle cx="12" cy="8" r="3.25" fill="none" stroke="currentColor" stroke-width="1.75"/></symbol>
-        <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5L3 8l9-5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-        <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.75"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.75"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.75"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.75"/></symbol>
-        <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4.75" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m8.6 12.4-1.3 8.1L12 17.8l4.7 2.7-1.3-8.1" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-        <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m14.8 9.2-1.5 4.1-4.1 1.5 1.5-4.1 4.1-1.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-        <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="4" y="9.5" width="3.4" height="9" fill="none" stroke="currentColor" stroke-width="1.75"/><circle cx="5.7" cy="5.6" r="1.55" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M11 18.5v-5.2a2.6 2.6 0 0 1 5.2 0v5.2" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M11 13.2h0M16.2 18.5h3.2v-5.4a2.8 2.8 0 0 0-5.2-1.4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
-        <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.2 1.4-4.2-2.2-6-2.6M15 21v-3.2a2.7 2.7 0 0 0-.8-2.1c2.7-.3 5.5-1.3 5.5-6a4.6 4.6 0 0 0-1.2-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.3 1.2a11.4 11.4 0 0 0-6 0C6.8 2.7 5.8 3 5.8 3a4.3 4.3 0 0 0-.1 3.2 4.6 4.6 0 0 0-1.2 3.2c0 4.6 2.8 5.6 5.5 6a2.7 2.7 0 0 0-.8 2.1V21" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-        <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M14 3v5h5M8 13h8M8 17h6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
-        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 14.2A8.2 8.2 0 1 1 9.8 3 6.4 6.4 0 0 0 21 14.2z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M12 3v1.8M12 19.2V21M21 12h-1.8M4.8 12H3M17.8 6.2l-1.2 1.2M7.4 16.6 6.2 17.8M17.8 17.8l-1.2-1.2M7.4 7.4 6.2 6.2" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
-        <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M8 7V5.8A1.8 1.8 0 0 1 9.8 4h4.4A1.8 1.8 0 0 1 16 5.8V7M3 12h18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
-        <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.75"/><rect x="3" y="13.5" width="18" height="6.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M7 7.2h.01M7 16.7h.01" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
-        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.2 19.2 6v6.2c0 4.4-2.9 6.7-6.8 8.3a1 1 0 0 1-.8 0C7.7 18.9 4.8 16.6 4.8 12.2V6L12 3.2z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M4 12v5.2A1.8 1.8 0 0 0 5.8 19H7a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 7 13H4zm16 0v5.2A1.8 1.8 0 0 1 18.2 19H17a1.5 1.5 0 0 1-1.5-1.5v-3A1.5 1.5 0 0 1 17 13h3z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/><circle cx="9" cy="10" r="1.5" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m5 17 4.2-3.6a1.2 1.2 0 0 1 1.6 0L20 18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></symbol>
-        <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="12.5" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m15.5 10.5 5-2.5v8l-5-2.5v-3z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M16.5 3.8a2.1 2.1 0 0 1 3 3L8 18.3 4 19.5l1.2-4L16.5 3.8z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5 13.4 9 19 10.5 13.4 12 12 17.5 10.6 12 5 10.5 10.6 9 12 3.5zM18 15l.6 2 2 .6-2 .6-.6 2-.6-2-2-.6 2-.6.6-2z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-        <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="m7 9 3 2.5L7 14M12.5 14H17" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-        <symbol id="i-message" viewBox="0 0 24 24"><path d="M6.5 18.5 4 20.2V6.8A2.8 2.8 0 0 1 6.8 4h10.4A2.8 2.8 0 0 1 20 6.8v7.4a2.8 2.8 0 0 1-2.8 2.8H8.2L6.5 18.5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></symbol>
-    </svg>
-
-    <div class="atmosphere" aria-hidden="true">
-        <div class="orb orb-a"></div>
-        <div class="orb orb-b"></div>
-        <div class="orb orb-c"></div>
-        <div class="orb orb-d"></div>
-        <div class="atmosphere-shade"></div>
-    </div>
-
     <a class="skip" href="#main">Skip to content</a>
 
-    <div class="shell" id="top">
-        <aside class="rail" aria-label="Profile">
-            <div class="rail-scroll">
-            <div class="rail-top">
-                <p class="status"><span class="status-dot" aria-hidden="true"></span> Based in Minnesota</p>
-                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">
-                    <svg class="ico moon" aria-hidden="true"><use href="#i-moon"></use></svg>
-                    <svg class="ico sun" aria-hidden="true"><use href="#i-sun"></use></svg>
-                </button>
-            </div>
-            <!-- Portrait slot stays empty until a photo is added. Put an img inside .portrait-slot; do not point at a missing file. -->
-            <div class="portrait-slot" data-portrait-slot></div>
-            <h1 id="hero-name">Ngu Brice Che</h1>
-            <p class="role">IT Professional</p>
-            <ul class="core-line">
-                <li>Systems Administration</li>
-                <li>IT Operations</li>
-                <li>Technical Support</li>
-                <li>Networking</li>
-            </ul>
-            <ul class="support-line">
-                <li>Cloud</li>
-                <li>Infrastructure</li>
-                <li>Identity</li>
-                <li>Automation</li>
-            </ul>
-            <p class="statement">I build, support, and troubleshoot technology environments across systems, infrastructure, networking, cloud, and identity — while continuing to grow toward cybersecurity.</p>
-            <div class="cta-row">
-                <a class="btn btn-primary" href="#projects">View My Work</a>
-                <a class="btn" href="#contact">Contact</a>
-                <a class="btn" href="#about">About Me</a>
-                <a class="btn" href="./Brice-Resume.pdf" target="_blank" rel="noopener noreferrer" download>Resume</a>
-            </div>
-            <div class="profile-actions">
-                <a class="email-link" href="#contact" data-mail-subject="Portfolio inquiry">
-                    <svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg>
-                    <span>Email</span>
-                </a>
-                <a href="https://linkedin.com/in/ngubriceche" target="_blank" rel="noopener noreferrer">
-                    <svg class="ico" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/supbrice" target="_blank" rel="noopener noreferrer">
-                    <svg class="ico" aria-hidden="true"><use href="#i-github"></use></svg>
-                    <span>GitHub</span>
-                </a>
-                <a href="./Brice-Resume.pdf" target="_blank" rel="noopener noreferrer" download>
-                    <svg class="ico" aria-hidden="true"><use href="#i-file"></use></svg>
-                    <span>Resume</span>
-                </a>
-            </div>
-            <p class="direction-note"><strong>Growing toward</strong> cybersecurity and security operations.</p>
-            </div>
-            <nav class="rail-nav" aria-label="Primary">
-                <a class="nav-link" href="#top"><svg class="ico" aria-hidden="true"><use href="#i-home"></use></svg><span>Home</span></a>
-                <a class="nav-link" href="#about"><svg class="ico" aria-hidden="true"><use href="#i-user"></use></svg><span>About</span></a>
-                <a class="nav-link" href="#skills"><svg class="ico" aria-hidden="true"><use href="#i-layers"></use></svg><span>Skills</span></a>
-                <a class="nav-link" href="#projects"><svg class="ico" aria-hidden="true"><use href="#i-grid"></use></svg><span>Projects</span></a>
-                <a class="nav-link" href="#experience"><svg class="ico" aria-hidden="true"><use href="#i-briefcase"></use></svg><span>Experience</span></a>
-                <a class="nav-link" href="#certifications"><svg class="ico" aria-hidden="true"><use href="#i-award"></use></svg><span>Certifications</span></a>
-                <a class="nav-link" href="#beyond"><svg class="ico" aria-hidden="true"><use href="#i-compass"></use></svg><span>Beyond IT</span></a>
-                <a class="nav-link" href="#contact"><svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg><span>Contact</span></a>
+    <header class="site-header" id="top">
+        <div class="wrap bar">
+            <a class="brand" href="#top">Ngu Brice Che</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
             </nav>
-        </aside>
+        </div>
+    </header>
 
-        <main class="canvas" id="main">
-            <div class="canvas-inner">
-                <section class="block" id="about">
-                    <div class="panel">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">About</p>
-                            <h2>I like understanding how a system works, then making it easier to support.</h2>
-                        </div>
-                        <div class="prose reveal">
-                            <p>I'm Brice, a technology professional with experience in technical support, systems administration, infrastructure, networking, and cloud identity. I like a hard problem when it can be broken into a clear next step.</p>
-                            <p>Most of the work is practical: troubleshooting, keeping an environment usable, and using automation when a script is more reliable than repeating the same change by hand. I also explore AI tools as part of learning, not as a separate practice.</p>
-                            <p>The path has been straightforward. IT support came first, then systems, infrastructure, networking, cloud, and identity. Cybersecurity and security operations are where I am intentionally growing.</p>
-                            <p>When I am away from the queue, I explore tools, build personal projects, and create digital content. I still want the result to be reliable and useful.</p>
-                            <p class="mission">Keep learning. Keep building. Keep moving forward.</p>
-                            <p><a class="text-link" href="#experience">Experience</a> follows the project labs, with the same roles that are on the resume.</p>
+    <main id="main">
+        <div class="wrap">
+            <div class="hero">
+                <div class="hero-grid">
+                    <div>
+                        <p class="who">
+                            <span class="who-name">Ngu Brice Che</span>
+                            <span>Minnesota</span>
+                        </p>
+                        <h1>IT<br />Professional</h1>
+                        <ol class="scope">
+                            <li>Systems Administration</li>
+                            <li>IT Operations</li>
+                            <li>Technical Support</li>
+                            <li>Networking</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <p class="lead">I build, support, and troubleshoot technology environments across systems, infrastructure, networking, cloud, and identity — while continuously growing toward cybersecurity.</p>
+                        <div class="cta-row">
+                            <a class="btn btn-primary" href="#work">Explore My Work</a>
+                            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+                            <a class="text-link" href="./Brice-Resume.pdf" download>Resume</a>
                         </div>
                     </div>
-                </section>
-
-                <section class="block" id="skills">
-                    <div class="panel">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">Skills</p>
-                            <h2>Grouped by the work, not by a single platform.</h2>
-                            <p class="lede">Azure is one skill in this set. Unmarked items are in current use. Marks call out fundamentals, growth, and exploration.</p>
-                        </div>
-                        <div class="skill-sheet">
-                            <article class="skill-row reveal">
-                                <div>
-                                    <h3>IT &amp; Systems</h3>
-                                    <p>Support, operations, and the Windows and network troubleshooting behind them. ServiceNow and Salesforce show up in the operations roles.</p>
-                                </div>
-                                <ul class="chips">
-                                    <li>Systems Administration</li>
-                                    <li>IT Operations</li>
-                                    <li>Technical Support</li>
-                                    <li>Windows</li>
-                                    <li>Troubleshooting</li>
-                                    <li>Networking</li>
-                                    <li>ServiceNow</li>
-                                    <li>Salesforce</li>
-                                </ul>
-                            </article>
-                            <article class="skill-row reveal">
-                                <div>
-                                    <h3>Cloud &amp; Infrastructure</h3>
-                                    <p>Microsoft Azure, hybrid infrastructure, and infrastructure as code from the nVent role and the labs.</p>
-                                </div>
-                                <ul class="chips">
-                                    <li>Azure</li>
-                                    <li>Hybrid Infrastructure</li>
-                                    <li>Infrastructure</li>
-                                    <li>Terraform</li>
-                                    <li>IaC</li>
-                                </ul>
-                            </article>
-                            <article class="skill-row reveal">
-                                <div>
-                                    <h3>Identity &amp; Security</h3>
-                                    <p>Active Directory, Entra ID, and access control are in the work. MFA and cybersecurity are a growth area, not a specialty claim.</p>
-                                </div>
-                                <ul class="chips">
-                                    <li>Active Directory</li>
-                                    <li>Entra ID</li>
-                                    <li>IAM</li>
-                                    <li>MFA <em class="mark">Growing</em></li>
-                                    <li>Security Fundamentals <em class="mark">Fundamentals</em></li>
-                                    <li>Cybersecurity <em class="mark">Growing</em></li>
-                                </ul>
-                            </article>
-                            <article class="skill-row reveal">
-                                <div>
-                                    <h3>Automation &amp; Technology</h3>
-                                    <p>PowerShell, Python, and scripting in the labs and the IaC pipelines. AI tools are exploratory.</p>
-                                </div>
-                                <ul class="chips">
-                                    <li>PowerShell</li>
-                                    <li>Python</li>
-                                    <li>Automation</li>
-                                    <li>AI tools <em class="mark">Exploring</em></li>
-                                    <li>Scripting</li>
-                                </ul>
-                            </article>
-                            <article class="skill-row reveal">
-                                <div>
-                                    <h3>Additional Capabilities</h3>
-                                    <p>Complementary to the IT work. They are not a second career. More detail sits in Beyond IT.</p>
-                                </div>
-                                <ul class="chips">
-                                    <li>Video</li>
-                                    <li>Photo</li>
-                                    <li>Resume design</li>
-                                    <li>Tech docs</li>
-                                    <li>Content creation</li>
-                                </ul>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block" id="projects">
-                    <div class="section-head-wrap">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">Projects</p>
-                            <h2>Four labs, written up as case studies.</h2>
-                            <p class="lede">Each card is a portfolio lab or a sanitized client-sized write-up. Diagrams are schematics from those repos. They are not screenshots, and there are no results here beyond what the write-ups already state.</p>
-                        </div>
-                    </div>
-                    <div class="cases">
-                        <article class="case reveal">
-                            <div class="diagram">
-                                <p class="diagram-kicker">Lab diagram</p>
-                                <div class="stack">
-                                    <div class="node">UniFi gateway<small>NAT · firewall · DHCP · QoS</small></div>
-                                    <div class="node">Managed L2/L3 PoE switches</div>
-                                </div>
-                                <div class="zone-grid">
-                                    <div class="zone">VLAN 10<small>Corporate</small></div>
-                                    <div class="zone">VLAN 20<small>Public</small></div>
-                                    <div class="zone">VLAN 30–50<small>OT signage, signals, fleet</small></div>
-                                    <div class="zone">VLAN 60<small>UniFi Protect</small></div>
-                                    <div class="zone">VLAN 99<small>Management</small></div>
-                                </div>
-                                <p class="diagram-caption">Schematic from the repo topology. Not a screenshot.</p>
-                            </div>
-                            <div class="case-body">
-                                <div class="badge-row">
-                                    <span class="badge">Lab / Portfolio</span>
-                                    <span class="badge">Client-sized write-up</span>
-                                </div>
-                                <h3>Network Infrastructure Upgrade — CPS</h3>
-                                <p class="summary">A UniFi network for Computer Plus Solutions: gateway, PoE switching, and separate zones for staff, guests, and operational technology.</p>
-                                <div class="facts">
-                                    <div>
-                                        <h4>Problem</h4>
-                                        <p>Staff PCs, guest access, and OT — digital signage, signals, and fleet tracking — shared a flat or poorly segmented LAN. Cameras and access points needed reliable PoE. Vendor-hosted OT needed a way out without a path into corporate traffic.</p>
-                                    </div>
-                                    <div>
-                                        <h4>What I built</h4>
-                                        <ul>
-                                            <li>UniFi gateway with NAT, firewall, DHCP, and QoS.</li>
-                                            <li>Managed Layer 2/3 PoE switches and a UniFi Protect zone.</li>
-                                            <li>VLAN plan for corporate, public, OT, Protect, and management.</li>
-                                            <li>Troubleshooting write-ups for DNS, DHCP, VLAN, vendor path, and Layer 2 adoption, plus Python and PowerShell validation scripts.</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Technologies</h4>
-                                        <ul class="chips">
-                                            <li>UniFi</li>
-                                            <li>VLAN</li>
-                                            <li>DNS</li>
-                                            <li>DHCP</li>
-                                            <li>NAT</li>
-                                            <li>QoS</li>
-                                            <li>PoE</li>
-                                            <li>Python</li>
-                                            <li>PowerShell</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Key concepts</h4>
-                                        <p>Deny inter-VLAN by default, then allow only what a zone needs. OT stays off corporate. Configs in the repo are sanitized examples, not a controller export.</p>
-                                    </div>
-                                    <div class="outcome">
-                                        <h4>Documented outcome</h4>
-                                        <p>The write-up describes a network that was designed and deployed, with post-cutover validation. It is a client-sized site. It does not claim campus scale or an SLA figure.</p>
-                                    </div>
-                                </div>
-                                <a class="btn case-link" href="https://github.com/supbrice/CloudProjects" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                            </div>
-                        </article>
-
-                        <article class="case reveal">
-                            <div class="diagram">
-                                <p class="diagram-kicker">Lab diagram</p>
-                                <div class="region-grid">
-                                    <div class="region">East US 2<small>Hub · VPN · Bastion · VM with no public IP</small></div>
-                                    <div class="region">Central US<small>Peered · uses the hub gateway</small></div>
-                                </div>
-                                <div class="stack">
-                                    <div class="node">Site-to-site VPN<small>On-premises is a placeholder address</small></div>
-                                    <div class="node">Identity and monitor<small>Managed identity · custom RBAC · Log Analytics</small></div>
-                                    <div class="node dashed">Conditional Access / PIM<small>Documented as a follow-on. Not created in this lab.</small></div>
-                                </div>
-                                <p class="diagram-caption">Schematic from the Terraform lab. Not a screenshot.</p>
-                            </div>
-                            <div class="case-body">
-                                <div class="badge-row">
-                                    <span class="badge">Portfolio lab</span>
-                                </div>
-                                <h3>Multi-Region Azure Hybrid / Zero Trust</h3>
-                                <p class="summary">A modular Terraform lab for a two-region Azure network, a VPN hub, Bastion access, managed identity, and monitoring hooks.</p>
-                                <div class="facts">
-                                    <div>
-                                        <h4>Objective</h4>
-                                        <p>Turn hybrid networking and identity practice into code a reviewer can read. The repo is explicit: this is not a live customer or employer deployment, and it is not a claim that this stack ran at nVent.</p>
-                                    </div>
-                                    <div>
-                                        <h4>What I built</h4>
-                                        <ul>
-                                            <li>VNets, subnets, and NSGs in East US 2 and Central US, with peering.</li>
-                                            <li>Site-to-site VPN, NAT Gateway, Bastion, and a management VM without a public IP.</li>
-                                            <li>User-assigned managed identity and a custom RBAC role.</li>
-                                            <li>Log Analytics, a data collection rule, and a VPN metric alert.</li>
-                                            <li>GitHub Actions checks for format and validate, with no Azure secrets.</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Technologies</h4>
-                                        <ul class="chips">
-                                            <li>Terraform</li>
-                                            <li>Azure</li>
-                                            <li>VNet</li>
-                                            <li>NSG</li>
-                                            <li>VPN</li>
-                                            <li>Bastion</li>
-                                            <li>Entra ID</li>
-                                            <li>RBAC</li>
-                                            <li>Log Analytics</li>
-                                            <li>GitHub Actions</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Key concepts</h4>
-                                        <p>Workloads have no public IPs. NSGs allow only the next hop that needs access. The VM uses a managed identity instead of a stored secret. Conditional Access and PIM are named as the layer above this RBAC model. The lab does not create them.</p>
-                                    </div>
-                                    <div class="outcome">
-                                        <h4>Documented outcome</h4>
-                                        <p>No production outcome is claimed. The documented result is a reviewable lab with fmt and validate in CI, and an honest limit on identity scope.</p>
-                                    </div>
-                                </div>
-                                <a class="btn case-link" href="https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                            </div>
-                        </article>
-
-                        <article class="case reveal">
-                            <div class="diagram">
-                                <p class="diagram-kicker">Lab diagram</p>
-                                <div class="stack">
-                                    <div class="node">rg-bricelab-hybridid<small>vnet-bricelab · NSG limited to the operator IP</small></div>
-                                </div>
-                                <div class="region-grid">
-                                    <div class="region">vm-dc01<small>Windows Server 2022 · AD DS + DNS</small></div>
-                                    <div class="region">vm-mgmt01<small>Domain-joined jump box</small></div>
-                                </div>
-                                <div class="stack">
-                                    <div class="node dashed">Entra Connect or Cloud Sync<small>Design note only. Not an employer tenant.</small></div>
-                                </div>
-                                <p class="diagram-caption">Schematic from the hybrid identity lab. Not a screenshot.</p>
-                            </div>
-                            <div class="case-body">
-                                <div class="badge-row">
-                                    <span class="badge">Portfolio lab</span>
-                                </div>
-                                <h3>Hybrid Identity Lab — AD DS on Azure VMs</h3>
-                                <p class="summary">A small Active Directory forest on Azure virtual machines, treated as the source of identity for a hybrid Entra ID design.</p>
-                                <div class="facts">
-                                    <div>
-                                        <h4>Objective</h4>
-                                        <p>Show the identity work from systems administration — Azure access, Active Directory, Group Policy, and PowerShell — without using an employer directory.</p>
-                                    </div>
-                                    <div>
-                                        <h4>What I built</h4>
-                                        <ul>
-                                            <li>Resource group, virtual network, NSG, and two Windows Server 2022 VMs.</li>
-                                            <li>Forest <span translate="no">bricelab.local</span> with DNS on the domain controller.</li>
-                                            <li>OU, group, and user baseline, plus a sample Group Policy.</li>
-                                            <li>Identity hygiene checks for privileged groups, non-expiring passwords, and stale accounts.</li>
-                                            <li>Written notes on Entra Connect, Cloud Sync, and what not to sync.</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Technologies</h4>
-                                        <ul class="chips">
-                                            <li>Azure VMs</li>
-                                            <li>Windows Server</li>
-                                            <li>AD DS</li>
-                                            <li>DNS</li>
-                                            <li>Group Policy</li>
-                                            <li>PowerShell</li>
-                                            <li>Entra ID</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Key concepts</h4>
-                                        <p>Role groups instead of a shared Domain Admin habit, a separate Tier 0 admin, and a UPN that is fit to discuss for sync. Password hash sync versus pass-through authentication is explained. It is not connected to a production tenant. MFA is part of that cloud-policy discussion, not a control this repo turns on.</p>
-                                    </div>
-                                    <div class="outcome">
-                                        <h4>Documented outcome</h4>
-                                        <p>The lab stands up the on-premises source of authority and a hygiene report. Connecting Entra ID stays conceptual. The repo says this is not an nVent environment and not a production domain.</p>
-                                    </div>
-                                </div>
-                                <a class="btn case-link" href="https://github.com/supbrice/configure-ad" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                            </div>
-                        </article>
-
-                        <article class="case reveal">
-                            <div class="diagram">
-                                <p class="diagram-kicker">Lab diagram</p>
-                                <div class="lab-grid">
-                                    <div class="lab-cell">01 Identity<small>Entra · CA · RBAC</small></div>
-                                    <div class="lab-cell">02 Hybrid<small>VPN · private DNS</small></div>
-                                    <div class="lab-cell">03 IaC<small>Terraform modules</small></div>
-                                    <div class="lab-cell">04 Network<small>DNS · VPN · NSG</small></div>
-                                    <div class="lab-cell">05 Monitor<small>Azure Monitor · Log Analytics</small></div>
-                                </div>
-                                <p class="diagram-caption">Five reference labs. Not a live estate, and not a screenshot.</p>
-                            </div>
-                            <div class="case-body">
-                                <div class="badge-row">
-                                    <span class="badge">Reference labs</span>
-                                </div>
-                                <h3>Azure Architect Labs</h3>
-                                <p class="summary">Five readable labs on identity, hybrid connectivity, Terraform, networking, and monitoring. Patterns, not a customer environment.</p>
-                                <div class="facts">
-                                    <div>
-                                        <h4>Objective</h4>
-                                        <p>Replace a beginner Azure list with labs that match hybrid Azure, Entra ID, infrastructure as code, and operations. The repo states they do not claim production SLAs or invented metrics.</p>
-                                    </div>
-                                    <div>
-                                        <h4>What I built</h4>
-                                        <ul>
-                                            <li>Identity and access patterns, including Conditional Access kept disabled by default.</li>
-                                            <li>Hybrid connectivity notes: VPN, on-premises prefixes, and private DNS.</li>
-                                            <li>Terraform modules with Python and PowerShell alongside them.</li>
-                                            <li>DNS, VPN, and NSG-as-firewall patterns, plus a VLAN-to-subnet mapping.</li>
-                                            <li>Azure Monitor and Log Analytics notes. VPN Gateway is off by default.</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Technologies</h4>
-                                        <ul class="chips">
-                                            <li>Azure</li>
-                                            <li>Entra ID</li>
-                                            <li>Terraform</li>
-                                            <li>PowerShell</li>
-                                            <li>Python</li>
-                                            <li>Azure Monitor</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4>Key concepts</h4>
-                                        <p>Conditional Access stays off until there is a break-glass path. ServiceNow is mentioned as the ITSM context from the jobs, not simulated as a product. Availability targets on a resume are not republished here as lab numbers.</p>
-                                    </div>
-                                    <div class="outcome">
-                                        <h4>Documented outcome</h4>
-                                        <p>The outcome is the written patterns and a disposable Terraform composition. There is no live estate and no availability figure in these labs.</p>
-                                    </div>
-                                </div>
-                                <a class="btn case-link" href="https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="block" id="experience">
-                    <div class="panel">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">Experience</p>
-                            <h2>Roles in support, operations, systems, and networking.</h2>
-                            <p class="lede">Employers, titles, dates, and bullets are unchanged.</p>
-                        </div>
-                        <div class="jobs">
-                            <article class="job reveal">
-                                <time datetime="2025-10">Oct 2025 - Jan 2026</time>
-                                <div>
-                                    <h3>Client Technical Support Specialist · Roundel</h3>
-                                    <p class="org"><img alt="" src="https://www.google.com/s2/favicons?domain=roundel.com&amp;sz=64" width="18" height="18" /><a href="https://roundel.com" target="_blank" rel="noopener noreferrer">Roundel, Target Corporation</a></p>
-                                    <ul>
-                                        <li>Handled Tier 2/3 platform incidents and system access in ServiceNow; owned escalations and post-incident reviews.</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="job reveal">
-                                <time datetime="2022-08">Aug 2022 - Dec 2024</time>
-                                <div>
-                                    <h3>Workforce Management Analyst · WTW</h3>
-                                    <p class="org"><img alt="" src="https://www.google.com/s2/favicons?domain=wtwco.com&amp;sz=64" width="18" height="18" /><a href="https://www.wtwco.com/en-us/about-us/overview" target="_blank" rel="noopener noreferrer">WTW (Willis Towers Watson)</a></p>
-                                    <ul>
-                                        <li>Monitored adherence and service levels for 100+ agents and built reports that held 90%+ SLA.</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="job reveal">
-                                <time datetime="2021-03">Mar 2021 - Aug 2022</time>
-                                <div>
-                                    <h3>System Administrator · nVent HOFFMAN</h3>
-                                    <p class="org"><img alt="" src="https://www.google.com/s2/favicons?domain=nvent.com&amp;sz=64" width="18" height="18" /><a href="https://www.nvent.com/en-us/" target="_blank" rel="noopener noreferrer">nVent HOFFMAN</a></p>
-                                    <ul>
-                                        <li>Optimized Azure access controls and identity management with Entra ID (Azure AD) to strengthen environment hygiene.</li>
-                                        <li>Built IaC deployment pipelines with Terraform, Python, and PowerShell to cut manual configuration errors and speed provisioning.</li>
-                                        <li>Supported hybrid cloud deployments, wrote incident-response documentation, and improved recovery times for critical services.</li>
-                                    </ul>
-                                </div>
-                            </article>
-                            <article class="job reveal">
-                                <time datetime="2016-09">Sep 2016 - Feb 2021</time>
-                                <div>
-                                    <h3>IT Support Specialist · MTN Cameroon</h3>
-                                    <p class="org"><img alt="" src="https://www.google.com/s2/favicons?domain=mtn.cm&amp;sz=64" width="18" height="18" /><a href="https://mtn.cm" target="_blank" rel="noopener noreferrer">MTN Cameroon</a></p>
-                                    <ul>
-                                        <li>Installed/configured network devices for 100+ users; troubleshot DNS, DHCP, VPN; maintained firewalls and patching.</li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block" id="certifications">
-                    <div class="panel">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">Certifications</p>
-                            <h2>Two Microsoft Azure certifications, plus earlier training.</h2>
-                            <p class="lede">These support the cloud and infrastructure work. They are not a security certification.</p>
-                        </div>
-                        <div class="cred-grid reveal">
-                            <article class="cred">
-                                <p class="cred-code">AZ-305</p>
-                                <h3>Microsoft Certified: Azure Solutions Architect Expert</h3>
-                                <p>Issued November 2024</p>
-                            </article>
-                            <article class="cred">
-                                <p class="cred-code">AZ-104</p>
-                                <h3>Microsoft Certified: Azure Administrator Associate</h3>
-                                <p>Issued September 2024</p>
-                            </article>
-                        </div>
-                        <div class="training reveal">
-                            <h3>Training</h3>
-                            <p class="lede" style="margin-top:0.4rem">Coursework already listed on the resume. Not additional certifications.</p>
-                            <ul class="training-list">
-                                <li>
-                                    <span><strong>Azure Cloud Computing</strong><br />NoelTechSolutions</span>
-                                    <span>Oct 2022 - Feb 2023</span>
-                                </li>
-                                <li>
-                                    <span><strong>Cisco Networking (CCNA Routing and Switching)</strong><br />Cisco Networking Academy</span>
-                                    <span>Oct 2016 - Jan 2017</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block" id="direction" aria-labelledby="direction-title">
-                    <div class="panel">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">Career direction</p>
-                            <h2 id="direction-title">Infrastructure and operations now. Security operations over time.</h2>
-                        </div>
-                        <div class="direction reveal">
-                            <article>
-                                <h3>Current focus</h3>
-                                <p>IT infrastructure and operations: systems administration, technical support, networking, and the cloud, infrastructure, identity, and automation work that sits with them.</p>
-                            </article>
-                            <article>
-                                <h3>Longer term</h3>
-                                <p>Cybersecurity and security operations, grown from the systems, access, and troubleshooting work already underway. That is a study path and a career goal. I am not presenting myself as a security specialist or as someone employed in a SOC.</p>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block" id="beyond">
-                    <div class="panel">
-                        <div class="section-head reveal">
-                            <p class="eyebrow">Beyond IT</p>
-                            <h2>Additional capabilities, kept in a supporting role.</h2>
-                            <p class="lede">Video, photo, documents, and content sit beside the IT work. They are a complement, not a second career.</p>
-                        </div>
-                        <div class="beyond-grid">
-                            <article class="reveal">
-                                <svg class="ico" aria-hidden="true"><use href="#i-video"></use></svg>
-                                <h3>Video</h3>
-                                <p>Short-form and social cuts, captions, and pacing for Reels, Shorts, and YouTube. On-device phone capture for demos and social clips.</p>
-                            </article>
-                            <article class="reveal">
-                                <svg class="ico" aria-hidden="true"><use href="#i-image"></use></svg>
-                                <h3>Photo</h3>
-                                <p>Color, cleanup, and web-ready stills for profiles and posts.</p>
-                            </article>
-                            <article class="reveal">
-                                <svg class="ico" aria-hidden="true"><use href="#i-file"></use></svg>
-                                <h3>Resume design &amp; tech docs</h3>
-                                <p>Resumes, role write-ups, and technical documents written so someone else can follow them.</p>
-                            </article>
-                            <article class="reveal">
-                                <svg class="ico" aria-hidden="true"><use href="#i-pen"></use></svg>
-                                <h3>Content creation</h3>
-                                <p>Digital content alongside personal projects. Useful next to the technical work, and not a separate practice.</p>
-                            </article>
-                            <article class="reveal">
-                                <svg class="ico" aria-hidden="true"><use href="#i-spark"></use></svg>
-                                <h3>AI-assisted workflows</h3>
-                                <p>Exploring AI tools while learning and drafting. Early, and not offered as an expert service.</p>
-                            </article>
-                            <article class="reveal">
-                                <svg class="ico" aria-hidden="true"><use href="#i-terminal"></use></svg>
-                                <h3>Automation</h3>
-                                <p>PowerShell and Python already show up in the labs. Here it is the same habit applied to repetitive work, still in support of IT.</p>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="block" id="contact">
-                    <div class="panel contact-panel reveal">
-                        <p class="eyebrow">Contact</p>
-                        <h2 style="max-width:36rem;margin-top:0.7rem">If the work fits, start with a topic.</h2>
-                        <p class="lede" style="margin-top:0.75rem">Based in Minnesota. Choose an inquiry type and your email app opens with the subject filled in. LinkedIn, GitHub, and the resume stay one click away.</p>
-                        <div class="inquiry-grid">
-                            <a class="inquiry email-link" href="#contact" data-mail-subject="Career Opportunity">
-                                <svg class="ico" aria-hidden="true"><use href="#i-briefcase"></use></svg>
-                                <span>Career Opportunity</span>
-                            </a>
-                            <a class="inquiry email-link" href="#contact" data-mail-subject="IT/Technical Project">
-                                <svg class="ico" aria-hidden="true"><use href="#i-server"></use></svg>
-                                <span>IT/Technical Project</span>
-                            </a>
-                            <a class="inquiry email-link" href="#contact" data-mail-subject="Cybersecurity Collaboration">
-                                <svg class="ico" aria-hidden="true"><use href="#i-shield"></use></svg>
-                                <span>Cybersecurity Collaboration</span>
-                            </a>
-                            <a class="inquiry email-link" href="#contact" data-mail-subject="Technical Support/Systems">
-                                <svg class="ico" aria-hidden="true"><use href="#i-headset"></use></svg>
-                                <span>Technical Support/Systems</span>
-                            </a>
-                            <a class="inquiry email-link" href="#contact" data-mail-subject="Creative/Digital Project">
-                                <svg class="ico" aria-hidden="true"><use href="#i-image"></use></svg>
-                                <span>Creative/Digital Project</span>
-                            </a>
-                            <a class="inquiry email-link" href="#contact" data-mail-subject="Other">
-                                <svg class="ico" aria-hidden="true"><use href="#i-message"></use></svg>
-                                <span>Other</span>
-                            </a>
-                        </div>
-                        <div class="link-row">
-                            <a class="email-link" href="#contact" data-mail-subject="Portfolio inquiry">
-                                <svg class="ico" aria-hidden="true"><use href="#i-mail"></use></svg>
-                                <span>Email</span>
-                            </a>
-                            <a href="https://linkedin.com/in/ngubriceche" target="_blank" rel="noopener noreferrer">
-                                <svg class="ico" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/supbrice" target="_blank" rel="noopener noreferrer">
-                                <svg class="ico" aria-hidden="true"><use href="#i-github"></use></svg>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="./Brice-Resume.pdf" target="_blank" rel="noopener noreferrer" download>
-                                <svg class="ico" aria-hidden="true"><use href="#i-file"></use></svg>
-                                <span>Resume</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                <footer class="site-footer">
-                    <p>Ngu Brice Che · IT Professional</p>
-                </footer>
+                    <!-- Portrait slot stays empty until a photo is added. Put an img inside .portrait-slot. Do not point at a missing file. -->
+                    <div class="portrait-slot" data-portrait-slot></div>
+                </div>
             </div>
-        </main>
-    </div>
+
+            <section id="work" aria-labelledby="work-title">
+                <p class="eyebrow">01 — Selected work</p>
+                <h2 id="work-title">Four labs I can walk through.</h2>
+                <p class="lede">These are portfolio labs and one sanitized client-sized write-up, not employment. The figures follow the diagrams in each repository. They are not screenshots, and I have not added results the write-ups do not state.</p>
+                <div class="studies">
+                    <article class="study rise">
+                        <figure class="diagram">
+                            <svg viewBox="0 0 400 640" role="img" aria-labelledby="cps-title cps-desc">
+                                <title id="cps-title">CPS network topology</title>
+                                <desc id="cps-desc">Internet connects to a UniFi gateway, then managed PoE switches, then VLANs for corporate, public, OT, UniFi Protect, and management.</desc>
+                                <line x1="36" y1="36" x2="36" y2="600" stroke="#1e4d5c" stroke-width="1.5"/>
+                                <g font-family="Source Sans 3, sans-serif">
+                                    <rect x="16" y="12" width="368" height="52" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="44" fill="#1c2430" font-size="18" font-weight="600">Internet</text>
+                                    <rect x="16" y="84" width="368" height="72" rx="8" fill="#1e4d5c"/>
+                                    <text x="56" y="114" fill="#f6f3ec" font-size="18" font-weight="600">UniFi gateway</text>
+                                    <text x="56" y="138" fill="#d7e4e8" font-size="15">NAT · firewall · DHCP · QoS</text>
+                                    <rect x="16" y="176" width="368" height="64" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="214" fill="#1c2430" font-size="18" font-weight="600">Managed L2/L3 PoE switches</text>
+                                    <rect x="16" y="260" width="368" height="64" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="288" fill="#1e4d5c" font-size="16" font-weight="700">VLAN 10</text>
+                                    <text x="140" y="288" fill="#1c2430" font-size="16">Corporate</text>
+                                    <rect x="16" y="336" width="368" height="64" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="364" fill="#1e4d5c" font-size="16" font-weight="700">VLAN 20</text>
+                                    <text x="140" y="364" fill="#1c2430" font-size="16">Public</text>
+                                    <rect x="16" y="412" width="368" height="64" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="436" fill="#1e4d5c" font-size="16" font-weight="700">VLAN 30–50</text>
+                                    <text x="56" y="458" fill="#1c2430" font-size="15">OT signage, signals, fleet</text>
+                                    <rect x="16" y="488" width="368" height="64" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="516" fill="#1e4d5c" font-size="16" font-weight="700">VLAN 60</text>
+                                    <text x="140" y="516" fill="#1c2430" font-size="16">UniFi Protect</text>
+                                    <rect x="16" y="564" width="368" height="64" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="56" y="592" fill="#1e4d5c" font-size="16" font-weight="700">VLAN 99</text>
+                                    <text x="140" y="592" fill="#1c2430" font-size="16">Management</text>
+                                </g>
+                            </svg>
+                            <figcaption>Diagram from the CloudProjects topology. Not a screenshot.</figcaption>
+                        </figure>
+                        <div class="study-main">
+                            <p class="badge">Lab · Client-sized write-up</p>
+                            <h3>Network Infrastructure Upgrade — CPS</h3>
+                            <p class="summary">A UniFi network for Computer Plus Solutions: gateway, PoE switching, and separate zones for staff, guests, and operational technology.</p>
+                            <a class="text-link" href="https://github.com/supbrice/CloudProjects" target="_blank" rel="noopener noreferrer">View the lab</a>
+                        </div>
+                        <dl class="notes">
+                            <div>
+                                <dt>Problem</dt>
+                                <dd>Staff PCs, guest access, and OT — digital signage, signals, and fleet tracking — shared a flat or poorly segmented LAN. Cameras and access points needed reliable PoE. Vendor-hosted OT needed a way out without a path into corporate traffic.</dd>
+                            </div>
+                            <div>
+                                <dt>What I built</dt>
+                                <dd>
+                                    <ul>
+                                        <li>UniFi gateway with NAT, firewall, DHCP, and QoS.</li>
+                                        <li>Managed Layer 2/3 PoE switches and a UniFi Protect zone.</li>
+                                        <li>VLANs for corporate, public, OT, Protect, and management.</li>
+                                        <li>Troubleshooting notes for DNS, DHCP, VLAN, vendor path, and Layer 2 adoption, plus Python and PowerShell checks.</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Honest limit</dt>
+                                <dd>The write-up describes a network that was designed and deployed, with post-cutover validation. It is a client-sized site. Configs are sanitized examples, not a controller export. No campus scale and no SLA figure.</dd>
+                            </div>
+                            <div>
+                                <dt>Technologies</dt>
+                                <dd>UniFi, VLAN, DNS, DHCP, NAT, QoS, PoE, Python, PowerShell</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="study rise">
+                        <figure class="diagram">
+                            <svg viewBox="0 0 400 760" role="img" aria-labelledby="mr-title mr-desc">
+                                <title id="mr-title">Multi-region Azure hybrid lab</title>
+                                <desc id="mr-desc">A placeholder on-premises network connects by site-to-site VPN to an East US 2 hub. Central US is peered and uses that hub gateway. Identity and monitoring are shared. Conditional Access and PIM are not created in the lab.</desc>
+                                <g font-family="Source Sans 3, sans-serif">
+                                    <rect x="16" y="12" width="368" height="132" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="44" fill="#1c2430" font-size="18" font-weight="700">On-premises</text>
+                                    <text x="36" y="68" fill="#445266" font-size="15">Placeholder addresses</text>
+                                    <text x="36" y="98" fill="#1c2430" font-size="16">VPN device · 203.0.113.0/24</text>
+                                    <text x="36" y="122" fill="#445266" font-size="15">Internal 10.50.0.0/16</text>
+                                    <text x="36" y="168" fill="#1e4d5c" font-size="14" font-weight="700">Site-to-site VPN</text>
+                                    <rect x="16" y="188" width="368" height="196" rx="8" fill="#1e4d5c"/>
+                                    <text x="36" y="220" fill="#f6f3ec" font-size="18" font-weight="700">East US 2 · hub</text>
+                                    <text x="36" y="250" fill="#f6f3ec" font-size="16">VPN Gateway · IKEv2</text>
+                                    <text x="36" y="276" fill="#f6f3ec" font-size="16">Azure Bastion</text>
+                                    <text x="36" y="302" fill="#f6f3ec" font-size="16">Management VM, no public IP</text>
+                                    <text x="36" y="328" fill="#d7e4e8" font-size="15">App and data · NSG · NAT</text>
+                                    <text x="36" y="360" fill="#1e4d5c" font-size="14" font-weight="700">Peering · gateway transit</text>
+                                    <rect x="16" y="380" width="368" height="112" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="412" fill="#1c2430" font-size="18" font-weight="700">Central US</text>
+                                    <text x="36" y="438" fill="#445266" font-size="15">Peered. Uses the hub gateway.</text>
+                                    <text x="36" y="464" fill="#1c2430" font-size="16">App and data · NSG · NAT</text>
+                                    <rect x="16" y="512" width="368" height="100" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="544" fill="#1c2430" font-size="18" font-weight="700">Shared</text>
+                                    <text x="36" y="570" fill="#445266" font-size="15">Managed identity · custom RBAC</text>
+                                    <text x="36" y="592" fill="#445266" font-size="15">Log Analytics · VPN metric alert</text>
+                                    <rect x="16" y="632" width="368" height="108" rx="8" fill="none" stroke="#1e4d5c" stroke-width="1.4" stroke-dasharray="6 5"/>
+                                    <text x="36" y="668" fill="#1e4d5c" font-size="17" font-weight="700">Conditional Access / PIM</text>
+                                    <text x="36" y="694" fill="#445266" font-size="15">Next layer. Not created here.</text>
+                                </g>
+                            </svg>
+                            <figcaption>Diagram from the Terraform lab. Site-to-site VPN into East US 2; Central US is peered. Not a screenshot.</figcaption>
+                        </figure>
+                        <div class="study-main">
+                            <p class="badge">Portfolio lab</p>
+                            <h3>Multi-Region Azure Hybrid / Zero Trust</h3>
+                            <p class="summary">A modular Terraform lab for a two-region Azure network, a VPN hub, Bastion access, managed identity, and monitoring hooks.</p>
+                            <a class="text-link" href="https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity" target="_blank" rel="noopener noreferrer">View the lab</a>
+                        </div>
+                        <dl class="notes">
+                            <div>
+                                <dt>Objective</dt>
+                                <dd>Turn hybrid networking and identity practice into code a reviewer can read. The repo is explicit: this is not a live customer or employer deployment, and it is not a claim that this stack ran at nVent.</dd>
+                            </div>
+                            <div>
+                                <dt>What I built</dt>
+                                <dd>
+                                    <ul>
+                                        <li>VNets, subnets, and NSGs in East US 2 and Central US, with peering.</li>
+                                        <li>Site-to-site VPN, NAT Gateway, Bastion, and a management VM without a public IP.</li>
+                                        <li>User-assigned managed identity and a custom RBAC role.</li>
+                                        <li>Log Analytics, a data collection rule, and a VPN metric alert.</li>
+                                        <li>GitHub Actions checks for format and validate, with no Azure secrets.</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Honest limit</dt>
+                                <dd>No production outcome is claimed. The documented result is a reviewable lab with fmt and validate in CI. Conditional Access and PIM are named as the layer above this RBAC model. The lab does not create them.</dd>
+                            </div>
+                            <div>
+                                <dt>Technologies</dt>
+                                <dd>Terraform, Azure, VNet, NSG, VPN, Bastion, Entra ID, RBAC, Log Analytics, GitHub Actions</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="study rise">
+                        <figure class="diagram">
+                            <svg viewBox="0 0 400 700" role="img" aria-labelledby="id-title id-desc">
+                                <title id="id-title">Hybrid identity lab</title>
+                                <desc id="id-desc">An operator reaches two Windows Server virtual machines through an NSG limited to their IP. vm-dc01 runs Active Directory and DNS for bricelab.local. vm-mgmt01 is the domain-joined jump box. Entra Connect or Cloud Sync is a design note, not a connected tenant.</desc>
+                                <g font-family="Source Sans 3, sans-serif">
+                                    <rect x="16" y="12" width="368" height="56" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="46" fill="#1c2430" font-size="18" font-weight="600">Lab operator</text>
+                                    <text x="36" y="96" fill="#1e4d5c" font-size="14" font-weight="700">RDP · operator IP only</text>
+                                    <rect x="16" y="112" width="368" height="64" rx="8" fill="none" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="140" fill="#1c2430" font-size="17" font-weight="700">rg-bricelab-hybridid</text>
+                                    <text x="36" y="162" fill="#445266" font-size="14">vnet-bricelab · 10.20.0.0/16</text>
+                                    <rect x="32" y="196" width="336" height="132" rx="8" fill="#1e4d5c"/>
+                                    <text x="52" y="230" fill="#f6f3ec" font-size="18" font-weight="700">vm-dc01</text>
+                                    <text x="52" y="256" fill="#d7e4e8" font-size="15">Windows Server 2022</text>
+                                    <text x="52" y="280" fill="#d7e4e8" font-size="15">AD DS + DNS · 10.20.1.4</text>
+                                    <text x="52" y="304" fill="#d7e4e8" font-size="15">Forest bricelab.local</text>
+                                    <rect x="32" y="344" width="336" height="112" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="52" y="378" fill="#1c2430" font-size="18" font-weight="700">vm-mgmt01</text>
+                                    <text x="52" y="404" fill="#445266" font-size="15">Windows Server 2022</text>
+                                    <text x="52" y="428" fill="#445266" font-size="15">Domain-joined jump · 10.20.1.5</text>
+                                    <rect x="16" y="492" width="368" height="120" rx="8" fill="none" stroke="#1e4d5c" stroke-width="1.4" stroke-dasharray="6 5"/>
+                                    <text x="36" y="528" fill="#1e4d5c" font-size="17" font-weight="700">Entra Connect or Cloud Sync</text>
+                                    <text x="36" y="556" fill="#445266" font-size="15">Design note only.</text>
+                                    <text x="36" y="580" fill="#445266" font-size="15">Not an employer tenant.</text>
+                                </g>
+                            </svg>
+                            <figcaption>Diagram from the hybrid identity lab. The dashed step is conceptual. Not a screenshot.</figcaption>
+                        </figure>
+                        <div class="study-main">
+                            <p class="badge">Portfolio lab</p>
+                            <h3>Hybrid Identity Lab — AD DS on Azure VMs</h3>
+                            <p class="summary">A small Active Directory forest on Azure virtual machines, treated as the source of identity for a hybrid Entra ID design.</p>
+                            <a class="text-link" href="https://github.com/supbrice/configure-ad" target="_blank" rel="noopener noreferrer">View the lab</a>
+                        </div>
+                        <dl class="notes">
+                            <div>
+                                <dt>Objective</dt>
+                                <dd>Show the identity work from systems administration — Azure access, Active Directory, Group Policy, and PowerShell — without using an employer directory.</dd>
+                            </div>
+                            <div>
+                                <dt>What I built</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Resource group, virtual network, NSG, and two Windows Server 2022 VMs.</li>
+                                        <li>Forest <span translate="no">bricelab.local</span> with DNS on the domain controller.</li>
+                                        <li>OU, group, and user baseline, plus a sample Group Policy.</li>
+                                        <li>Identity hygiene checks for privileged groups, non-expiring passwords, and stale accounts.</li>
+                                        <li>Written notes on Entra Connect, Cloud Sync, and what not to sync.</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Honest limit</dt>
+                                <dd>The lab stands up the on-premises source of authority. Connecting Entra ID stays conceptual. This is not an nVent environment and not a production domain. MFA is part of that discussion, not a control this repo turns on.</dd>
+                            </div>
+                            <div>
+                                <dt>Technologies</dt>
+                                <dd>Azure VMs, Windows Server, AD DS, DNS, Group Policy, PowerShell, Entra ID</dd>
+                            </div>
+                        </dl>
+                    </article>
+
+                    <article class="study rise">
+                        <figure class="diagram">
+                            <svg viewBox="0 0 400 520" role="img" aria-labelledby="az-title az-desc">
+                                <title id="az-title">Azure architect reference labs</title>
+                                <desc id="az-desc">Five reference labs: identity and access, hybrid connectivity, Terraform modules, networking, and monitoring. Not a live environment.</desc>
+                                <g font-family="Source Sans 3, sans-serif">
+                                    <rect x="16" y="8" width="368" height="92" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="46" fill="#1e4d5c" font-size="18" font-weight="700">01</text>
+                                    <text x="80" y="44" fill="#1c2430" font-size="18" font-weight="700">Identity</text>
+                                    <text x="80" y="70" fill="#445266" font-size="15">Entra · RBAC · CA left off</text>
+                                    <rect x="16" y="112" width="368" height="92" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="150" fill="#1e4d5c" font-size="18" font-weight="700">02</text>
+                                    <text x="80" y="148" fill="#1c2430" font-size="18" font-weight="700">Hybrid</text>
+                                    <text x="80" y="174" fill="#445266" font-size="15">VPN · private DNS</text>
+                                    <rect x="16" y="216" width="368" height="92" rx="8" fill="#1e4d5c"/>
+                                    <text x="36" y="254" fill="#f6f3ec" font-size="18" font-weight="700">03</text>
+                                    <text x="80" y="252" fill="#f6f3ec" font-size="18" font-weight="700">Infrastructure as code</text>
+                                    <text x="80" y="278" fill="#d7e4e8" font-size="15">Terraform · Python · PowerShell</text>
+                                    <rect x="16" y="320" width="368" height="92" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="358" fill="#1e4d5c" font-size="18" font-weight="700">04</text>
+                                    <text x="80" y="356" fill="#1c2430" font-size="18" font-weight="700">Network</text>
+                                    <text x="80" y="382" fill="#445266" font-size="15">DNS · VPN · NSG</text>
+                                    <rect x="16" y="424" width="368" height="84" rx="8" fill="#faf8f4" stroke="#1c2430" stroke-width="1.4"/>
+                                    <text x="36" y="458" fill="#1e4d5c" font-size="18" font-weight="700">05</text>
+                                    <text x="80" y="456" fill="#1c2430" font-size="18" font-weight="700">Monitor</text>
+                                    <text x="80" y="482" fill="#445266" font-size="15">Azure Monitor · Log Analytics</text>
+                                </g>
+                            </svg>
+                            <figcaption>Five reference labs from the repository. Not a live estate, and not a screenshot.</figcaption>
+                        </figure>
+                        <div class="study-main">
+                            <p class="badge">Reference labs</p>
+                            <h3>Azure Architect Labs</h3>
+                            <p class="summary">Five readable labs on identity, hybrid connectivity, Terraform, networking, and monitoring. Patterns, not a customer environment.</p>
+                            <a class="text-link" href="https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases" target="_blank" rel="noopener noreferrer">View the lab</a>
+                        </div>
+                        <dl class="notes">
+                            <div>
+                                <dt>Objective</dt>
+                                <dd>Labs that match hybrid Azure, Entra ID, infrastructure as code, and operations. The repo states they do not claim production SLAs or invented metrics.</dd>
+                            </div>
+                            <div>
+                                <dt>What I built</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Identity and access patterns, including Conditional Access kept disabled by default.</li>
+                                        <li>Hybrid connectivity notes: VPN, on-premises prefixes, and private DNS.</li>
+                                        <li>Terraform modules with Python and PowerShell alongside them.</li>
+                                        <li>DNS, VPN, and NSG patterns, plus a VLAN-to-subnet mapping.</li>
+                                        <li>Azure Monitor and Log Analytics notes. VPN Gateway is off by default.</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Honest limit</dt>
+                                <dd>The outcome is the written patterns and a disposable Terraform composition. There is no live estate and no availability figure in these labs. ServiceNow is mentioned as the ITSM context from the jobs, not simulated here.</dd>
+                            </div>
+                            <div>
+                                <dt>Technologies</dt>
+                                <dd>Azure, Entra ID, Terraform, PowerShell, Python, Azure Monitor</dd>
+                            </div>
+                        </dl>
+                    </article>
+                </div>
+            </section>
+
+            <section id="about" aria-labelledby="about-title">
+                <p class="eyebrow">02 — About</p>
+                <h2 id="about-title">I like understanding how a system works, then making it easier to support.</h2>
+                <div class="prose">
+                    <p>I'm Brice. I've worked in technical support, systems administration, infrastructure, networking, and cloud identity. I like a hard problem when it can be broken into a clear next step.</p>
+                    <p>Most of the work is practical: troubleshooting, keeping an environment usable, and writing a script when repeating the same change by hand is the risky part. I also try AI tools while I'm learning. That is not a separate practice.</p>
+                    <p>Support came first. Then systems, infrastructure, networking, cloud, and identity. Cybersecurity and security operations are where I am growing, on purpose. That is a direction, not a job I already hold.</p>
+                    <p>Away from the queue I explore tools, build small projects, and make the occasional video, photo, or document. I still want the result to be something another person can use.</p>
+                    <p class="mission">Keep learning. Keep building. Keep moving forward.</p>
+                </div>
+            </section>
+
+            <section id="skills" aria-labelledby="skills-title">
+                <p class="eyebrow">03 — Technical focus</p>
+                <h2 id="skills-title">Grouped by the work, not by one platform.</h2>
+                <p class="lede">Azure is one skill in this set. Where something is still early, it says so.</p>
+                <div class="focus">
+                    <article>
+                        <h3>IT and systems</h3>
+                        <p>Systems administration, IT operations, technical support, Windows, troubleshooting, and networking. ServiceNow and Salesforce show up in the operations roles.</p>
+                    </article>
+                    <article>
+                        <h3>Cloud and infrastructure</h3>
+                        <p>Microsoft Azure, hybrid infrastructure, and infrastructure as code, from the nVent role and the labs. Terraform sits with that work.</p>
+                    </article>
+                    <article>
+                        <h3>Identity and security</h3>
+                        <p>Active Directory, Entra ID, and IAM are in the work. <span class="mark">Growing</span> MFA and cybersecurity. Security fundamentals are in place. They are not a specialty claim.</p>
+                    </article>
+                    <article>
+                        <h3>Automation</h3>
+                        <p>PowerShell, Python, and scripting in the labs and the IaC pipelines. <span class="mark">Exploring</span> AI tools, as part of learning.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="experience" aria-labelledby="experience-title">
+                <div class="split">
+                    <div>
+                        <p class="eyebrow">04 — Experience</p>
+                        <h2 id="experience-title">Roles in support, operations, systems, and networking.</h2>
+                        <p class="lede">Employers, titles, dates, and bullets match the resume.</p>
+                        <ol class="roles">
+                            <li class="role">
+                                <time datetime="2025-10">Oct 2025 - Jan 2026</time>
+                                <h3>Client Technical Support Specialist</h3>
+                                <p class="org"><a href="https://roundel.com" target="_blank" rel="noopener noreferrer">Roundel, Target Corporation</a></p>
+                                <ul>
+                                    <li>Handled Tier 2/3 platform incidents and system access in ServiceNow; owned escalations and post-incident reviews.</li>
+                                </ul>
+                            </li>
+                            <li class="role">
+                                <time datetime="2022-08">Aug 2022 - Dec 2024</time>
+                                <h3>Workforce Management Analyst</h3>
+                                <p class="org"><a href="https://www.wtwco.com/en-us/about-us/overview" target="_blank" rel="noopener noreferrer">WTW (Willis Towers Watson)</a></p>
+                                <ul>
+                                    <li>Monitored adherence and service levels for 100+ agents and built reports that held 90%+ SLA.</li>
+                                </ul>
+                            </li>
+                            <li class="role">
+                                <time datetime="2021-03">Mar 2021 - Aug 2022</time>
+                                <h3>System Administrator</h3>
+                                <p class="org"><a href="https://www.nvent.com/en-us/" target="_blank" rel="noopener noreferrer">nVent HOFFMAN</a></p>
+                                <ul>
+                                    <li>Optimized Azure access controls and identity management with Entra ID (Azure AD) to strengthen environment hygiene.</li>
+                                    <li>Built IaC deployment pipelines with Terraform, Python, and PowerShell to cut manual configuration errors and speed provisioning.</li>
+                                    <li>Supported hybrid cloud deployments, wrote incident-response documentation, and improved recovery times for critical services.</li>
+                                </ul>
+                            </li>
+                            <li class="role">
+                                <time datetime="2016-09">Sep 2016 - Feb 2021</time>
+                                <h3>IT Support Specialist</h3>
+                                <p class="org"><a href="https://mtn.cm" target="_blank" rel="noopener noreferrer">MTN Cameroon</a></p>
+                                <ul>
+                                    <li>Installed/configured network devices for 100+ users; troubleshot DNS, DHCP, VPN; maintained firewalls and patching.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="certs" id="certifications">
+                        <h3>Certifications</h3>
+                        <p class="fine">AZ-305 and AZ-104. They support the cloud and infrastructure work. They are not a security certification.</p>
+                        <article>
+                            <p class="code">AZ-305</p>
+                            <h4>Microsoft Certified: Azure Solutions Architect Expert</h4>
+                            <p>Issued November 2024</p>
+                        </article>
+                        <article>
+                            <p class="code">AZ-104</p>
+                            <h4>Microsoft Certified: Azure Administrator Associate</h4>
+                            <p>Issued September 2024</p>
+                        </article>
+                        <h3 class="subhead">Training</h3>
+                        <p class="fine">Coursework already listed on the resume. Not additional certifications. The Cisco line is academy training, not a CCNA claim.</p>
+                        <ul class="training">
+                            <li>
+                                <span><strong>Azure Cloud Computing</strong><br />NoelTechSolutions</span>
+                                <span>Oct 2022 - Feb 2023</span>
+                            </li>
+                            <li>
+                                <span><strong>Cisco Networking (CCNA Routing and Switching)</strong><br />Cisco Networking Academy</span>
+                                <span>Oct 2016 - Jan 2017</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="journey" aria-labelledby="journey-title">
+                <p class="eyebrow">05 — Cybersecurity journey</p>
+                <h2 id="journey-title">Infrastructure now. Security operations over time.</h2>
+                <p class="lede">Labeled as growth. I am not presenting myself as a security specialist, and I am not employed in a SOC.</p>
+                <div class="two">
+                    <article>
+                        <h3>Current focus</h3>
+                        <p>IT infrastructure and operations: systems administration, technical support, networking, and the cloud, infrastructure, identity, and automation work that sits with them.</p>
+                    </article>
+                    <article>
+                        <h3>Where this is going</h3>
+                        <p>Cybersecurity and security operations, grown from the systems, access, and troubleshooting I already do. A study path and a career goal. Not a current title.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="beyond" aria-labelledby="beyond-title">
+                <p class="eyebrow">06 — Beyond IT</p>
+                <h2 id="beyond-title">Useful beside the IT work.</h2>
+                <p class="lede">Video, photo, documents, and content. A complement, not a second career.</p>
+                <div class="beyond">
+                    <article>
+                        <h3>Video</h3>
+                        <p>Short-form and social cuts, captions, and pacing for Reels, Shorts, and YouTube. Phone capture for demos and clips.</p>
+                    </article>
+                    <article>
+                        <h3>Photo</h3>
+                        <p>Color, cleanup, and web-ready stills for profiles and posts.</p>
+                    </article>
+                    <article>
+                        <h3>Resume design and tech docs</h3>
+                        <p>Resumes, role write-ups, and technical documents written so someone else can follow them.</p>
+                    </article>
+                    <article>
+                        <h3>Content</h3>
+                        <p>Digital content alongside personal projects. Useful next to the technical work, and not a separate practice.</p>
+                    </article>
+                    <article>
+                        <h3>AI-assisted workflows</h3>
+                        <p>Exploring AI tools while learning and drafting. Early, and not offered as an expert service.</p>
+                    </article>
+                    <article>
+                        <h3>Automation</h3>
+                        <p>The same PowerShell and Python habit from the labs, applied to repetitive work, still in support of IT.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-title">
+                <p class="eyebrow">07 — Contact</p>
+                <h2 id="contact-title">Tell me what you need.</h2>
+                <p class="lede">I'm in Minnesota. IT roles, technical projects, cybersecurity collaboration, and creative or documentation work are all fine reasons to write.</p>
+                <div class="inquiries">
+                    <a class="inquiry" href="mailto:ngubriceche@outlook.com" data-mail-subject="IT role">
+                        <strong>IT roles</strong>
+                        <span>Systems, support, operations, networking</span>
+                    </a>
+                    <a class="inquiry" href="mailto:ngubriceche@outlook.com" data-mail-subject="Technical project">
+                        <strong>Technical projects</strong>
+                        <span>Infrastructure, cloud, identity, automation</span>
+                    </a>
+                    <a class="inquiry" href="mailto:ngubriceche@outlook.com" data-mail-subject="Cybersecurity collaboration">
+                        <strong>Cybersecurity collaboration</strong>
+                        <span>Learning and security-operations conversations</span>
+                    </a>
+                    <a class="inquiry" href="mailto:ngubriceche@outlook.com" data-mail-subject="Creative work and documentation">
+                        <strong>Creative work and docs</strong>
+                        <span>Video, photo, resumes, technical writing</span>
+                    </a>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:ngubriceche@outlook.com" data-mail-subject="Portfolio inquiry">ngubriceche@outlook.com</a>
+                    <a href="https://www.linkedin.com/in/ngubriceche" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/supbrice" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="./Brice-Resume.pdf" download>Resume</a>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <p>Ngu Brice Che · IT Professional</p>
+            </footer>
+        </div>
+    </main>
 
     <script>
         (function () {
-            var root = document.documentElement;
-            var toggle = document.getElementById("theme-toggle");
-            function label() {
-                var light = root.classList.contains("light");
-                toggle.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
-                var theme = document.querySelector('meta[name="theme-color"]');
-                if (theme) theme.setAttribute("content", light ? "#eef2f6" : "#07090f");
-            }
-            label();
-            toggle.addEventListener("click", function () {
-                var light = root.classList.toggle("light");
-                try { localStorage.setItem("theme", light ? "light" : "dark"); } catch (err) {}
-                label();
-            });
-        })();
-
-        (function () {
-            var user = "ngubriceche";
-            var domain = "outlook.com";
-            document.querySelectorAll(".email-link").forEach(function (link) {
+            var address = "ngubriceche@outlook.com";
+            document.querySelectorAll("[data-mail-subject]").forEach(function (link) {
                 var subject = link.getAttribute("data-mail-subject") || "";
-                var address = user + "@" + domain;
                 link.href = "mailto:" + address + (subject ? "?subject=" + encodeURIComponent(subject) : "");
-                var visible = (link.textContent || "").replace(/\s+/g, " ").trim();
-                link.setAttribute("aria-label", visible + " — " + address);
-                link.title = address;
             });
         })();
 
         (function () {
-            var links = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
+            var links = Array.prototype.slice.call(document.querySelectorAll(".site-nav a"));
             var sections = links.map(function (link) {
                 return document.querySelector(link.getAttribute("href"));
             }).filter(Boolean);
 
             function mark() {
-                var y = window.scrollY + 32;
+                var line = 96;
                 var current = sections[0];
-                var atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+                var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
                 if (atBottom) {
                     current = sections[sections.length - 1];
                 } else {
                     sections.forEach(function (section) {
-                        if (section.offsetTop <= y) current = section;
+                        if (section.getBoundingClientRect().top <= line) current = section;
                     });
                 }
                 links.forEach(function (link) {
                     var on = current && link.getAttribute("href") === "#" + current.id;
-                    link.classList.toggle("is-active", on);
                     if (on) link.setAttribute("aria-current", "true");
                     else link.removeAttribute("aria-current");
                 });
             }
+
             mark();
             window.addEventListener("scroll", mark, { passive: true });
             window.addEventListener("resize", mark);
-
-            var nodes = document.querySelectorAll(".reveal");
-            var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            if (reduce || !("IntersectionObserver" in window)) {
-                nodes.forEach(function (el) { el.classList.add("is-in"); });
-                return;
-            }
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add("is-in");
-                    observer.unobserve(entry.target);
-                });
-            }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-            nodes.forEach(function (el) { observer.observe(el); });
         })();
+
     </script>
 </body>
 </html>
