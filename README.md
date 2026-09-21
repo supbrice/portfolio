@@ -18,9 +18,13 @@ Repo: [github.com/supbrice/portfolio](https://github.com/supbrice/portfolio)
 
 A single-page portfolio (static `index.html`) that follows the resume and links the four public infrastructure labs.
 
+On a wide screen the identity sits in a sticky left rail (status, name, role, pitch, calls to action) while the proof scrolls on the right. On a phone the same identity stacks first, then the sections. There is no profile photo on the page. `.portrait-slot` is empty until an image is placed inside it.
+
+The background is a slow drift of soft color fields. With `prefers-reduced-motion: reduce`, those fields stay still and section motion is turned off.
+
 | Section | What you see |
 | --- | --- |
-| Hero | Name **Ngu Brice Che**, IT Professional positioning, four calls to action |
+| Identity rail | Name **Ngu Brice Che**, IT Professional positioning, four calls to action, no photo |
 | About | Short personal note in the existing voice |
 | Skills | IT & systems, cloud & infrastructure, identity & security, automation, additional capabilities |
 | Projects | Case studies for the four labs, labeled lab / portfolio |
@@ -47,7 +51,7 @@ Personal utilities stay in GitHub and are not featured on this page.
 
 - Static `index.html` (no build step)
 - Resume download: `Brice-Resume.pdf`
-- Profile image: `web-pfp.png`
+- `web-pfp.png` is unused. The page does not load it. Add an `img` inside `.portrait-slot` when a photo is ready.
 - GitHub Pages: `.nojekyll` so Pages serves the files as-is
 - Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
 
