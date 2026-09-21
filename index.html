@@ -380,8 +380,8 @@
 
         .mock {
             position: relative;
-            min-height: 420px;
-            padding: 1.4rem;
+            min-height: 460px;
+            padding: 1.35rem;
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -839,9 +839,7 @@
             .cred-grid,
             .split,
             .beyond-grid,
-            .inquiry-grid,
-            .vlan-row,
-            .lab-row {
+            .inquiry-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -854,6 +852,11 @@
             .device { min-height: 0; }
 
             .work { margin-bottom: 2.75rem; }
+        }
+
+        @media (max-width: 860px) {
+            .vlan-row,
+            .lab-row { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 640px) {
@@ -870,13 +873,14 @@
             .split,
             .beyond-grid,
             .inquiry-grid,
-            .vlan-row,
             .region-row,
-            .lab-row,
             .training-list li {
                 grid-template-columns: 1fr;
                 flex-direction: column;
             }
+
+            .vlan-row,
+            .lab-row { grid-template-columns: 1fr 1fr; }
 
             .training-list li { align-items: flex-start; }
             .training-list span:last-child { white-space: normal; }
