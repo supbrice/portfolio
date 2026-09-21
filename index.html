@@ -423,6 +423,26 @@
         }
 
         @media (max-width: 767px) {
+            header nav > a {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+
+            header nav > a > span {
+                min-width: 0;
+            }
+
+            header nav > a .font-mono {
+                white-space: normal;
+                letter-spacing: 0.12em;
+                line-height: 1.35;
+            }
+
+            #theme-toggle {
+                flex: 0 0 auto;
+                align-self: flex-start;
+            }
+
             .stack-mobile > * {
                 grid-column: span 1 / span 1 !important;
             }
