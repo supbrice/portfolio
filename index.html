@@ -5,1047 +5,1363 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brice | Azure / Hybrid Systems Administrator | AZ-305 | AZ-104</title>
     <link rel="icon" type="image/png" href="./web-pfp.png" sizes="32x32" />
-    <link class="ios-icon" rel="apple-touch-icon" href="./web-pfp.png" />
+    <link rel="apple-touch-icon" href="./web-pfp.png" />
     <meta
         name="description"
         content="Azure / Hybrid Systems Administrator focused on Microsoft Azure, hybrid identity, enterprise networking, Terraform, PowerShell, and Tier 2/3 support."
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        abyss: "#06080d",
-                        graphite: "#0e131c",
-                        steel: "#161d2a",
-                        mist: "#94a3b8",
-                        line: "rgba(96, 165, 250, 0.18)",
-                        accent: "#3b82f6"
-                    },
-                    fontFamily: {
-                        sans: ["Space Grotesk", "sans-serif"],
-                        mono: ["IBM Plex Mono", "monospace"]
-                    },
-                    boxShadow: {
-                        glow: "0 0 0 1px rgba(59, 130, 246, 0.15), 0 20px 80px rgba(2, 12, 27, 0.65)"
-                    },
-                    backgroundImage: {
-                        grid: "linear-gradient(rgba(59,130,246,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px)"
-                    }
-                }
-            }
-        };
-    </script>
+    <meta name="theme-color" content="#05070c" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
         rel="stylesheet"
     />
-    <style>
-        html {
-            scroll-behavior: smooth;
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light");
         }
-
+    </script>
+    <style>
         :root {
             color-scheme: dark;
+            --bg0: #05070c;
+            --bg1: #090d14;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --faint: #64748b;
+            --accent: #60a5fa;
+            --accent-strong: #3b82f6;
+            --line: rgba(255, 255, 255, 0.1);
+            --line-strong: rgba(96, 165, 250, 0.48);
+            --glass: linear-gradient(180deg, rgba(16, 24, 40, 0.82), rgba(8, 12, 20, 0.94));
+            --card: rgba(255, 255, 255, 0.035);
+            --pill: rgba(255, 255, 255, 0.04);
+            --shadow: 0 24px 70px rgba(2, 8, 20, 0.38);
+            --lift: 0 18px 40px rgba(2, 8, 20, 0.38), 0 0 0 1px rgba(96, 165, 250, 0.2);
+            --dialog: #0c121c;
+            --dialog-bar: rgba(12, 18, 28, 0.94);
+            --ph-text: #fbbf24;
+            --ph-bg: rgba(251, 191, 36, 0.08);
+            --ph-line: rgba(251, 191, 36, 0.6);
+            --creative: rgba(167, 139, 250, 0.16);
+            --creative-line: rgba(167, 139, 250, 0.38);
+            --grid: rgba(96, 165, 250, 0.07);
+            --glow: rgba(59, 130, 246, 0.22);
+            --ink-on-accent: #041018;
         }
 
         html.light {
             color-scheme: light;
+            --bg0: #f4f7fb;
+            --bg1: #e8eef7;
+            --text: #0f172a;
+            --muted: #475569;
+            --faint: #64748b;
+            --accent: #1d4ed8;
+            --accent-strong: #2563eb;
+            --line: rgba(15, 23, 42, 0.1);
+            --line-strong: rgba(37, 99, 235, 0.4);
+            --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(241, 245, 249, 0.96));
+            --card: rgba(255, 255, 255, 0.78);
+            --pill: #ffffff;
+            --shadow: 0 18px 44px rgba(148, 163, 184, 0.2);
+            --lift: 0 16px 36px rgba(148, 163, 184, 0.28), 0 0 0 1px rgba(37, 99, 235, 0.16);
+            --dialog: #ffffff;
+            --dialog-bar: rgba(255, 255, 255, 0.96);
+            --ph-text: #92400e;
+            --ph-bg: #fffbeb;
+            --ph-line: #d97706;
+            --creative: rgba(139, 92, 246, 0.1);
+            --creative-line: rgba(109, 40, 217, 0.28);
+            --grid: rgba(37, 99, 235, 0.07);
+            --glow: rgba(37, 99, 235, 0.14);
+            --ink-on-accent: #f8fafc;
         }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text);
+            font-family: "Space Grotesk", sans-serif;
             background:
-                radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent 30%),
-                radial-gradient(circle at 85% 15%, rgba(59, 130, 246, 0.1), transparent 22%),
-                linear-gradient(180deg, #05070c 0%, #090d14 45%, #05070b 100%);
+                radial-gradient(circle at 0% -10%, var(--glow), transparent 34%),
+                radial-gradient(circle at 100% 0%, rgba(14, 165, 233, 0.14), transparent 28%),
+                linear-gradient(180deg, var(--bg0), var(--bg1) 46%, var(--bg0));
         }
 
-        .glass {
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(9, 13, 20, 0.88));
-            backdrop-filter: blur(18px);
-        }
-
-        .scanline::before {
+        body::before {
             content: "";
-            position: absolute;
+            position: fixed;
             inset: 0;
             pointer-events: none;
-            background: linear-gradient(rgba(255, 255, 255, 0.015) 50%, transparent 50%);
-            background-size: 100% 4px;
-            opacity: 0.32;
+            background-image:
+                linear-gradient(var(--grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: radial-gradient(circle at 50% 30%, #000 20%, transparent 78%);
         }
 
-        .brand-chip {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 2.75rem;
-            height: 2.75rem;
-            border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-            flex-shrink: 0;
+        button, input { font: inherit; color: inherit; }
+
+        a { color: var(--accent); }
+
+        img { max-width: 100%; }
+
+        .wrap {
+            width: min(1180px, calc(100% - 32px));
+            margin-inline: auto;
         }
 
-        .brand-chip svg {
-            width: 1.2rem;
-            height: 1.2rem;
-            display: block;
-        }
-
-        .brand-linkedin {
-            background: linear-gradient(135deg, rgba(10, 102, 194, 0.24), rgba(10, 102, 194, 0.08));
-            color: #0a66c2;
-        }
-
-        .brand-email {
-            background: linear-gradient(135deg, rgba(0, 120, 212, 0.24), rgba(14, 165, 233, 0.08));
-            color: #38bdf8;
-        }
-
-        .brand-phone {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.24), rgba(21, 128, 61, 0.08));
-            color: #4ade80;
-        }
-
-        .brand-location {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.24), rgba(244, 63, 94, 0.08));
-            color: #fb7185;
-        }
-
-        .theme-toggle-icon-sun {
-            display: none;
-        }
-
-        .section-break {
-            position: relative;
-            margin-top: 5rem;
-        }
-
-        .section-break::before {
-            content: "";
-            display: block;
-            height: 1px;
-            margin-bottom: 3rem;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.28), transparent);
-        }
-
-        @media (min-width: 1024px) {
-            .section-break {
-                margin-top: 6rem;
-            }
-
-            .section-break::before {
-                margin-bottom: 3.5rem;
-            }
-        }
-
-        .ticker-shell {
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(7, 10, 16, 0.82);
-            overflow: hidden;
-        }
-
-        .ticker-track {
-            display: flex;
-            width: max-content;
-            animation: ticker-scroll 40s linear infinite;
-        }
-
-        .ticker-shell:hover .ticker-track {
-            animation-play-state: paused;
-        }
-
-        .ticker-group {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.7rem 1.25rem;
-        }
-
-        .ticker-item {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.32rem 0.8rem 0.32rem 0.42rem;
-            border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.03);
-            opacity: 0.92;
-            color: #e2e8f0;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: opacity 180ms ease, transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
-        }
-
-        .ticker-item:hover {
-            opacity: 1;
-            transform: translateY(-1px);
-            border-color: rgba(59, 130, 246, 0.32);
-            background: rgba(59, 130, 246, 0.1);
-            box-shadow: 0 0 18px rgba(59, 130, 246, 0.16);
-        }
-
-        .ticker-link {
-            color: inherit;
-        }
-
-        .ticker-logo {
-            width: 1.2rem;
-            height: 1.2rem;
-            flex-shrink: 0;
-            display: block;
-        }
-
-        .ticker-label {
-            display: inline;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-            line-height: 1;
-            color: inherit;
-            white-space: nowrap;
-        }
-
-        .company-link {
-            color: inherit;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: color 180ms ease, border-color 180ms ease;
-        }
-
-        .company-link:hover {
-            color: #60a5fa;
-            border-bottom-color: rgba(96, 165, 250, 0.55);
-        }
-
-        .company-row {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.65rem;
-        }
-
-        .company-logo {
-            width: 18px;
-            height: 18px;
-            border-radius: 9999px;
-            flex-shrink: 0;
-            opacity: 0.9;
-        }
-
-        .brand-avatar {
-            width: 2.6rem;
-            height: 2.6rem;
-            border-radius: 0.85rem;
-            object-fit: cover;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.12);
-            image-rendering: pixelated;
-            flex-shrink: 0;
-            transition: transform 200ms ease, box-shadow 200ms ease;
-        }
-
-        .brand-avatar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.28);
-        }
-
-        @keyframes ticker-scroll {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        article.glass {
-            transition: transform 200ms ease, box-shadow 200ms ease;
-        }
-
-        article.glass:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2), 0 10px 40px rgba(59, 130, 246, 0.08);
-        }
-
-        .rounded-\[1\.75rem\] {
-            transition: all 200ms ease;
-        }
-
-        .rounded-\[1\.75rem\]:hover {
-            border-color: rgba(59, 130, 246, 0.3);
-        }
-
-        button:not(.status-pill):not(#theme-toggle) {
-            transition: all 200ms ease;
-        }
-
-        button:not(.status-pill):not(#theme-toggle):active {
-            transform: scale(0.98);
-        }
-
-        html.light body {
-            background:
-                radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 28%),
-                radial-gradient(circle at 85% 12%, rgba(14, 165, 233, 0.12), transparent 20%),
-                linear-gradient(180deg, #f8fbff 0%, #eef4fb 42%, #f6f9fd 100%);
-        }
-
-        html.light .glass {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(241, 245, 249, 0.92));
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--line);
+            background: color-mix(in srgb, var(--bg0) 78%, transparent);
             backdrop-filter: blur(18px);
-            box-shadow: 0 18px 48px rgba(148, 163, 184, 0.18);
         }
 
-        html.light .scanline::before {
-            opacity: 0.08;
-            background: linear-gradient(rgba(15, 23, 42, 0.04) 50%, transparent 50%);
+        .bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 72px;
         }
 
-        html.light .theme-toggle-icon-moon {
-            display: none;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            text-decoration: none;
+            min-width: 0;
         }
 
-        html.light .theme-toggle-icon-sun {
+        .brand img,
+        .portrait img {
+            image-rendering: pixelated;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid var(--line);
+        }
+
+        .brand strong { display: block; font-size: 1rem; letter-spacing: -0.03em; }
+
+        .brand small {
+            display: block;
+            margin-top: 2px;
+            color: var(--faint);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.64rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .bar-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+        .resume-link,
+        .icon-btn,
+        .text-btn {
+            border: 1px solid var(--line);
+            background: var(--pill);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: 999px;
+        }
+
+        .resume-link,
+        .text-btn {
+            padding: 9px 14px;
+            font-size: 0.86rem;
+            font-weight: 600;
+        }
+
+        .icon-btn {
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .resume-link:hover,
+        .icon-btn:hover,
+        .text-btn:hover,
+        .pill:hover {
+            border-color: var(--line-strong);
+        }
+
+        .icon-sun { display: none; }
+        html.light .icon-moon { display: none; }
+        html.light .icon-sun { display: block; }
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            align-items: center;
+            margin: 22px 0 14px;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 99px;
+            background: var(--accent-strong);
+        }
+
+        .dot.portfolio { background: #a78bfa; }
+        .dot.personal { background: #f59e0b; }
+
+        .bento {
+            display: grid;
+            gap: 14px;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.92fr) minmax(0, 1.08fr);
+            grid-template-areas:
+                "hero job cloud"
+                "hero talk cloud"
+                "creative personal cloud";
+            padding-bottom: 28px;
+        }
+
+        .tile {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 22px;
+            overflow: hidden;
+            text-align: left;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: var(--glass);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .tile::after {
+            content: "";
+            position: absolute;
+            inset: 0 auto auto 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.7), transparent);
+            pointer-events: none;
+        }
+
+        .tile:hover {
+            transform: translateY(-3px);
+            border-color: var(--line-strong);
+            box-shadow: var(--lift);
+        }
+
+        .tile:focus-visible,
+        .resume-link:focus-visible,
+        .icon-btn:focus-visible,
+        .text-btn:focus-visible,
+        .pill:focus-visible,
+        .jump a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        .tile-hero { grid-area: hero; min-height: 420px; }
+        .tile-job { grid-area: job; }
+        .tile-talk { grid-area: talk; cursor: default; }
+        .tile-cloud { grid-area: cloud; }
+        .tile-creative {
+            grid-area: creative;
+            background:
+                linear-gradient(180deg, var(--creative), transparent 42%),
+                var(--glass);
+            border-color: var(--creative-line);
+        }
+        .tile-personal {
+            grid-area: personal;
+            border-style: dashed;
+            border-color: var(--ph-line);
+        }
+
+        .tile-talk {
+            background: linear-gradient(165deg, #3b82f6 0%, #1d4ed8 58%, #0f172a 140%);
+            color: #f8fafc;
+            border-color: transparent;
+        }
+
+        .tile-talk .kicker,
+        .tile-talk .lede,
+        .tile-talk .tile-foot { color: rgba(255, 255, 255, 0.82); }
+
+        .kicker {
+            margin: 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .tile h1,
+        .tile h2,
+        .panel h2,
+        .panel h3,
+        .card h3,
+        .role h3 {
+            margin: 0;
+            letter-spacing: -0.04em;
+        }
+
+        .tile h1 {
+            margin-top: 18px;
+            font-size: clamp(4rem, 7vw, 6.4rem);
+            line-height: 0.88;
+            font-weight: 700;
+        }
+
+        .tile h2 {
+            margin-top: 10px;
+            font-size: clamp(1.35rem, 2vw, 1.85rem);
+            line-height: 1.05;
+        }
+
+        .lede, .quiet, .ph-note, .tile-foot, .role li, .card li, .card p, .panel .intro {
+            color: var(--muted);
+        }
+
+        .lede {
+            margin: 10px 0 0;
+            font-size: 0.98rem;
+            line-height: 1.45;
+        }
+
+        .hero-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .portrait {
+            width: 124px;
+            height: 124px;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.12);
+            background: #111;
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
         }
 
-        html.light .section-break::before {
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.18), transparent);
+        .tagline-ph,
+        .ph {
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+            max-width: 100%;
+            margin: 16px 0 0;
+            padding: 8px 12px;
+            border: 1px dashed var(--ph-line);
+            border-radius: 999px;
+            background: var(--ph-bg);
+            color: var(--ph-text);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.92rem;
+            line-height: 1.35;
         }
 
-        html.light .section-break {
-            margin-top: 6rem;
+        .ph-list { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 14px; }
+        .ph-list .ph { margin: 0; }
+
+        .ph-note {
+            margin: 10px 0 0;
+            font-size: 0.82rem;
+            line-height: 1.45;
         }
 
-        html.light .section-break::before {
-            margin-bottom: 3.5rem;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.18), transparent);
+        .tile-foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 16px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
-        @media (max-width: 1023px) {
-            html.light .section-break {
-                margin-top: 5rem;
+        .open-hint {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 5px 9px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.66rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            background: color-mix(in srgb, var(--bg0) 35%, transparent);
+        }
+
+        .tile-creative .open-hint,
+        .tile-personal .open-hint { right: 16px; }
+
+        .meta-block { margin-top: 14px; }
+        .meta-block + .meta-block { margin-top: 10px; }
+
+        .meta-label {
+            margin: 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.66rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+
+        .meta-block strong {
+            display: block;
+            margin-top: 4px;
+            font-size: 0.98rem;
+            letter-spacing: -0.03em;
+        }
+
+        .meta-block em {
+            display: block;
+            margin-top: 2px;
+            font-style: normal;
+            color: var(--muted);
+            font-size: 0.84rem;
+        }
+
+        .chips, .pills, .jump {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip, .jump a, .tag {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--pill);
+            color: var(--text);
+            font-size: 0.78rem;
+        }
+
+        .chip, .tag { padding: 6px 10px; }
+
+        .chips { margin-top: 14px; }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .quiet {
+            margin: 8px 0 0;
+            padding-left: 1rem;
+            font-size: 0.86rem;
+            line-height: 1.45;
+        }
+
+        .quiet li + li { margin-top: 4px; }
+
+        .skill-line {
+            margin: 12px 0 0;
+            font-size: 0.92rem;
+            line-height: 1.4;
+        }
+
+        .skill-line strong { color: var(--text); }
+
+        .pills { margin-top: 14px; }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .tile-talk .pill:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        .footnote {
+            margin: 0 0 36px;
+            color: var(--faint);
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        dialog {
+            width: min(980px, calc(100vw - 28px));
+            max-height: min(880px, calc(100vh - 28px));
+            padding: 0;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: var(--dialog);
+            color: var(--text);
+            box-shadow: var(--shadow);
+        }
+
+        dialog::backdrop {
+            background: rgba(2, 6, 14, 0.72);
+            backdrop-filter: blur(8px);
+        }
+
+        .dialog-bar {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--line);
+            background: var(--dialog-bar);
+            backdrop-filter: blur(16px);
+        }
+
+        .dialog-bar p {
+            margin: 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+
+        .dialog-body { padding: 22px 22px 32px; }
+
+        .panel h2 {
+            margin-top: 8px;
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            line-height: 1.05;
+        }
+
+        .intro { margin: 12px 0 0; font-size: 1.02rem; line-height: 1.6; max-width: 72ch; }
+
+        .keywords {
+            margin: 14px 0 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+
+        .jump { margin-top: 16px; }
+        .jump a {
+            padding: 7px 10px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .block { margin-top: 28px; scroll-margin-top: 72px; }
+        .block h3.section-title {
+            margin: 0;
+            font-size: 1.35rem;
+            letter-spacing: -0.04em;
+            line-height: 1.2;
+        }
+
+        .card-grid, .proj-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .card-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+        .proj-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+        .card, .role, .proj {
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            background: var(--card);
+            padding: 16px;
+        }
+
+        .card.accented, .cred.accented { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+
+        .card p, .proj p, .role li, .cred p { margin: 8px 0 0; line-height: 1.55; font-size: 0.92rem; }
+
+        .card ul, .role ul { margin: 10px 0 0; padding-left: 1.1rem; }
+        .card li { margin-top: 4px; }
+
+        .icon-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+        }
+
+        .icon-row i, .icon-row svg { width: 18px; height: 18px; }
+
+        .proj-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: flex-end;
+            min-height: 72px;
+            margin: -4px -4px 12px;
+            padding: 12px;
+            border-radius: 14px;
+        }
+
+        .vlan {
+            border-radius: 8px;
+            padding: 4px 7px;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.68rem;
+        }
+
+        .v-cyan { color: #a5f3fc; border: 1px solid rgba(34, 211, 238, 0.45); background: rgba(34, 211, 238, 0.12); }
+        .v-amber { color: #fde68a; border: 1px solid rgba(251, 191, 36, 0.45); background: rgba(251, 191, 36, 0.12); }
+        .v-violet { color: #ddd6fe; border: 1px solid rgba(167, 139, 250, 0.45); background: rgba(167, 139, 250, 0.12); }
+        .v-green { color: #bbf7d0; border: 1px solid rgba(52, 211, 153, 0.45); background: rgba(52, 211, 153, 0.12); }
+
+        html.light .v-cyan { color: #0e7490; }
+        html.light .v-amber { color: #92400e; }
+        html.light .v-violet { color: #5b21b6; }
+        html.light .v-green { color: #047857; }
+
+        .bg-cyan { background: linear-gradient(135deg, rgba(6, 182, 212, 0.22), rgba(15, 23, 42, 0.2)); }
+        .bg-blue { background: linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(15, 23, 42, 0.2)); }
+        .bg-indigo { background: linear-gradient(135deg, rgba(99, 102, 241, 0.24), rgba(15, 23, 42, 0.2)); }
+        .bg-sky { background: linear-gradient(135deg, rgba(14, 165, 233, 0.22), rgba(15, 23, 42, 0.2)); }
+
+        .proj-kicker, .role .when {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+        .repo {
+            display: inline-flex;
+            margin-top: 12px;
+            font-weight: 650;
+            text-decoration: none;
+        }
+
+        .role + .role { margin-top: 12px; }
+        .role-top, .cred-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .company {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 6px;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .company img { width: 16px; height: 16px; border-radius: 99px; }
+
+        .cred-list { display: grid; gap: 10px; margin-top: 14px; }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .tool {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 12px 14px;
+            background: var(--card);
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        .tool:hover { border-color: var(--line-strong); }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+        .actions a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 42px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: var(--pill);
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 650;
+        }
+
+        .actions a.primary {
+            background: var(--accent-strong);
+            border-color: transparent;
+            color: var(--ink-on-accent);
+        }
+
+        @media (max-width: 1100px) {
+            .bento {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "hero hero"
+                    "job talk"
+                    "cloud cloud"
+                    "creative personal";
             }
+            .split { grid-template-columns: 1fr 1fr; }
+        }
 
-            html.light .section-break::before {
-                margin-bottom: 3rem;
+        @media (max-width: 720px) {
+            .wrap { width: min(100% - 24px, 1180px); }
+            .brand small { display: none; }
+            .bento {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "hero"
+                    "job"
+                    "cloud"
+                    "creative"
+                    "personal"
+                    "talk";
             }
-        }
-
-        html.light .ticker-shell {
-            background: rgba(235, 241, 248, 0.88);
-            border-top-color: rgba(15, 23, 42, 0.08);
-            border-bottom-color: rgba(15, 23, 42, 0.08);
-        }
-
-        html.light .ticker-item {
-            border-color: rgba(15, 23, 42, 0.08);
-            background: rgba(255, 255, 255, 0.78);
-            color: #334155;
-        }
-
-        html.light .ticker-item:hover {
-            border-color: rgba(59, 130, 246, 0.28);
-            background: rgba(239, 246, 255, 0.95);
-        }
-
-        html.light .bg-grid {
-            opacity: 0.12 !important;
-        }
-
-        html.light .bg-slate-950\/75,
-        html.light .bg-slate-950\/70,
-        html.light .bg-slate-950\/55,
-        html.light .bg-slate-950\/50 {
-            background-color: rgba(255, 255, 255, 0.72) !important;
-        }
-
-        html.light .bg-white\/\[0\.03\] {
-            background-color: rgba(255, 255, 255, 0.78) !important;
-        }
-
-        html.light .border-white\/5 {
-            border-color: rgba(15, 23, 42, 0.08) !important;
-        }
-
-        html.light .border-white\/10 {
-            border-color: rgba(148, 163, 184, 0.22) !important;
-        }
-
-        html.light .border-white\/15 {
-            border-color: rgba(148, 163, 184, 0.26) !important;
-        }
-
-        html.light .text-white {
-            color: #0f172a !important;
-        }
-
-        html.light .text-slate-100,
-        html.light .text-slate-300 {
-            color: #334155 !important;
-        }
-
-        html.light .text-slate-400 {
-            color: #475569 !important;
-        }
-
-        html.light .text-slate-500 {
-            color: #64748b !important;
-        }
-
-        html.light .text-slate-950 {
-            color: #eff6ff !important;
-        }
-
-        html.light .shadow-glow {
-            box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.14), 0 20px 60px rgba(148, 163, 184, 0.2) !important;
-        }
-
-        html.light .shadow-\[0_0_18px_\#3b82f6\] {
-            box-shadow: 0 0 18px rgba(59, 130, 246, 0.35) !important;
-        }
-
-        @media (max-width: 767px) {
-            .stack-mobile > * {
-                grid-column: span 1 / span 1 !important;
+            .tile { padding: 18px; border-radius: 22px; }
+            .tile h1 { font-size: 3.6rem; }
+            .portrait { width: 96px; height: 96px; border-radius: 22px; }
+            .split, .role-top { grid-template-columns: 1fr; display: grid; }
+            .role-top { display: flex; }
+            dialog {
+                width: calc(100vw - 12px);
+                max-height: calc(100vh - 12px);
+                border-radius: 18px;
             }
-
-            .ticker-group {
-                gap: 0.55rem;
-                padding: 0.58rem 0.9rem;
-            }
-
-            .ticker-item {
-                gap: 0.4rem;
-                padding: 0.26rem 0.65rem 0.26rem 0.34rem;
-            }
-
-            .ticker-logo {
-                width: 1.05rem;
-                height: 1.05rem;
-            }
-
-            .ticker-label {
-                font-size: 0.7rem;
-            }
+            .dialog-body { padding: 16px 16px 28px; }
         }
 
-        @media (min-width: 1024px) {
-            .section-break {
-                margin-top: 5rem;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .tile { transition: none; }
+            .tile:hover { transform: none; }
         }
     </style>
 </head>
-<body class="min-h-screen text-slate-100 antialiased">
-    <div class="fixed inset-0 -z-10 bg-grid bg-[size:42px_42px] opacity-30"></div>
-
-    <header class="sticky top-0 z-50 border-b border-white/5 bg-slate-950/75 backdrop-blur-xl">
-        <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4 lg:px-10">
-            <a href="#top" class="flex items-center gap-3 leading-tight">
-                <img src="./web-pfp.png" alt="Brice avatar" class="brand-avatar" />
+<body>
+    <header class="site-header">
+        <div class="wrap bar">
+            <a class="brand" href="#board">
+                <img src="./web-pfp.png" alt="" />
                 <span>
-                    <span class="block text-base font-semibold tracking-tight text-white">Brice</span>
-                    <span class="font-mono text-[0.65rem] uppercase tracking-[0.28em] text-slate-500">Azure / Hybrid Systems Administrator</span>
+                    <strong>Brice</strong>
+                    <small>Azure / Hybrid Systems Administrator</small>
                 </span>
             </a>
-            <div class="order-3 flex w-full items-center gap-4 overflow-x-auto pb-1 text-xs text-slate-300 md:order-2 md:w-auto md:gap-8 md:pb-0 md:text-sm">
-                <a href="#about" class="transition hover:text-accent">About</a>
-                <a href="#projects" class="transition hover:text-accent">Projects</a>
-                <a href="#expertise" class="transition hover:text-accent">Expertise</a>
-                <a href="#experience" class="transition hover:text-accent">Experience</a>
-                <a href="#credentials" class="transition hover:text-accent">Credentials</a>
-                <a href="#contact" class="transition hover:text-accent">Contact</a>
-            </div>
-            <button
-                id="theme-toggle"
-                type="button"
-                aria-label="Toggle color theme"
-                class="order-2 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.03] p-2.5 text-slate-300 transition hover:border-accent/40 hover:text-accent md:order-3"
-            >
-                <svg class="theme-toggle-icon-moon h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                <svg class="theme-toggle-icon-sun h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
-                    <path d="M12 2.5v2.2M12 19.3v2.2M21.5 12h-2.2M4.7 12H2.5M18.72 5.28l-1.56 1.56M6.84 17.16l-1.56 1.56M18.72 18.72l-1.56-1.56M6.84 6.84L5.28 5.28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-                </svg>
-            </button>
-        </nav>
-        <div class="ticker-shell">
-            <div class="ticker-track">
-                <div class="ticker-group" aria-label="Technology stack">
-                    <a class="ticker-link ticker-item" href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#0078D4" d="M22.379 23.343a1.62 1.62 0 0 0 1.536-2.14v.002L17.35 1.76A1.62 1.62 0 0 0 15.816.657H8.184A1.62 1.62 0 0 0 6.65 1.76L.086 21.204a1.62 1.62 0 0 0 1.536 2.139h4.741a1.62 1.62 0 0 0 1.535-1.103l.977-2.892 4.947 3.675c.28.208.618.32.966.32m-3.084-12.531 3.624 10.739a.54.54 0 0 1-.51.713v-.001h-.03a.54.54 0 0 1-.322-.106l-9.287-6.9h4.853m6.313 7.006c.116-.326.13-.694.007-1.058L9.79 1.76a1.722 1.722 0 0 0-.007-.02h6.034a.54.54 0 0 1 .512.366l6.562 19.445a.54.54 0 0 1-.338.684"/></svg>
-                        <span class="ticker-label">Azure</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.terraform.io" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#7B42BC" d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z"/></svg>
-                        <span class="ticker-label">Terraform</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.microsoft.com/security/business/identity-access/microsoft-entra-id" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="0" y="0" width="11.2" height="11.2" fill="#F25022"/><rect x="12.8" y="0" width="11.2" height="11.2" fill="#7FBA00"/><rect x="0" y="12.8" width="11.2" height="11.2" fill="#00A4EF"/><rect x="12.8" y="12.8" width="11.2" height="11.2" fill="#FFB900"/></svg>
-                        <span class="ticker-label">Entra ID</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://learn.microsoft.com/powershell/" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#5391FE" d="M23.181 2.974c.568 0 .923.463.792 1.035l-3.659 15.982c-.13.572-.697 1.035-1.265 1.035H.819c-.568 0-.923-.463-.792-1.035L3.686 4.009c.13-.572.697-1.035 1.265-1.035zm-8.375 9.346c.251-.394.227-.905-.09-1.243L9.122 5.125c-.38-.404-1.037-.407-1.466-.003-.429.402-.468 1.056-.088 1.46l4.662 4.96v.11l-7.42 5.374c-.45.327-.533.977-.187 1.453.346.476.991.597 1.44.27l8.229-5.91c.28-.196.438-.365.514-.52zm-2.796 4.399a.928.928 0 00-.934.923c0 .51.418.923.934.923h4.433a.928.928 0 00.934-.923.928.928 0 00-.934-.923z"/></svg>
-                        <span class="ticker-label">PowerShell</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.python.org" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#3776AB" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
-                        <span class="ticker-label">Python</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.servicenow.com" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="5.5" fill="#032D42"/><circle cx="12" cy="12" r="5.2" fill="none" stroke="#81B5A1" stroke-width="2.4"/></svg>
-                        <span class="ticker-label">ServiceNow</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#00A1E0" d="M10.006 5.415a4.195 4.195 0 013.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.176 5.22c-.345 0-.69-.044-1.02-.104a3.75 3.75 0 01-3.3 1.95c-.6 0-1.155-.15-1.65-.375A4.314 4.314 0 018.88 20.4a4.302 4.302 0 01-4.05-2.82c-.27.062-.54.076-.825.076-2.204 0-4.005-1.8-4.005-4.05 0-1.5.811-2.805 2.01-3.51-.255-.57-.39-1.2-.39-1.846 0-2.58 2.1-4.65 4.65-4.65 1.53 0 2.85.705 3.72 1.8"/></svg>
-                        <span class="ticker-label">Salesforce</span>
-                    </a>
-                </div>
-                <div class="ticker-group" aria-hidden="true">
-                    <a class="ticker-link ticker-item" href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#0078D4" d="M22.379 23.343a1.62 1.62 0 0 0 1.536-2.14v.002L17.35 1.76A1.62 1.62 0 0 0 15.816.657H8.184A1.62 1.62 0 0 0 6.65 1.76L.086 21.204a1.62 1.62 0 0 0 1.536 2.139h4.741a1.62 1.62 0 0 0 1.535-1.103l.977-2.892 4.947 3.675c.28.208.618.32.966.32m-3.084-12.531 3.624 10.739a.54.54 0 0 1-.51.713v-.001h-.03a.54.54 0 0 1-.322-.106l-9.287-6.9h4.853m6.313 7.006c.116-.326.13-.694.007-1.058L9.79 1.76a1.722 1.722 0 0 0-.007-.02h6.034a.54.54 0 0 1 .512.366l6.562 19.445a.54.54 0 0 1-.338.684"/></svg>
-                        <span class="ticker-label">Azure</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.terraform.io" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#7B42BC" d="M1.44 0v7.575l6.561 3.79V3.787zm21.12 4.227l-6.561 3.791v7.574l6.56-3.787zM8.72 4.23v7.575l6.561 3.787V8.018zm0 8.405v7.575L15.28 24v-7.578z"/></svg>
-                        <span class="ticker-label">Terraform</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.microsoft.com/security/business/identity-access/microsoft-entra-id" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="0" y="0" width="11.2" height="11.2" fill="#F25022"/><rect x="12.8" y="0" width="11.2" height="11.2" fill="#7FBA00"/><rect x="0" y="12.8" width="11.2" height="11.2" fill="#00A4EF"/><rect x="12.8" y="12.8" width="11.2" height="11.2" fill="#FFB900"/></svg>
-                        <span class="ticker-label">Entra ID</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://learn.microsoft.com/powershell/" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#5391FE" d="M23.181 2.974c.568 0 .923.463.792 1.035l-3.659 15.982c-.13.572-.697 1.035-1.265 1.035H.819c-.568 0-.923-.463-.792-1.035L3.686 4.009c.13-.572.697-1.035 1.265-1.035zm-8.375 9.346c.251-.394.227-.905-.09-1.243L9.122 5.125c-.38-.404-1.037-.407-1.466-.003-.429.402-.468 1.056-.088 1.46l4.662 4.96v.11l-7.42 5.374c-.45.327-.533.977-.187 1.453.346.476.991.597 1.44.27l8.229-5.91c.28-.196.438-.365.514-.52zm-2.796 4.399a.928.928 0 00-.934.923c0 .51.418.923.934.923h4.433a.928.928 0 00.934-.923.928.928 0 00-.934-.923z"/></svg>
-                        <span class="ticker-label">PowerShell</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.python.org" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#3776AB" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg>
-                        <span class="ticker-label">Python</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.servicenow.com" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="5.5" fill="#032D42"/><circle cx="12" cy="12" r="5.2" fill="none" stroke="#81B5A1" stroke-width="2.4"/></svg>
-                        <span class="ticker-label">ServiceNow</span>
-                    </a>
-                    <a class="ticker-link ticker-item" href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer" tabindex="-1">
-                        <svg class="ticker-logo" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#00A1E0" d="M10.006 5.415a4.195 4.195 0 013.045-1.306c1.56 0 2.954.9 3.69 2.205.63-.3 1.35-.45 2.1-.45 2.85 0 5.159 2.34 5.159 5.22s-2.31 5.22-5.176 5.22c-.345 0-.69-.044-1.02-.104a3.75 3.75 0 01-3.3 1.95c-.6 0-1.155-.15-1.65-.375A4.314 4.314 0 018.88 20.4a4.302 4.302 0 01-4.05-2.82c-.27.062-.54.076-.825.076-2.204 0-4.005-1.8-4.005-4.05 0-1.5.811-2.805 2.01-3.51-.255-.57-.39-1.2-.39-1.846 0-2.58 2.1-4.65 4.65-4.65 1.53 0 2.85.705 3.72 1.8"/></svg>
-                        <span class="ticker-label">Salesforce</span>
-                    </a>
-                </div>
+            <div class="bar-actions">
+                <a class="resume-link" href="./Brice-Resume.pdf" target="_blank" rel="noopener noreferrer" download>Resume</a>
+                <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle color theme" aria-pressed="false">
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+                        <path d="M12 2.5v2.2M12 19.3v2.2M21.5 12h-2.2M4.7 12H2.5M18.72 5.28l-1.56 1.56M6.84 17.16l-1.56 1.56M18.72 18.72l-1.56-1.56M6.84 6.84 5.28 5.28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
-    <main id="top" class="mx-auto max-w-7xl px-6 pb-24 pt-10 lg:px-10 lg:pt-20">
-        <section class="grid gap-8">
-            <div class="glass relative overflow-hidden rounded-[2rem] border border-white/10 p-8 shadow-glow lg:p-12">
-                <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/80 to-transparent"></div>
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Professional Summary</p>
-                <div class="mt-6 max-w-2xl">
-                    <h1 class="mt-3 max-w-4xl text-4xl font-black tracking-[-0.06em] text-white sm:text-5xl lg:text-[5.5rem] lg:leading-[0.95]">
-                        Brice
-                    </h1>
-                    <p class="mt-4 max-w-2xl text-lg font-semibold leading-relaxed text-accent sm:text-xl lg:text-[1.3rem]">
-                        Azure / Hybrid Systems Administrator | AZ-305 | AZ-104
-                    </p>
-                    <p class="mt-4 max-w-2xl text-base leading-7 text-slate-300">
-                        Systems and infrastructure administrator focused on Microsoft Azure, hybrid identity, and enterprise networking. Hands-on with Entra ID access control, Terraform and PowerShell automation, and DNS/DHCP/VPN/VLAN environments. Azure Solutions Architect Expert and Azure Administrator Associate. Delivers Tier 2/3 support with 90%+ SLA operations.
-                    </p>
-                    <p class="mt-5 max-w-2xl font-mono text-[10px] uppercase tracking-[0.25em] opacity-80 text-slate-400">
-                        Hybrid Identity · Azure · Entra · Terraform · Networking · Tier 2/3 Support
-                    </p>
-                    <div class="mt-6 flex flex-wrap gap-3">
-                        <a
-                            href="./Brice-Resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            download
-                            class="inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:border-accent/60 hover:bg-blue-400"
-                        >
-                            Download Resume
-                        </a>
-                        <a
-                            href="https://linkedin.com/in/ngubriceche"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
-                        >
-                            View LinkedIn
-                        </a>
-                        <a
-                            href="https://github.com/supbrice"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
-                        >
-                            GitHub
-                        </a>
+    <main id="board" class="wrap">
+        <p class="legend">
+            <span><i class="dot"></i> Hire</span>
+            <span><i class="dot portfolio"></i> Portfolio</span>
+            <span><i class="dot personal"></i> Personal — not work experience</span>
+        </p>
+
+        <div class="bento">
+            <button class="tile tile-hero" type="button" data-open="about" aria-haspopup="dialog" aria-controls="detail-dialog">
+                <span class="open-hint">About</span>
+                <div class="hero-top">
+                    <div class="portrait">
+                        <img src="./web-pfp.png" alt="Brice avatar" />
                     </div>
                 </div>
+                <p class="kicker">Portfolio</p>
+                <h1>Brice</h1>
+                <p class="tagline-ph">[Your personal tagline here]</p>
+                <p class="ph-note">Personal placeholder. Replace this line with your own tagline.</p>
+                <span class="tile-foot"><span>@supbrice</span><span>Open about</span></span>
+            </button>
 
-                <div class="mt-8 grid gap-4 md:grid-cols-3">
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-accent/30 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Focus</p>
-                        <p class="mt-3 text-lg font-semibold text-white">Infrastructure &amp; Cloud</p>
-                        <p class="mt-2 text-xs leading-6 text-slate-400">Microsoft Azure, hybrid identity, enterprise networking, and cloud support.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-accent/30 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Strength</p>
-                        <p class="mt-3 text-lg font-semibold text-white">IaC &amp; Automation</p>
-                        <p class="mt-2 text-xs leading-6 text-slate-400">Terraform, PowerShell, and Python for reliable provisioning and automation.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-accent/30 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mindset</p>
-                        <p class="mt-3 text-lg font-semibold text-white">Operational Reliability</p>
-                        <p class="mt-2 text-xs leading-6 text-slate-400">Monitoring, root-cause analysis, incident response, and resilient service delivery.</p>
-                    </div>
+            <button class="tile tile-job" type="button" data-open="role" aria-haspopup="dialog" aria-controls="detail-dialog">
+                <span class="open-hint">Experience</span>
+                <p class="kicker">Hire · Role</p>
+                <h2>Azure / Hybrid Systems Administrator</h2>
+                <p class="lede">AZ-305 | AZ-104</p>
+                <div class="meta-block">
+                    <p class="meta-label">Latest role</p>
+                    <strong>Client Technical Support Specialist · Roundel</strong>
+                    <em>Oct 2025 - Jan 2026</em>
                 </div>
-            </div>
-        </section>
+                <div class="meta-block">
+                    <p class="meta-label">Proof role</p>
+                    <strong>System Administrator · nVent</strong>
+                    <em>Azure access, Entra ID, Terraform / PowerShell IaC</em>
+                </div>
+                <p class="ph-note">Open to remote or Twin Cities north metro (Ramsey, MN).</p>
+                <span class="tile-foot"><span>4 roles</span><span>Open experience</span></span>
+            </button>
 
-        <section id="about" class="section-break">
-            <div class="glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-                <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <button class="tile tile-cloud" type="button" data-open="cloud" aria-haspopup="dialog" aria-controls="detail-dialog">
+                <span class="open-hint">Depth</span>
+                <p class="kicker">Hire · Cloud &amp; Infra</p>
+                <h2>Azure, Terraform, and Entra ID</h2>
+                <p class="lede">Hybrid cloud, identity, networking, and systems administration.</p>
+                <div class="chips" aria-label="Primary stack">
+                    <span class="chip">Azure</span>
+                    <span class="chip">Terraform</span>
+                    <span class="chip">Entra ID</span>
+                    <span class="chip">PowerShell</span>
+                    <span class="chip">Hybrid</span>
+                </div>
+                <div class="split">
                     <div>
-                        <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Administration</p>
-                        <h2 class="mt-4 text-3xl font-bold text-white leading-tight">Systems administration that keeps enterprise services reliable, secure, and available.</h2>
+                        <p class="meta-label">Expertise</p>
+                        <ul class="quiet">
+                            <li>Networking &amp; Security</li>
+                            <li>Cloud &amp; Identity</li>
+                            <li>Automation</li>
+                            <li>ITSM</li>
+                        </ul>
                     </div>
-                    <p class="max-w-xl text-base leading-7 text-slate-400">
-                        Hands-on administration across cloud platforms, enterprise networks, identity, incident response, and automation—keeping critical services stable, secure, and accessible.
-                    </p>
-                </div>
-
-                <div id="expertise" class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="shield"></i>
-                            <h3 class="text-lg font-semibold text-white">Networking &amp; Security</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Keeping systems connected, protected, and reliable.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>DNS, DHCP, VPN, and VLANs</li>
-                            <li>Firewalls, NSGs, and endpoint monitoring</li>
-                            <li>Issue isolation across enterprise environments</li>
-                        </ul>
-                    </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="cloud"></i>
-                            <h3 class="text-lg font-semibold text-white">Cloud &amp; Identity</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Supporting cloud environments with a focus on access and stability.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Microsoft Azure and hybrid cloud</li>
-                            <li>Entra ID (Azure AD), hybrid cloud, and RBAC</li>
-                            <li>Infrastructure as Code and access control</li>
-                        </ul>
-                    </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="terminal-square"></i>
-                            <h3 class="text-lg font-semibold text-white">Automation</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Using scripts and infrastructure tools to remove repetitive work.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Terraform, PowerShell, and Python workflows</li>
-                            <li>Terraform and infrastructure as code</li>
-                            <li>Process improvement through automation</li>
-                        </ul>
-                    </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="headset"></i>
-                            <h3 class="text-lg font-semibold text-white">ITSM</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Turning technical problems into clear, manageable next steps.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Incident resolution and escalation</li>
-                            <li>ServiceNow and Salesforce workflows</li>
-                            
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-break">
-            <div class="glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Core Competencies</p>
-                <h2 class="mt-4 text-3xl font-bold text-white leading-tight">Core systems administration capabilities across infrastructure, networks, cloud operations, and automation.</h2>
-                <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <h3 class="text-lg font-semibold text-white">Cloud &amp; Identity</h3>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Keeping cloud environments stable, accessible, and well governed.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Microsoft Azure and hybrid cloud</li>
-                            <li>Entra ID (Azure AD), RBAC, and access control</li>
-                            <li>Access control and environment stability</li>
-                        </ul>
-                    </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <h3 class="text-lg font-semibold text-white">ITSM</h3>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Resolving high-volume issues with clear ownership and follow-through.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Resolving high-volume issues</li>
-                            <li>Clear documentation and escalation</li>
-                            <li>Improving resolution time and ticket quality</li>
-                        </ul>
-                    </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <h3 class="text-lg font-semibold text-white">Automation</h3>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Using scripting and IaC to simplify repetitive operational work.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Terraform, PowerShell, and Python</li>
-                            <li>Reducing repetitive work</li>
-                            <li>Improving workflows</li>
-                        </ul>
-                    </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <h3 class="text-lg font-semibold text-white">Security Awareness</h3>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Supporting systems with secure habits and practical risk awareness.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>Firewalls, NSGs, and endpoint monitoring</li>
-                            <li>DNS, DHCP, VPN, and VLAN environments</li>
-                            <li>Secure configurations and best practices</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="more-skills" class="section-break">
-            <div class="glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-                <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <div>
-                        <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">More skills</p>
-                        <h2 class="mt-4 text-3xl font-bold text-white leading-tight">Creative and documentation skills beyond systems work.</h2>
-                    </div>
-                    <p class="max-w-xl text-base leading-7 text-slate-400">
-                        These sit alongside the Azure and IT focus so visitors see the full range.
-                    </p>
-                </div>
-
-                <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="video"></i>
-                            <h3 class="text-lg font-semibold text-white">Video editing</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Short-form and social cuts, captions, and pacing for Reels, Shorts, and YouTube.</p>
-                        <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-6 text-slate-400">
-                            <li>On-device phone capture for demos and social clips.</li>
+                        <p class="meta-label">Labs</p>
+                        <ul class="quiet">
+                            <li>Network Infrastructure Upgrade — CPS</li>
+                            <li>Multi-Region Azure Hybrid / Zero Trust</li>
+                            <li>Hybrid Identity Lab</li>
+                            <li>Azure Architect Labs</li>
                         </ul>
+                    </div>
+                </div>
+                <div class="chips">
+                    <span class="chip">AZ-305</span>
+                    <span class="chip">AZ-104</span>
+                    <span class="chip">Azure coursework</span>
+                    <span class="chip">Cisco networking</span>
+                </div>
+                <span class="tile-foot"><span>Projects · credentials · toolkit</span><span>Open depth</span></span>
+            </button>
+
+            <button class="tile tile-creative" type="button" data-open="creative" aria-haspopup="dialog" aria-controls="detail-dialog">
+                <span class="open-hint">Skills</span>
+                <p class="kicker">Portfolio · Creative</p>
+                <h2>More skills</h2>
+                <p class="skill-line"><strong>Video editing.</strong> Short-form and social cuts, captions, and pacing for Reels, Shorts, and YouTube.</p>
+                <p class="skill-line"><strong>Photo editing.</strong> Color, cleanup, and web-ready stills for profiles and posts.</p>
+                <p class="skill-line"><strong>Documentation.</strong> Resumes, role write-ups, and clear tech docs people can actually use.</p>
+                <span class="tile-foot"><span>Not the hire headline</span><span>Open</span></span>
+            </button>
+
+            <button class="tile tile-personal" type="button" data-open="personal" aria-haspopup="dialog" aria-controls="detail-dialog">
+                <span class="open-hint">Edit</span>
+                <p class="kicker">Personal</p>
+                <h2>Not work experience</h2>
+                <div class="ph-list">
+                    <span class="ph">[Hobby 1]</span>
+                    <span class="ph">[Hobby 2]</span>
+                    <span class="ph">[Interest — replace with yours]</span>
+                </div>
+                <p class="ph-note">Placeholders only. Replace these with your own hobbies and interests.</p>
+                <span class="tile-foot"><span>Personal lane</span><span>Open</span></span>
+            </button>
+
+            <article class="tile tile-talk" id="contact">
+                <p class="kicker">Let's talk</p>
+                <h2>Collabs and reaching out</h2>
+                <p class="lede">Open to Azure Admin / Hybrid / Entra / Infrastructure roles — remote or Twin Cities north metro (Ramsey, MN).</p>
+                <div class="pills">
+                    <a class="pill email-protected" href="#contact" data-mail-user="ngubriceche" data-mail-domain="outlook.com" data-mail-subject="Portfolio%20Inquiry">Email</a>
+                    <a class="pill" href="https://linkedin.com/in/ngubriceche" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a class="pill" href="https://github.com/supbrice" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="pill" href="./Brice-Resume.pdf" target="_blank" rel="noopener noreferrer" download>Resume</a>
+                </div>
+            </article>
+        </div>
+        <p class="footnote">Hire lanes are work history, labs, and credentials. Creative is portfolio range alongside Azure and IT. Personal placeholders are not production experience. Infrastructure projects are labs, not a live production estate.</p>
+    </main>
+
+    <dialog id="detail-dialog" aria-labelledby="about-title">
+        <div class="dialog-bar">
+            <p id="dialog-kicker">Board detail</p>
+            <button class="text-btn" type="button" data-close>Close</button>
+        </div>
+        <div class="dialog-body">
+            <section class="panel" data-panel="about" hidden>
+                <p class="kicker">Portfolio · About</p>
+                <h2 id="about-title">Brice</h2>
+                <p class="tagline-ph">[Your personal tagline here]</p>
+                <p class="ph-note">Personal placeholder. Replace the bracketed line with your own tagline. This is not a work headline.</p>
+                <p class="kicker" style="margin-top:22px">Professional Summary</p>
+                <p class="intro">Systems and infrastructure administrator focused on Microsoft Azure, hybrid identity, and enterprise networking. Hands-on with Entra ID access control, Terraform and PowerShell automation, and DNS/DHCP/VPN/VLAN environments. Azure Solutions Architect Expert and Azure Administrator Associate. Delivers Tier 2/3 support with 90%+ SLA operations.</p>
+                <p class="keywords">Hybrid Identity · Azure · Entra · Terraform · Networking · Tier 2/3 Support</p>
+                <div class="card-grid">
+                    <article class="card">
+                        <p class="meta-label">Focus</p>
+                        <h3>Infrastructure &amp; Cloud</h3>
+                        <p>Microsoft Azure, hybrid identity, enterprise networking, and cloud support.</p>
                     </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="image"></i>
-                            <h3 class="text-lg font-semibold text-white">Photo editing</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Color, cleanup, and web-ready stills for profiles and posts.</p>
+                    <article class="card">
+                        <p class="meta-label">Strength</p>
+                        <h3>IaC &amp; Automation</h3>
+                        <p>Terraform, PowerShell, and Python for reliable provisioning and automation.</p>
                     </article>
-                    <article class="glass rounded-[2rem] border border-white/10 p-6">
-                        <div class="flex items-center gap-3 text-accent">
-                            <i data-lucide="file-text"></i>
-                            <h3 class="text-lg font-semibold text-white">Documentation</h3>
-                        </div>
-                        <p class="mt-4 text-base leading-7 text-slate-300">Resumes, role write-ups, and clear tech docs people can actually use.</p>
+                    <article class="card">
+                        <p class="meta-label">Mindset</p>
+                        <h3>Operational Reliability</h3>
+                        <p>Monitoring, root-cause analysis, incident response, and resilient service delivery.</p>
                     </article>
                 </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section-break glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Key Projects</p>
-                    <h2 class="mt-4 text-3xl font-bold text-white leading-tight">Infrastructure labs — visual map of the hire-facing GitHub work.</h2>
+                <div class="actions">
+                    <a class="primary" href="./Brice-Resume.pdf" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+                    <a href="https://linkedin.com/in/ngubriceche" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+                    <a href="https://github.com/supbrice" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
-                <p class="max-w-xl text-base leading-7 text-slate-400">Four infrastructure labs aligned to Azure, hybrid networking, and identity — the same set on the resume.</p>
-            </div>
+            </section>
 
-            <div class="mt-8 grid gap-5 lg:grid-cols-2">
-
-                <article class="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] transition hover:border-accent/40">
-                    <div class="relative h-28 bg-gradient-to-br from-cyan-500/20 via-slate-900 to-slate-950 p-5">
-                        <div class="flex h-full items-end gap-2">
-                            <div class="rounded-lg border border-cyan-400/40 bg-cyan-400/10 px-2 py-1 font-mono text-[10px] text-cyan-200">VLAN 10</div>
-                            <div class="rounded-lg border border-amber-400/40 bg-amber-400/10 px-2 py-1 font-mono text-[10px] text-amber-200">VLAN 20</div>
-                            <div class="rounded-lg border border-violet-400/40 bg-violet-400/10 px-2 py-1 font-mono text-[10px] text-violet-200">OT 30-50</div>
-                            <div class="rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-2 py-1 font-mono text-[10px] text-emerald-200">Protect 60</div>
-                        </div>
-                        <i data-lucide="network" class="absolute right-4 top-4 h-8 w-8 text-cyan-300/80"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap items-center gap-2">
-                            <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Infrastructure Lab</p>
-                            <span class="rounded-full border border-white/10 px-2 py-0.5 text-[10px] text-slate-400">UniFi · VLAN · OT</span>
-                        </div>
-                        <h3 class="mt-3 text-xl font-semibold text-white">Network Infrastructure Upgrade — CPS</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-400">UniFi gateway, L2/L3 PoE switches, public / corporate / OT zoning, NAT/QoS, and written troubleshooting scenarios. Sanitized lab/client write-up.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">DNS/DHCP</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">VLAN isolation</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Python checks</span>
-                        </div>
-                        <a href="https://github.com/supbrice/CloudProjects" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:text-blue-300">GitHub repo <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
-                    </div>
-                </article>
-
-                <article class="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] transition hover:border-accent/40">
-                    <div class="relative h-28 bg-gradient-to-br from-blue-500/25 via-slate-900 to-slate-950 p-5">
-                        <div class="flex h-full flex-col justify-end gap-2">
-                            <div class="flex items-center gap-2">
-                                <span class="h-2 w-2 rounded-full bg-blue-400"></span>
-                                <span class="font-mono text-[10px] text-blue-200">Region A · VNet / NSG</span>
-                            </div>
-                            <div class="ml-4 h-px w-16 bg-blue-400/50"></div>
-                            <div class="flex items-center gap-2">
-                                <span class="h-2 w-2 rounded-full bg-sky-300"></span>
-                                <span class="font-mono text-[10px] text-sky-200">VPN hub · Bastion · Monitor</span>
-                            </div>
-                        </div>
-                        <i data-lucide="cloud" class="absolute right-4 top-4 h-8 w-8 text-blue-300/80"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap items-center gap-2">
-                            <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Portfolio Lab</p>
-                            <span class="rounded-full border border-white/10 px-2 py-0.5 text-[10px] text-slate-400">Terraform · Azure</span>
-                        </div>
-                        <h3 class="mt-3 text-xl font-semibold text-white">Multi-Region Azure Hybrid / Zero Trust</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-400">Modular Terraform: multi-region VNets/NSGs, site-to-site VPN, Bastion, managed identity/RBAC, Log Analytics. Lab only — CA/PIM called out as follow-on.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">IaC</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Hybrid VPN</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">GitHub Actions</span>
-                        </div>
-                        <a href="https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:text-blue-300">GitHub repo <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
-                    </div>
-                </article>
-
-                <article class="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] transition hover:border-accent/40">
-                    <div class="relative h-28 bg-gradient-to-br from-indigo-500/25 via-slate-900 to-slate-950 p-5">
-                        <div class="flex h-full items-end gap-3">
-                            <div class="rounded-md border border-indigo-300/40 bg-indigo-400/10 px-3 py-2 text-center">
-                                <p class="font-mono text-[9px] text-indigo-200">AD DS</p>
-                                <p class="text-[10px] text-white">Forest</p>
-                            </div>
-                            <div class="h-px flex-1 bg-indigo-400/40"></div>
-                            <div class="rounded-md border border-blue-300/40 bg-blue-400/10 px-3 py-2 text-center">
-                                <p class="font-mono text-[9px] text-blue-200">Entra</p>
-                                <p class="text-[10px] text-white">Sync notes</p>
-                            </div>
-                        </div>
-                        <i data-lucide="fingerprint" class="absolute right-4 top-4 h-8 w-8 text-indigo-300/80"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap items-center gap-2">
-                            <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Portfolio Lab</p>
-                            <span class="rounded-full border border-white/10 px-2 py-0.5 text-[10px] text-slate-400">AD · PowerShell</span>
-                        </div>
-                        <h3 class="mt-3 text-xl font-semibold text-white">Hybrid Identity Lab — AD DS on Azure VMs</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-400">AD DS forest on Azure VMs, OU/GPO baseline, identity hygiene checks, Entra Connect / Cloud Sync design notes. Not an employer tenant.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">GPO</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Identity hygiene</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Hybrid</span>
-                        </div>
-                        <a href="https://github.com/supbrice/configure-ad" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:text-blue-300">GitHub repo <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
-                    </div>
-                </article>
-
-                <article class="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03] transition hover:border-accent/40">
-                    <div class="relative h-28 bg-gradient-to-br from-sky-500/20 via-slate-900 to-slate-950 p-5">
-                        <div class="grid h-full grid-cols-5 gap-2 content-end">
-                            <div class="rounded border border-white/15 bg-white/5 py-2 text-center font-mono text-[9px] text-slate-300">CA</div>
-                            <div class="rounded border border-white/15 bg-white/5 py-2 text-center font-mono text-[9px] text-slate-300">VPN</div>
-                            <div class="rounded border border-white/15 bg-white/5 py-2 text-center font-mono text-[9px] text-slate-300">IaC</div>
-                            <div class="rounded border border-white/15 bg-white/5 py-2 text-center font-mono text-[9px] text-slate-300">DNS</div>
-                            <div class="rounded border border-white/15 bg-white/5 py-2 text-center font-mono text-[9px] text-slate-300">Mon</div>
-                        </div>
-                        <i data-lucide="layers" class="absolute right-4 top-4 h-8 w-8 text-sky-300/80"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex flex-wrap items-center gap-2">
-                            <p class="font-mono text-xs uppercase tracking-[0.3em] text-accent">Reference Labs</p>
-                            <span class="rounded-full border border-white/10 px-2 py-0.5 text-[10px] text-slate-400">5 labs</span>
-                        </div>
-                        <h3 class="mt-3 text-xl font-semibold text-white">Azure Architect Labs</h3>
-                        <p class="mt-3 text-sm leading-7 text-slate-400">Entra/CA/RBAC patterns, hybrid VPN/private DNS, Terraform modules, DNS/VPN/NSG, and Azure Monitor ops — patterns, not a live estate.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Entra</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Terraform</span>
-                            <span class="rounded-full bg-white/5 px-2.5 py-1 text-[11px] text-slate-300">Monitor</span>
-                        </div>
-                        <a href="https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition hover:text-blue-300">GitHub repo <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
-                    </div>
-                </article>
-
+            <section class="panel" data-panel="role" hidden>
+                <p class="kicker">Hire · Role</p>
+                <h2 id="role-title">Experience supporting systems, infrastructure, cloud operations, and enterprise users.</h2>
+                <p class="intro">Career progression spanning client technical support, workforce operations, systems administration, and dependable network service delivery.</p>
+                <p class="intro">Azure / Hybrid Systems Administrator | AZ-305 | AZ-104. Open to remote or Twin Cities north metro (Ramsey, MN).</p>
+                <div class="card-grid">
+                    <article class="card">
+                        <p class="meta-label">Target Roles</p>
+                        <h3>Azure Admin · Hybrid · Entra / Infra</h3>
+                        <p>Open to remote or Twin Cities north metro (Ramsey, MN). Strongest proof: nVent Azure/Entra + IaC.</p>
+                    </article>
+                    <article class="card">
+                        <p class="meta-label">Proof Role</p>
+                        <h3>System Administrator · nVent</h3>
+                        <p>Azure access/Entra hygiene, Terraform/PowerShell IaC, hybrid cloud support.</p>
+                    </article>
                 </div>
-        </section>
 
-        <section id="experience" class="section-break glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Experience</p><h2 class="mt-4 text-3xl font-bold text-white leading-tight">Experience supporting systems, infrastructure, cloud operations, and enterprise users.</h2></div><p class="max-w-xl text-base leading-7 text-slate-400">Career progression spanning client technical support, workforce operations, systems administration, and dependable network service delivery.</p></div>
-            <div class="mt-8 space-y-5">
-                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6"><div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between"><div><h3 class="text-xl font-semibold text-white">Client Technical Support Specialist · Roundel</h3><p class="mt-1 text-accent"><span class="company-row"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=roundel.com&sz=64" alt="" /><a href="https://roundel.com" target="_blank" rel="noopener noreferrer" class="company-link">Roundel, Target Corporation</a></span></p></div><p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Oct 2025 - Jan 2026</p></div><ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400"><li>Handled Tier 2/3 platform incidents and system access in ServiceNow; owned escalations and post-incident reviews.</li></ul></article>
-                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6"><div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between"><div><h3 class="text-xl font-semibold text-white">Workforce Management Analyst · WTW</h3><p class="mt-1 text-accent"><span class="company-row"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=wtwco.com&sz=64" alt="" /><a href="https://www.wtwco.com/en-us/about-us/overview" target="_blank" rel="noopener noreferrer" class="company-link">WTW (Willis Towers Watson)</a></span></p></div><p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Aug 2022 - Dec 2024</p></div><ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400"><li>Monitored adherence and service levels for 100+ agents and built reports that held 90%+ SLA.</li></ul></article>
-                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6"><div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between"><div><h3 class="text-xl font-semibold text-white">System Administrator · nVent HOFFMAN</h3><p class="mt-1 text-accent"><span class="company-row"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=nvent.com&sz=64" alt="" /><a href="https://www.nvent.com/en-us/" target="_blank" rel="noopener noreferrer" class="company-link">nVent HOFFMAN</a></span></p></div><p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Mar 2021 - Aug 2022</p></div><ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400">
+                <article class="role">
+                    <div class="role-top">
+                        <div>
+                            <h3>Client Technical Support Specialist · Roundel</h3>
+                            <a class="company" href="https://roundel.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://www.google.com/s2/favicons?domain=roundel.com&sz=64" alt="" />
+                                Roundel, Target Corporation
+                            </a>
+                        </div>
+                        <p class="when">Oct 2025 - Jan 2026</p>
+                    </div>
+                    <ul>
+                        <li>Handled Tier 2/3 platform incidents and system access in ServiceNow; owned escalations and post-incident reviews.</li>
+                    </ul>
+                </article>
+                <article class="role">
+                    <div class="role-top">
+                        <div>
+                            <h3>Workforce Management Analyst · WTW</h3>
+                            <a class="company" href="https://www.wtwco.com/en-us/about-us/overview" target="_blank" rel="noopener noreferrer">
+                                <img src="https://www.google.com/s2/favicons?domain=wtwco.com&sz=64" alt="" />
+                                WTW (Willis Towers Watson)
+                            </a>
+                        </div>
+                        <p class="when">Aug 2022 - Dec 2024</p>
+                    </div>
+                    <ul>
+                        <li>Monitored adherence and service levels for 100+ agents and built reports that held 90%+ SLA.</li>
+                    </ul>
+                </article>
+                <article class="role">
+                    <div class="role-top">
+                        <div>
+                            <h3>System Administrator · nVent HOFFMAN</h3>
+                            <a class="company" href="https://www.nvent.com/en-us/" target="_blank" rel="noopener noreferrer">
+                                <img src="https://www.google.com/s2/favicons?domain=nvent.com&sz=64" alt="" />
+                                nVent HOFFMAN
+                            </a>
+                        </div>
+                        <p class="when">Mar 2021 - Aug 2022</p>
+                    </div>
+                    <ul>
                         <li>Optimized Azure access controls and identity management with Entra ID (Azure AD) to strengthen environment hygiene.</li>
                         <li>Built IaC deployment pipelines with Terraform, Python, and PowerShell to cut manual configuration errors and speed provisioning.</li>
                         <li>Supported hybrid cloud deployments, wrote incident-response documentation, and improved recovery times for critical services.</li>
-</ul></article>
-                <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6"><div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between"><div><h3 class="text-xl font-semibold text-white">IT Support Specialist · MTN Cameroon</h3><p class="mt-1 text-accent"><span class="company-row"><img class="company-logo" src="https://www.google.com/s2/favicons?domain=mtn.cm&sz=64" alt="" /><a href="https://mtn.cm" target="_blank" rel="noopener noreferrer" class="company-link">MTN Cameroon</a></span></p></div><p class="font-mono text-xs uppercase tracking-[0.3em] text-slate-500">Sep 2016 - Feb 2021</p></div><ul class="mt-4 space-y-2 text-sm leading-7 text-slate-400"><li>Installed/configured network devices for 100+ users; troubleshot DNS, DHCP, VPN; maintained firewalls and patching.</li></ul></article>
-            </div>
-        </section>
-
-        <section class="section-break grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div id="credentials" class="glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Credentials</p>
-                <h2 class="mt-4 text-3xl font-bold text-white leading-tight">Certifications and technical training that support modern systems administration.</h2>
-
-                <div class="mt-10 space-y-4">
-                    <div class="rounded-2xl border border-accent/20 bg-accent/5 p-6 transition hover:border-accent/40 hover:bg-accent/8">
-                        <p class="text-lg font-semibold text-white">Microsoft Certified: Azure Solutions Architect Expert</p>
-                        <p class="mt-2 text-sm text-slate-400">Issued November 2024</p>
+                    </ul>
+                </article>
+                <article class="role">
+                    <div class="role-top">
+                        <div>
+                            <h3>IT Support Specialist · MTN Cameroon</h3>
+                            <a class="company" href="https://mtn.cm" target="_blank" rel="noopener noreferrer">
+                                <img src="https://www.google.com/s2/favicons?domain=mtn.cm&sz=64" alt="" />
+                                MTN Cameroon
+                            </a>
+                        </div>
+                        <p class="when">Sep 2016 - Feb 2021</p>
                     </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="text-lg font-semibold text-white">Microsoft Certified: Azure Administrator Associate</p>
-                        <p class="mt-2 text-sm text-slate-400">Issued September 2024</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="text-base font-semibold text-white">Azure Cloud Computing</p>
-                        <p class="mt-2 text-sm text-slate-400">NoelTechSolutions • Oct 2022 - Feb 2023</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="text-base font-semibold text-white">Cisco Networking (CCNA Routing and Switching)</p>
-                        <p class="mt-2 text-sm text-slate-400">Cisco Networking Academy • Oct 2016 - Jan 2017</p>
-                    </div>
-                </div>
-            </div>
+                    <ul>
+                        <li>Installed/configured network devices for 100+ users; troubleshot DNS, DHCP, VPN; maintained firewalls and patching.</li>
+                    </ul>
+                </article>
+            </section>
 
-            <div class="glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Toolkit</p>
-                <h2 class="mt-4 text-3xl font-bold text-white leading-tight">Platforms and tools used to administer, automate, secure, and support enterprise systems.</h2>
+            <section class="panel" data-panel="cloud" hidden>
+                <p class="kicker">Hire · Cloud &amp; Infra</p>
+                <h2 id="cloud-title">Systems administration that keeps enterprise services reliable, secure, and available.</h2>
+                <p class="intro">Hands-on administration across cloud platforms, enterprise networks, identity, incident response, and automation—keeping critical services stable, secure, and accessible.</p>
+                <nav class="jump" aria-label="Technical depth">
+                    <a href="#depth-expertise">Expertise</a>
+                    <a href="#depth-competencies">Competencies</a>
+                    <a href="#depth-projects">Projects</a>
+                    <a href="#depth-credentials">Credentials</a>
+                    <a href="#depth-toolkit">Toolkit</a>
+                </nav>
 
-                <div class="mt-10 grid gap-3 md:grid-cols-2">
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Azure</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Entra ID (Azure AD)</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Terraform</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Python</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">PowerShell</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">RBAC / Infrastructure as Code</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">ServiceNow</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Salesforce</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Firewalls / NSGs</div>
-                    <div class="rounded-2xl border border-white/10 px-5 py-4 text-sm text-slate-300 font-medium transition hover:border-accent/20 hover:bg-white/[0.04]">Endpoint Monitoring</div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section class="section-break">
-            <div class="glass rounded-[2rem] border border-white/10 p-8 lg:p-12">
-                <div class="flex items-center justify-between">
-                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Snapshot</p>
-                    <span class="h-2.5 w-2.5 rounded-full bg-accent shadow-[0_0_18px_#3b82f6]"></span>
-                </div>
-                <div class="stack-mobile mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4 text-sm">
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs text-slate-500 uppercase tracking-[0.25em]">Target Roles</p>
-                        <p class="mt-3 text-base font-medium text-white">Azure Admin · Hybrid · Entra / Infra</p>
-                        <p class="mt-3 text-xs leading-6 text-slate-400">Open to remote or Twin Cities north metro (Ramsey, MN). Strongest proof: nVent Azure/Entra + IaC.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs text-slate-500 uppercase tracking-[0.25em]">Proof Role</p>
-                        <p class="mt-3 text-base font-medium text-white">System Administrator · nVent</p>
-                        <p class="mt-3 text-xs leading-6 text-slate-400">Azure access/Entra hygiene, Terraform/PowerShell IaC, hybrid cloud support.</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs text-slate-500 uppercase tracking-[0.25em]">Core Stack</p>
-                        <p class="mt-3 text-xs leading-6 text-slate-300">Azure / Entra ID / Terraform / PowerShell / Python / ServiceNow / Salesforce</p>
-                    </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-accent/20 hover:bg-white/[0.06]">
-                        <p class="font-mono text-xs text-slate-500 uppercase tracking-[0.25em]">Lab Mode</p>
-                        <p class="mt-3 text-xs leading-6 text-slate-300">Projects, automation ideas, continuous learning, and systems improvement.</p>
+                <div class="block" id="depth-expertise">
+                    <h3 class="section-title">Expertise</h3>
+                    <div class="card-grid">
+                        <article class="card">
+                            <div class="icon-row"><i data-lucide="shield"></i><h3>Networking &amp; Security</h3></div>
+                            <p>Keeping systems connected, protected, and reliable.</p>
+                            <ul>
+                                <li>DNS, DHCP, VPN, and VLANs</li>
+                                <li>Firewalls, NSGs, and endpoint monitoring</li>
+                                <li>Issue isolation across enterprise environments</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <div class="icon-row"><i data-lucide="cloud"></i><h3>Cloud &amp; Identity</h3></div>
+                            <p>Supporting cloud environments with a focus on access and stability.</p>
+                            <ul>
+                                <li>Microsoft Azure and hybrid cloud</li>
+                                <li>Entra ID (Azure AD), hybrid cloud, and RBAC</li>
+                                <li>Infrastructure as Code and access control</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <div class="icon-row"><i data-lucide="terminal-square"></i><h3>Automation</h3></div>
+                            <p>Using scripts and infrastructure tools to remove repetitive work.</p>
+                            <ul>
+                                <li>Terraform, PowerShell, and Python workflows</li>
+                                <li>Terraform and infrastructure as code</li>
+                                <li>Process improvement through automation</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <div class="icon-row"><i data-lucide="headset"></i><h3>ITSM</h3></div>
+                            <p>Turning technical problems into clear, manageable next steps.</p>
+                            <ul>
+                                <li>Incident resolution and escalation</li>
+                                <li>ServiceNow and Salesforce workflows</li>
+                            </ul>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact" class="section-break">
-            <div class="glass rounded-[2rem] border border-accent/20 p-8 shadow-glow lg:p-12">
-                <p class="font-mono text-xs uppercase tracking-[0.35em] text-accent">Contact</p>
-                <h2 class="mt-4 max-w-4xl text-3xl font-bold text-white leading-tight">Open to Azure Admin / Hybrid / Entra / Infrastructure roles — remote or Twin Cities north metro (Ramsey, MN).</h2>
-                <div class="mt-8 flex flex-wrap gap-3 items-center">
-                    <a
-                        href="#contact"
-                        data-mail-user="ngubriceche"
-                        data-mail-domain="outlook.com"
-                        data-mail-subject="Portfolio%20Inquiry"
-                        class="email-protected inline-flex items-center gap-3 rounded-full border border-accent/30 bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition hover:border-accent/60 hover:bg-blue-400"
-                    >
-                        Email
-                    </a>
-                    <a
-                        href="https://linkedin.com/in/ngubriceche"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
-                    >
-                        LinkedIn
-                    </a>
-                    <a
-                        href="https://github.com/supbrice"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
-                    >
-                        GitHub
-                    </a>
-                    <a
-                        href="./Brice-Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        download
-                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:border-accent/40 hover:text-accent"
-                    >
-                        Resume
-                    </a>
+                <div class="block" id="depth-competencies">
+                    <p class="kicker">Core Competencies</p>
+                    <h3 class="section-title">Core systems administration capabilities across infrastructure, networks, cloud operations, and automation.</h3>
+                    <div class="card-grid">
+                        <article class="card">
+                            <h3>Cloud &amp; Identity</h3>
+                            <p>Keeping cloud environments stable, accessible, and well governed.</p>
+                            <ul>
+                                <li>Microsoft Azure and hybrid cloud</li>
+                                <li>Entra ID (Azure AD), RBAC, and access control</li>
+                                <li>Access control and environment stability</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>ITSM</h3>
+                            <p>Resolving high-volume issues with clear ownership and follow-through.</p>
+                            <ul>
+                                <li>Resolving high-volume issues</li>
+                                <li>Clear documentation and escalation</li>
+                                <li>Improving resolution time and ticket quality</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Automation</h3>
+                            <p>Using scripting and IaC to simplify repetitive operational work.</p>
+                            <ul>
+                                <li>Terraform, PowerShell, and Python</li>
+                                <li>Reducing repetitive work</li>
+                                <li>Improving workflows</li>
+                            </ul>
+                        </article>
+                        <article class="card">
+                            <h3>Security Awareness</h3>
+                            <p>Supporting systems with secure habits and practical risk awareness.</p>
+                            <ul>
+                                <li>Firewalls, NSGs, and endpoint monitoring</li>
+                                <li>DNS, DHCP, VPN, and VLAN environments</li>
+                                <li>Secure configurations and best practices</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="card-grid">
+                        <article class="card">
+                            <p class="meta-label">Core Stack</p>
+                            <p>Azure / Entra ID / Terraform / PowerShell / Python / ServiceNow / Salesforce</p>
+                        </article>
+                        <article class="card">
+                            <p class="meta-label">Lab Mode</p>
+                            <p>Projects, automation ideas, continuous learning, and systems improvement.</p>
+                        </article>
+                    </div>
                 </div>
 
-            </div>
-        </section>
-    </main>
+                <div class="block" id="depth-projects">
+                    <p class="kicker">Key Projects</p>
+                    <h3 class="section-title">Infrastructure labs — visual map of the hire-facing GitHub work.</h3>
+                    <p class="intro">Four infrastructure labs aligned to Azure, hybrid networking, and identity — the same set on the resume.</p>
+                    <div class="proj-grid">
+                        <article class="proj">
+                            <div class="proj-top bg-cyan">
+                                <span class="vlan v-cyan">VLAN 10</span>
+                                <span class="vlan v-amber">VLAN 20</span>
+                                <span class="vlan v-violet">OT 30-50</span>
+                                <span class="vlan v-green">Protect 60</span>
+                            </div>
+                            <p class="proj-kicker">Infrastructure Lab · UniFi · VLAN · OT</p>
+                            <h3>Network Infrastructure Upgrade — CPS</h3>
+                            <p>UniFi gateway, L2/L3 PoE switches, public / corporate / OT zoning, NAT/QoS, and written troubleshooting scenarios. Sanitized lab/client write-up.</p>
+                            <div class="tags">
+                                <span class="tag">DNS/DHCP</span>
+                                <span class="tag">VLAN isolation</span>
+                                <span class="tag">Python checks</span>
+                            </div>
+                            <a class="repo" href="https://github.com/supbrice/CloudProjects" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+                        </article>
+                        <article class="proj">
+                            <div class="proj-top bg-blue">
+                                <span class="vlan v-cyan">Region A · VNet / NSG</span>
+                                <span class="vlan v-cyan">VPN hub · Bastion · Monitor</span>
+                            </div>
+                            <p class="proj-kicker">Portfolio Lab · Terraform · Azure</p>
+                            <h3>Multi-Region Azure Hybrid / Zero Trust</h3>
+                            <p>Modular Terraform: multi-region VNets/NSGs, site-to-site VPN, Bastion, managed identity/RBAC, Log Analytics. Lab only — CA/PIM called out as follow-on.</p>
+                            <div class="tags">
+                                <span class="tag">IaC</span>
+                                <span class="tag">Hybrid VPN</span>
+                                <span class="tag">GitHub Actions</span>
+                            </div>
+                            <a class="repo" href="https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+                        </article>
+                        <article class="proj">
+                            <div class="proj-top bg-indigo">
+                                <span class="vlan v-violet">AD DS · Forest</span>
+                                <span class="vlan v-cyan">Entra · Sync notes</span>
+                            </div>
+                            <p class="proj-kicker">Portfolio Lab · AD · PowerShell</p>
+                            <h3>Hybrid Identity Lab — AD DS on Azure VMs</h3>
+                            <p>AD DS forest on Azure VMs, OU/GPO baseline, identity hygiene checks, Entra Connect / Cloud Sync design notes. Not an employer tenant.</p>
+                            <div class="tags">
+                                <span class="tag">GPO</span>
+                                <span class="tag">Identity hygiene</span>
+                                <span class="tag">Hybrid</span>
+                            </div>
+                            <a class="repo" href="https://github.com/supbrice/configure-ad" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+                        </article>
+                        <article class="proj">
+                            <div class="proj-top bg-sky">
+                                <span class="vlan v-cyan">CA</span>
+                                <span class="vlan v-cyan">VPN</span>
+                                <span class="vlan v-cyan">IaC</span>
+                                <span class="vlan v-cyan">DNS</span>
+                                <span class="vlan v-cyan">Mon</span>
+                            </div>
+                            <p class="proj-kicker">Reference Labs · 5 labs</p>
+                            <h3>Azure Architect Labs</h3>
+                            <p>Entra/CA/RBAC patterns, hybrid VPN/private DNS, Terraform modules, DNS/VPN/NSG, and Azure Monitor ops — patterns, not a live estate.</p>
+                            <div class="tags">
+                                <span class="tag">Entra</span>
+                                <span class="tag">Terraform</span>
+                                <span class="tag">Monitor</span>
+                            </div>
+                            <a class="repo" href="https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="block" id="depth-credentials">
+                    <p class="kicker">Credentials</p>
+                    <h3 class="section-title">Certifications and technical training that support modern systems administration.</h3>
+                    <div class="cred-list">
+                        <article class="card cred accented">
+                            <h3>Microsoft Certified: Azure Solutions Architect Expert</h3>
+                            <p>Issued November 2024</p>
+                        </article>
+                        <article class="card cred">
+                            <h3>Microsoft Certified: Azure Administrator Associate</h3>
+                            <p>Issued September 2024</p>
+                        </article>
+                        <article class="card cred">
+                            <h3>Azure Cloud Computing</h3>
+                            <p>NoelTechSolutions • Oct 2022 - Feb 2023</p>
+                        </article>
+                        <article class="card cred">
+                            <h3>Cisco Networking (CCNA Routing and Switching)</h3>
+                            <p>Cisco Networking Academy • Oct 2016 - Jan 2017</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="block" id="depth-toolkit">
+                    <p class="kicker">Toolkit</p>
+                    <h3 class="section-title">Platforms and tools used to administer, automate, secure, and support enterprise systems.</h3>
+                    <div class="tool-grid">
+                        <a class="tool" href="https://azure.microsoft.com" target="_blank" rel="noopener noreferrer">Azure</a>
+                        <a class="tool" href="https://www.microsoft.com/security/business/identity-access/microsoft-entra-id" target="_blank" rel="noopener noreferrer">Entra ID (Azure AD)</a>
+                        <a class="tool" href="https://www.terraform.io" target="_blank" rel="noopener noreferrer">Terraform</a>
+                        <a class="tool" href="https://www.python.org" target="_blank" rel="noopener noreferrer">Python</a>
+                        <a class="tool" href="https://learn.microsoft.com/powershell/" target="_blank" rel="noopener noreferrer">PowerShell</a>
+                        <span class="tool">RBAC / Infrastructure as Code</span>
+                        <a class="tool" href="https://www.servicenow.com" target="_blank" rel="noopener noreferrer">ServiceNow</a>
+                        <a class="tool" href="https://www.salesforce.com" target="_blank" rel="noopener noreferrer">Salesforce</a>
+                        <span class="tool">Firewalls / NSGs</span>
+                        <span class="tool">Endpoint Monitoring</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel" data-panel="creative" hidden>
+                <p class="kicker">Portfolio · Creative</p>
+                <h2 id="creative-title">Creative and documentation skills beyond systems work.</h2>
+                <p class="intro">These sit alongside the Azure and IT focus so visitors see the full range. This lane is portfolio range, not the hire headline.</p>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="icon-row"><i data-lucide="video"></i><h3>Video editing</h3></div>
+                        <p>Short-form and social cuts, captions, and pacing for Reels, Shorts, and YouTube.</p>
+                        <ul>
+                            <li>On-device phone capture for demos and social clips.</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="icon-row"><i data-lucide="image"></i><h3>Photo editing</h3></div>
+                        <p>Color, cleanup, and web-ready stills for profiles and posts.</p>
+                    </article>
+                    <article class="card">
+                        <div class="icon-row"><i data-lucide="file-text"></i><h3>Documentation</h3></div>
+                        <p>Resumes, role write-ups, and clear tech docs people can actually use.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel" data-panel="personal" hidden>
+                <p class="kicker">Personal · not work experience</p>
+                <h2 id="personal-title">Hobbies and interests</h2>
+                <p class="intro">Placeholder only. Replace the bracketed lines with your own hobbies and interests before treating this lane as finished. Nothing here is production experience or a client claim.</p>
+                <div class="ph-list">
+                    <span class="ph">[Hobby 1]</span>
+                    <span class="ph">[Hobby 2]</span>
+                    <span class="ph">[Interest — replace with yours]</span>
+                </div>
+            </section>
+        </div>
+    </dialog>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         (function () {
             const root = document.documentElement;
-            const savedTheme = localStorage.getItem("theme");
-            if (savedTheme === "light") {
-                root.classList.add("light");
+            const toggle = document.getElementById("theme-toggle");
+            const dialog = document.getElementById("detail-dialog");
+            const kicker = document.getElementById("dialog-kicker");
+            const panels = dialog.querySelectorAll("[data-panel]");
+            const titles = {
+                about: "about-title",
+                role: "role-title",
+                cloud: "cloud-title",
+                creative: "creative-title",
+                personal: "personal-title"
+            };
+            const labels = {
+                about: "About",
+                role: "Experience",
+                cloud: "Cloud & Infra",
+                creative: "Creative",
+                personal: "Personal"
+            };
+
+            function syncTheme() {
+                const isLight = root.classList.contains("light");
+                if (toggle) toggle.setAttribute("aria-pressed", isLight ? "true" : "false");
+                const theme = document.querySelector('meta[name="theme-color"]');
+                if (theme) theme.setAttribute("content", isLight ? "#f4f7fb" : "#05070c");
             }
 
-            const toggle = document.getElementById("theme-toggle");
-            if (!toggle) return;
+            if (toggle) {
+                toggle.addEventListener("click", function () {
+                    const isLight = root.classList.toggle("light");
+                    localStorage.setItem("theme", isLight ? "light" : "dark");
+                    syncTheme();
+                });
+            }
+            syncTheme();
 
-            toggle.addEventListener("click", function () {
-                const isLight = root.classList.toggle("light");
-                localStorage.setItem("theme", isLight ? "light" : "dark");
-            });
-        })();
-
-        (function () {
-            const links = document.querySelectorAll(".email-protected");
-            links.forEach(function (link) {
+            document.querySelectorAll(".email-protected").forEach(function (link) {
                 const user = link.dataset.mailUser || "";
                 const domain = link.dataset.mailDomain || "";
                 const subject = link.dataset.mailSubject || "";
@@ -1055,11 +1371,30 @@
                 link.setAttribute("aria-label", address);
                 link.setAttribute("title", address);
             });
+
+            document.querySelectorAll("[data-open]").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    const id = button.getAttribute("data-open");
+                    panels.forEach(function (panel) {
+                        panel.hidden = panel.getAttribute("data-panel") !== id;
+                    });
+                    dialog.setAttribute("aria-labelledby", titles[id] || "about-title");
+                    if (kicker) kicker.textContent = labels[id] || "Detail";
+                    dialog.showModal();
+                    dialog.scrollTop = 0;
+                });
+            });
+
+            dialog.querySelector("[data-close]").addEventListener("click", function () {
+                dialog.close();
+            });
+
+            dialog.addEventListener("click", function (event) {
+                if (event.target === dialog) dialog.close();
+            });
+
+            if (window.lucide) lucide.createIcons();
         })();
-
-
-
-        lucide.createIcons();
     </script>
 </body>
 </html>

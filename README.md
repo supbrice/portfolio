@@ -10,16 +10,18 @@ Repo: [github.com/supbrice/brice-portfolio](https://github.com/supbrice/portfoli
 
 ## What this website is
 
-A single-page hire-facing site (HTML + Tailwind CDN) that mirrors the current resume and links every public GitHub project.
+A single-page bento board (static `index.html`) that mirrors the current resume. Hire, portfolio, and personal lanes are separate tiles. Technical depth opens from the Cloud & Infra tile instead of stacking down the page.
 
-| Section | What you see |
-| --- | --- |
-| Hero | Name **Brice**, Azure / hybrid positioning, resume + LinkedIn + GitHub |
-| Skills | Cloud & identity, automation, networking/security, ITSM — aligned to the resume |
-| Projects | Visual cards for all public labs + personal tools |
-| Experience | Roundel → WTW → nVent → MTN (resume order) |
-| Credentials | AZ-305, AZ-104, Azure coursework, Cisco networking track |
-| Contact | Protected email, LinkedIn, GitHub, resume PDF |
+| Tile | Lane | What you see |
+| --- | --- | --- |
+| Hero | Personal | Name **Brice**, photo, editable tagline placeholder |
+| Job / Role | Hire | Azure / hybrid headline, latest role, full experience |
+| Cloud & Infra | Hire | Azure, Terraform, Entra ID, expertise, projects, credentials, toolkit |
+| Creative | Portfolio | Video editing, photo editing, documentation (More skills) |
+| Personal | Personal | Hobby and interest placeholders only — not work history |
+| Let's Talk | Contact | Protected email, LinkedIn, GitHub, resume PDF |
+
+About, projects, expertise, experience, credentials, and contact now live inside those tiles. Replace the bracketed tagline and hobby placeholders before publishing them as finished personal copy.
 
 This is a **personal portfolio / lab showcase**, not a company product and not a production customer deployment.
 
@@ -40,7 +42,8 @@ Personal utilities (`ai-usage-dashboard`, `sofi-levels-card`) stay in GitHub but
 
 ## Stack
 
-- Static `index.html` + Tailwind CSS (CDN) + Lucide icons
+- Static `index.html` + Lucide icons (detail panels)
+- Light / dark theme toggle
 - Resume download: `Brice-Resume.pdf`
 - Deploy: GitHub Actions → **Azure Static Web Apps** on every push to `main`
 
