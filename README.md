@@ -14,7 +14,7 @@ A single-page hire-facing site (HTML + Tailwind CDN) that mirrors the current re
 
 | Section | What you see |
 | --- | --- |
-| Hero | Name **Brice**, Azure / hybrid positioning, resume + LinkedIn + GitHub |
+| Hero | Name **Ngu Brice Che**, Azure / hybrid positioning, resume + LinkedIn + GitHub |
 | Skills | Cloud & identity, automation, networking/security, ITSM — aligned to the resume |
 | Projects | Visual cards for all public labs + personal tools |
 | Experience | Roundel → WTW → nVent → MTN (resume order) |
@@ -64,7 +64,7 @@ README.md           # This file
 ## Honest scope
 
 - Labs are labeled as labs. No fake production SLAs or enterprise scale claims.
-- Full legal name is kept off public GitHub prose (site uses **Brice**).
+- Hero and header show **Ngu Brice Che**. The About Me section keeps the approved line “I'm Brice”.
 - Entra Conditional Access / PIM / Intune flagship lab is not claimed until it ships.
 
 ## Contact
