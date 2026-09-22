@@ -13,9 +13,15 @@
       var s = document.createElement("script");
       s.src = "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js";
       s.onload = function () {
+        function isDark() {
+          var t = document.documentElement.getAttribute("data-theme");
+          if (t === "dark") return true;
+          if (t === "light") return false;
+          return global.matchMedia && global.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
         global.mermaid.initialize({
           startOnLoad: false,
-          theme: "dark",
+          theme: isDark() ? "dark" : "default",
           securityLevel: "loose",
           flowchart: { htmlLabels: true, curve: "basis" },
         });

@@ -18,11 +18,11 @@ GitHub Pages serves this repo from the `main` branch root (`/`). The links page 
 
 ## What this website is
 
-A multi-page static portfolio with an Apple / glass layout. Asset links are relative (`css/`, `js/`, `data/`, `assets/`) so they resolve under the `/portfolio/` project-pages base.
+A multi-page glass IT portfolio. The header display name is **Ngu Brice Che | 🦾**, and the favicon is the same mark in `assets/favicon.svg`. Asset links are relative (`css/`, `js/`, `data/`, `assets/`) so they resolve under the `/portfolio/` project-pages base.
 
 | Page | File | What you see |
 | --- | --- | --- |
-| Home | `index.html` | Name **Ngu Brice Che**, IT Professional positioning, links into the other pages |
+| Home | `index.html` | **Ngu Brice Che \| 🦾**, IT Professional positioning, experience timeline, and links into the other pages |
 | Projects | `projects.html` | PORTFOLIO / LAB cards, previews, and an offline file browser |
 | Labs | `labs.html` | Lab catalog plus interactive Mermaid diagrams |
 | Creative | `creative.html` | Complementary video, photo, resume, docs, and content skills |
@@ -44,14 +44,18 @@ Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showc
 ## Stack
 
 - Static HTML (no build step)
-- `css/site.css` — Apple system font stack (`SF Pro Text` / `SF Pro Display` with system fallbacks) and glass styling
+- `css/site.css` — Apple system font stack (`SF Pro Text` / `SF Pro Display` with system fallbacks) and glass styling, including light and dark themes
 - `js/nav.js` — page navigation
+- `js/theme.js` — light / dark theme toggle
+- `js/skill-rotate.js` — rotating skill line on Home
+- `js/creative.js` — creative card behavior
 - `js/diagram.js` — interactive Mermaid (pan / zoom), wired from Labs and the Projects file view
 - `data/bundle.js` — offline repo snapshot used by Projects and Labs
-- `assets/previews/` — GitHub-style preview images
+- `assets/favicon.svg` — 🦾 favicon
+- `assets/previews/`, `assets/companies/`, `assets/tech/`, `assets/tools/` — previews, company marks, technology ticker, and creative tool logos
 - `.nojekyll` so Pages serves the files as-is
 - Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
-- `Brice-Resume.pdf` remains at the previous download URL. The new pages do not link it. `web-pfp.png` is unused and is not loaded.
+- `Brice-Resume.pdf` remains at the previous download URL. The pages do not link it. `web-pfp.png` is unused and is not loaded.
 
 ## Open locally
 
@@ -63,7 +67,7 @@ Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showc
 
 - Labs are labeled PORTFOLIO / LAB. Diagrams come from the lab READMEs; they are not screenshots of a live customer environment.
 - No invented metrics, clients, or awards on these pages.
-- Header and brand show **Ngu Brice Che**. About keeps “I'm Brice”.
+- Header and brand show **Ngu Brice Che | 🦾**. About opens with “I'm Ngu Brice Che”.
 - Cybersecurity is described as a growth path, without expert or SOC claims.
 
 ## Contact
