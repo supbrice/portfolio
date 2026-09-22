@@ -89,24 +89,73 @@
       </nav>
     </div>
   </header>
-  <main class="page wrap">
+
+  <main class="page wrap page-projects">
     <div class="page-hero projects-hero">
       <h1 class="page-title">Projects</h1>
-      <p class="lede">PORTFOLIO / LAB work — each card shows a preview, what the lab does, and a short explanation. Browse Project opens the offline file view.</p>
+      <p class="lede">Technical projects and hands-on labs that show how I approach real IT problems — from infrastructure and identity to cloud, automation, networking, and security.</p>
+      <p class="lede-support">Explore a project to see the problem, approach, technologies, implementation, and technical documentation.</p>
+      <p class="projects-vs-labs"><strong>Projects</strong> on this page are case-study views of my strongest PORTFOLIO / LAB work. <strong>Labs</strong> are hands-on experiments and learning environments — see the <a href="labs.html">Labs catalog</a> for diagrams and short cards.</p>
     </div>
 
-    <section class="block" style="padding-top:0;">
+    <section class="block projects-cards-section" style="padding-top:0;" aria-labelledby="case-studies-heading">
+      <div class="section-head">
+        <h2 id="case-studies-heading">Case studies</h2>
+        <p>PORTFOLIO / LAB work — presented for recruiters and technical visitors. Not production customer environments.</p>
+      </div>
       <div class="project-showcase" id="project-grid"></div>
+    </section>
 
-      <div id="browser" class="project-browser" hidden>
+    <section class="block case-study-section" id="case-study" hidden aria-labelledby="case-study-title">
+      <div class="case-study-panel">
+        <div class="case-study-top">
+          <button type="button" class="btn btn-secondary" id="case-study-back">← All projects</button>
+          <span class="lab-badge">PORTFOLIO / LAB</span>
+        </div>
+        <div class="case-study-hero">
+          <div class="case-study-shot">
+            <img id="case-study-img" src="" alt="" />
+          </div>
+          <div class="case-study-intro">
+            <h2 id="case-study-title">Project</h2>
+            <p id="case-study-summary" class="case-study-summary"></p>
+            <div id="case-study-tech" class="project-tags"></div>
+            <div id="case-study-skills" class="project-skills"></div>
+            <div class="case-study-actions">
+              <a class="btn btn-secondary" id="case-study-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <button type="button" class="btn btn-primary" id="case-study-files">Explore Technical Files</button>
+            </div>
+          </div>
+        </div>
+        <div class="case-study-body">
+          <article class="case-block"><h3>Problem</h3><p id="cs-problem"></p></article>
+          <article class="case-block"><h3>Approach</h3><p id="cs-approach"></p></article>
+          <article class="case-block"><h3>Architecture</h3><p id="cs-architecture"></p></article>
+          <article class="case-block"><h3>Technologies</h3><div id="cs-technologies" class="project-tags"></div></article>
+          <article class="case-block"><h3>Implementation</h3><p id="cs-implementation"></p></article>
+          <article class="case-block"><h3>Validation / What I Learned</h3><p id="cs-validation"></p></article>
+          <article class="case-block"><h3>Technical Documentation</h3><p id="cs-docs"></p></article>
+          <article class="case-block"><h3>GitHub / Files</h3><p id="cs-files-note"></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block files-section" id="technical-files" aria-labelledby="files-heading">
+      <div class="section-head">
+        <h2 id="files-heading">Explore Technical Files</h2>
+        <p>Offline GitHub-style browser for snapshotted PORTFOLIO / LAB repositories. Secondary to the case studies above.</p>
+      </div>
+      <div id="browser" class="project-browser">
         <div class="explorer-head">
           <div>
-            <h3 id="explorer-title">Select a lab</h3>
+            <h3 id="explorer-title">Select a project</h3>
             <span class="lab-badge">PORTFOLIO / LAB</span>
           </div>
-          <button type="button" class="btn btn-secondary" id="explorer-close">Close browser</button>
+          <button type="button" class="btn btn-secondary" id="explorer-close" hidden>Close browser</button>
         </div>
-        <div class="explorer" id="explorer">
+        <p class="files-hint" id="files-hint">Open a case study and choose <strong>Explore Technical Files</strong>, or pick a repo below.</p>
+        <div class="files-repo-picks" id="files-repo-picks"></div>
+        <div class="explorer" id="explorer" hidden>
           <div class="tree-pane" id="tree-pane" role="navigation" aria-label="Repository file tree"></div>
           <div class="file-pane">
             <div class="file-bar">
@@ -120,7 +169,8 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">
+
+<footer class="site-footer">
     <div class="wrap">
       <p class="copyright">Copyright © 2026 Brice. All rights reserved.</p>
     </div>
@@ -133,111 +183,216 @@
     (function () {
       var DETAILS = {
         CloudProjects: {
-          title: "CloudProjects — Network upgrade lab",
+          title: "Network upgrade lab",
+          short: "Segmented business network design with UniFi, VLANs, and OT isolation.",
           does: "Shows how a business network can be segmented and upgraded with UniFi gear, VLANs, and OT isolation.",
           explain: "PORTFOLIO / LAB write-up of a client-sized network design: gateway, PoE switching, public / corporate / OT zones, Protect, NAT/QoS, and post-cutover checks. Config examples are sanitized — not a live customer controller dump.",
           tags: ["Networking", "UniFi", "VLAN", "OT isolation"],
-          shot: "net"
+          skills: ["Network design", "VLAN segmentation", "Documentation"],
+          preview: "assets/previews/CloudProjects.png",
+          problem: "Many small and mid-size environments mix corporate, guest, and operational technology on flat or loosely segmented networks, which makes change risk and troubleshooting harder.",
+          approach: "Document a segmented UniFi-oriented design with clear zones, PoE switching, and cutover checks so the upgrade path is repeatable and reviewable.",
+          architecture: "Gateway and switching layout with public, corporate, and OT-oriented zones; Protect and NAT/QoS notes live in the lab write-up and diagrams in the repo snapshot.",
+          implementation: "Markdown design notes and sanitized config examples in the offline snapshot. Use Browse Technical Files to open the tree and README.",
+          validation: "Treated as PORTFOLIO / LAB learning work: validates documentation habits and network segmentation thinking, not a claim of a live customer cutover.",
+          docs: "README and design notes in the snapshotted repository explain zones, checks, and limits."
         },
         "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity": {
           title: "Multi-region Azure hybrid lab",
+          short: "Terraform lab for multi-region Azure networking with hybrid connectivity and identity-minded access.",
           does: "Terraform lab for multi-region Azure networking with hybrid connectivity and identity-minded access.",
           explain: "PORTFOLIO / LAB infrastructure-as-code demo: hub-style networking across regions, VPN/Bastion patterns, RBAC, and monitoring hooks. Built to practice hybrid cloud design — not a production customer estate.",
           tags: ["Azure", "Terraform", "Hybrid", "Zero Trust"],
-          shot: "azure"
+          skills: ["IaC", "Hybrid networking", "Identity-aware access"],
+          preview: "assets/previews/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity.png",
+          problem: "Hybrid and multi-region Azure estates need consistent networking, connectivity, and access patterns that are hard to practice without a disposable lab.",
+          approach: "Codify hub-style multi-region networking and hybrid connectivity patterns with Terraform, plus RBAC and monitoring hooks for review.",
+          architecture: "Multi-region network topology with hybrid connectivity and identity-minded access paths — see Mermaid/diagrams in the lab README when present.",
+          implementation: "Terraform modules and markdown in the offline snapshot. Open Explore Technical Files for .tf and docs.",
+          validation: "Lab validates IaC structure and hybrid design vocabulary for interviews and practice — not a deployed customer production footprint.",
+          docs: "Repo README and Terraform comments describe layout, assumptions, and lab boundaries."
         },
         "configure-ad": {
-          title: "configure-ad — Hybrid AD lab",
+          title: "Hybrid AD lab",
+          short: "Active Directory Domain Services on Azure VMs with hybrid identity notes.",
           does: "Walks through Active Directory Domain Services on Azure VMs with hybrid identity notes.",
           explain: "PORTFOLIO / LAB for standing up AD DS in Azure, OU/GPO baselines, and Entra Connect / Cloud Sync notes. Useful for hybrid identity practice without claiming a live enterprise forest.",
           tags: ["Active Directory", "Azure VMs", "Hybrid identity"],
-          shot: "ad"
+          skills: ["AD DS", "Hybrid identity", "Windows Server"],
+          preview: "assets/previews/configure-ad.png",
+          problem: "Hybrid identity skills need a safe place to practice AD DS, OU/GPO baselines, and sync concepts without touching a real enterprise forest.",
+          approach: "Stand up AD DS on Azure VMs and document hybrid identity notes (Entra Connect / Cloud Sync) as a guided lab.",
+          architecture: "Azure VMs hosting AD DS with documented hybrid sync considerations — details in the lab README.",
+          implementation: "Step notes and scripts in the snapshot. Use the file browser for the exact tree.",
+          validation: "Confirms ability to document and sequence hybrid AD lab work; labeled PORTFOLIO / LAB only.",
+          docs: "Lab README covers setup order, baselines, and limits."
         },
         "Azure-Cloud-Skills-and-Use-Cases": {
-          title: "Azure Cloud Skills & use cases",
+          title: "Azure skills & use cases",
+          short: "Reference labs for Entra, Conditional Access, RBAC, hybrid VPN/DNS, Terraform, and Monitor.",
           does: "Reference labs covering Entra, Conditional Access, RBAC, hybrid VPN/DNS, Terraform, and Monitor.",
           explain: "PORTFOLIO / LAB collection of Azure scenarios for learning and interview talking points. Each folder is a use-case sketch — labeled lab work, not billed customer delivery.",
           tags: ["Azure", "Entra ID", "RBAC", "Monitor"],
-          shot: "skills"
+          skills: ["Azure fundamentals", "Identity controls", "Monitoring"],
+          preview: "assets/previews/Azure-Cloud-Skills-and-Use-Cases.png",
+          problem: "Azure identity, access, connectivity, and monitoring topics are easier to discuss with concrete, folder-sized scenarios than with abstract lists.",
+          approach: "Organize reference scenarios (Entra, Conditional Access, RBAC, hybrid VPN/DNS, Terraform, Monitor) as a browsable lab pack.",
+          architecture: "Per-folder use-case sketches rather than one monolith — open the tree to see how topics are grouped.",
+          implementation: "Markdown and example configs in the snapshot; each folder is a scenario sketch.",
+          validation: "Supports study and interview talking points. Explicitly PORTFOLIO / LAB — not customer delivery.",
+          docs: "Folder READMEs and notes describe each use-case sketch."
         },
         "entra-hybrid-proof": {
-          title: "entra-hybrid-proof — Identity pack",
+          title: "Entra identity pack",
+          short: "Entra ID + hybrid identity pack: Conditional Access, PIM, group access, and JML scripts.",
           does: "Entra ID + hybrid identity proof pack: Conditional Access, PIM, group access, and joiner/mover/leaver scripts.",
           explain: "PORTFOLIO / LAB identity kit for practicing Conditional Access, Privileged Identity Management, group-based access, and PowerShell JML flows. Lab tenant patterns only — not a customer tenant.",
           tags: ["Entra ID", "Conditional Access", "PIM", "PowerShell"],
-          shot: "entra"
+          skills: ["Identity governance", "Conditional Access", "PowerShell"],
+          preview: "assets/previews/entra-hybrid-proof.png",
+          problem: "Identity controls (CA, PIM, group access, joiner/mover/leaver) need practice packs that stay clearly separated from real tenant administration.",
+          approach: "Assemble a proof pack of Conditional Access, PIM, group-based access, and PowerShell JML patterns for lab tenants.",
+          architecture: "Identity control scenarios and scripts organized for review; see repo docs for flow notes.",
+          implementation: "PowerShell and markdown in the offline snapshot via Explore Technical Files.",
+          validation: "Lab tenant patterns only — demonstrates identity tooling literacy, not operation of a customer tenant.",
+          docs: "Pack README and script headers document intent and lab boundaries."
         }
       };
 
       var snap = window.__REPO_SNAPSHOT__;
       var grid = document.getElementById("project-grid");
-      var browser = document.getElementById("browser");
+      var caseSection = document.getElementById("case-study");
+      var cardsSection = document.querySelector(".projects-cards-section");
+      var explorer = document.getElementById("explorer");
       var treePane = document.getElementById("tree-pane");
       var filePath = document.getElementById("file-path");
       var fileBody = document.getElementById("file-body");
       var titleEl = document.getElementById("explorer-title");
       var disclaimer = document.getElementById("explorer-disclaimer");
       var closeBtn = document.getElementById("explorer-close");
+      var picks = document.getElementById("files-repo-picks");
+      var filesHint = document.getElementById("files-hint");
+      var activeRepo = null;
 
       if (!snap || !snap.index || !snap.repos) {
         grid.innerHTML = "<p>Snapshot data missing. Keep <code>data/bundle.js</code> next to these pages.</p>";
         return;
       }
 
-      snap.index.repos.forEach(function (r) {
-        var repo = snap.repos[r.name];
-        var d = DETAILS[r.name] || {};
-        var article = document.createElement("article");
-        article.className = "project-card";
-        var preview = d.preview || ('assets/previews/' + r.name + '.png');
-        var previewOg = 'assets/previews/' + r.name + '-og.png';
-        article.innerHTML =
-          '<div class="project-shot gh-frame">' +
-            '<img src="' + preview + '" alt="GitHub preview of ' + (r.name || '') + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + previewOg + '\';" />' +
-            '<div class="shot-caption">GitHub view</div>' +
-          "</div>" +
-          '<div class="project-body">' +
-            '<span class="tag">PORTFOLIO / LAB</span>' +
-            "<h3></h3>" +
-            '<p class="project-does"><strong>What it does:</strong> <span></span></p>' +
-            '<p class="project-explain"></p>' +
-            '<div class="project-tags"></div>' +
-            '<div class="project-meta"></div>' +
-            '<div class="project-actions">' +
-              '<button type="button" class="btn btn-primary browse-btn">Browse Project</button>' +
-              '<a class="btn btn-secondary gh-link" target="_blank" rel="noopener noreferrer">GitHub</a>' +
+      function previewFor(name, d) {
+        if (d && d.preview) return d.preview;
+        return "assets/previews/" + name + ".png";
+      }
+
+      function renderCards() {
+        grid.innerHTML = "";
+        snap.index.repos.forEach(function (r, idx) {
+          var d = DETAILS[r.name] || {};
+          var article = document.createElement("article");
+          article.className = "project-card project-card--case";
+          article.style.setProperty("--enter-delay", (idx * 60) + "ms");
+          var preview = previewFor(r.name, d);
+          var previewOg = "assets/previews/" + r.name + "-og.png";
+          article.innerHTML =
+            '<div class="project-shot">' +
+              '<img src="' + preview + '" alt="Preview of ' + (d.title || r.name) + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + previewOg + '\';" />' +
+              '<span class="lab-badge shot-badge">PORTFOLIO / LAB</span>' +
             "</div>" +
-          "</div>";
+            '<div class="project-body">' +
+              "<h3></h3>" +
+              '<p class="project-short"></p>' +
+              '<p class="project-label-row"><span class="meta-label">Technologies</span></p>' +
+              '<div class="project-tags"></div>' +
+              '<p class="project-label-row"><span class="meta-label">Skills demonstrated</span></p>' +
+              '<div class="project-skills"></div>' +
+              '<div class="project-actions">' +
+                '<button type="button" class="btn btn-primary case-btn">View Case Study →</button>' +
+              "</div>" +
+            "</div>";
+          article.querySelector("h3").textContent = d.title || r.title || r.name;
+          article.querySelector(".project-short").textContent = d.short || d.does || r.blurb || "";
+          var tagsEl = article.querySelector(".project-tags");
+          (d.tags || []).forEach(function (t) {
+            var s = document.createElement("span");
+            s.className = "chip";
+            s.textContent = t;
+            tagsEl.appendChild(s);
+          });
+          var skillsEl = article.querySelector(".project-skills");
+          (d.skills || []).forEach(function (t) {
+            var s = document.createElement("span");
+            s.className = "chip chip-skill";
+            s.textContent = t;
+            skillsEl.appendChild(s);
+          });
+          article.querySelector(".case-btn").addEventListener("click", function () {
+            openCase(r.name);
+          });
+          grid.appendChild(article);
 
-        article.querySelector("h3").textContent = d.title || r.title || r.name;
-        article.querySelector(".project-does span").textContent =
-          d.does || r.blurb || "Open the offline snapshot to inspect files.";
-        article.querySelector(".project-explain").textContent =
-          d.explain ||
-          ((repo && repo.meta && repo.meta.description) || r.blurb || "");
-        var tagsEl = article.querySelector(".project-tags");
-        (d.tags || []).forEach(function (t) {
-          var s = document.createElement("span");
-          s.className = "chip";
-          s.textContent = t;
-          tagsEl.appendChild(s);
+          var pick = document.createElement("button");
+          pick.type = "button";
+          pick.className = "btn btn-secondary files-pick";
+          pick.textContent = d.title || r.name;
+          pick.addEventListener("click", function () {
+            openRepo(r.name, true);
+          });
+          picks.appendChild(pick);
         });
-        article.querySelector(".project-meta").textContent =
-          (repo ? Object.keys(repo.files).length : 0) +
-          " snapshotted files · offline browser";
-        var gh = article.querySelector(".gh-link");
-        gh.href = (repo && repo.meta && repo.meta.url) || r.url || "#";
-        article.querySelector(".browse-btn").addEventListener("click", function () {
-          openRepo(r.name);
-          history.replaceState(null, "", "projects.html?repo=" + encodeURIComponent(r.name));
-        });
-        grid.appendChild(article);
-      });
+      }
 
-      function openRepo(name) {
+      function openCase(name) {
+        var repo = snap.repos[name];
+        var d = DETAILS[name] || {};
+        if (!repo && !d.title) return;
+        activeRepo = name;
+        caseSection.hidden = false;
+        cardsSection.hidden = true;
+        document.getElementById("case-study-title").textContent = d.title || name;
+        document.getElementById("case-study-summary").textContent = d.explain || d.does || "";
+        var img = document.getElementById("case-study-img");
+        img.src = previewFor(name, d);
+        img.alt = "Architecture or preview for " + (d.title || name);
+        function fillTags(el, arr) {
+          el.innerHTML = "";
+          (arr || []).forEach(function (t) {
+            var s = document.createElement("span");
+            s.className = "chip";
+            s.textContent = t;
+            el.appendChild(s);
+          });
+        }
+        fillTags(document.getElementById("case-study-tech"), d.tags);
+        fillTags(document.getElementById("case-study-skills"), d.skills);
+        fillTags(document.getElementById("cs-technologies"), d.tags);
+        document.getElementById("cs-problem").textContent = d.problem || "";
+        document.getElementById("cs-approach").textContent = d.approach || "";
+        document.getElementById("cs-architecture").textContent = d.architecture || "";
+        document.getElementById("cs-implementation").textContent = d.implementation || "";
+        document.getElementById("cs-validation").textContent = d.validation || "";
+        document.getElementById("cs-docs").textContent = d.docs || "";
+        document.getElementById("cs-files-note").textContent =
+          "GitHub and the offline file browser below expose the snapshotted tree for this PORTFOLIO / LAB repo.";
+        var gh = document.getElementById("case-study-github");
+        gh.href = (repo && repo.meta && repo.meta.url) || (snap.index.repos.find(function(x){return x.name===name;}) || {}).url || "#";
+        history.replaceState(null, "", "projects.html?repo=" + encodeURIComponent(name));
+        caseSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function showCards() {
+        caseSection.hidden = true;
+        cardsSection.hidden = false;
+        history.replaceState(null, "", "projects.html");
+        cardsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function openRepo(name, scroll) {
         var repo = snap.repos[name];
         if (!repo) return;
-        browser.hidden = false;
+        activeRepo = name;
+        explorer.hidden = false;
+        closeBtn.hidden = false;
+        filesHint.hidden = true;
         titleEl.textContent = (DETAILS[name] && DETAILS[name].title) || (repo.meta && repo.meta.repo) || name;
         disclaimer.textContent =
           ((repo.meta && repo.meta.disclaimer) || "PORTFOLIO / LAB snapshot.") +
@@ -254,7 +409,9 @@
           fileBody.className = "file-body empty";
           fileBody.textContent = "Pick a file on the left to read it here.";
         }
-        browser.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (scroll) {
+          document.getElementById("technical-files").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }
 
       function renderTree(repo) {
@@ -318,14 +475,24 @@
         }
       }
 
-      closeBtn.addEventListener("click", function () {
-        browser.hidden = true;
-        history.replaceState(null, "", "projects.html");
+      document.getElementById("case-study-back").addEventListener("click", showCards);
+      document.getElementById("case-study-files").addEventListener("click", function () {
+        if (activeRepo) openRepo(activeRepo, true);
       });
+      closeBtn.addEventListener("click", function () {
+        explorer.hidden = true;
+        closeBtn.hidden = true;
+        filesHint.hidden = false;
+        titleEl.textContent = "Select a project";
+      });
+
+      renderCards();
 
       var params = new URLSearchParams(location.search);
       var initial = params.get("repo");
-      if (initial && snap.repos[initial]) openRepo(initial);
+      if (initial && (snap.repos[initial] || DETAILS[initial])) {
+        openCase(initial);
+      }
     })();
   </script>
 </body>

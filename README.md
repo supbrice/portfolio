@@ -23,7 +23,7 @@ A multi-page glass IT portfolio. The header display name is **Ngu Brice Che | ðŸ
 | Page | File | What you see |
 | --- | --- | --- |
 | Home | `index.html` | **Ngu Brice Che \| ðŸ¦¾**, IT Professional positioning, clickable browse cards above the experience timeline |
-| Projects | `projects.html` | PORTFOLIO / LAB cards, previews, and an offline file browser |
+| Projects | `projects.html` | Case-study card grid with View Case Study panels; the file browser sits under Explore Technical Files |
 | Labs | `labs.html` | Lab catalog plus interactive Mermaid diagrams |
 | Creative | `creative.html` | Single-column expandable list (video, photo, resume, docs, content) plus AI-assisted workflow tool cards |
 | About | `about.html` | Intro lede, then My Background, What I Do, and Beyond IT |
