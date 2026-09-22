@@ -4,10 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ngu Brice Che — Creative</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/site.css" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('po-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="glass-po">
-  <div class="anim-bg" aria-hidden="true">
+    <div class="anim-bg" aria-hidden="true">
     <div class="blob b1"></div>
     <div class="blob b2"></div>
     <div class="blob b3"></div>
@@ -15,94 +25,236 @@
   </div>
 <header>
     <div class="wrap nav">
-      <a class="brand" href="index.html">Ngu Brice Che</a>
+      <div class="brand">
+        <a class="brand-name" href="index.html">Ngu Brice Che | 🦾</a>
+        <a class="brand-loc" href="https://maps.apple.com/?q=Minnesota" target="_blank" rel="noopener noreferrer"><span class="loc-pin" aria-hidden="true"></span><span class="brand-loc-text">Minnesota</span></a>
+      </div>
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html" data-nav="home">Home</a>
-        <a href="projects.html" data-nav="projects">Projects</a>
-        <a href="labs.html" data-nav="labs">Labs</a>
-        <a href="creative.html" data-nav="creative">Creative</a>
+
+        <div class="nav-item">
+          <a href="projects.html" data-nav="projects" aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <div class="nav-dropdown" role="menu">
+            <a role="menuitem" href="projects.html">All projects</a>
+            <a role="menuitem" href="projects.html?repo=CloudProjects">Network upgrade lab</a>
+            <a role="menuitem" href="projects.html?repo=Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity">Multi-region Azure hybrid</a>
+            <a role="menuitem" href="projects.html?repo=configure-ad">Hybrid AD lab</a>
+            <a role="menuitem" href="projects.html?repo=Azure-Cloud-Skills-and-Use-Cases">Azure skills &amp; use cases</a>
+            <a role="menuitem" href="projects.html?repo=entra-hybrid-proof">Entra identity pack</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="labs.html" data-nav="labs" aria-haspopup="true" aria-expanded="false">Labs</a>
+          <div class="nav-dropdown" role="menu">
+            <a role="menuitem" href="labs.html">All labs</a>
+            <a role="menuitem" href="labs.html#labs-diagrams">Architecture diagrams</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="creative.html" data-nav="creative" aria-haspopup="true" aria-expanded="false">Creative</a>
+          <div class="nav-dropdown" role="menu">
+            <a role="menuitem" href="creative.html">All creative</a>
+            <a role="menuitem" href="creative.html#video-editing">Video editing</a>
+            <a role="menuitem" href="creative.html#resume-design">Resume design</a>
+            <a role="menuitem" href="creative.html#content-creation">Content creation</a>
+            <a role="menuitem" href="creative.html#photo-editing">Photo editing</a>
+            <a role="menuitem" href="creative.html#technical-documentation">Technical documentation</a>
+            <a role="menuitem" href="creative.html#ai-assisted-workflows">AI-assisted workflows</a>
+          </div>
+        </div>
+
         <a href="about.html" data-nav="about">About</a>
-        <a href="contact.html" data-nav="contact">Contact</a>
+
+        <div class="nav-item">
+          <a href="contact.html" data-nav="contact" aria-haspopup="true" aria-expanded="false">Contact</a>
+          <div class="nav-dropdown" role="menu">
+            <a role="menuitem" href="contact.html">Contact page</a>
+            <a role="menuitem" href="https://www.linkedin.com/in/ngubriceche" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a role="menuitem" href="mailto:supbricenow@gmail.com">Email</a>
+            <a role="menuitem" href="mailto:supbricenow@gmail.com?subject=Phone%20call%20request">Request a call</a>
+            <a role="menuitem" href="https://cal.com/supbrice" target="_blank" rel="noopener noreferrer">Schedule a call</a>
+          </div>
+        </div>
+
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode" title="Theme">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+          </span>
+        </button>
       </nav>
     </div>
   </header>
   <main class="page wrap">
     <div class="page-hero">
       <h1 class="page-title">Creative</h1>
-      <p class="lede">Extra capabilities I can use on projects and collaborations. IT stays the main story.</p>
-      <span class="note">Complementary skills · not a competing career</span>
+      <p class="lede">Extra capabilities for projects and collaborations — click a card to explore more, and open any tool to learn it. IT stays the main story.</p>
     </div>
-    <section class="block" style="padding-top:0;">
+        <section class="block" style="padding-top:0;">
       <div class="grid creative-grid">
-        <article class="card creative-card">
-          <div class="creative-icon icon-video" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
+        <details class="card creative-card" id="video-editing">
+          <summary class="creative-summary">
+            <div class="creative-icon icon-video" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
               <rect class="ci-frame" x="6" y="12" width="28" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
               <path class="ci-play" d="M18 20v12l12-6-12-6z" fill="currentColor"/>
               <path class="ci-reel" d="M36 16l8-4v24l-8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
+            </div>
+            <span class="tag creative-badge">VIDEO</span>
+            <h3>Video Editing</h3>
+            <p>Cuts, captions, transitions, and short-form clips from phone recordings and existing footage.</p>
+          </summary>
+          <div class="creative-more">
+            <h4>What I can do</h4>
+            <ul class="more-list">
+              <li>Trim and assemble short clips for demos, walkthroughs, and social posts</li>
+              <li>Add captions, simple transitions, and title cards</li>
+              <li>Record and clean up screen demos with CleanShot or Screen Studio</li>
+              <li>Export ready-to-share videos for LinkedIn, GitHub, or portfolio use</li>
+            </ul>
+            <h4>Tools I use</h4>
+            <ul class="tool-list">
+            <li><a class="tool-item" href="https://www.apple.com/final-cut-pro/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/final-cut-pro.svg" alt="" width="20" height="20" /><span>Final Cut Pro</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/capcut.svg" alt="" width="20" height="20" /><span>CapCut</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/davinci-resolve.svg" alt="" width="20" height="20" /><span>DaVinci Resolve</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://cleanshot.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/cleanshot.svg" alt="" width="20" height="20" /><span>CleanShot</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.screen.studio/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/screen-studio.svg" alt="" width="20" height="20" /><span>Screen Studio</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            </ul>
           </div>
-          <span class="tag">Video</span>
-          <h3>Video editing</h3>
-          <p>Cuts, captions, and short-form clips from phone recordings and existing footage.</p>
-        </article>
-        <article class="card creative-card">
-          <div class="creative-icon icon-photo" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
-              <rect class="ci-frame" x="8" y="12" width="32" height="26" rx="4" stroke="currentColor" stroke-width="2"/>
-              <circle class="ci-lens" cx="24" cy="25" r="7" stroke="currentColor" stroke-width="2"/>
-              <circle class="ci-dot" cx="34" cy="18" r="2" fill="currentColor"/>
-              <path class="ci-flash" d="M14 12V9h6v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <span class="tag">Photo</span>
-          <h3>Photo editing</h3>
-          <p>Cleanup, crop, color, and simple composites for profiles, posts, and documents.</p>
-        </article>
-        <article class="card creative-card">
-          <div class="creative-icon icon-resume" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
+        </details>
+        <details class="card creative-card" id="resume-design">
+          <summary class="creative-summary">
+            <div class="creative-icon icon-resume" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
               <rect class="ci-page" x="12" y="6" width="24" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
               <path class="ci-line l1" d="M18 16h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path class="ci-line l2" d="M18 22h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path class="ci-line l3" d="M18 28h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <circle class="ci-avatar" cx="24" cy="36" r="3" fill="currentColor"/>
             </svg>
+            </div>
+            <span class="tag creative-badge">DOCS</span>
+            <h3>Resume Design</h3>
+            <p>Clean, readable resume layouts that keep the facts accurate and easy to scan.</p>
+          </summary>
+          <div class="creative-more">
+            <h4>What I can do</h4>
+            <ul class="more-list">
+              <li>Design clear one-page and multi-section resume layouts</li>
+              <li>Keep wording truthful while improving visual hierarchy and scanability</li>
+              <li>Export print-ready and ATS-friendly Word or PDF versions</li>
+              <li>Match layout to IT / systems / cloud roles without inventing experience</li>
+            </ul>
+            <h4>Tools I use</h4>
+            <ul class="tool-list">
+            <li><a class="tool-item" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/canva.svg" alt="" width="20" height="20" /><span>Canva</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.microsoft.com/microsoft-365/word" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/microsoft-word.svg" alt="" width="20" height="20" /><span>Microsoft Word</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            </ul>
           </div>
-          <span class="tag">Docs</span>
-          <h3>Resume design</h3>
-          <p>Clean, readable resume layouts that keep the facts accurate and easy to scan.</p>
-        </article>
-        <article class="card creative-card">
-          <div class="creative-icon icon-docs" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
+        </details>
+        <details class="card creative-card" id="content-creation">
+          <summary class="creative-summary">
+            <div class="creative-icon icon-content" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+              <rect class="ci-post" x="10" y="10" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
+              <path class="ci-pen" d="M28 14l6 6-14 14H14V28l14-14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path class="ci-spark s1" d="M34 10v4M36 12h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path class="ci-spark s2" d="M12 34v3M13.5 35.5h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            </div>
+            <span class="tag creative-badge">CONTENT</span>
+            <h3>Content Creation</h3>
+            <p>Short-form content, social posts, visual concepts, and AI-assisted content workflows.</p>
+          </summary>
+          <div class="creative-more">
+            <h4>What I can do</h4>
+            <ul class="more-list">
+              <li>Draft short posts and captions for LinkedIn or portfolio updates</li>
+              <li>Build simple visual concepts and graphics in Canva</li>
+              <li>Pair short video clips with CapCut for social-ready content</li>
+              <li>Use AI to brainstorm outlines, then edit for accuracy and voice</li>
+            </ul>
+            <h4>Tools I use</h4>
+            <ul class="tool-list">
+            <li><a class="tool-item" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/canva.svg" alt="" width="20" height="20" /><span>Canva</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.capcut.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/capcut.svg" alt="" width="20" height="20" /><span>CapCut</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/chatgpt.svg" alt="" width="20" height="20" /><span>ChatGPT</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://grok.x.ai/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/grok.svg" alt="" width="20" height="20" /><span>Grok</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </details>
+        <details class="card creative-card" id="photo-editing">
+          <summary class="creative-summary">
+            <div class="creative-icon icon-photo" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+              <rect class="ci-frame" x="8" y="12" width="32" height="26" rx="4" stroke="currentColor" stroke-width="2"/>
+              <circle class="ci-lens" cx="24" cy="25" r="7" stroke="currentColor" stroke-width="2"/>
+              <circle class="ci-dot" cx="34" cy="18" r="2" fill="currentColor"/>
+              <path class="ci-flash" d="M14 12V9h6v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            </div>
+            <span class="tag creative-badge">PHOTO</span>
+            <h3>Photo Editing</h3>
+            <p>Image adjustments, cropping, cleanup, and visual enhancements.</p>
+          </summary>
+          <div class="creative-more">
+            <h4>What I can do</h4>
+            <ul class="more-list">
+              <li>Crop, straighten, and color-adjust photos for web or print</li>
+              <li>Clean up backgrounds and small distractions for portfolio or resume use</li>
+              <li>Capture and annotate screenshots with CleanShot</li>
+              <li>Prepare profile, banner, and project images at the right size</li>
+            </ul>
+            <h4>Tools I use</h4>
+            <ul class="tool-list">
+            <li><a class="tool-item" href="https://www.pixelmator.com/pro/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/pixelmator.svg" alt="" width="20" height="20" /><span>Pixelmator</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.pixelmator.com/photomator/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/photomator.svg" alt="" width="20" height="20" /><span>Photomator</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://cleanshot.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/cleanshot.svg" alt="" width="20" height="20" /><span>CleanShot</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </div>
+        </details>
+        <details class="card creative-card" id="technical-documentation">
+          <summary class="creative-summary">
+            <div class="creative-icon icon-docs" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
               <path class="ci-page" d="M14 8h14l8 8v24a3 3 0 0 1-3 3H14a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               <path class="ci-fold" d="M28 8v8h8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               <path class="ci-line l1" d="M16 24h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path class="ci-line l2" d="M16 30h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path class="ci-line l3" d="M16 36h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
+            </div>
+            <span class="tag creative-badge">DOCS</span>
+            <h3>Technical Documentation</h3>
+            <p>Write-ups, how-tos, project documentation, and lab notes that explain technical systems clearly.</p>
+          </summary>
+          <div class="creative-more">
+            <h4>What I can do</h4>
+            <ul class="more-list">
+              <li>Write README and lab notes that explain setup, architecture, and limits</li>
+              <li>Document runbooks, how-tos, and troubleshooting steps</li>
+              <li>Keep portfolio / lab labeling honest so readers know what is demo vs production</li>
+              <li>Publish docs in Markdown, Notion, Google Docs, or Word as needed</li>
+            </ul>
+            <h4>Tools I use</h4>
+            <ul class="tool-list">
+            <li><a class="tool-item" href="https://www.markdownguide.org/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/markdown.svg" alt="" width="20" height="20" /><span>Markdown</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://github.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/github.svg" alt="" width="20" height="20" /><span>GitHub</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.microsoft.com/microsoft-365/word" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/microsoft-word.svg" alt="" width="20" height="20" /><span>Microsoft Word</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.notion.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/notion.svg" alt="" width="20" height="20" /><span>Notion</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://docs.google.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/google-docs.svg" alt="" width="20" height="20" /><span>Google Docs</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            </ul>
           </div>
-          <span class="tag">Docs</span>
-          <h3>Technical documentation</h3>
-          <p>Write-ups, how-tos, and lab notes that explain a system without extra fluff.</p>
-        </article>
-        <article class="card creative-card">
-          <div class="creative-icon icon-content" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
-              <rect class="ci-post" x="10" y="10" width="28" height="28" rx="6" stroke="currentColor" stroke-width="2"/>
-              <path class="ci-pen" d="M28 14l6 6-14 14H14V28l14-14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              <path class="ci-spark s1" d="M34 10v4M36 12h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path class="ci-spark s2" d="M12 34v3M13.5 35.5h-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <span class="tag">Content</span>
-          <h3>Content creation</h3>
-          <p>Simple digital content for personal brand and project explainers.</p>
-        </article>
-        <article class="card creative-card">
-          <div class="creative-icon icon-ai" aria-hidden="true">
-            <svg viewBox="0 0 48 48" fill="none">
+        </details>
+        <details class="card creative-card" id="ai-assisted-workflows">
+          <summary class="creative-summary">
+            <div class="creative-icon icon-ai" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
               <circle class="ci-orb" cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
               <circle class="ci-core" cx="24" cy="24" r="3.5" fill="currentColor"/>
               <path class="ci-ray r1" d="M24 6v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -112,11 +264,27 @@
               <path class="ci-ray r5" d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path class="ci-ray r6" d="M33.5 33.5L37 37" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
+            </div>
+            <span class="tag creative-badge">TOOLS</span>
+            <h3>AI-Assisted Workflows</h3>
+            <p>Using AI to research, organize, write, brainstorm, automate, and streamline technical and creative work.</p>
+          </summary>
+          <div class="creative-more">
+            <h4>What I can do</h4>
+            <ul class="more-list">
+              <li>Brainstorm outlines, checklists, and first drafts faster</li>
+              <li>Summarize notes and turn them into clear documentation</li>
+              <li>Assist with scripting ideas, then verify and test before use</li>
+              <li>Speed up repetitive creative and IT busywork — with human review on the final output</li>
+            </ul>
+            <h4>Tools I use</h4>
+            <ul class="tool-list">
+            <li><a class="tool-item" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/chatgpt.svg" alt="" width="20" height="20" /><span>ChatGPT</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://grok.x.ai/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/grok.svg" alt="" width="20" height="20" /><span>Grok</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            <li><a class="tool-item" href="https://www.make.com/" target="_blank" rel="noopener noreferrer"><img class="tool-logo" src="assets/tools/ai-automation.svg" alt="" width="20" height="20" /><span>AI Automation Tools</span><span class="tool-open" aria-hidden="true">↗</span></a></li>
+            </ul>
           </div>
-          <span class="tag">Tools</span>
-          <h3>AI-assisted workflows</h3>
-          <p>Using AI tools to draft, edit, and speed up repeatable creative and admin work.</p>
-        </article>
+        </details>
       </div>
       <div class="actions" style="justify-content:flex-start;margin-top:2rem;">
         <a class="btn btn-primary" href="contact.html">Work with me</a>
@@ -129,6 +297,8 @@
       <p class="copyright">Copyright © 2026 Brice. All rights reserved.</p>
     </div>
   </footer>
+  <script src="js/theme.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/creative.js"></script>
 </body>
 </html>
