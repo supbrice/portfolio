@@ -3071,3 +3071,12 @@ details.creative-card.card {
 .ai-tool-grid {
   max-width: 100%;
 }
+
+
+.prose h2 {
+  margin: 1.75rem 0 0.65rem;
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+.prose h2:first-child { margin-top: 0; }
