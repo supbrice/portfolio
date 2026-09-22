@@ -22,12 +22,12 @@ A multi-page glass IT portfolio. The header display name is **Ngu Brice Che | �
 
 | Page | File | What you see |
 | --- | --- | --- |
-| Home | `index.html` | **Ngu Brice Che \| 🦾**, IT Professional positioning, experience timeline, and links into the other pages |
+| Home | `index.html` | **Ngu Brice Che \| 🦾**, IT Professional positioning, clickable browse cards above the experience timeline |
 | Projects | `projects.html` | PORTFOLIO / LAB cards, previews, and an offline file browser |
 | Labs | `labs.html` | Lab catalog plus interactive Mermaid diagrams |
-| Creative | `creative.html` | Complementary video, photo, resume, docs, and content skills |
+| Creative | `creative.html` | Single-column expandable list (video, photo, resume, docs, content) plus AI-assisted workflow tool cards |
 | About | `about.html` | IT-first story; cloud/identity supporting; cybersecurity as a direction |
-| Contact | `contact.html` | LinkedIn, email, and scheduling |
+| Contact | `contact.html` | Resume first, then LinkedIn, email, call, and schedule a call |
 
 Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showcase, not a company product and not a production customer deployment.
 
@@ -55,7 +55,7 @@ Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showc
 - `assets/previews/`, `assets/companies/`, `assets/tech/`, `assets/tools/` — previews, company marks, technology ticker, and creative tool logos
 - `.nojekyll` so Pages serves the files as-is
 - Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
-- `Brice-Resume.pdf` remains at the previous download URL. The pages do not link it. `web-pfp.png` is unused and is not loaded.
+- Contact’s Resume button links to `assets/Brice-Resume.pdf`. `Brice-Resume.pdf` also stays at the repo root. `web-pfp.png` is unused and is not loaded.
 
 ## Open locally
 
