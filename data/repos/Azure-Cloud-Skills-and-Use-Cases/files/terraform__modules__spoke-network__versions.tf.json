@@ -1,0 +1,1 @@
+{"path": "terraform/modules/spoke-network/versions.tf", "repo": "Azure-Cloud-Skills-and-Use-Cases", "label": "PORTFOLIO / LAB", "content": "terraform {\n  required_version = \">= 1.6.0\"\n\n  required_providers {\n    azurerm = {\n      source  = \"hashicorp/azurerm\"\n      version = \">= 4.0.0, < 5.0.0\"\n    }\n  }\n}\n"}

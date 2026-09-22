@@ -1,0 +1,1 @@
+{"path": "terraform/environments/dev/providers.tf", "repo": "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity", "label": "PORTFOLIO / LAB", "content": "provider \"azurerm\" {\n  features {\n    resource_group {\n      prevent_deletion_if_contains_resources = false\n    }\n  }\n\n  subscription_id = var.subscription_id\n}\n\nprovider \"azuread\" {}\n"}

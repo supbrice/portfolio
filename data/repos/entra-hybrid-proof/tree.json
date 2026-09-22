@@ -1,0 +1,171 @@
+{
+  "repo": "entra-hybrid-proof",
+  "url": "https://github.com/supbrice/entra-hybrid-proof",
+  "description": "Hire-facing Entra ID + hybrid identity proof: Conditional Access, PIM, group access, M365 notes, PowerShell JML (lab — not a customer tenant)",
+  "branch": "main",
+  "label": "PORTFOLIO / LAB",
+  "disclaimer": "Lab / portfolio snapshot for offline browsing. Not a production customer environment.",
+  "tree": [
+    {
+      "path": ".github",
+      "type": "dir"
+    },
+    {
+      "path": ".github/workflows",
+      "type": "dir"
+    },
+    {
+      "path": "docs",
+      "type": "dir"
+    },
+    {
+      "path": "scripts",
+      "type": "dir"
+    },
+    {
+      "path": "scripts/common",
+      "type": "dir"
+    },
+    {
+      "path": "scripts/joiner",
+      "type": "dir"
+    },
+    {
+      "path": "scripts/leaver",
+      "type": "dir"
+    },
+    {
+      "path": "scripts/mover",
+      "type": "dir"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "type": "file",
+      "size": 1754
+    },
+    {
+      "path": ".gitignore",
+      "type": "file",
+      "size": 268
+    },
+    {
+      "path": "docs/break-glass.md",
+      "type": "file",
+      "size": 3886
+    },
+    {
+      "path": "docs/conditional-access.md",
+      "type": "file",
+      "size": 2928
+    },
+    {
+      "path": "docs/group-based-access.md",
+      "type": "file",
+      "size": 3249
+    },
+    {
+      "path": "docs/interview-talk-track.md",
+      "type": "file",
+      "size": 3982
+    },
+    {
+      "path": "docs/m365-admin-scenarios.md",
+      "type": "file",
+      "size": 4042
+    },
+    {
+      "path": "docs/pim-user-administrator.md",
+      "type": "file",
+      "size": 3595
+    },
+    {
+      "path": "docs/README.md",
+      "type": "file",
+      "size": 899
+    },
+    {
+      "path": "LICENSE",
+      "type": "file",
+      "size": 1062
+    },
+    {
+      "path": "README.md",
+      "type": "file",
+      "size": 7146
+    },
+    {
+      "path": "scripts/common/LabIdentity.psm1",
+      "type": "file",
+      "size": 6095
+    },
+    {
+      "path": "scripts/config.example.json",
+      "type": "file",
+      "size": 1592
+    },
+    {
+      "path": "scripts/Invoke-LabJmlDemo.ps1",
+      "type": "file",
+      "size": 1253
+    },
+    {
+      "path": "scripts/joiner/New-LabJoiner.ps1",
+      "type": "file",
+      "size": 5616
+    },
+    {
+      "path": "scripts/joiner/README.md",
+      "type": "file",
+      "size": 1059
+    },
+    {
+      "path": "scripts/leaver/Invoke-LabLeaver.ps1",
+      "type": "file",
+      "size": 3735
+    },
+    {
+      "path": "scripts/leaver/README.md",
+      "type": "file",
+      "size": 1012
+    },
+    {
+      "path": "scripts/mover/README.md",
+      "type": "file",
+      "size": 902
+    },
+    {
+      "path": "scripts/mover/Set-LabMover.ps1",
+      "type": "file",
+      "size": 2906
+    },
+    {
+      "path": "scripts/README.md",
+      "type": "file",
+      "size": 2596
+    }
+  ],
+  "files": {
+    "docs/README.md": "data/repos/entra-hybrid-proof/files/docs__README.md.json",
+    "scripts/mover/README.md": "data/repos/entra-hybrid-proof/files/scripts__mover__README.md.json",
+    "scripts/leaver/README.md": "data/repos/entra-hybrid-proof/files/scripts__leaver__README.md.json",
+    "scripts/joiner/README.md": "data/repos/entra-hybrid-proof/files/scripts__joiner__README.md.json",
+    "scripts/README.md": "data/repos/entra-hybrid-proof/files/scripts__README.md.json",
+    "README.md": "data/repos/entra-hybrid-proof/files/README.md.json",
+    "scripts/Invoke-LabJmlDemo.ps1": "data/repos/entra-hybrid-proof/files/scripts__Invoke-LabJmlDemo.ps1.json",
+    "scripts/config.example.json": "data/repos/entra-hybrid-proof/files/scripts__config.example.json.json",
+    ".github/workflows/validate.yml": "data/repos/entra-hybrid-proof/files/.github__workflows__validate.yml.json",
+    "scripts/mover/Set-LabMover.ps1": "data/repos/entra-hybrid-proof/files/scripts__mover__Set-LabMover.ps1.json",
+    "docs/conditional-access.md": "data/repos/entra-hybrid-proof/files/docs__conditional-access.md.json",
+    "docs/group-based-access.md": "data/repos/entra-hybrid-proof/files/docs__group-based-access.md.json",
+    "docs/pim-user-administrator.md": "data/repos/entra-hybrid-proof/files/docs__pim-user-administrator.md.json",
+    "scripts/leaver/Invoke-LabLeaver.ps1": "data/repos/entra-hybrid-proof/files/scripts__leaver__Invoke-LabLeaver.ps1.json",
+    "docs/break-glass.md": "data/repos/entra-hybrid-proof/files/docs__break-glass.md.json",
+    "docs/interview-talk-track.md": "data/repos/entra-hybrid-proof/files/docs__interview-talk-track.md.json",
+    "docs/m365-admin-scenarios.md": "data/repos/entra-hybrid-proof/files/docs__m365-admin-scenarios.md.json",
+    "scripts/joiner/New-LabJoiner.ps1": "data/repos/entra-hybrid-proof/files/scripts__joiner__New-LabJoiner.ps1.json",
+    ".gitignore": "data/repos/entra-hybrid-proof/files/.gitignore.json",
+    "LICENSE": "data/repos/entra-hybrid-proof/files/LICENSE.json",
+    "scripts/common/LabIdentity.psm1": "data/repos/entra-hybrid-proof/files/scripts__common__LabIdentity.psm1.json"
+  },
+  "readmePath": "docs/README.md"
+}

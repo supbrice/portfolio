@@ -1,0 +1,63 @@
+{
+  "generated": "local static snapshot",
+  "owner": "supbrice",
+  "label": "PORTFOLIO / LAB",
+  "note": "Offline snapshot for browser file explorer. No GitHub API at runtime.",
+  "repos": [
+    {
+      "id": "CloudProjects",
+      "name": "CloudProjects",
+      "title": "CloudProjects",
+      "blurb": "CPS network upgrade lab — UniFi / VLAN / OT isolation (PORTFOLIO / LAB)",
+      "url": "https://github.com/supbrice/CloudProjects",
+      "label": "PORTFOLIO / LAB",
+      "data": "data/repos/CloudProjects/tree.json",
+      "fileCount": 14,
+      "treeCount": 18
+    },
+    {
+      "id": "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity",
+      "name": "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity",
+      "title": "Multi Region Azure Hybrid Infrastructure Zero Trust Identity",
+      "blurb": "Multi-region Azure hybrid Terraform lab (PORTFOLIO / LAB)",
+      "url": "https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity",
+      "label": "PORTFOLIO / LAB",
+      "data": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/tree.json",
+      "fileCount": 49,
+      "treeCount": 62
+    },
+    {
+      "id": "configure-ad",
+      "name": "configure-ad",
+      "title": "configure ad",
+      "blurb": "Hybrid AD DS on Azure VMs lab (PORTFOLIO / LAB)",
+      "url": "https://github.com/supbrice/configure-ad",
+      "label": "PORTFOLIO / LAB",
+      "data": "data/repos/configure-ad/tree.json",
+      "fileCount": 7,
+      "treeCount": 8
+    },
+    {
+      "id": "Azure-Cloud-Skills-and-Use-Cases",
+      "name": "Azure-Cloud-Skills-and-Use-Cases",
+      "title": "Azure Cloud Skills and Use Cases",
+      "blurb": "Azure architect reference labs (PORTFOLIO / LAB)",
+      "url": "https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases",
+      "label": "PORTFOLIO / LAB",
+      "data": "data/repos/Azure-Cloud-Skills-and-Use-Cases/tree.json",
+      "fileCount": 47,
+      "treeCount": 68
+    },
+    {
+      "id": "entra-hybrid-proof",
+      "name": "entra-hybrid-proof",
+      "title": "entra hybrid proof",
+      "blurb": "Entra ID + hybrid identity proof pack (PORTFOLIO / LAB)",
+      "url": "https://github.com/supbrice/entra-hybrid-proof",
+      "label": "PORTFOLIO / LAB",
+      "data": "data/repos/entra-hybrid-proof/tree.json",
+      "fileCount": 21,
+      "treeCount": 29
+    }
+  ]
+}

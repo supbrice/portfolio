@@ -1,0 +1,113 @@
+{
+  "repo": "CloudProjects",
+  "url": "https://github.com/supbrice/CloudProjects",
+  "description": "CPS network upgrade lab: UniFi, VLANs, OT/public/corporate isolation, troubleshooting scenarios",
+  "branch": "main",
+  "label": "PORTFOLIO / LAB",
+  "disclaimer": "Lab / portfolio snapshot for offline browsing. Not a production customer environment.",
+  "tree": [
+    {
+      "path": "configs",
+      "type": "dir"
+    },
+    {
+      "path": "configs/unifi",
+      "type": "dir"
+    },
+    {
+      "path": "docs",
+      "type": "dir"
+    },
+    {
+      "path": "scripts",
+      "type": "dir"
+    },
+    {
+      "path": ".gitignore",
+      "type": "file",
+      "size": 68
+    },
+    {
+      "path": "configs/unifi/firewall-and-nat.md",
+      "type": "file",
+      "size": 3523
+    },
+    {
+      "path": "configs/unifi/networks.json",
+      "type": "file",
+      "size": 2623
+    },
+    {
+      "path": "configs/unifi/protect.md",
+      "type": "file",
+      "size": 2058
+    },
+    {
+      "path": "docs/adoption-and-validation.md",
+      "type": "file",
+      "size": 2668
+    },
+    {
+      "path": "docs/poe-budget.csv",
+      "type": "file",
+      "size": 990
+    },
+    {
+      "path": "docs/troubleshooting-scenarios.md",
+      "type": "file",
+      "size": 5251
+    },
+    {
+      "path": "docs/vlan-plan.csv",
+      "type": "file",
+      "size": 1029
+    },
+    {
+      "path": "docs/vlan-plan.md",
+      "type": "file",
+      "size": 2881
+    },
+    {
+      "path": "README.md",
+      "type": "file",
+      "size": 5818
+    },
+    {
+      "path": "scripts/poe_budget.py",
+      "type": "file",
+      "size": 2513
+    },
+    {
+      "path": "scripts/Test-NetworkHealth.ps1",
+      "type": "file",
+      "size": 6795
+    },
+    {
+      "path": "scripts/test_artifacts.py",
+      "type": "file",
+      "size": 2665
+    },
+    {
+      "path": "scripts/validate_network.py",
+      "type": "file",
+      "size": 10830
+    }
+  ],
+  "files": {
+    "README.md": "data/repos/CloudProjects/files/README.md.json",
+    "configs/unifi/protect.md": "data/repos/CloudProjects/files/configs__unifi__protect.md.json",
+    "scripts/poe_budget.py": "data/repos/CloudProjects/files/scripts__poe_budget.py.json",
+    "configs/unifi/networks.json": "data/repos/CloudProjects/files/configs__unifi__networks.json.json",
+    "scripts/test_artifacts.py": "data/repos/CloudProjects/files/scripts__test_artifacts.py.json",
+    "docs/adoption-and-validation.md": "data/repos/CloudProjects/files/docs__adoption-and-validation.md.json",
+    "docs/vlan-plan.md": "data/repos/CloudProjects/files/docs__vlan-plan.md.json",
+    "configs/unifi/firewall-and-nat.md": "data/repos/CloudProjects/files/configs__unifi__firewall-and-nat.md.json",
+    "docs/troubleshooting-scenarios.md": "data/repos/CloudProjects/files/docs__troubleshooting-scenarios.md.json",
+    "scripts/Test-NetworkHealth.ps1": "data/repos/CloudProjects/files/scripts__Test-NetworkHealth.ps1.json",
+    "scripts/validate_network.py": "data/repos/CloudProjects/files/scripts__validate_network.py.json",
+    ".gitignore": "data/repos/CloudProjects/files/.gitignore.json",
+    "docs/poe-budget.csv": "data/repos/CloudProjects/files/docs__poe-budget.csv.json",
+    "docs/vlan-plan.csv": "data/repos/CloudProjects/files/docs__vlan-plan.csv.json"
+  },
+  "readmePath": "README.md"
+}

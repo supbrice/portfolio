@@ -1,0 +1,1 @@
+{"path": ".gitignore", "repo": "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity", "label": "PORTFOLIO / LAB", "content": ".terraform/\n*.tfstate\n*.tfstate.*\ncrash.log\ncrash.*.log\noverride.tf\noverride.tf.json\n*_override.tf\n*_override.tf.json\n*.tfvars.json\n*secret*.tfvars\n.DS_Store\n*.log\n"}

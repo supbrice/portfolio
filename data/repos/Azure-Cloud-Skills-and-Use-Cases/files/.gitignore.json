@@ -1,0 +1,1 @@
+{"path": ".gitignore", "repo": "Azure-Cloud-Skills-and-Use-Cases", "label": "PORTFOLIO / LAB", "content": ".terraform/\n*.tfstate\n*.tfstate.*\n*.tfvars\n!*.tfvars.example\ncrash.log\noverride.tf\noverride.tf.json\n*_override.tf\n*_override.tf.json\n.venv/\n__pycache__/\n*.pyc\n.pytest_cache/\n.DS_Store\n*.log\n.env\n.env.*\n!*.env.example\n"}

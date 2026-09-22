@@ -1,0 +1,1 @@
+{"path": "labs/05-monitor-ops/scripts/requirements.txt", "repo": "Azure-Cloud-Skills-and-Use-Cases", "label": "PORTFOLIO / LAB", "content": "# Optional. The print-query path needs nothing but Python 3.\nazure-identity>=1.17.0\nazure-monitor-query>=1.4.0\n"}
