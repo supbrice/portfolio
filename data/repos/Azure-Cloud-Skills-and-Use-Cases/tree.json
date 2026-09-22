@@ -1,0 +1,379 @@
+{
+  "repo": "Azure-Cloud-Skills-and-Use-Cases",
+  "url": "https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases",
+  "description": "Azure architect reference labs: Entra/CA/RBAC, hybrid VPN/DNS, Terraform, Monitor",
+  "branch": "main",
+  "label": "PORTFOLIO / LAB",
+  "disclaimer": "Lab / portfolio snapshot for offline browsing. Not a production customer environment.",
+  "tree": [
+    {
+      "path": ".github",
+      "type": "dir"
+    },
+    {
+      "path": ".github/workflows",
+      "type": "dir"
+    },
+    {
+      "path": "docs",
+      "type": "dir"
+    },
+    {
+      "path": "labs",
+      "type": "dir"
+    },
+    {
+      "path": "labs/01-identity-access",
+      "type": "dir"
+    },
+    {
+      "path": "labs/01-identity-access/scripts",
+      "type": "dir"
+    },
+    {
+      "path": "labs/02-hybrid-connectivity",
+      "type": "dir"
+    },
+    {
+      "path": "labs/03-terraform-modules",
+      "type": "dir"
+    },
+    {
+      "path": "labs/03-terraform-modules/scripts",
+      "type": "dir"
+    },
+    {
+      "path": "labs/04-networking-dns-vpn",
+      "type": "dir"
+    },
+    {
+      "path": "labs/04-networking-dns-vpn/scripts",
+      "type": "dir"
+    },
+    {
+      "path": "labs/05-monitor-ops",
+      "type": "dir"
+    },
+    {
+      "path": "labs/05-monitor-ops/queries",
+      "type": "dir"
+    },
+    {
+      "path": "labs/05-monitor-ops/scripts",
+      "type": "dir"
+    },
+    {
+      "path": "terraform",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/lab",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/hybrid-gateway",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/identity-rbac",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/monitoring",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/spoke-network",
+      "type": "dir"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "type": "file",
+      "size": 1385
+    },
+    {
+      "path": ".gitignore",
+      "type": "file",
+      "size": 217
+    },
+    {
+      "path": "docs/cert-skill-map.md",
+      "type": "file",
+      "size": 1551
+    },
+    {
+      "path": "docs/ops-itsm.md",
+      "type": "file",
+      "size": 1637
+    },
+    {
+      "path": "labs/01-identity-access/README.md",
+      "type": "file",
+      "size": 3147
+    },
+    {
+      "path": "labs/01-identity-access/scripts/Audit-PrivilegedAccess.ps1",
+      "type": "file",
+      "size": 4272
+    },
+    {
+      "path": "labs/01-identity-access/scripts/export-standing-rbac.sh",
+      "type": "file",
+      "size": 1781
+    },
+    {
+      "path": "labs/02-hybrid-connectivity/README.md",
+      "type": "file",
+      "size": 2678
+    },
+    {
+      "path": "labs/03-terraform-modules/azure-pipelines.validate.yml",
+      "type": "file",
+      "size": 734
+    },
+    {
+      "path": "labs/03-terraform-modules/README.md",
+      "type": "file",
+      "size": 2811
+    },
+    {
+      "path": "labs/03-terraform-modules/scripts/check_naming.py",
+      "type": "file",
+      "size": 3556
+    },
+    {
+      "path": "labs/04-networking-dns-vpn/README.md",
+      "type": "file",
+      "size": 3346
+    },
+    {
+      "path": "labs/04-networking-dns-vpn/scripts/check-nsg-and-dns.sh",
+      "type": "file",
+      "size": 1938
+    },
+    {
+      "path": "labs/04-networking-dns-vpn/scripts/Test-HybridNameResolution.ps1",
+      "type": "file",
+      "size": 2139
+    },
+    {
+      "path": "labs/05-monitor-ops/queries/failed-signins.kql",
+      "type": "file",
+      "size": 357
+    },
+    {
+      "path": "labs/05-monitor-ops/queries/rbac-changes.kql",
+      "type": "file",
+      "size": 548
+    },
+    {
+      "path": "labs/05-monitor-ops/queries/vpn-and-nsg.kql",
+      "type": "file",
+      "size": 984
+    },
+    {
+      "path": "labs/05-monitor-ops/README.md",
+      "type": "file",
+      "size": 2984
+    },
+    {
+      "path": "labs/05-monitor-ops/scripts/New-MonitorActionGroup.ps1",
+      "type": "file",
+      "size": 1417
+    },
+    {
+      "path": "labs/05-monitor-ops/scripts/query_workspace.py",
+      "type": "file",
+      "size": 3068
+    },
+    {
+      "path": "labs/05-monitor-ops/scripts/requirements.txt",
+      "type": "file",
+      "size": 111
+    },
+    {
+      "path": "LICENSE",
+      "type": "file",
+      "size": 1062
+    },
+    {
+      "path": "README.md",
+      "type": "file",
+      "size": 3861
+    },
+    {
+      "path": "terraform/lab/.terraform.lock.hcl",
+      "type": "file",
+      "size": 2300
+    },
+    {
+      "path": "terraform/lab/main.tf",
+      "type": "file",
+      "size": 2535
+    },
+    {
+      "path": "terraform/lab/outputs.tf",
+      "type": "file",
+      "size": 691
+    },
+    {
+      "path": "terraform/lab/terraform.tfvars.example",
+      "type": "file",
+      "size": 485
+    },
+    {
+      "path": "terraform/lab/variables.tf",
+      "type": "file",
+      "size": 1559
+    },
+    {
+      "path": "terraform/lab/versions.tf",
+      "type": "file",
+      "size": 701
+    },
+    {
+      "path": "terraform/modules/hybrid-gateway/main.tf",
+      "type": "file",
+      "size": 1636
+    },
+    {
+      "path": "terraform/modules/hybrid-gateway/outputs.tf",
+      "type": "file",
+      "size": 508
+    },
+    {
+      "path": "terraform/modules/hybrid-gateway/variables.tf",
+      "type": "file",
+      "size": 972
+    },
+    {
+      "path": "terraform/modules/hybrid-gateway/versions.tf",
+      "type": "file",
+      "size": 168
+    },
+    {
+      "path": "terraform/modules/identity-rbac/main.tf",
+      "type": "file",
+      "size": 2714
+    },
+    {
+      "path": "terraform/modules/identity-rbac/outputs.tf",
+      "type": "file",
+      "size": 557
+    },
+    {
+      "path": "terraform/modules/identity-rbac/variables.tf",
+      "type": "file",
+      "size": 896
+    },
+    {
+      "path": "terraform/modules/identity-rbac/versions.tf",
+      "type": "file",
+      "size": 262
+    },
+    {
+      "path": "terraform/modules/monitoring/main.tf",
+      "type": "file",
+      "size": 2155
+    },
+    {
+      "path": "terraform/modules/monitoring/outputs.tf",
+      "type": "file",
+      "size": 478
+    },
+    {
+      "path": "terraform/modules/monitoring/variables.tf",
+      "type": "file",
+      "size": 880
+    },
+    {
+      "path": "terraform/modules/monitoring/versions.tf",
+      "type": "file",
+      "size": 168
+    },
+    {
+      "path": "terraform/modules/spoke-network/main.tf",
+      "type": "file",
+      "size": 629
+    },
+    {
+      "path": "terraform/modules/spoke-network/nsg.tf",
+      "type": "file",
+      "size": 4291
+    },
+    {
+      "path": "terraform/modules/spoke-network/outputs.tf",
+      "type": "file",
+      "size": 580
+    },
+    {
+      "path": "terraform/modules/spoke-network/variables.tf",
+      "type": "file",
+      "size": 1265
+    },
+    {
+      "path": "terraform/modules/spoke-network/versions.tf",
+      "type": "file",
+      "size": 168
+    },
+    {
+      "path": "terraform/README.md",
+      "type": "file",
+      "size": 493
+    }
+  ],
+  "files": {
+    "terraform/README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__README.md.json",
+    "labs/02-hybrid-connectivity/README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__02-hybrid-connectivity__README.md.json",
+    "labs/03-terraform-modules/README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__03-terraform-modules__README.md.json",
+    "labs/05-monitor-ops/README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__README.md.json",
+    "labs/01-identity-access/README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__01-identity-access__README.md.json",
+    "labs/04-networking-dns-vpn/README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__04-networking-dns-vpn__README.md.json",
+    "README.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/README.md.json",
+    "terraform/modules/hybrid-gateway/versions.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__hybrid-gateway__versions.tf.json",
+    "terraform/modules/monitoring/versions.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__monitoring__versions.tf.json",
+    "terraform/modules/spoke-network/versions.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__spoke-network__versions.tf.json",
+    "terraform/modules/identity-rbac/versions.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__identity-rbac__versions.tf.json",
+    "terraform/modules/monitoring/outputs.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__monitoring__outputs.tf.json",
+    "terraform/modules/hybrid-gateway/outputs.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__hybrid-gateway__outputs.tf.json",
+    "terraform/modules/identity-rbac/outputs.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__identity-rbac__outputs.tf.json",
+    "terraform/modules/spoke-network/outputs.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__spoke-network__outputs.tf.json",
+    "terraform/modules/spoke-network/main.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__spoke-network__main.tf.json",
+    "terraform/lab/outputs.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__lab__outputs.tf.json",
+    "terraform/lab/versions.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__lab__versions.tf.json",
+    "labs/03-terraform-modules/azure-pipelines.validate.yml": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__03-terraform-modules__azure-pipelines.validate.yml.json",
+    "terraform/modules/monitoring/variables.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__monitoring__variables.tf.json",
+    "terraform/modules/identity-rbac/variables.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__identity-rbac__variables.tf.json",
+    "terraform/modules/hybrid-gateway/variables.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__hybrid-gateway__variables.tf.json",
+    "terraform/modules/spoke-network/variables.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__spoke-network__variables.tf.json",
+    ".github/workflows/validate.yml": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/.github__workflows__validate.yml.json",
+    "labs/05-monitor-ops/scripts/New-MonitorActionGroup.ps1": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__scripts__New-MonitorActionGroup.ps1.json",
+    "docs/cert-skill-map.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/docs__cert-skill-map.md.json",
+    "terraform/lab/variables.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__lab__variables.tf.json",
+    "terraform/modules/hybrid-gateway/main.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__hybrid-gateway__main.tf.json",
+    "docs/ops-itsm.md": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/docs__ops-itsm.md.json",
+    "labs/01-identity-access/scripts/export-standing-rbac.sh": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__01-identity-access__scripts__export-standing-rbac.sh.json",
+    "labs/04-networking-dns-vpn/scripts/check-nsg-and-dns.sh": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__04-networking-dns-vpn__scripts__check-nsg-and-dns.sh.json",
+    "labs/04-networking-dns-vpn/scripts/Test-HybridNameResolution.ps1": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__04-networking-dns-vpn__scripts__Test-HybridNameResolution.ps1.json",
+    "terraform/modules/monitoring/main.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__monitoring__main.tf.json",
+    "terraform/lab/.terraform.lock.hcl": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__lab__.terraform.lock.hcl.json",
+    "terraform/lab/main.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__lab__main.tf.json",
+    "terraform/modules/identity-rbac/main.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__identity-rbac__main.tf.json",
+    "labs/05-monitor-ops/scripts/query_workspace.py": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__scripts__query_workspace.py.json",
+    "labs/03-terraform-modules/scripts/check_naming.py": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__03-terraform-modules__scripts__check_naming.py.json",
+    "labs/01-identity-access/scripts/Audit-PrivilegedAccess.ps1": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__01-identity-access__scripts__Audit-PrivilegedAccess.ps1.json",
+    "terraform/modules/spoke-network/nsg.tf": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__modules__spoke-network__nsg.tf.json",
+    "labs/05-monitor-ops/scripts/requirements.txt": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__scripts__requirements.txt.json",
+    ".gitignore": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/.gitignore.json",
+    "labs/05-monitor-ops/queries/failed-signins.kql": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__queries__failed-signins.kql.json",
+    "terraform/lab/terraform.tfvars.example": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/terraform__lab__terraform.tfvars.example.json",
+    "labs/05-monitor-ops/queries/rbac-changes.kql": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__queries__rbac-changes.kql.json",
+    "labs/05-monitor-ops/queries/vpn-and-nsg.kql": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/labs__05-monitor-ops__queries__vpn-and-nsg.kql.json",
+    "LICENSE": "data/repos/Azure-Cloud-Skills-and-Use-Cases/files/LICENSE.json"
+  },
+  "readmePath": "terraform/README.md"
+}

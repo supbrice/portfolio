@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brice — Labs</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body class="glass-po">
+  <div class="anim-bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+  </div>
+<header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Ngu Brice Che</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="projects.html" data-nav="projects">Projects</a>
+        <a href="labs.html" data-nav="labs">Labs</a>
+        <a href="creative.html" data-nav="creative">Creative</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page wrap">
+    <div class="page-hero">
+      <h1 class="page-title">Labs</h1>
+      <p class="lede">PORTFOLIO / LAB repositories — learning and demonstration work, not production customer environments.</p>
+      <span class="note">Open any lab in the Projects file browser · diagrams below pan and zoom like GitHub</span>
+    </div>
+    <section class="block" style="padding-top:0;">
+      <div class="grid" id="labs-grid"></div>
+    </section>
+    <section class="block labs-diagrams" aria-label="Interactive lab architecture diagrams">
+      <div class="section-head">
+        <h2>Architecture diagrams</h2>
+        <p>Same Mermaid diagrams as the GitHub READMEs — drag to pan, scroll to zoom, or use the controls.</p>
+      </div>
+      <div id="labs-diagrams"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="copyright">Copyright © 2026 Brice. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="data/bundle.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/diagram.js"></script>
+  <script>
+    (function () {
+      var snap = window.__REPO_SNAPSHOT__;
+      var grid = document.getElementById("labs-grid");
+      var diagrams = document.getElementById("labs-diagrams");
+      if (!snap || !snap.index || !snap.index.repos) {
+        grid.innerHTML = "<p>Snapshot missing. Keep <code>data/bundle.js</code> beside these pages.</p>";
+        return;
+      }
+
+      snap.index.repos.forEach(function (r) {
+        var repo = snap.repos[r.name];
+        var article = document.createElement("article");
+        article.className = "card";
+        article.innerHTML =
+          '<span class="tag">PORTFOLIO / LAB</span><h3></h3><p></p><div class="meta"></div><a class="card-link"></a>';
+        article.querySelector("h3").textContent = r.title || r.name;
+        article.querySelector("p").textContent =
+          (repo && repo.meta && repo.meta.description) || r.blurb || "";
+        var treeCount = repo ? repo.tree.length : r.treeCount || 0;
+        var fileCount = repo ? Object.keys(repo.files).length : r.fileCount || 0;
+        article.querySelector(".meta").textContent =
+          treeCount + " paths · " + fileCount + " files snapshotted";
+        var a = article.querySelector("a");
+        a.href = "projects.html?repo=" + encodeURIComponent(r.name);
+        a.textContent = "Open in file browser →";
+        grid.appendChild(article);
+
+        if (!repo || !window.PODiagram) return;
+        var readmePath = (repo.meta && repo.meta.readmePath) || "README.md";
+        var md = repo.files[readmePath];
+        if (!md) return;
+        var blocks = PODiagram.extractMermaidBlocks(md);
+        if (!blocks.length) return;
+
+        var card = document.createElement("article");
+        card.className = "lab-diagram-card";
+        card.id = "diagram-" + r.name;
+        var title = document.createElement("h2");
+        title.textContent = r.title || r.name;
+        var lede = document.createElement("p");
+        lede.className = "lede-sm";
+        lede.textContent = "Interactive diagram from this lab's README (pan, zoom, reset).";
+        var host = document.createElement("div");
+        var actions = document.createElement("div");
+        actions.className = "lab-actions";
+        var open = document.createElement("a");
+        open.className = "btn btn-primary";
+        open.href = "projects.html?repo=" + encodeURIComponent(r.name);
+        open.textContent = "Browse Project";
+        var jump = document.createElement("a");
+        jump.className = "btn btn-secondary";
+        jump.href = (repo.meta && repo.meta.url) || ("https://github.com/supbrice/" + r.name);
+        jump.target = "_blank";
+        jump.rel = "noopener noreferrer";
+        jump.textContent = "View on GitHub";
+        actions.appendChild(open);
+        actions.appendChild(jump);
+        card.appendChild(title);
+        card.appendChild(lede);
+        card.appendChild(host);
+        card.appendChild(actions);
+        diagrams.appendChild(card);
+        PODiagram.mountAllFromMarkdown(host, md);
+      });
+    })();
+  </script>
+</body>
+</html>

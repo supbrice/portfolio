@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ngu Brice Che — Projects</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body class="glass-po">
+  <div class="anim-bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+  </div>
+<header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">Ngu Brice Che</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="projects.html" data-nav="projects">Projects</a>
+        <a href="labs.html" data-nav="labs">Labs</a>
+        <a href="creative.html" data-nav="creative">Creative</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page wrap">
+    <div class="page-hero projects-hero">
+      <h1 class="page-title">Projects</h1>
+      <p class="lede">PORTFOLIO / LAB work — each card shows a preview, what the lab does, and a short explanation. Browse Project opens the offline file view.</p>
+      <span class="note">Local snapshots · not customer production work</span>
+    </div>
+
+    <section class="block" style="padding-top:0;">
+      <div class="project-showcase" id="project-grid"></div>
+
+      <div id="browser" class="project-browser" hidden>
+        <div class="explorer-head">
+          <div>
+            <h3 id="explorer-title">Select a lab</h3>
+            <span class="lab-badge">PORTFOLIO / LAB</span>
+          </div>
+          <button type="button" class="btn btn-secondary" id="explorer-close">Close browser</button>
+        </div>
+        <div class="explorer" id="explorer">
+          <div class="tree-pane" id="tree-pane" role="navigation" aria-label="Repository file tree"></div>
+          <div class="file-pane">
+            <div class="file-bar">
+              <span>File: <strong id="file-path">—</strong></span>
+              <span>Offline snapshot</span>
+            </div>
+            <pre class="file-body empty" id="file-body">Pick a file on the left to read it here.</pre>
+          </div>
+        </div>
+        <p class="disclaimer" id="explorer-disclaimer"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="copyright">Copyright © 2026 Brice. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="data/bundle.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/diagram.js"></script>
+  <script>
+    (function () {
+      var DETAILS = {
+        CloudProjects: {
+          title: "CloudProjects — Network upgrade lab",
+          does: "Shows how a business network can be segmented and upgraded with UniFi gear, VLANs, and OT isolation.",
+          explain: "PORTFOLIO / LAB write-up of a client-sized network design: gateway, PoE switching, public / corporate / OT zones, Protect, NAT/QoS, and post-cutover checks. Config examples are sanitized — not a live customer controller dump.",
+          tags: ["Networking", "UniFi", "VLAN", "OT isolation"],
+          shot: "net"
+        },
+        "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity": {
+          title: "Multi-region Azure hybrid lab",
+          does: "Terraform lab for multi-region Azure networking with hybrid connectivity and identity-minded access.",
+          explain: "PORTFOLIO / LAB infrastructure-as-code demo: hub-style networking across regions, VPN/Bastion patterns, RBAC, and monitoring hooks. Built to practice hybrid cloud design — not a production customer estate.",
+          tags: ["Azure", "Terraform", "Hybrid", "Zero Trust"],
+          shot: "azure"
+        },
+        "configure-ad": {
+          title: "configure-ad — Hybrid AD lab",
+          does: "Walks through Active Directory Domain Services on Azure VMs with hybrid identity notes.",
+          explain: "PORTFOLIO / LAB for standing up AD DS in Azure, OU/GPO baselines, and Entra Connect / Cloud Sync notes. Useful for hybrid identity practice without claiming a live enterprise forest.",
+          tags: ["Active Directory", "Azure VMs", "Hybrid identity"],
+          shot: "ad"
+        },
+        "Azure-Cloud-Skills-and-Use-Cases": {
+          title: "Azure Cloud Skills & use cases",
+          does: "Reference labs covering Entra, Conditional Access, RBAC, hybrid VPN/DNS, Terraform, and Monitor.",
+          explain: "PORTFOLIO / LAB collection of Azure scenarios for learning and interview talking points. Each folder is a use-case sketch — labeled lab work, not billed customer delivery.",
+          tags: ["Azure", "Entra ID", "RBAC", "Monitor"],
+          shot: "skills"
+        },
+        "entra-hybrid-proof": {
+          title: "entra-hybrid-proof — Identity pack",
+          does: "Entra ID + hybrid identity proof pack: Conditional Access, PIM, group access, and joiner/mover/leaver scripts.",
+          explain: "PORTFOLIO / LAB identity kit for practicing Conditional Access, Privileged Identity Management, group-based access, and PowerShell JML flows. Lab tenant patterns only — not a customer tenant.",
+          tags: ["Entra ID", "Conditional Access", "PIM", "PowerShell"],
+          shot: "entra"
+        }
+      };
+
+      var snap = window.__REPO_SNAPSHOT__;
+      var grid = document.getElementById("project-grid");
+      var browser = document.getElementById("browser");
+      var treePane = document.getElementById("tree-pane");
+      var filePath = document.getElementById("file-path");
+      var fileBody = document.getElementById("file-body");
+      var titleEl = document.getElementById("explorer-title");
+      var disclaimer = document.getElementById("explorer-disclaimer");
+      var closeBtn = document.getElementById("explorer-close");
+
+      if (!snap || !snap.index || !snap.repos) {
+        grid.innerHTML = "<p>Snapshot data missing. Keep <code>data/bundle.js</code> next to these pages.</p>";
+        return;
+      }
+
+      snap.index.repos.forEach(function (r) {
+        var repo = snap.repos[r.name];
+        var d = DETAILS[r.name] || {};
+        var article = document.createElement("article");
+        article.className = "project-card";
+        var preview = d.preview || ('assets/previews/' + r.name + '.png');
+        var previewOg = 'assets/previews/' + r.name + '-og.png';
+        article.innerHTML =
+          '<div class="project-shot gh-frame">' +
+            '<img src="' + preview + '" alt="GitHub preview of ' + (r.name || '') + '" loading="lazy" onerror="this.onerror=null;this.src=\'' + previewOg + '\';" />' +
+            '<div class="shot-caption">GitHub view</div>' +
+          "</div>" +
+          '<div class="project-body">' +
+            '<span class="tag">PORTFOLIO / LAB</span>' +
+            "<h3></h3>" +
+            '<p class="project-does"><strong>What it does:</strong> <span></span></p>' +
+            '<p class="project-explain"></p>' +
+            '<div class="project-tags"></div>' +
+            '<div class="project-meta"></div>' +
+            '<div class="project-actions">' +
+              '<button type="button" class="btn btn-primary browse-btn">Browse Project</button>' +
+              '<a class="btn btn-secondary gh-link" target="_blank" rel="noopener noreferrer">GitHub</a>' +
+            "</div>" +
+          "</div>";
+
+        article.querySelector("h3").textContent = d.title || r.title || r.name;
+        article.querySelector(".project-does span").textContent =
+          d.does || r.blurb || "Open the offline snapshot to inspect files.";
+        article.querySelector(".project-explain").textContent =
+          d.explain ||
+          ((repo && repo.meta && repo.meta.description) || r.blurb || "");
+        var tagsEl = article.querySelector(".project-tags");
+        (d.tags || []).forEach(function (t) {
+          var s = document.createElement("span");
+          s.className = "chip";
+          s.textContent = t;
+          tagsEl.appendChild(s);
+        });
+        article.querySelector(".project-meta").textContent =
+          (repo ? Object.keys(repo.files).length : 0) +
+          " snapshotted files · offline browser";
+        var gh = article.querySelector(".gh-link");
+        gh.href = (repo && repo.meta && repo.meta.url) || r.url || "#";
+        article.querySelector(".browse-btn").addEventListener("click", function () {
+          openRepo(r.name);
+          history.replaceState(null, "", "projects.html?repo=" + encodeURIComponent(r.name));
+        });
+        grid.appendChild(article);
+      });
+
+      function openRepo(name) {
+        var repo = snap.repos[name];
+        if (!repo) return;
+        browser.hidden = false;
+        titleEl.textContent = (DETAILS[name] && DETAILS[name].title) || (repo.meta && repo.meta.repo) || name;
+        disclaimer.textContent =
+          ((repo.meta && repo.meta.disclaimer) || "PORTFOLIO / LAB snapshot.") +
+          " Branch: " +
+          ((repo.meta && repo.meta.branch) || "main") +
+          ". Live GitHub: " +
+          ((repo.meta && repo.meta.url) || "");
+        renderTree(repo);
+        var readme = repo.meta && repo.meta.readmePath;
+        if (readme && repo.files[readme] != null) {
+          showFile(readme, repo.files[readme]);
+        } else {
+          filePath.textContent = "—";
+          fileBody.className = "file-body empty";
+          fileBody.textContent = "Pick a file on the left to read it here.";
+        }
+        browser.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function renderTree(repo) {
+        treePane.innerHTML = "";
+        var items = repo.tree.slice().sort(function (a, b) {
+          if (a.type !== b.type) return a.type === "dir" ? -1 : 1;
+          return a.path.localeCompare(b.path);
+        });
+        items.forEach(function (item) {
+          var depth = item.path.split("/").length - 1;
+          var leaf = item.path.split("/").pop();
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "tree-item" + (item.type === "dir" ? " dir" : "");
+          btn.style.paddingLeft = 0.55 + depth * 0.7 + "rem";
+          btn.innerHTML =
+            '<span class="ico" aria-hidden="true">' +
+            (item.type === "dir" ? "📁" : "📄") +
+            "</span><span></span>";
+          btn.querySelector("span:last-child").textContent = leaf;
+          btn.title = item.path;
+          if (item.type === "file") {
+            btn.addEventListener("click", function () {
+              treePane.querySelectorAll(".tree-item.active").forEach(function (el) {
+                el.classList.remove("active");
+              });
+              btn.classList.add("active");
+              var content = repo.files[item.path];
+              if (content == null) {
+                showFile(
+                  item.path,
+                  "[Path is in the tree but content was not snapshotted — binary, oversized, or skipped.]"
+                );
+              } else {
+                showFile(item.path, content);
+              }
+            });
+          }
+          treePane.appendChild(btn);
+        });
+      }
+
+      function showFile(path, content) {
+        filePath.textContent = path;
+        fileBody.className = "file-body";
+        var isReadme = /readme\.md$/i.test(path);
+        if (isReadme && window.PODiagram && PODiagram.extractMermaidBlocks(content).length) {
+          fileBody.innerHTML = "";
+          var split = document.createElement("div");
+          split.className = "file-split";
+          var pre = document.createElement("pre");
+          pre.className = "file-code";
+          pre.textContent = content;
+          var diag = document.createElement("div");
+          split.appendChild(diag);
+          split.appendChild(pre);
+          fileBody.appendChild(split);
+          PODiagram.mountAllFromMarkdown(diag, content);
+        } else {
+          fileBody.textContent = content;
+        }
+      }
+
+      closeBtn.addEventListener("click", function () {
+        browser.hidden = true;
+        history.replaceState(null, "", "projects.html");
+      });
+
+      var params = new URLSearchParams(location.search);
+      var initial = params.get("repo");
+      if (initial && snap.repos[initial]) openRepo(initial);
+    })();
+  </script>
+</body>
+</html>

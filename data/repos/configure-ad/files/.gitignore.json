@@ -1,0 +1,1 @@
+{"path": ".gitignore", "repo": "configure-ad", "label": "PORTFOLIO / LAB", "content": "# Operator-generated lab output\n*.csv\n*.log\n*.clixml\nlocal.settings.ps1\nsecrets/\n"}

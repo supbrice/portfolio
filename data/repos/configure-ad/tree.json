@@ -1,0 +1,59 @@
+{
+  "repo": "configure-ad",
+  "url": "https://github.com/supbrice/configure-ad",
+  "description": "Hybrid AD DS lab on Azure VMs — OU/GPO baseline, Entra Connect/Cloud Sync notes",
+  "branch": "main",
+  "label": "PORTFOLIO / LAB",
+  "disclaimer": "Lab / portfolio snapshot for offline browsing. Not a production customer environment.",
+  "tree": [
+    {
+      "path": "scripts",
+      "type": "dir"
+    },
+    {
+      "path": ".gitignore",
+      "type": "file",
+      "size": 81
+    },
+    {
+      "path": "LICENSE",
+      "type": "file",
+      "size": 1062
+    },
+    {
+      "path": "README.md",
+      "type": "file",
+      "size": 17406
+    },
+    {
+      "path": "scripts/Install-ADDSForest.ps1",
+      "type": "file",
+      "size": 2659
+    },
+    {
+      "path": "scripts/Invoke-IdentityHygieneChecks.ps1",
+      "type": "file",
+      "size": 5828
+    },
+    {
+      "path": "scripts/New-AzureAdLabInfra.ps1",
+      "type": "file",
+      "size": 7284
+    },
+    {
+      "path": "scripts/New-LabIdentityBaseline.ps1",
+      "type": "file",
+      "size": 7306
+    }
+  ],
+  "files": {
+    "README.md": "data/repos/configure-ad/files/README.md.json",
+    "scripts/Install-ADDSForest.ps1": "data/repos/configure-ad/files/scripts__Install-ADDSForest.ps1.json",
+    "scripts/Invoke-IdentityHygieneChecks.ps1": "data/repos/configure-ad/files/scripts__Invoke-IdentityHygieneChecks.ps1.json",
+    "scripts/New-AzureAdLabInfra.ps1": "data/repos/configure-ad/files/scripts__New-AzureAdLabInfra.ps1.json",
+    "scripts/New-LabIdentityBaseline.ps1": "data/repos/configure-ad/files/scripts__New-LabIdentityBaseline.ps1.json",
+    ".gitignore": "data/repos/configure-ad/files/.gitignore.json",
+    "LICENSE": "data/repos/configure-ad/files/LICENSE.json"
+  },
+  "readmePath": "README.md"
+}

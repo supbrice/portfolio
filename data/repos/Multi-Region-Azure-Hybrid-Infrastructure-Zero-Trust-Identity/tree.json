@@ -1,0 +1,359 @@
+{
+  "repo": "Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity",
+  "url": "https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity",
+  "description": "Terraform portfolio lab: multi-region Azure hybrid networking, VPN hub, Bastion, RBAC, Monitor",
+  "branch": "main",
+  "label": "PORTFOLIO / LAB",
+  "disclaimer": "Lab / portfolio snapshot for offline browsing. Not a production customer environment.",
+  "tree": [
+    {
+      "path": ".github",
+      "type": "dir"
+    },
+    {
+      "path": ".github/workflows",
+      "type": "dir"
+    },
+    {
+      "path": "scripts",
+      "type": "dir"
+    },
+    {
+      "path": "terraform",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/environments",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/environments/dev",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/environments/prod",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/compute",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/hybrid-vpn",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/identity",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/monitoring",
+      "type": "dir"
+    },
+    {
+      "path": "terraform/modules/networking",
+      "type": "dir"
+    },
+    {
+      "path": ".github/workflows/terraform-lint.yml",
+      "type": "file",
+      "size": 513
+    },
+    {
+      "path": ".github/workflows/terraform-plan.yml",
+      "type": "file",
+      "size": 1113
+    },
+    {
+      "path": ".gitignore",
+      "type": "file",
+      "size": 164
+    },
+    {
+      "path": "README.md",
+      "type": "file",
+      "size": 8779
+    },
+    {
+      "path": "scripts/validate.sh",
+      "type": "file",
+      "size": 521
+    },
+    {
+      "path": "terraform/environments/dev/.terraform.lock.hcl",
+      "type": "file",
+      "size": 2282
+    },
+    {
+      "path": "terraform/environments/dev/main.tf",
+      "type": "file",
+      "size": 1539
+    },
+    {
+      "path": "terraform/environments/dev/outputs.tf",
+      "type": "file",
+      "size": 558
+    },
+    {
+      "path": "terraform/environments/dev/providers.tf",
+      "type": "file",
+      "size": 184
+    },
+    {
+      "path": "terraform/environments/dev/terraform.tfvars",
+      "type": "file",
+      "size": 351
+    },
+    {
+      "path": "terraform/environments/dev/variables.tf",
+      "type": "file",
+      "size": 805
+    },
+    {
+      "path": "terraform/environments/dev/versions.tf",
+      "type": "file",
+      "size": 296
+    },
+    {
+      "path": "terraform/environments/prod/.terraform.lock.hcl",
+      "type": "file",
+      "size": 2282
+    },
+    {
+      "path": "terraform/environments/prod/main.tf",
+      "type": "file",
+      "size": 1553
+    },
+    {
+      "path": "terraform/environments/prod/outputs.tf",
+      "type": "file",
+      "size": 558
+    },
+    {
+      "path": "terraform/environments/prod/providers.tf",
+      "type": "file",
+      "size": 183
+    },
+    {
+      "path": "terraform/environments/prod/terraform.tfvars",
+      "type": "file",
+      "size": 351
+    },
+    {
+      "path": "terraform/environments/prod/variables.tf",
+      "type": "file",
+      "size": 805
+    },
+    {
+      "path": "terraform/environments/prod/versions.tf",
+      "type": "file",
+      "size": 296
+    },
+    {
+      "path": "terraform/locals.tf",
+      "type": "file",
+      "size": 651
+    },
+    {
+      "path": "terraform/main.tf",
+      "type": "file",
+      "size": 6898
+    },
+    {
+      "path": "terraform/modules/compute/main.tf",
+      "type": "file",
+      "size": 2238
+    },
+    {
+      "path": "terraform/modules/compute/outputs.tf",
+      "type": "file",
+      "size": 611
+    },
+    {
+      "path": "terraform/modules/compute/variables.tf",
+      "type": "file",
+      "size": 1510
+    },
+    {
+      "path": "terraform/modules/compute/versions.tf",
+      "type": "file",
+      "size": 159
+    },
+    {
+      "path": "terraform/modules/hybrid-vpn/main.tf",
+      "type": "file",
+      "size": 2099
+    },
+    {
+      "path": "terraform/modules/hybrid-vpn/outputs.tf",
+      "type": "file",
+      "size": 729
+    },
+    {
+      "path": "terraform/modules/hybrid-vpn/variables.tf",
+      "type": "file",
+      "size": 1584
+    },
+    {
+      "path": "terraform/modules/hybrid-vpn/versions.tf",
+      "type": "file",
+      "size": 159
+    },
+    {
+      "path": "terraform/modules/identity/main.tf",
+      "type": "file",
+      "size": 2352
+    },
+    {
+      "path": "terraform/modules/identity/outputs.tf",
+      "type": "file",
+      "size": 939
+    },
+    {
+      "path": "terraform/modules/identity/README.md",
+      "type": "file",
+      "size": 1022
+    },
+    {
+      "path": "terraform/modules/identity/variables.tf",
+      "type": "file",
+      "size": 1332
+    },
+    {
+      "path": "terraform/modules/identity/versions.tf",
+      "type": "file",
+      "size": 244
+    },
+    {
+      "path": "terraform/modules/monitoring/main.tf",
+      "type": "file",
+      "size": 3147
+    },
+    {
+      "path": "terraform/modules/monitoring/outputs.tf",
+      "type": "file",
+      "size": 637
+    },
+    {
+      "path": "terraform/modules/monitoring/variables.tf",
+      "type": "file",
+      "size": 1248
+    },
+    {
+      "path": "terraform/modules/monitoring/versions.tf",
+      "type": "file",
+      "size": 159
+    },
+    {
+      "path": "terraform/modules/networking/bastion.tf",
+      "type": "file",
+      "size": 845
+    },
+    {
+      "path": "terraform/modules/networking/main.tf",
+      "type": "file",
+      "size": 1900
+    },
+    {
+      "path": "terraform/modules/networking/nat.tf",
+      "type": "file",
+      "size": 1512
+    },
+    {
+      "path": "terraform/modules/networking/nsg.tf",
+      "type": "file",
+      "size": 7184
+    },
+    {
+      "path": "terraform/modules/networking/outputs.tf",
+      "type": "file",
+      "size": 1455
+    },
+    {
+      "path": "terraform/modules/networking/variables.tf",
+      "type": "file",
+      "size": 1608
+    },
+    {
+      "path": "terraform/modules/networking/versions.tf",
+      "type": "file",
+      "size": 159
+    },
+    {
+      "path": "terraform/outputs.tf",
+      "type": "file",
+      "size": 1206
+    },
+    {
+      "path": "terraform/README.md",
+      "type": "file",
+      "size": 890
+    },
+    {
+      "path": "terraform/variables.tf",
+      "type": "file",
+      "size": 4448
+    },
+    {
+      "path": "terraform/versions.tf",
+      "type": "file",
+      "size": 244
+    }
+  ],
+  "files": {
+    "terraform/README.md": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__README.md.json",
+    "terraform/modules/identity/README.md": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__identity__README.md.json",
+    "README.md": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/README.md.json",
+    "terraform/modules/compute/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__compute__versions.tf.json",
+    "terraform/modules/hybrid-vpn/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__hybrid-vpn__versions.tf.json",
+    "terraform/modules/monitoring/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__monitoring__versions.tf.json",
+    "terraform/modules/networking/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__versions.tf.json",
+    "terraform/environments/prod/providers.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__providers.tf.json",
+    "terraform/environments/dev/providers.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__providers.tf.json",
+    "terraform/modules/identity/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__identity__versions.tf.json",
+    "terraform/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__versions.tf.json",
+    "terraform/environments/dev/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__versions.tf.json",
+    "terraform/environments/prod/versions.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__versions.tf.json",
+    ".github/workflows/terraform-lint.yml": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/.github__workflows__terraform-lint.yml.json",
+    "scripts/validate.sh": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/scripts__validate.sh.json",
+    "terraform/environments/dev/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__outputs.tf.json",
+    "terraform/environments/prod/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__outputs.tf.json",
+    "terraform/modules/compute/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__compute__outputs.tf.json",
+    "terraform/modules/monitoring/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__monitoring__outputs.tf.json",
+    "terraform/locals.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__locals.tf.json",
+    "terraform/modules/hybrid-vpn/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__hybrid-vpn__outputs.tf.json",
+    "terraform/environments/dev/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__variables.tf.json",
+    "terraform/environments/prod/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__variables.tf.json",
+    "terraform/modules/networking/bastion.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__bastion.tf.json",
+    "terraform/modules/identity/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__identity__outputs.tf.json",
+    ".github/workflows/terraform-plan.yml": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/.github__workflows__terraform-plan.yml.json",
+    "terraform/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__outputs.tf.json",
+    "terraform/modules/monitoring/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__monitoring__variables.tf.json",
+    "terraform/modules/identity/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__identity__variables.tf.json",
+    "terraform/modules/networking/outputs.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__outputs.tf.json",
+    "terraform/modules/compute/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__compute__variables.tf.json",
+    "terraform/modules/networking/nat.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__nat.tf.json",
+    "terraform/environments/dev/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__main.tf.json",
+    "terraform/environments/prod/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__main.tf.json",
+    "terraform/modules/hybrid-vpn/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__hybrid-vpn__variables.tf.json",
+    "terraform/modules/networking/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__variables.tf.json",
+    "terraform/modules/networking/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__main.tf.json",
+    "terraform/modules/hybrid-vpn/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__hybrid-vpn__main.tf.json",
+    "terraform/modules/compute/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__compute__main.tf.json",
+    "terraform/environments/dev/.terraform.lock.hcl": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__.terraform.lock.hcl.json",
+    "terraform/environments/prod/.terraform.lock.hcl": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__.terraform.lock.hcl.json",
+    "terraform/modules/identity/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__identity__main.tf.json",
+    "terraform/modules/monitoring/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__monitoring__main.tf.json",
+    "terraform/variables.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__variables.tf.json",
+    "terraform/main.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__main.tf.json",
+    "terraform/modules/networking/nsg.tf": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__modules__networking__nsg.tf.json",
+    ".gitignore": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/.gitignore.json",
+    "terraform/environments/dev/terraform.tfvars": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__dev__terraform.tfvars.json",
+    "terraform/environments/prod/terraform.tfvars": "data/repos/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity/files/terraform__environments__prod__terraform.tfvars.json"
+  },
+  "readmePath": "terraform/README.md"
+}

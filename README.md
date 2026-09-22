@@ -6,7 +6,7 @@ Primary identity: **IT Professional**.
 
 Core line: Systems Administration · IT Operations · Technical Support · Networking.
 
-Cloud, infrastructure, identity, and automation support that work. Azure is one skill, not the headline. Cybersecurity and security operations are a direction, not a current specialty or a SOC role.
+Cloud, infrastructure, identity, and automation (including Azure) support that work. Cybersecurity is a growth path, not a current specialty or a SOC role. Creative work is complementary.
 
 ## Live site
 
@@ -14,55 +14,58 @@ Cloud, infrastructure, identity, and automation support that work. Azure is one 
 
 Repo: [github.com/supbrice/portfolio](https://github.com/supbrice/portfolio)
 
+GitHub Pages serves this repo from the `main` branch root (`/`). The links page (LT) stays in the separate [supbrice/links](https://github.com/supbrice/links) repo and is not part of this site.
+
 ## What this website is
 
-A single-page portfolio (static `index.html`) that follows the resume and links the four public infrastructure labs.
+A multi-page static portfolio with an Apple / glass layout. Asset links are relative (`css/`, `js/`, `data/`, `assets/`) so they resolve under the `/portfolio/` project-pages base.
 
-On a wide screen a fixed left rail holds the identity: status, name, role, pitch, two calls to action, and text links. The right side scrolls. A quiet control switches **Case studies** (the four labs as a vertical gallery) and **Capabilities** (about, skills, experience, certifications, career direction, Beyond IT, and contact). On a phone the identity stacks first, then the same control and gallery. There is no profile photo, and `web-pfp.png` is not requested.
+| Page | File | What you see |
+| --- | --- | --- |
+| Home | `index.html` | Name **Ngu Brice Che**, IT Professional positioning, links into the other pages |
+| Projects | `projects.html` | PORTFOLIO / LAB cards, previews, and an offline file browser |
+| Labs | `labs.html` | Lab catalog plus interactive Mermaid diagrams |
+| Creative | `creative.html` | Complementary video, photo, resume, docs, and content skills |
+| About | `about.html` | IT-first story; cloud/identity supporting; cybersecurity as a direction |
+| Contact | `contact.html` | LinkedIn, email, and scheduling |
 
-The background is a light field with a slow drift of soft washes. With `prefers-reduced-motion: reduce`, those washes stay still and the status dot does not pulse.
-
-| Section | What you see |
-| --- | --- |
-| Identity rail | Name **Ngu Brice Che**, IT Professional positioning, two calls to action, text links, no photo |
-| Case studies | Four labs as rounded schematic cards, labeled lab / portfolio |
-| Capabilities | About, skills, experience, AZ-305 / AZ-104, career direction, Beyond IT, contact |
-
-This is a **personal portfolio / lab showcase**, not a company product and not a production customer deployment.
+Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showcase, not a company product and not a production customer deployment.
 
 ## Projects on the site
 
-| Project | Repo | Focus |
-| --- | --- | --- |
-| Network Infrastructure Upgrade (CPS) | [CloudProjects](https://github.com/supbrice/CloudProjects) | UniFi, VLANs, OT/public/corporate isolation, troubleshooting scenarios |
-| Multi-Region Azure Hybrid / Zero Trust Identity | [Multi-Region…](https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity) | Terraform VNets, VPN hub, Bastion, RBAC, Monitor (lab) |
-| Hybrid Identity Lab | [configure-ad](https://github.com/supbrice/configure-ad) | AD DS on Azure VMs, OU/GPO, Entra Connect/Cloud Sync notes |
-| Azure Architect Labs | [Azure-Cloud-Skills-and-Use-Cases](https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases) | Entra/CA/RBAC, hybrid DNS/VPN, Terraform, Monitor patterns |
-
-Personal utilities stay in GitHub and are not featured on this page.
+| Project | Repo |
+| --- | --- |
+| Network upgrade lab | [CloudProjects](https://github.com/supbrice/CloudProjects) |
+| Multi-region Azure hybrid lab | [Multi-Region…](https://github.com/supbrice/Multi-Region-Azure-Hybrid-Infrastructure-Zero-Trust-Identity) |
+| Hybrid AD lab | [configure-ad](https://github.com/supbrice/configure-ad) |
+| Azure reference labs | [Azure-Cloud-Skills-and-Use-Cases](https://github.com/supbrice/Azure-Cloud-Skills-and-Use-Cases) |
+| Entra hybrid identity pack | [entra-hybrid-proof](https://github.com/supbrice/entra-hybrid-proof) |
 
 ## Stack
 
-- Static `index.html` (no build step)
-- Resume download: `Brice-Resume.pdf`
-- `web-pfp.png` is unused. The page does not load it and does not render a profile image.
-- GitHub Pages: `.nojekyll` so Pages serves the files as-is
+- Static HTML (no build step)
+- `css/site.css` — Apple system font stack (`SF Pro Text` / `SF Pro Display` with system fallbacks) and glass styling
+- `js/nav.js` — page navigation
+- `js/diagram.js` — interactive Mermaid (pan / zoom), wired from Labs and the Projects file view
+- `data/bundle.js` — offline repo snapshot used by Projects and Labs
+- `assets/previews/` — GitHub-style preview images
+- `.nojekyll` so Pages serves the files as-is
 - Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
+- `Brice-Resume.pdf` remains at the previous download URL. The new pages do not link it. `web-pfp.png` is unused and is not loaded.
 
 ## Open locally
 
 1. Clone this repo.
-2. Open `index.html` in a browser.
+2. Open `index.html` in a browser, or serve the repo root with any static file server.
 3. No build step.
 
 ## Honest scope
 
-- Labs are labeled as labs. Diagrams on the project cards are schematics, not screenshots.
-- No invented metrics, clients, or awards.
-- Hero and header show **Ngu Brice Che**. The About section keeps “I'm Brice”.
-- AZ-305 and AZ-104 are the certifications. The Cisco Networking Academy line is training, not a CCNA claim.
-- Entra Conditional Access / PIM is not claimed as a shipped lab. MFA and cybersecurity are marked as growth.
+- Labs are labeled PORTFOLIO / LAB. Diagrams come from the lab READMEs; they are not screenshots of a live customer environment.
+- No invented metrics, clients, or awards on these pages.
+- Header and brand show **Ngu Brice Che**. About keeps “I'm Brice”.
+- Cybersecurity is described as a growth path, without expert or SOC claims.
 
 ## Contact
 
-[linkedin.com/in/ngubriceche](https://www.linkedin.com/in/ngubriceche) · [github.com/supbrice](https://github.com/supbrice) · ngubriceche@outlook.com
+[linkedin.com/in/ngubriceche](https://www.linkedin.com/in/ngubriceche) · [github.com/supbrice](https://github.com/supbrice) · supbricenow@gmail.com
