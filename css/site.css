@@ -145,7 +145,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
   color: var(--text);
   background: var(--bg);
   line-height: 1.5;
@@ -688,7 +688,7 @@ footer {
 
 .file-body.empty {
   color: var(--muted);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.95rem;
 }
 
@@ -2447,15 +2447,21 @@ body.glass-po > footer.site-footer {
   filter: blur(2px);
 }
 .subtitle-rotate.is-in {
-  animation: skill-rotate-in 420ms ease both;
+  animation: skill-rotate-in 420ms cubic-bezier(0.34, 1.3, 0.64, 1) both;
 }
 @keyframes skill-rotate-in {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(-0.4em);
     filter: blur(2px);
   }
-  to {
+  55% {
+    opacity: 1;
+    transform: translateY(0.08em);
+    filter: blur(0);
+  }
+  78% { transform: translateY(-0.04em); }
+  100% {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
@@ -3119,7 +3125,9 @@ details.creative-card.card {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 @keyframes projectEnter {
-  to { opacity: 1; transform: translateY(0); }
+  60%  { opacity: 1; transform: translateY(-3px); }
+  82%  { transform: translateY(1px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .project-card--case:hover {
   transform: translateY(-4px);
@@ -3276,5 +3284,512 @@ html[data-theme="dark"] .case-study-panel {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* === home-hub (local) === */
+.home-hub .home-hero {
+  padding: 4.5rem 0 3rem;
+  text-align: center;
+}
+.home-hub .hero-name {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+.home-hub .home-hero h1 {
+  margin: 0;
+  font-size: clamp(2.35rem, 6vw, 3.4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  font-weight: 800;
+}
+.home-hub .home-focus {
+  margin: 0.85rem auto 0;
+  max-width: 40rem;
+  font-weight: 650;
+  color: var(--muted);
+}
+.home-hub .home-intro {
+  margin: 1.1rem auto 0;
+  max-width: 38rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.home-hub .home-hero .actions {
+  margin-top: 1.6rem;
+  justify-content: center;
+}
+.home-hub .section-head {
+  text-align: left;
+}
+.home-hub .section-head p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  max-width: 36rem;
+}
+.home-do-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.home-do-card {
+  height: 100%;
+}
+.home-do-card .home-do-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.85rem;
+  color: var(--blue);
+  background: var(--blue-soft);
+}
+.home-do-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.home-do-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.home-featured-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.home-feature-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.home-feature-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+.home-feature-body {
+  padding: 1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+.home-feature-body h3 {
+  margin: 0.35rem 0 0.25rem;
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+}
+.home-feature-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.home-snapshot {
+  text-align: left;
+  padding: 1.5rem 1.5rem 1.35rem;
+}
+.home-snapshot p {
+  margin: 0 0 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.home-snapshot p:last-of-type {
+  margin-bottom: 0;
+}
+.home-snapshot .actions {
+  margin-top: 1.2rem;
+}
+.home-beyond-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.home-beyond-card {
+  height: 100%;
+}
+.home-beyond-card h3 {
+  margin: 0.45rem 0 0.35rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+.home-beyond-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.home-section-actions {
+  margin-top: 1.35rem;
+  justify-content: flex-start;
+}
+.home-connect {
+  padding-bottom: 3.5rem;
+}
+.home-connect .section-head {
+  text-align: center;
+}
+.home-connect .section-head p {
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-connect-actions {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+@media (max-width: 960px) {
+  .home-do-grid,
+  .home-featured-grid,
+  .home-beyond-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .home-do-grid,
+  .home-featured-grid,
+  .home-beyond-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-hub .home-hero {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+  .home-section-actions,
+  .home-snapshot .actions {
+    justify-content: stretch;
+  }
+  .home-section-actions .btn,
+  .home-snapshot .actions .btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-feature-card,
+  .home-do-card,
+  .home-beyond-card {
+    transition: none;
+  }
+}
+
+/* === about-split (local) === */
+.about-page .page-hero {
+  padding-bottom: 1.1rem;
+}
+.about-intro {
+  padding-bottom: 0.35rem;
+}
+.about-intro .prose {
+  max-width: none;
+}
+.about-intro .prose p {
+  margin: 0;
+  max-width: 42rem;
+}
+.about-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  column-gap: clamp(1.75rem, 4vw, 3rem);
+  row-gap: 1.75rem;
+  align-items: start;
+  isolation: isolate;
+}
+.about-copy {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  padding-right: 0.25rem;
+  z-index: 1;
+}
+.about-timeline {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  width: 100%;
+  max-width: 280px;
+  justify-self: end;
+  position: relative;
+  z-index: 1;
+}
+.about-copy .prose {
+  max-width: 40rem; /* keep text from running into the timeline gutter */
+}
+.about-page h2.about-col-title {
+  margin: 0 0 0.65rem;
+  font-size: 1.18rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text);
+}
+.about-copy .prose h2:not(.about-col-title) {
+  margin-top: 1.5rem;
+  font-size: 1.18rem;
+}
+.about-timeline-head {
+  margin: 0 0 0.65rem;
+}
+.about-timeline-head p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+.experience-body {
+  min-width: 0;
+}
+.about-timeline .experience-list {
+  gap: 0.45rem;
+}
+.about-timeline .experience-item {
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 0.45rem 0.55rem;
+  padding: 0.55rem 0.6rem;
+  border-radius: 12px;
+}
+.about-timeline .experience-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  padding: 2px;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--bg) 90%, transparent);
+}
+.about-timeline .experience-title {
+  font-size: 0.8rem;
+  line-height: 1.25;
+  margin: 0 0 0.08rem;
+}
+.about-timeline .experience-company {
+  font-size: 0.72rem;
+  margin: 0 0 0.08rem;
+}
+.about-timeline .experience-meta {
+  font-size: 0.68rem;
+  line-height: 1.3;
+}
+.experience-timeline {
+  position: relative;
+}
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: calc(0.6rem + 14px);
+  top: 0.7rem;
+  bottom: 0.7rem;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--blue) 28%, var(--line));
+  pointer-events: none;
+  z-index: 0;
+}
+.experience-timeline .experience-item {
+  position: relative;
+  z-index: 1;
+}
+.about-beyond {
+  padding-top: 0.5rem;
+  clear: both;
+}
+.about-beyond .prose {
+  max-width: 42rem;
+}
+.about-beyond .prose h2 {
+  margin-top: 0;
+}
+.about-actions {
+  justify-content: flex-start;
+  margin-top: 1.75rem;
+}
+@media (max-width: 960px) {
+  .about-split {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+  .about-copy,
+  .about-timeline {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: none;
+    justify-self: stretch;
+    padding-right: 0;
+  }
+  .about-timeline {
+    max-width: 22rem;
+  }
+  .about-copy .prose {
+    max-width: none;
+  }
+}
+
+/* =========================================================
+   Motion pass + Poppins (2026-09-26)
+   Calm, one-time entrances; hover-only button pop; gentle
+   float on a few Creative cards. All disabled for
+   prefers-reduced-motion: reduce.
+   ========================================================= */
+:root {
+  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --rv-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --pop-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
+}
+
+/* 1. One-time bouncy entrance (js/motion.js adds html.rv-on + .rv) */
+html.rv-on .rv:not(.rv-in):not(.rv-done) {
+  opacity: 0;
+  transform: translateY(16px);
+}
+html.rv-on .rv.rv-in {
+  animation: rvRise 620ms var(--rv-ease) both;
+  animation-delay: var(--rv-delay, 0ms);
+}
+@keyframes rvRise {
+  0%   { opacity: 0; transform: translateY(16px); }
+  60%  { opacity: 1; transform: translateY(-3px); }
+  82%  { transform: translateY(1px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. Wave emoji (auto-wrapped by js/motion.js if a 👋 is present) */
+.wave-emoji {
+  display: inline-block;
+  transform-origin: 70% 75%;
+}
+.wave-emoji.is-waving {
+  animation: waveHand 1.1s ease-in-out 2;
+}
+@keyframes waveHand {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+}
+
+/* 4. Buttons: hover-only pop + soft glow (no idle motion) */
+.btn,
+.contact-icon {
+  transition: transform 220ms var(--pop-ease), box-shadow 240ms ease, background 180ms ease, filter 180ms ease;
+}
+body.glass-po .btn:hover,
+body.glass-po .btn:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+}
+body.glass-po .btn-primary:hover,
+body.glass-po .btn-primary:focus-visible {
+  box-shadow: 0 10px 26px rgba(0, 113, 227, 0.32), 0 0 0 4px rgba(0, 113, 227, 0.12);
+}
+body.glass-po .btn-secondary:hover,
+body.glass-po .btn-secondary:focus-visible {
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.10), 0 0 0 4px rgba(0, 113, 227, 0.10);
+}
+body.glass-po .contact-icon:hover,
+body.glass-po .contact-icon:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: var(--shadow), 0 0 0 4px rgba(0, 113, 227, 0.10), 0 10px 24px rgba(0, 113, 227, 0.14);
+}
+body.glass-po .btn:active,
+body.glass-po .contact-icon:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* 5. Creative: gentle slow float on a few cards (uses `translate`, so hover transform still works) */
+.page-creative .creative-grid > details.creative-card:nth-child(1):not(.rv-in),
+.page-creative .creative-grid > details.creative-card:nth-child(4):not(.rv-in),
+.page-creative .creative-grid > details.creative-card:nth-child(5):not(.rv-in) {
+  animation: creativeFloat 7s ease-in-out 1.2s infinite;
+}
+.page-creative .creative-grid > details.creative-card:nth-child(4):not(.rv-in) {
+  animation-duration: 8s;
+  animation-delay: 2.4s;
+}
+.page-creative .creative-grid > details.creative-card:nth-child(5):not(.rv-in) {
+  animation-duration: 7.5s;
+  animation-delay: 3.4s;
+}
+.page-creative .creative-grid > details.creative-card:not(.rv-in):hover,
+.page-creative .creative-grid > details.creative-card:not(.rv-in):focus-within,
+.page-creative .creative-grid > details.creative-card:not(.rv-in)[open] {
+  animation-play-state: paused;
+}
+@keyframes creativeFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.rv-on .rv,
+  html.rv-on .rv.rv-in {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .wave-emoji,
+  .wave-emoji.is-waving,
+  .subtitle-rotate.is-in,
+  .page-creative .creative-grid > details.creative-card {
+    animation: none !important;
+    translate: none !important;
+  }
+  body.glass-po .btn:hover,
+  body.glass-po .btn:focus-visible,
+  body.glass-po .btn:active,
+  body.glass-po .contact-icon:hover,
+  body.glass-po .contact-icon:focus-visible,
+  body.glass-po .contact-icon:active {
+    transform: none !important;
+  }
+}
+
+/* === Alignment fixes (2026-09-26 22:56) ===
+   Home hero "IT Professional": the base h1 has max-width:16ch + margin:0 auto, but
+   .home-hub .home-hero h1 reset margin to 0, leaving a 16ch box pinned to the left
+   of the hero (text centered inside it, not on the page). Poppins' wider "ch"
+   made the offset larger. Center the box and let it size to the hero. */
+.home-hub .home-hero h1 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+  text-wrap: balance;
+}
+/* Focus line: wrap only between items (never inside "Technical Support" etc.), balanced rows */
+.home-hub .home-focus {
+  display: block;
+  text-wrap: balance;
+}
+.home-hub .home-focus .focus-item {
+  white-space: nowrap;
+}
+/* Last nav dropdown (Contact) was centered under its trigger and ran ~14px past
+   the header's right edge; right-align it like the mobile layout does. */
+@media (min-width: 861px) {
+  .nav-links > .nav-item:last-of-type > .nav-dropdown {
+    left: auto;
+    right: 0;
+    transform: translateY(4px);
+  }
+  .nav-links > .nav-item:last-of-type.is-open > .nav-dropdown,
+  .nav-links > .nav-item:last-of-type:hover > .nav-dropdown,
+  .nav-links > .nav-item:last-of-type:focus-within > .nav-dropdown {
+    transform: translateY(0);
   }
 }
