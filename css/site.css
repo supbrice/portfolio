@@ -3793,3 +3793,62 @@ body.glass-po .contact-icon:active {
     transform: translateY(0);
   }
 }
+
+/* === Creative header centered on the card column (2026-09-29) ===
+   Same max-width + horizontal centering as .creative-grid (44rem, margin-inline:auto),
+   so the intro's edges line up with the single-column cards at every width. */
+.page-creative .page-hero {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.page-creative .page-hero .page-title {
+  max-width: none; /* base h1 16ch cap left the title box pinned left */
+  margin-inline: auto;
+}
+.page-creative .page-hero .lede,
+.page-creative .page-hero .lede p {
+  max-width: none;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* === Experience cards link to LinkedIn (2026-09-29) === */
+.experience-entry {
+  margin: 0;
+  padding: 0;
+}
+a.experience-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 220ms var(--pop-ease, ease), box-shadow 240ms ease, border-color 200ms ease;
+}
+a.experience-link:hover,
+a.experience-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--blue) 35%, var(--glass-border));
+  box-shadow:
+    inset 0 1px 0 var(--glass-inset),
+    0 10px 24px rgba(15, 23, 42, 0.10),
+    0 0 0 3px rgba(0, 113, 227, 0.10),
+    0 0 18px rgba(0, 113, 227, 0.16);
+}
+a.experience-link:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+a.experience-link:active {
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  a.experience-link,
+  a.experience-link:hover,
+  a.experience-link:focus-visible,
+  a.experience-link:active {
+    transition: none !important;
+    transform: none !important;
+  }
+}
