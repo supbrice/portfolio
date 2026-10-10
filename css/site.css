@@ -19,6 +19,9 @@
   --header-bg: rgba(255, 255, 255, 0.82);
   --header-border: rgba(0, 0, 0, 0.05);
   --hover-wash: rgba(0, 0, 0, 0.05);
+  --grid-line: rgba(22, 84, 58, 0.09);
+  --grid-opacity: 0.5;
+  --chart-texture: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221600%22%20height%3D%22900%22%20viewBox%3D%220%200%201600%20900%22%3E%3Cpolyline%20points%3D%22-40%2C783%2014%2C786%2091%2C767%20175%2C769%20236%2C779%20287%2C771%20329%2C778%20401%2C765%20452%2C754%20533%2C760%20613%2C740%20670%2C745%20758%2C737%20802%2C747%20885%2C730%20965%2C708%201032%2C678%201091%2C667%201172%2C649%201255%2C633%201331%2C639%201382%2C640%201426%2C645%201471%2C647%201543%2C641%201601%2C644%22%20fill%3D%22none%22%20stroke%3D%22%235af08a%22%20stroke-width%3D%222.5%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.05%22%2F%3E%3Cpolyline%20points%3D%22-40%2C781%2012%2C769%2066%2C739%20140%2C731%20196%2C706%20239%2C683%20319%2C666%20363%2C639%20431%2C612%20482%2C600%20566%2C572%20613%2C575%20690%2C553%20768%2C536%20837%2C524%20927%2C514%20991%2C488%201074%2C480%201122%2C461%201192%2C447%201262%2C430%201315%2C415%201402%2C385%201447%2C359%201525%2C328%201582%2C321%201630%2C330%22%20fill%3D%22none%22%20stroke%3D%22%235af08a%22%20stroke-width%3D%222.5%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.06%22%2F%3E%3Cpolyline%20points%3D%22-40%2C906%2015%2C883%2085%2C874%20163%2C846%20242%2C819%20282%2C814%20323%2C784%20407%2C743%20463%2C743%20547%2C698%20591%2C685%20634%2C661%20713%2C650%20776%2C628%20830%2C596%20891%2C588%20958%2C557%201008%2C549%201098%2C513%201160%2C492%201206%2C489%201262%2C467%201314%2C462%201358%2C443%201409%2C411%201492%2C401%201544%2C378%201595%2C376%22%20fill%3D%22none%22%20stroke%3D%22%235af08a%22%20stroke-width%3D%221.5%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.08%22%2F%3E%3Cpolyline%20points%3D%22-40%2C848%2010%2C849%2071%2C833%20134%2C805%20208%2C762%20253%2C753%20310%2C721%20362%2C717%20425%2C701%20479%2C695%20565%2C669%20648%2C641%20691%2C608%20772%2C564%20859%2C522%20907%2C508%20958%2C497%201001%2C489%201090%2C470%201169%2C447%201230%2C410%201320%2C379%201396%2C369%201451%2C333%201520%2C310%201597%2C303%22%20fill%3D%22none%22%20stroke%3D%22%235af08a%22%20stroke-width%3D%221.5%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.06%22%2F%3E%3Cpolyline%20points%3D%22-40%2C927%209%2C916%2083%2C914%20129%2C891%20181%2C879%20252%2C871%20322%2C858%20408%2C855%20484%2C853%20544%2C836%20599%2C835%20676%2C838%20739%2C808%20829%2C810%20880%2C811%20966%2C781%201050%2C772%201098%2C751%201174%2C734%201263%2C712%201303%2C693%201358%2C678%201445%2C678%201491%2C686%201559%2C684%201629%2C664%22%20fill%3D%22none%22%20stroke%3D%22%235af08a%22%20stroke-width%3D%222.5%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.07%22%2F%3E%3Cpolyline%20points%3D%22-40%2C715%2042%2C703%20103%2C692%20144%2C669%20216%2C654%20293%2C627%20354%2C626%20398%2C597%20483%2C566%20565%2C536%20612%2C535%20667%2C501%20747%2C460%20832%2C443%20885%2C442%20964%2C400%201024%2C375%201072%2C343%201155%2C296%201236%2C254%201277%2C231%201333%2C196%201413%2C154%201494%2C136%201573%2C125%22%20fill%3D%22none%22%20stroke%3D%22%235af08a%22%20stroke-width%3D%221.5%22%20stroke-linejoin%3D%22round%22%20stroke-linecap%3D%22round%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221249%22%20y%3D%22378%22%20width%3D%2210%22%20height%3D%2261%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221265%22%20y%3D%22409%22%20width%3D%2210%22%20height%3D%2230%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%22630%22%20y%3D%22229%22%20width%3D%2210%22%20height%3D%2268%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.07%22%2F%3E%3Crect%20x%3D%22560%22%20y%3D%22410%22%20width%3D%2210%22%20height%3D%2267%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.05%22%2F%3E%3Crect%20x%3D%22576%22%20y%3D%22414%22%20width%3D%2210%22%20height%3D%2264%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.07%22%2F%3E%3Crect%20x%3D%22304%22%20y%3D%22811%22%20width%3D%2210%22%20height%3D%2220%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.08%22%2F%3E%3Crect%20x%3D%22320%22%20y%3D%22795%22%20width%3D%2210%22%20height%3D%2236%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.07%22%2F%3E%3Crect%20x%3D%22686%22%20y%3D%22810%22%20width%3D%2210%22%20height%3D%2238%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%22417%22%20y%3D%22588%22%20width%3D%2210%22%20height%3D%2245%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%22579%22%20y%3D%2284%22%20width%3D%2210%22%20height%3D%2250%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.05%22%2F%3E%3Crect%20x%3D%22595%22%20y%3D%2279%22%20width%3D%2210%22%20height%3D%2255%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.07%22%2F%3E%3Crect%20x%3D%22791%22%20y%3D%22561%22%20width%3D%2210%22%20height%3D%2239%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.07%22%2F%3E%3Crect%20x%3D%22807%22%20y%3D%22553%22%20width%3D%2210%22%20height%3D%2247%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221042%22%20y%3D%22745%22%20width%3D%2210%22%20height%3D%2239%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.05%22%2F%3E%3Crect%20x%3D%221058%22%20y%3D%22750%22%20width%3D%2210%22%20height%3D%2234%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221009%22%20y%3D%22390%22%20width%3D%2210%22%20height%3D%2253%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.08%22%2F%3E%3Crect%20x%3D%221025%22%20y%3D%22383%22%20width%3D%2210%22%20height%3D%2259%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221015%22%20y%3D%22278%22%20width%3D%2210%22%20height%3D%2223%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221031%22%20y%3D%22248%22%20width%3D%2210%22%20height%3D%2253%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221234%22%20y%3D%22164%22%20width%3D%2210%22%20height%3D%2231%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.08%22%2F%3E%3Crect%20x%3D%22258%22%20y%3D%22558%22%20width%3D%2210%22%20height%3D%2258%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%22807%22%20y%3D%2253%22%20width%3D%2210%22%20height%3D%2266%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.05%22%2F%3E%3Crect%20x%3D%221368%22%20y%3D%22619%22%20width%3D%2210%22%20height%3D%2241%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3Crect%20x%3D%221384%22%20y%3D%22598%22%20width%3D%2210%22%20height%3D%2262%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.07%22%2F%3E%3Crect%20x%3D%22155%22%20y%3D%22267%22%20width%3D%2210%22%20height%3D%2235%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.05%22%2F%3E%3Crect%20x%3D%22171%22%20y%3D%22278%22%20width%3D%2210%22%20height%3D%2225%22%20rx%3D%222.5%22%20fill%3D%22%235af08a%22%20opacity%3D%220.06%22%2F%3E%3C%2Fsvg%3E");
   --file-fg: #1f2328;
   --code-bg: rgba(15, 23, 42, 0.06);
   --code-border: rgba(15, 23, 42, 0.08);
@@ -30,24 +33,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0b1220;
+    --bg: #16363c;
     --text: #f5f5f7;
     --muted: #a1a8b3;
-    --line: rgba(255, 255, 255, 0.12);
-    --card: #121a2b;
-    --blue: #0a84ff;
-    --blue-soft: rgba(10, 132, 255, 0.18);
+    --line: rgba(198, 236, 220, 0.22);
+    --card: #102a2f;
+    --blue: #7abcf4;
+    --blue-soft: rgba(122, 188, 244, 0.20);
     --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
-    --panel: #10182a;
-    --glass: rgba(255, 255, 255, 0.08);
-    --glass-strong: rgba(255, 255, 255, 0.12);
-    --glass-border: rgba(255, 255, 255, 0.16);
-    --glass-inset: rgba(255, 255, 255, 0.14);
-    --footer-fg: rgba(245, 245, 247, 0.55);
-    --footer-strong: rgba(245, 245, 247, 0.72);
-    --footer-sep: rgba(245, 245, 247, 0.28);
-    --header-bg: rgba(11, 18, 32, 0.72);
-    --header-border: rgba(255, 255, 255, 0.08);
+    --panel: #1b4047;
+    --glass: rgba(16, 42, 47, 0.88);
+    --glass-strong: rgba(27, 64, 71, 0.92);
+    --glass-border: rgba(198, 236, 220, 0.18);
+    --glass-inset: rgba(255, 255, 255, 0.12);
+    --footer-fg: rgba(245, 245, 247, 0.78);
+    --footer-strong: rgba(245, 245, 247, 0.92);
+    --footer-sep: rgba(245, 245, 247, 0.45);
+    --header-bg: rgba(16, 42, 47, 0.80);
+    --header-border: rgba(198, 236, 220, 0.16);
+    --grid-line: rgba(90, 240, 138, 0.06);
+    --grid-opacity: 1;
+    --video-shade: linear-gradient(180deg, rgba(16, 42, 47, 0.74) 0%, rgba(16, 42, 47, 0.64) 42%, rgba(16, 42, 47, 0.82) 100%);
     --hover-wash: rgba(255, 255, 255, 0.06);
     --file-fg: #e6edf3;
     --code-bg: rgba(255, 255, 255, 0.06);
@@ -60,24 +66,27 @@
 }
 
 html[data-theme="dark"] {
-    --bg: #0b1220;
+    --bg: #16363c;
     --text: #f5f5f7;
     --muted: #a1a8b3;
-    --line: rgba(255, 255, 255, 0.12);
-    --card: #121a2b;
-    --blue: #0a84ff;
-    --blue-soft: rgba(10, 132, 255, 0.18);
+    --line: rgba(198, 236, 220, 0.22);
+    --card: #102a2f;
+    --blue: #7abcf4;
+    --blue-soft: rgba(122, 188, 244, 0.20);
     --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
-    --panel: #10182a;
-    --glass: rgba(255, 255, 255, 0.08);
-    --glass-strong: rgba(255, 255, 255, 0.12);
-    --glass-border: rgba(255, 255, 255, 0.16);
-    --glass-inset: rgba(255, 255, 255, 0.14);
-    --footer-fg: rgba(245, 245, 247, 0.55);
-    --footer-strong: rgba(245, 245, 247, 0.72);
-    --footer-sep: rgba(245, 245, 247, 0.28);
-    --header-bg: rgba(11, 18, 32, 0.72);
-    --header-border: rgba(255, 255, 255, 0.08);
+    --panel: #1b4047;
+    --glass: rgba(16, 42, 47, 0.88);
+    --glass-strong: rgba(27, 64, 71, 0.92);
+    --glass-border: rgba(198, 236, 220, 0.18);
+    --glass-inset: rgba(255, 255, 255, 0.12);
+    --footer-fg: rgba(245, 245, 247, 0.78);
+    --footer-strong: rgba(245, 245, 247, 0.92);
+    --footer-sep: rgba(245, 245, 247, 0.45);
+    --header-bg: rgba(16, 42, 47, 0.80);
+    --header-border: rgba(198, 236, 220, 0.16);
+    --grid-line: rgba(90, 240, 138, 0.06);
+    --grid-opacity: 1;
+    --video-shade: linear-gradient(180deg, rgba(16, 42, 47, 0.74) 0%, rgba(16, 42, 47, 0.64) 42%, rgba(16, 42, 47, 0.82) 100%);
     --hover-wash: rgba(255, 255, 255, 0.06);
     --file-fg: #e6edf3;
     --code-bg: rgba(255, 255, 255, 0.06);
@@ -109,6 +118,8 @@ html[data-theme="light"] {
   --header-bg: rgba(255, 255, 255, 0.82);
   --header-border: rgba(0, 0, 0, 0.05);
   --hover-wash: rgba(0, 0, 0, 0.05);
+  --grid-line: rgba(22, 84, 58, 0.09);
+  --grid-opacity: 0.5;
   --file-fg: #1f2328;
   --code-bg: rgba(15, 23, 42, 0.06);
   --code-border: rgba(15, 23, 42, 0.08);
@@ -893,6 +904,10 @@ body.links-page footer {
   text-transform: uppercase;
   color: #8b93a7;
   margin-bottom: 1rem;
+}
+html[data-theme="dark"] .tech-ticker .ticker-label,
+html:not([data-theme="light"]) .tech-ticker .ticker-label {
+  color: var(--muted);
 }
 
 .ticker-viewport {
@@ -1957,20 +1972,20 @@ body.glass-po .creative-card--photo {
 /* —— Dark mode extras (system + manual) —— */
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) body.glass-po .anim-bg:not(.anim-bg--video) {
-    background:
-      radial-gradient(ellipse at 20% 10%, rgba(56, 189, 248, 0.22), transparent 52%),
-      radial-gradient(ellipse at 80% 18%, rgba(129, 140, 248, 0.24), transparent 48%),
-      radial-gradient(ellipse at 45% 92%, rgba(14, 165, 233, 0.16), transparent 52%),
-      linear-gradient(145deg, #070b16 0%, #0b1224 38%, #121038 72%, #0a1628 100%);
+    background: var(--bg);
   }
-  html:not([data-theme="light"]) body.glass-po .anim-bg .b1 { background: #2563eb; opacity: 0.45; }
-  html:not([data-theme="light"]) body.glass-po .anim-bg .b2 { background: #6366f1; opacity: 0.42; }
-  html:not([data-theme="light"]) body.glass-po .anim-bg .b3 { background: #0891b2; opacity: 0.38; }
-  html:not([data-theme="light"]) body.glass-po .anim-bg .b4 { background: #7c3aed; opacity: 0.28; }
+  html:not([data-theme="light"]) body.glass-po .anim-bg:not(.anim-bg--video) .blob {
+    display: none;
+  }
   html:not([data-theme="light"]) body.glass-po .mock-banner { background: rgba(0, 0, 0, 0.55); }
   html:not([data-theme="light"]) body.glass-po .btn-primary {
-    background: rgba(10, 132, 255, 0.92);
-    box-shadow: 0 8px 22px rgba(10, 132, 255, 0.28);
+    background: #0a6fe0;
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(10, 111, 224, 0.28);
+  }
+  html:not([data-theme="light"]) body.glass-po .btn-primary:hover,
+  html:not([data-theme="light"]) body.glass-po .btn-primary:focus-visible {
+    background: #0064cc;
   }
   html:not([data-theme="light"]) body.glass-po .note,
   html:not([data-theme="light"]) body.glass-po .lab-badge {
@@ -1986,20 +2001,20 @@ body.glass-po .creative-card--photo {
 }
 
 html[data-theme="dark"] body.glass-po .anim-bg:not(.anim-bg--video) {
-  background:
-    radial-gradient(ellipse at 20% 10%, rgba(56, 189, 248, 0.22), transparent 52%),
-    radial-gradient(ellipse at 80% 18%, rgba(129, 140, 248, 0.24), transparent 48%),
-    radial-gradient(ellipse at 45% 92%, rgba(14, 165, 233, 0.16), transparent 52%),
-    linear-gradient(145deg, #070b16 0%, #0b1224 38%, #121038 72%, #0a1628 100%);
+  background: var(--bg);
 }
-html[data-theme="dark"] body.glass-po .anim-bg .b1 { background: #2563eb; opacity: 0.45; }
-html[data-theme="dark"] body.glass-po .anim-bg .b2 { background: #6366f1; opacity: 0.42; }
-html[data-theme="dark"] body.glass-po .anim-bg .b3 { background: #0891b2; opacity: 0.38; }
-html[data-theme="dark"] body.glass-po .anim-bg .b4 { background: #7c3aed; opacity: 0.28; }
+html[data-theme="dark"] body.glass-po .anim-bg:not(.anim-bg--video) .blob {
+  display: none;
+}
 html[data-theme="dark"] body.glass-po .mock-banner { background: rgba(0, 0, 0, 0.55); }
 html[data-theme="dark"] body.glass-po .btn-primary {
-  background: rgba(10, 132, 255, 0.92);
-  box-shadow: 0 8px 22px rgba(10, 132, 255, 0.28);
+  background: #0a6fe0;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(10, 111, 224, 0.28);
+}
+html[data-theme="dark"] body.glass-po .btn-primary:hover,
+html[data-theme="dark"] body.glass-po .btn-primary:focus-visible {
+  background: #0064cc;
 }
 html[data-theme="dark"] body.glass-po .note,
 html[data-theme="dark"] body.glass-po .lab-badge {
@@ -2107,8 +2122,7 @@ body.glass-po .anim-bg--video .bg-video-shade {
 /* Default / dark shade — keep video visible */
 html[data-theme="dark"] body.glass-po .anim-bg--video .bg-video-shade,
 html:not([data-theme="light"]) body.glass-po .anim-bg--video .bg-video-shade {
-  background:
-    linear-gradient(180deg, rgba(5,10,24,0.45) 0%, rgba(5,10,24,0.28) 42%, rgba(5,10,24,0.62) 100%);
+  background: var(--video-shade);
 }
 
 /* Light shade — soft white frost so UI tokens stay light-theme */
@@ -2159,7 +2173,7 @@ html.has-video-bg[data-theme="light"] body.glass-po .btn-secondary {
 /* Dark + video: keep glass translucent so plexus stays visible behind UI */
 html[data-theme="dark"]:has(.anim-bg--video) body.glass-po header,
 html.has-video-bg[data-theme="dark"] body.glass-po header {
-  background: rgba(11, 18, 32, 0.55) !important;
+  background: var(--header-bg) !important;
 }
 html[data-theme="dark"]:has(.anim-bg--video) body.glass-po .card,
 html[data-theme="dark"]:has(.anim-bg--video) body.glass-po .panel,
@@ -2169,8 +2183,8 @@ html.has-video-bg[data-theme="dark"] body.glass-po .card,
 html.has-video-bg[data-theme="dark"] body.glass-po .panel,
 html.has-video-bg[data-theme="dark"] body.glass-po .explorer,
 html.has-video-bg[data-theme="dark"] body.glass-po .tech-ticker {
-  background: rgba(17, 24, 39, 0.55) !important;
-  border-color: rgba(255, 255, 255, 0.14) !important;
+  background: var(--glass) !important;
+  border-color: var(--glass-border) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2179,6 +2193,14 @@ html.has-video-bg[data-theme="dark"] body.glass-po .tech-ticker {
   }
   body.glass-po .anim-bg--video .blob {
     display: block !important;
+  }
+  html[data-theme="dark"] body.glass-po .anim-bg.anim-bg--video,
+  html:not([data-theme="light"]) body.glass-po .anim-bg.anim-bg--video {
+    background: var(--bg) !important;
+  }
+  html[data-theme="dark"] body.glass-po .anim-bg--video .blob,
+  html:not([data-theme="light"]) body.glass-po .anim-bg--video .blob {
+    display: none !important;
   }
 }
 
@@ -2298,8 +2320,8 @@ body.glass-po > header {
 }
 html[data-theme="dark"] body.glass-po > header,
 html:not([data-theme="light"]) body.glass-po > header {
-  background: rgba(11, 18, 32, 0.52) !important;
-  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+  background: var(--header-bg) !important;
+  border-bottom-color: var(--header-border) !important;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
 }
 
@@ -2332,8 +2354,8 @@ html[data-theme="dark"] body.glass-po > .tech-ticker,
 html[data-theme="dark"] body.glass-po > footer.site-footer,
 html:not([data-theme="light"]) body.glass-po > .tech-ticker,
 html:not([data-theme="light"]) body.glass-po > footer.site-footer {
-  background: rgba(11, 18, 32, 0.52) !important;
-  border-top-color: rgba(255, 255, 255, 0.12);
+  background: var(--header-bg) !important;
+  border-top-color: var(--header-border);
   box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.28);
 }
 
@@ -2688,7 +2710,7 @@ a.tool-item:focus-visible {
 }
 a.tool-item:hover .tool-open { opacity: 0.9; }
 
-/* Cool perspective / fade grid overlay */
+/* 48px grid. Color and strength come from --grid-line / --grid-opacity. */
 body.glass-po .anim-bg::after {
   content: "";
   position: absolute;
@@ -2696,26 +2718,29 @@ body.glass-po .anim-bg::after {
   pointer-events: none;
   z-index: 1;
   background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--text) 10%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--text) 10%, transparent) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
   background-position: center top;
   -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 35%, #000 20%, transparent 72%);
   mask-image: radial-gradient(ellipse 75% 60% at 50% 35%, #000 20%, transparent 72%);
-  opacity: 0.55;
+  opacity: var(--grid-opacity);
 }
-html[data-theme="dark"] body.glass-po .anim-bg::after,
-html:not([data-theme="light"]) body.glass-po .anim-bg::after {
+/* Chart texture sits above the grid, fixed to the viewport, and does not move. */
+html[data-theme="dark"] body.glass-po .anim-bg::before,
+html:not([data-theme="light"]) body.glass-po .anim-bg::before {
+  top: 0;
+  bottom: 0;
+  height: auto;
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.09) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
-  opacity: 0.7;
-}
-html[data-theme="light"] body.glass-po .anim-bg::after {
-  background-image:
-    linear-gradient(to right, rgba(15, 23, 42, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.08) 1px, transparent 1px);
-  opacity: 0.5;
+    linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--blue) 42%, transparent) 50%, transparent 100%),
+    var(--chart-texture);
+  background-size: 100% 1px, cover;
+  background-position: center 32%, center;
+  background-repeat: no-repeat, no-repeat;
 }
 /* Soft horizon glow line across the grid */
 body.glass-po .anim-bg::before {
@@ -2738,9 +2763,17 @@ body.glass-po .anim-bg::before {
   mask-image: radial-gradient(ellipse 60% 100% at 50% 50%, #000 10%, transparent 75%);
 }
 @media (prefers-reduced-motion: reduce) {
-  body.glass-po .anim-bg::before,
-  body.glass-po .anim-bg::after {
+  html[data-theme="light"] body.glass-po .anim-bg::before,
+  html[data-theme="light"] body.glass-po .anim-bg::after {
     opacity: 0.35;
+  }
+  html[data-theme="dark"] body.glass-po .anim-bg::before,
+  html:not([data-theme="light"]) body.glass-po .anim-bg::before {
+    opacity: 1;
+  }
+  html[data-theme="dark"] body.glass-po .anim-bg::after,
+  html:not([data-theme="light"]) body.glass-po .anim-bg::after {
+    opacity: var(--grid-opacity);
   }
 }
 
@@ -2799,8 +2832,8 @@ details.creative-card.card {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 html[data-theme="dark"] details.creative-card.card {
-  background: rgba(22, 28, 42, 0.62);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--glass);
+  border-color: var(--glass-border);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.08) inset,
     0 18px 40px rgba(0, 0, 0, 0.35);
@@ -2873,6 +2906,16 @@ details.creative-card[open] .creative-explore span[aria-hidden="true"] {
 details.creative-card[open] .creative-explore {
   color: #1d4ed8;
 }
+html[data-theme="dark"] .creative-icon,
+html:not([data-theme="light"]) .creative-icon {
+  color: var(--blue);
+}
+html[data-theme="dark"] .creative-explore,
+html[data-theme="dark"] details.creative-card[open] .creative-explore,
+html:not([data-theme="light"]) .creative-explore,
+html:not([data-theme="light"]) details.creative-card[open] .creative-explore {
+  color: var(--blue);
+}
 .creative-more {
   margin-top: 1.1rem;
   padding-top: 1rem;
@@ -2881,8 +2924,8 @@ details.creative-card[open] .creative-explore {
 
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) details.creative-card.card {
-    background: rgba(22, 28, 42, 0.62);
-    border-color: rgba(255, 255, 255, 0.12);
+    background: var(--glass);
+    border-color: var(--glass-border);
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.08) inset,
       0 18px 40px rgba(0, 0, 0, 0.35);
@@ -3194,9 +3237,10 @@ details.creative-card.card {
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
 }
-html[data-theme="dark"] .case-study-panel {
-  background: rgba(22, 28, 42, 0.62);
-  border-color: rgba(255,255,255,0.12);
+html[data-theme="dark"] .case-study-panel,
+html:not([data-theme="light"]) .case-study-panel {
+  background: var(--glass);
+  border-color: var(--glass-border);
 }
 .case-study-top {
   display: flex;
