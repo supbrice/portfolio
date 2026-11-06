@@ -44,7 +44,7 @@ Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showc
 ## Stack
 
 - Static HTML (no build step)
-- `css/site.css` — Apple system font stack (`SF Pro Text` / `SF Pro Display` with system fallbacks) and glass styling, including light and dark themes
+- `css/site.css` — Poppins, with system font fallbacks, and glass styling, including light and dark themes
 - `js/nav.js` — page navigation
 - `js/theme.js` — light / dark theme toggle
 - `js/skill-rotate.js` — rotating skill line on Home
@@ -55,6 +55,7 @@ Labs are labeled **PORTFOLIO / LAB**. This is a personal portfolio and lab showc
 - `assets/previews/`, `assets/companies/`, `assets/tech/`, `assets/tools/` — previews, company marks, technology ticker, and creative tool logos
 - `.nojekyll` so Pages serves the files as-is
 - Azure Static Web Apps workflow remains in `.github/workflows/` for pushes to `main`
+- Vercel auto-deploy is off (`vercel.json`). GitHub Pages is the live host.
 - Contact’s Resume button links to `assets/Brice-Resume.pdf`. `Brice-Resume.pdf` also stays at the repo root. `web-pfp.png` is unused and is not loaded.
 
 ## Open locally
